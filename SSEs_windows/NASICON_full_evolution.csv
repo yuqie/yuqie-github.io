@@ -1,0 +1,29 @@
+1,   1.00           0.00                0.00                   0.00                                                    NaCoO2         
+2,"   0.58           0.42              -24.21                 -24.21                      Na2ZrSiO5, Co3O4, Na3(CoO2)4, Na3PO4         "
+3,"   0.52           0.48              -26.51                 -26.51                      Na4(CoO2)7, Co3O4, Na3PO4, Na2ZrSiO5  Minimum"
+4,"   0.42           0.58              -24.51                 -24.51            Na4(CoO2)7, ZrO2, Co3O4, Na4Zr2(SiO4)3, Na3PO4         "
+5,"   0.35           0.65              -22.52                 -22.52               Na4(CoO2)7, ZrO2, Co3O4, Na3PO4, Na2ZrSi2O7         "
+6,"   0.33           0.67              -21.85                 -21.85                ZrO2, Co3O4, Na(CoO2)2, Na3PO4, Na2ZrSi2O7         "
+7,   0.00           1.00                0.00                   0.00                                             Na3Zr2Si2PO12         
+
+9,   1.00           0.00               -0.00                   0.00                                              NaCrO2         
+10,"   0.38           0.62              -11.42                 -11.42                      Cr2O5, Na3PO4, Na2ZrSiO5, Cr3P         "
+11,"   0.29           0.71              -12.55                 -12.55            Na3PO4, ZrO2, Cr2O5, Cr3P, Na4Zr2(SiO4)3  Minimum"
+12,"   0.24           0.76              -12.51                 -12.51               Na3PO4, ZrO2, Cr2O5, Cr3P, Na2ZrSi2O7         "
+13,"   0.20           0.80              -11.08                 -11.08                Na3PO4, ZrO2, Cr2O5, Na2ZrSi2O7, CrP         "
+14,   0.00           1.00                0.00                   0.00                                       Na3Zr2Si2PO12         
+
+16,     1.00            0.00              -0.00                   0.00                  Na2FePO4F   Minimum
+17,     0.00            1.00               0.00                   0.00              Na3Zr2Si2PO12          
+      
+19,     1.00            0.00               0.00                   0.00                  Na2MnPO4F   Mutual Rxn. E. Min.
+20,     0.00            1.00              -0.00                   0.00              Na3Zr2Si2PO12          Rxn. E. Min.
+
+22,      1.00            -0.00               0.00                   0.00                       Na3V2(PO4)3         
+23,"      0.25             0.75              -0.84                  -0.84             Na4P2O7, V2O3, ZrSiO4  Minimum"
+24,      0.00             1.00              -0.00                   0.00                     Na3Zr2Si2PO12         
+
+26,      1.00             0.00              -0.00                   0.00                            Na3V2P2O8F3         
+27,"      0.47             0.53              -1.02                  -1.02               Na3V2(PO4)3, NaF, ZrSiO4         "
+28,"      0.18             0.82              -1.08                  -1.08             ZrSiO4, Na4P2O7, NaF, V2O3  Minimum"
+29,      0.00             1.00              -0.00                   0.00                          Na3Zr2Si2PO12         
