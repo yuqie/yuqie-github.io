@@ -9,4 +9,4 @@ Some scripts used in [VASP](https://www.vasp.at/), which are mostly based on [py
        pass
        return
     if you have a list of numerical values： arithmetic_mean(*x)
-    * will "unpack" or singularize the list。
+    [* ]will "unpack" or singularize the list.
