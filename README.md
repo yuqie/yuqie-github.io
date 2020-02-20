@@ -10,7 +10,7 @@ Some scripts used in [VASP](https://www.vasp.at/), which are mostly based on [py
        return
     if you have a list of numerical values： arithmetic_mean(*x)
      *  will "unpack" or singularize the list.
-2. [pickle & shelve in python] (https://www.python-course.eu/python3_file_management.php)
+2. [pickle & shelve in python](https://www.python-course.eu/python3_file_management.php/)
 
    *city, day, time = line.split()
    join(city)
