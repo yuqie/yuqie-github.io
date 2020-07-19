@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Home is behind, the world ahead">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ringinmay&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/5/index.html">
+<meta property="og:site_name" content="Ringinmay&#39;s Blog">
+<meta property="og:description" content="Home is behind, the world ahead">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="QY">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/page/5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>Ringinmay's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ringinmay's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Home is behind, the world ahead</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/17/1d67f72b_12a64c5f7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/09/17/1d67f72b_12a64c5f7/" class="post-title-link" itemprop="url">【黑鸦密令】活动抽卡记录</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-09-17 12:28:47" itemprop="dateCreated datePublished" datetime="2018-09-17T12:28:47+08:00">2018-09-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2018-09-18 12:54:59" itemprop="dateModified" datetime="2018-09-18T12:54:59+08:00">2018-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>我应该算是坠机了吧，十一连抽+十几个浅思+2次单抽，无事发生，一个五花都没有，连歪都没有歪，o(╥﹏╥)o，宝宝心里苦，宝宝想哭</p> 
+<p>----------------------------------更新-------------------------------------</p> 
+<p>活动开始陆陆续续抽了快一万叶子了，浅思抽了十来个，基本无事发生，两个淑女+长庚+屠龙就是所有的收获了ORZ</p> 
+<p>到底有没有保底呀</p> 
+<p>以及单抽算不算保底呢，好像单抽啊</p> 
+<p>------------------------------------更新-----------------------------------</p> 
+<p>第十次：三花聚顶</p> 
+<p>
+![](https://imglf3.nosdn.127.net/img/b0hEc3QzYVFCMkRZVC9hOGRhU3NHSmxqL21SR0I5a0dERW56OEswZUg1MkhVSmVlQVNqSEp3PT0.png)
+<br />第十一次：三花聚顶</p> 
+<p>
+![](https://imglf6.nosdn.127.net/img/b0hEc3QzYVFCMkRZVC9hOGRhU3NHSkR2QzRpTFRQb1VuVGhBcTdPMUs3MFU3MkRDYzdYU3BRPT0.png)
+<br /><br /></p> 
+<p>----------------------------------连抽记录--------------------------------</p> 
+<p>第一次：四花长庚刀一枚</p> 
+<p>
+![](https://imglf4.nosdn.127.net/img/b0hEc3QzYVFCMkRERVV2TUdVR2FWQUdhUkp3enFtckVGVTVoMks1S0FqbmRWVHVYNmpuWC9BPT0.png)
+<br />第二次：淑女姐姐！</p> 
+<p>
+![](https://imglf6.nosdn.127.net/img/b0hEc3QzYVFCMkRERVV2TUdVR2FWS3FwVGF1SU1XdjBqVTdCTTF4S2RSUGR1dzMxcEVGRVhBPT0.png)
+<br />第三次：三花聚顶&nbsp;娜迦*2 伏魔杖*2</p> 
+<p>
+![](https://imglf3.nosdn.127.net/img/b0hEc3QzYVFCMkRERVV2TUdVR2FWQ24zQ0xoclp6emZDTUxJWUVwWXNuZXZXeU56ZURtSm9nPT0.png)
+<br />第四次：三花聚顶</p> 
+<p>
+![](https://imglf5.nosdn.127.net/img/b0hEc3QzYVFCMkRERVV2TUdVR2FWQW1Mc3VpTHZpWHc1SStNUE8zZFZNRHI4a25NQjJVNk13PT0.png)
+<br />第五次：三花聚顶
+![](https://imglf4.nosdn.127.net/img/b0hEc3QzYVFCMkRERVV2TUdVR2FWQTc5Q0tyWXRpUVRVdk1RTmkvaHZsQWk4OGFVcVNOczlnPT0.png)
+<br /></p> 
+<p>第六次：淑女姐姐
+![](https://imglf3.nosdn.127.net/img/b0hEc3QzYVFCMkRERVV2TUdVR2FWTlJ0M1YzT1J0TWNGajVyRXppb1E2azArcE1ZRStxWXl3PT0.png)
+<br /></p> 
+<p>第七次：三花聚顶
+![](https://imglf5.nosdn.127.net/img/b0hEc3QzYVFCMkRERVV2TUdVR2FWTlUrZE9lLzYveGdZcy85SU4zNWF2OXgrV0VWOENzT3pBPT0.png)
+<br /></p> 
+<p>第八次：屠龙+越女triple ORZ
+![](https://imglf6.nosdn.127.net/img/b0hEc3QzYVFCMkRERVV2TUdVR2FWRERwK0RDZW84OXFxbThYQis1SGNrUVpER2dobmNKaVZnPT0.png)
+<br /></p> 
+<p>第九次：三花聚顶
+![](https://imglf6.nosdn.127.net/img/b0hEc3QzYVFCMkRERVV2TUdVR2FWTmZINWMySzJJNXNWN3djYXhpSFN6Y3N4Q1dGaTNZV1N3PT0.png)
+<br /></p> 
+<p><br /></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/09/17/1d67f72b_12a64c5f7/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/17/1d67f72b_12a64ad75/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/09/17/1d67f72b_12a64ad75/" class="post-title-link" itemprop="url">【转载】如何优雅地绘制布里渊区？</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-09-17 09:43:28" itemprop="dateCreated datePublished" datetime="2018-09-17T09:43:28+08:00">2018-09-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:21:12" itemprop="dateModified" datetime="2019-07-21T14:21:12+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>布里渊区（Brillouin zone）是固体物理学中一个十分重要的概念，我们在写论文时也经常需要绘图展示研究材料的布里渊区。但布里渊区是一个三维图，很难用二维的平面绘图软件直接绘制。</p> 
+<p>Xcrysden（http://www.xcrysden.org/）这个软件可以在看晶体结构的同时输出布里渊区矢量图，而Adobe Illustrator（以下简称AI）是矢量绘图的专业软件之一。如果两者结合在一起，就可以绘制出布里渊区，而且图片也很美观。</p> 
+<p><strong>软件</strong>：Xcrysden、AI</p> 
+<p><strong>步骤</strong>：</p> 
+<p>1.&nbsp;用Xcrysden打开晶体结构文件（xsf格式或pwscf、Wienk结构文件），选择菜单“Tools”→“ k-path Section”，如下图所示。</p> 
+<p>
+![](https://image.sciencenet.cn/home/201805/04/195038fbvep5kb8u8e75kp.png)
+<br /></p> 
+<p>2.&nbsp;在弹出的“Band Path Section”窗口中选择要标注的k点，其他点可以点击不显示。</p> 
+<p>
+![](https://image.sciencenet.cn/home/201805/04/195134i2xj6x9lqe29d09l.png)
+<br /></p> 
+<p>3.&nbsp;用鼠标拖动布里渊区，调整好角度后点击左边的打印机按钮，在弹出的对话框中选择“Print to”→“file”，并填写好相应的Filename（xxx.eps）后点击打印。</p> 
+<p>
+![](https://image.sciencenet.cn/home/201805/04/195053bg9qxj2xp2pzjaqk.png)
+</p> 
+<p>4.&nbsp;将生成的eps文件用AI软件打开(而非拖动到已有的AI文件中)，依次双击左边的图标和上面的字并删除。</p> 
+<p>
+![](https://image.sciencenet.cn/home/201805/04/195436l7qp1obbjb4pnbbt.png)
+<br /></p> 
+<p>5.&nbsp;由于布里渊区是矢量图，双击线可以进行编辑。然后在图片上添加必要的线，标出必要的文字和图标，再和其他图片组合在一起，保存文件并导出图片。</p> 
+<p>最后效果如图：</p> 
+<p>
+![](https://image.sciencenet.cn/home/201805/04/195855my926lo5zyb4dyza.png)
+<br /></p> 
+<p><strong>说明：</strong><br /></p> 
+<p>1.<strong>&nbsp;</strong>Xcrysden软件可能需要在Linux系统下安装；</p> 
+<p>2.&nbsp;布里渊区的位置和名称可以参考网站：<a rel="nofollow" href="http://www.cryst.ehu.es/cryst/get_kvec.html" target="_blank"  >http://www.cryst.ehu.es/cryst/get_kvec.html</a></p> 
+<p>或文章：<a rel="nofollow" href="https://www.sciencedirect.com/science/article/pii/S0927025610002697?via%3Dihub" target="_blank"  >https://www.sciencedirect.com/science/article/pii/S0927025610002697?via%3Dihub</a>&nbsp;</p> 
+<p>3.&nbsp;&nbsp;&nbsp;“Γ”等希腊字母在AI的标注：选择菜单“文字”→“字形”，点击需要输入特殊字符。</p> 
+<p>“窗口”→“文字”→“字符”，点击右边的显示选项按钮后点击下标（高版本可以直接显示下标按钮）。</p> 
+<p>http://blog.sciencenet.cn/home.php?mod=space&amp;uid=1502061&amp;do=blog&amp;id=1112345</p> 
+<p><br /></p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/1d67f72b_eec6272f/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/18/1d67f72b_eec6272f/" class="post-title-link" itemprop="url">【草单】持续更新</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-07-18 12:46:50" itemprop="dateCreated datePublished" datetime="2018-07-18T12:46:50+08:00">2018-07-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong><span style="text-decoration:underline;"  >1。科颜氏金盏花洁面</span></strong></p> 
+<p>&nbsp;&nbsp;用过试用装，感觉很适合我的皮肤状态（2018年6月左右的状态），洗完清爽不紧绷，清洁力度刚好，并且味道很好闻</p> 
+<p><strong><span style="text-decoration:underline;"  >2.&nbsp; the ordinary</span></strong></p> 
+<p>&nbsp;大概就是被种草了吧，便宜大碗~</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/18/1d67f72b_eec5ff28/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/18/1d67f72b_eec5ff28/" class="post-title-link" itemprop="url">【梦间集】活动记录</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-07-18 12:05:44" itemprop="dateCreated datePublished" datetime="2018-07-18T12:05:44+08:00">2018-07-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>卡池：沉梦觅影</p> 
+<p>六连第一次：&nbsp;
+![](https://imglf6.nosdn.127.net/img/b0hEc3QzYVFCMkJWU1k1SFRXWTVLbURYSGQvSy9MeHJoK0k4YjI5NnNEdGtkeGlUTlBxdWpBPT0.png)
+<br /></p> 
+<p>六连第二次：</p> 
+<p><br /></p> 
+<p>
+![](https://imglf3.nosdn.127.net/img/b0hEc3QzYVFCMkJWU1k1SFRXWTVLaFNmdStzN25vSm9HQnEyZUtwaXNqVFFSSkFvSENWMXhnPT0.png)
+<br /><br /></p> 
+<p>六连第三次：</p> 
+<p><br /></p> 
+<p>
+![](https://imglf5.nosdn.127.net/img/b0hEc3QzYVFCMkJWU1k1SFRXWTVLaW82T3M1VXdGQ2t2ZGlVeTNoNmlBY1lQcm9zTm5YV1NRPT0.png)
+<br /><br /></p> 
+<p>六连第四次：<br /></p> 
+<p>
+![](https://imglf4.nosdn.127.net/img/b0hEc3QzYVFCMkJWU1k1SFRXWTVLdldkSFFCKzVVV3RuWDVaeFh6QWNUVVZpMjhqTElMeVNBPT0.png)
+<br /><br /></p> 
+<p>六连第五次：</p> 
+<p>
+![](https://imglf6.nosdn.127.net/img/b0hEc3QzYVFCMkJWU1k1SFRXWTVLdEZIQmRpTzgwMmYwcDVEZlJDTVRuMHp0MXdDci9xQUtnPT0.png)
+<br /><br /></p> 
+<p>六连第六次：漏截了，三花聚顶，无事发生</p> 
+<p>单抽：
+![](https://imglf6.nosdn.127.net/img/b0hEc3QzYVFCMkJWU1k1SFRXWTVLdXhlQXZFcFM2WW1ERjNiNnRzTDFPeXFkdnAwUEFGSktRPT0.png)
+<br /></p> 
+<p>六连第七次：</p> 
+<p>
+![](https://imglf5.nosdn.127.net/img/b0hEc3QzYVFCMkJWU1k1SFRXWTVLZ3ZkbVl3YzNhRGZZZ0VWQlJuTjJTUGZkZjdLWmJEaVl3PT0.png)
+<br />虽然不是心目中的新五花，<span style="text-decoration:line-through;"  >想要卷卷，想要归一</span>，但7200金叶子+9浅思，还算不错啦，要知足~</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/12/1d67f72b_eeb915f2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/12/1d67f72b_eeb915f2/" class="post-title-link" itemprop="url">整牙日记（1）</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-07-12 08:49:27" itemprop="dateCreated datePublished" datetime="2018-07-12T08:49:27+08:00">2018-07-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><span style="text-decoration:underline;"  >基本情况：</span>&nbsp;</p> 
+<p>2005年，十一岁时做过一次正畸，拔了四颗牙</p> 
+<p>2016年，大学毕业，发现下牙不齐，去河北省人民医院咨询，确定是阻生齿的影响，暑假拔出两颗阻生齿，还缝了针，呜呜~~同时咬了牙模打算做矫正，最终没能下定决心</p> 
+<p>2017年末，在校医院洗牙之后发现，牙齿歪的更厉害了，并且露出来的牙齿特别长，担心有一天它突然掉了。</p> 
+<p>2018年5月，下定决心在校医院看了正畸科医生，除了太贵，没有其他毛病。</p> 
+<p>2018年7月，也就是昨天，在校医院验了血，今天拍片咬牙模，最终还是决定戴隐形，三万五千大洋，o(╥﹏╥)o</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/25/1d67f72b_ee9ecb91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/06/25/1d67f72b_ee9ecb91/" class="post-title-link" itemprop="url">记录一下</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-06-25 07:22:14" itemprop="dateCreated datePublished" datetime="2018-06-25T07:22:14+08:00">2018-06-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:24:36" itemprop="dateModified" datetime="2019-07-21T14:24:36+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>PRM投稿整整两个月之后，终于又回到了编辑部ORZ，APS果然比ACS慢很多啊</p> 
+<p>默默祈祷能有个好结果</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/04/1d67f72b_ee7afc90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/06/04/1d67f72b_ee7afc90/" class="post-title-link" itemprop="url">不用wannier90接口直接绘费米面的VASP后处理脚本程序</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-06-04 03:19:07" itemprop="dateCreated datePublished" datetime="2018-06-04T03:19:07+08:00">2018-06-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:21:43" itemprop="dateModified" datetime="2019-07-21T14:21:43+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a rel="nofollow" href="http://blog.sciencenet.cn/blog-1502061-1093325.html" target="_blank"  >http://blog.sciencenet.cn/blog-1502061-1093325.html </a><br /></p> 
+<p>如果想用VASP绘费米面（Fermisurface），一般都需要用<a rel="nofollow" href="http://wannier.org/" target="_blank"  >wannier90</a>软件wannier化后再计算费米面。因此需要重新编译wannier90版的VASP，而且有时wannier90插值的能带并不正确，这将带来很大的不便。如果我们能将布里渊区所有的k点都计算出来，并将本征值按照一定顺序和格式生成bxsf文件（<a rel="nofollow" href="http://www.xcrysden.org/doc/XSF.html" target="_blank"  >http://www.xcrysden.org/doc/XSF.html</a>），也可以绘制出费米面。这里编写了直接生成倒空间k点并提取VASP EIGENVAL文件计算费米面的脚本。</p> 
+<p><strong>脚本和例子：</strong>
+![](https://blog.sciencenet.cn/static/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif)
+<a rel="nofollow" href="http://blog.sciencenet.cn/home.php?mod=attachment&amp;filename=Fermi_Surface.rar&amp;id=146759" target="_blank"  >Fermi_Surface.rar</a>（点击下载）</p> 
+<p><strong>所需程序：</strong>VASP、python3、XCrySDen</p> 
+<p><strong>使用方法：</strong></p> 
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进行常规的VASP自洽计算。</p> 
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在inpu.dat中输入下面的参数：</p> 
+<p>其中，第一行的三个数值分别为a、b、c方向k点网格数目nx、ny、nz；第二行第一个数值为费米能级，后面两了0.0无意义；第三至第五行为倒空间矢量（在OUTCAR中查找，关键字“reciprocal lattice vectors”）。</p> 
+<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运行<strong>python&nbsp; Genkpoints.py </strong>（Genkpoints.py和input.dat需要在同一个文件夹）生成KPOINTS文件，生成的KPOINTS格式如下：</p> 
+<p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将生成的KPOINTS文件放在bands文件夹中进行常规能带计算。</p> 
+<p>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计算结束后，将EIGENVAL文件拷贝到当前文件夹，然后运行<strong>python&nbsp; EIG2bxsf.py </strong>（EIG2bxsf.py、input.dat和EIGENVAL需要在同一个文件夹），得到Python.bxsf文件。</p> 
+<p>6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将生成的Python.bxsf文件用XCrySDen打开，即可看到该材料的费米面，如下图所示。</p> 
+<p>
+![](https://blog.sciencenet.cn/home.php)
+<br /></p> 
+<p>图&nbsp;&nbsp; MgB2(左)和1T-TaS2(右)的费米面</p> 
+<p><strong>说</strong><strong>&nbsp;&nbsp;</strong><strong>明：</strong></p> 
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VASP最多允许输入20000个k点，如果超过这个数值，则会出现如下报错：</p> 
+<p>ERROR in RD_KPOINTS (mkpoints.F): increase NKDIMD to &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 29791</p> 
+<p>此时需要降低k点网格使(nx+1)*(ny+1)*(nz+1)&lt;20000。或者修改mkpoints.F文件夹下的NKDIMD后重新编译VASP。</p> 
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果k点太少，绘制的费米面比较粗糙，可以在XCrySDen设置费米面插值，如下图所示：</p> 
+<p>
+![](https://blog.sciencenet.cn/home.php)
+</p> 
+<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此程序没有考虑晶体的对称性，所以生成的k点较多，如果考虑对称性计算量将大大降低。如果您有编程实现思路欢迎和我联系。</p> 
+<p><br /></p> 
+<p><br /></p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/04/1d67f72b_ee7afc8a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/06/04/1d67f72b_ee7afc8a/" class="post-title-link" itemprop="url">使用MATLAB将BXSF文件转换为可以用VESTA打开的XSF文件</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-06-04 03:14:59" itemprop="dateCreated datePublished" datetime="2018-06-04T03:14:59+08:00">2018-06-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:21:53" itemprop="dateModified" datetime="2019-07-21T14:21:53+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a rel="nofollow" href="http://blog.sciencenet.cn/blog-1502061-1026133.html" target="_blank"  >http://blog.sciencenet.cn/blog-1502061-1026133.html </a><br /></p> 
+<p>第一性原理软件生成费米面（Fermi surface）标准文件是BXSF（Band-XSF）格式的，BXSF文件可以用XCrySDen软件打开。但是XCrySDen绘图不是很漂亮，而VESTA绘图要比XCrySDen美观很多。那是否可以将BXSF文件放在VESTA里绘图呢？答案是否定的。这是由于BXSF和XSF文件格式有差别导致的。</p> 
+<p>&nbsp;&nbsp; BXSF和XSF在文件格式上的差别主要有两个。第一、BXSF文件包含多条能带的数据，也就是多套网格数据，而XSF文件只有一个网格的数据。第二、BXSF和XSF的数据排列正好相反，XSF文件的数据按照“column-major (i.e. FORTRAN) order”的顺序排列网格（datagrid）数据的（如下图1），而bxsf文件的数据按照“row-major (i.e. C) order”顺序排列能带网格（bandgrid）数据的（如下图2）。具体文件格式可以参见XCrySDen网站介绍(<a rel="nofollow" href="http://www.xcrysden.org/doc/XSF.html" target="_blank"  >http://www.XCrySDen.org/doc/XSF.html</a>)。</p> 
+<p>
+![](https://image.sciencenet.cn/album/201701/07/204244kjy5nkynxxnjwg48.png)
+<br /></p> 
+<p><strong>图 1 </strong>xsf文件的数据顺序：the values inside a datagrid are specified in column-major (i.e. FORTRAN) order</p> 
+<p>
+![](https://image.sciencenet.cn/album/201701/07/204302kztzswjrtgwtgitg.png)
+</p> 
+<p><strong>图 2 &nbsp;</strong>bxsf文件的数据顺序：the values inside a bandgrid are specified in row-major (i.e. C) order.</p> 
+<p>&nbsp;&nbsp;这里提供一个MATLAB程序bxsf2xsf.m将BXSF文件按照XSF的顺序重新排列，同时将每一条能带数据分别生成一个XSF文件。</p> 
+<p><strong>所需程序：</strong>MATLAB、<a rel="nofollow" href="http://www.jp-minerals.org/vesta/en/" target="_blank"  >VESTA</a></p> 
+<p><strong>脚本和例子：</strong>
+![](https://blog.sciencenet.cn/static/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif)
+<a rel="nofollow" href="http://blog.sciencenet.cn/home.php?mod=attachment&amp;filename=bxsf2xsf.zip&amp;id=93567" target="_blank"  >bxsf2xsf.zip</a>(点击下载)</p> 
+<p><strong>使用方法：</strong></p> 
+<p>&nbsp;&nbsp;&nbsp;一般情况下，BSXF文件里的能带未必都穿过费米面，因此需要修改bxsf2xsf.m脚本里下面两个参数：</p> 
+<p>这两个参数设置穿过费米面能带的序号（BXSF出现的顺序从1开始，而非BAND后面的数字）。按F5运行bxsf2xsf.m，按照提示在弹出的“选择要打开的文件”对话框中选择要处理的BXSF文件。运行成功后就可以得到一批“BXSF文件名+.band#.xsf”的文件，其中band后面的数字对应BXSF文件里能带的序号。这个脚本已经将能量都减去了Fermi能级，因此生成的XSF文件的费米能级为0。<br /></p> 
+<p>&nbsp;对于网格较稀疏BXSF文件，用bxsf2xsf.m处理可能会导致绘制的费米面出现孔洞和毛刺的现象，可以使用bxsf2xsf_inter.m脚本处理（见附件），类似XCrySDen的Interpolation功能，这个脚本使用内插的方法得到较密的能带网格点。内插倍数就是网格增加为原来多少倍。内插倍数建议2-5倍，更高的倍数可能导致生成的XSF文件较大。</p> 
+<p><strong>绘图步骤&nbsp;</strong>（适用于VESTA version 3）</p> 
+<p>1.&nbsp;先打开一个*.band#.xsf文件，然后再载入其他的XSF文件，方法：选择菜单Edit → Edit Data → Volumetric Data…在弹出的对话框中选择Import…，选择其他的XSF文件，然后选择Multiply to current data，如图3所示，最后点击应用扭。</p> 
+<p>
+![](https://image.sciencenet.cn/album/201701/07/204411j31d17806xgxu8gs.png)
+<br /></p> 
+<p><strong>图 3 </strong>将*.band#.xsf文件导入到VESTA中</p> 
+<p>2.&nbsp;点击软件主界面左下角的Properties…按钮，在弹出的对话框中将Isosurface选项卡的Isosurface level值调为0，同时Sections选项卡里的Opacity of drawn secions的值也改为0，如图4所示。</p> 
+<p>
+![](https://image.sciencenet.cn/album/201701/07/204439gjapwpptxuguwz5l.png)
+
+<p><img src="https://image.sciencenet.cn/album/201701/07/204440gss2elrfsbl448n8.png" alt=""></p>
+</p> 
+<p><strong>图 4</strong>&nbsp;&nbsp;将Isosurface level值调为0，同时将Opacity of drawn secions的值也改为0</p> 
+<p>最终效果如下图5所示。可以将文件保存为*.vesta格式的文件方便以后查看。</p> 
+<p>
+![](https://image.sciencenet.cn/album/201701/07/204509o0m0ma0hmqa0wl0h.png)
+</p> 
+<p><strong>图 5 &nbsp;</strong>最终效果图（MgB2的Fermi surface）<br /></p> 
+<p><strong>说&nbsp;明：</strong></p> 
+<p>1.虽然用VESTA绘制的费米面比XcrySDen美观，但是也有下面几个缺点：(1)只能在倒空间原胞（而非倒空间布里渊区）内绘制；(2)费米面颜色只能统一设定，而非像XCrySDen那样可以单独设定每一个费米面的颜色。如果有网友能解决上面两个问题请@我。</p> 
+<p>2.用VESTA可以很方便地绘出沿任意切面的费米面。在Utilities菜单中选择2D Data Display…，并设置合适的切面参数就可以绘制像图6一样的效果。</p> 
+<p>3.使用Volumetric data的Surface coloring功能还可以在费米面上加上颜色，比如可以绘制轨道分辨的费米面，如图7所示。</p> 
+<p>
+![](https://image.sciencenet.cn/album/201701/07/204603bryruznffvrurwuf.png)
+</p> 
+<p><strong>图 6 &nbsp;</strong>沿着特定切面的费米面(黑鳞)<br /></p> 
+<p>
+![](https://image.sciencenet.cn/album/201701/07/204605pvg82cspb8imbqkk.png)
+</p> 
+<p><strong>图7 &nbsp;</strong>轨道分辨的MgB2费米面（B原子的px/py轨道）</p> 
+<p><br /></p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/03/1d67f72b_125f79ce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/03/1d67f72b_125f79ce/" class="post-title-link" itemprop="url">不可错过的歌声与美——花になれ</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-03-03 06:08:28" itemprop="dateCreated datePublished" datetime="2018-03-03T06:08:28+08:00">2018-03-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>特别美好的柚子以及特别美好的歌声。</p> 
+<p><br /></p> 
+<p>
+![](https://imglf6.nosdn.127.net/img/b0hEc3QzYVFCMkJRLzdJZ3ZrWXc1eFFzaWp1TmMyWEpyVm1kMmlweFBwdU1LcDU3TEx1Nk53PT0.jpg)
+<br /><br /></p> 
+<p><br /></p> 
+<p>指田郁也の「花になる」という歌、楽しみください</p> 
+<p><br /></p> 
+<p>あなたは今笑えてますか？</p> 
+<p>どんな息をしてますか？</p> 
+<p>人混みに強がりながら</p> 
+<p>「負けないように」と</p> 
+<p>歩いているんだろう</p> 
+<p><br /></p> 
+<p>足許のその花でさえ</p> 
+<p>生きることを</p> 
+<p>迷いはしない</p> 
+<p><br /></p> 
+<p>「生きてゆけ」</p> 
+<p>僕らは今&nbsp;風の中で</p> 
+<p>それぞれの空を見上げてる</p> 
+<p>ぶつかっていいんだ</p> 
+<p>泣いたっていいんだ</p> 
+<p>何処かに答えはあるから</p> 
+<p><br /></p> 
+<p>「諦めないで」</p> 
+<p>どんな明日も苦しいほど</p> 
+<p>その命は強く輝く</p> 
+<p>風に立つ一輪</p> 
+<p>僕たちも花になれる</p> 
+<p><br /></p> 
+<p>あなたは今きついていますか？</p> 
+<p>大きな力はその手にあること</p> 
+<p>勇気は今&nbsp;光になる</p> 
+<p>未完成でいい</p> 
+<p>立ち向かえる</p> 
+<p>その胸に抱いてる種は</p> 
+<p>いつかきっと</p> 
+<p>夢を咲かすよ</p> 
+<p><br /></p> 
+<p>「まけないで」</p> 
+<p>誰が今&nbsp;時の中で</p> 
+<p>それぞれの明日を探してる</p> 
+<p>傷ついていいんだ</p> 
+<p>間違っていいんだ</p> 
+<p>何度も立ち上がればいい</p> 
+<p><br /></p> 
+<p>ただひとつだけ</p> 
+<p>その未来へ&nbsp;手を伸ばして</p> 
+<p>真っすぐに咲く花のように</p> 
+<p>人は誰も強くなれる</p> 
+<p>あなたもけっとなれる</p> 
+<p><br /></p> 
+<p>答えない&nbsp;毎日に</p> 
+<p>立ち止まっても</p> 
+<p>その涙は始まりのサイン</p> 
+<p>ほら太陽が</p> 
+<p>優しい風が</p> 
+<p>僕らを見つめているから</p> 
+<p><br /></p> 
+<p>「いきてうけ」</p> 
+<p>僕らは今&nbsp;風の中で</p> 
+<p>それぞれの空を見上げてる</p> 
+<p>ぶつかっていいんだ</p> 
+<p>泣いたっていいんだ</p> 
+<p>がならす答えはあるから</p> 
+<p><br /></p> 
+<p>「諦めないで」</p> 
+<p>どんな明日も苦しいほど</p> 
+<p>その命は強く輝く</p> 
+<p>風に立つ一輪</p> 
+<p>僕たちも花になれる</p> 
+<p><br /></p> 
+<p>風に咲く一輪</p> 
+<p>僕たちも花になれる</p> 
+<p><br /></p> 
+<p>ps：&nbsp;其实我是巴黎散步道这个SP入坑的，但也很喜欢幻化成花这个表演滑曲目，尤其是12年的那几场，yuzuru富有感染力的表演和这首歌相映成辉，还让人感受到这个年龄的少年独有的令人震撼的中性之美。</p> 
+<p>pps：其实是这场表演的考斯腾太美了，以及不记得在乐乎还是知乎看到有人po根据这套考斯腾画的扇面，美哭惹，以至于忘了保存下来，现在找不到了，不知道有没有人见过啊/(ㄒoㄒ)/~~</p> 
+<p><br /></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2018/03/03/1d67f72b_125f79ce/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/14/1d67f72b_119df63f/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/11/14/1d67f72b_119df63f/" class="post-title-link" itemprop="url">最近看过还不错的电影和番剧</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-11-14 10:50:18" itemprop="dateCreated datePublished" datetime="2017-11-14T10:50:18+08:00">2017-11-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2017-11-16 01:46:56" itemprop="dateModified" datetime="2017-11-16T01:46:56+08:00">2017-11-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>看不见的客人</p> 
+<p>十二公民</p> 
+<p>惊天魔盗团</p> 
+<p>我是杀人犯</p> 
+<p>死亡笔记</p> 
+<p>白色巨塔</p> 
+<p>齐木楠雄的灾难</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="QY"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">QY</p>
+  <div class="site-description" itemprop="description">Home is behind, the world ahead</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">QY</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

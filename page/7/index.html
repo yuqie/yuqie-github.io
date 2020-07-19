@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Home is behind, the world ahead">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ringinmay&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/7/index.html">
+<meta property="og:site_name" content="Ringinmay&#39;s Blog">
+<meta property="og:description" content="Home is behind, the world ahead">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="QY">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/page/7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>Ringinmay's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ringinmay's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Home is behind, the world ahead</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/1d67f72b_f59b155/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/04/25/1d67f72b_f59b155/" class="post-title-link" itemprop="url">CCTV-6 数字电影</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-04-25 11:02:29" itemprop="dateCreated datePublished" datetime="2017-04-25T11:02:29+08:00">2017-04-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>《大国手》八集</p> 
+<p>讲得是乾隆年间范西屏和施襄夏之间的故事。</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/1d67f72b_f59b14c/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/04/25/1d67f72b_f59b14c/" class="post-title-link" itemprop="url">2017-04-25 燕园植物鉴赏</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-04-25 11:00:01" itemprop="dateCreated datePublished" datetime="2017-04-25T11:00:01+08:00">2017-04-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:26:20" itemprop="dateModified" datetime="2019-07-21T14:26:20+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今日上午参加了燕园植物鉴赏，还领到了一盆多肉植物，开心</p> 
+<p>黄刺玫</p> 
+<p>棣棠花</p> 
+<p>牡丹</p> 
+<p>芍药</p> 
+<p>杜仲</p> 
+<p>毛泡桐</p> 
+<p>悬铃木</p> 
+<p>楸树</p> 
+<p>杨白蜡</p> 
+<p>流苏树</p> 
+<p>玫瑰</p> 
+<p>连翘</p> 
+<p>侧柏</p> 
+<p>白皮松</p> 
+<p>暴马丁香</p> 
+<p>栓皮栎</p> 
+<p>水栒子</p> 
+<p>水杉</p> 
+<p>七叶树</p> 
+<p>鸢尾花</p> 
+<p>小叶女贞</p> 
+<p>元宝槭</p> 
+<p>接骨木</p> 
+<p>马莲花</p> 
+<p>虞美人</p> 
+<p>国槐与洋槐</p> 
+<p>构树与桑树</p> 
+<p>金银花和金银木</p> 
+<p>香椿和臭椿</p> 
+<p>爬山虎是葡萄科</p> 
+<p>app：形色&nbsp;&nbsp;花伴侣</p> 
+<p>网站：燕园草木：http://yanyuanplants.pku.edu.cn/</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/31/1d67f72b_ef1e1e4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/03/31/1d67f72b_ef1e1e4/" class="post-title-link" itemprop="url">Possible reasons for why there is instability in p</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-03-31 01:48:30" itemprop="dateCreated datePublished" datetime="2017-03-31T01:48:30+08:00">2017-03-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:22:11" itemprop="dateModified" datetime="2019-07-21T14:22:11+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Possible reasons for why there is instability in phonon dispersion can be categorized into two groups:<br /></p> 
+<p>&nbsp;<strong>Group 1: It is an artifact due to technical details such as:</strong></p> 
+<p>&nbsp;(a) small supercell size.</p> 
+<p>&nbsp;(b) stopping criterion for ionic relaxation is not tight enough (EDIFFG&nbsp;~&nbsp;-0.001 recommended).&nbsp;</p> 
+<p>(c) forces are not accurate and EDIFF needs to be tightened (EDIFF&nbsp;~ 1E-8 ,&nbsp; ADDGRID=.TRUE.,&nbsp; and LREAL =. FALSE.&nbsp; are recommended).</p> 
+<p>&nbsp;(d) The DFT functional &quot;loosens&quot; the lattice a bit. This is typical for GGA family.</p> 
+<p>&nbsp;(e) many other things one can think of ...&nbsp;</p> 
+<p><strong> Group 2: Physical </strong></p> 
+<p>(a) The crystal is unstable at 0 K and the imaginary frequency indicates a phase transition and the stability of another phase. A classic example is cubic ZrO2.</p> 
+<p>&nbsp;(b) The crystal is&nbsp; stable at 0K but is highly anharmonic and a harmonic treatment will artificially show imaginary frequency.&nbsp;</p> 
+<p>(c) Other suggestions from phonon experts ...?&nbsp;</p> 
+<p> Regarding why one needs supercell with DFPT, it is a VASP implementation issue. VASP performs DFPT at Gamma point only.&nbsp; Other codes (such as PWSCF, Abinit, ELk,..) have complete implementation for DFPT. Still VASP implementation is very useful because Born effective charges and the dielectric constant are evaluated based on Gamma point properties.&nbsp;&nbsp;</p> 
+<p>Mostafa MIT</p> 
+<p> ________________________________</p> 
+<p> Negative frequency in phonon dispersion<br /></p> 
+<p> Hello, I am trying to calculate the phonon dispersion for UO2F2, which has a five atom rhombohedral primitive cell (space group R-3m,&nbsp;#166). I am using a 2x2x2 supercell (40 atoms) and 8x8x8 kpoint grid to calculate the phonons using DFPT with Phonopy and VASP. The phonon frequencies at the gamma point are what I would expect, but one of the acoustic bands goes negative at other kpoints. I have attached a pdf showing this. Does anyone have any idea why this is happening?&nbsp; I would not expect any instabilities.&nbsp;&nbsp;</p> 
+<p>I believe that the primitive cell is adequately relaxed, and I do not see any negative frequencies at the gamma point. Are there other reasons why a band would be negative at certain kpoints?&nbsp;</p> 
+<p>Also, can anyone explain why a supercell is needed for DFPT calculations? I understand why one would need to use a supercell with the finite displacement method, but I am somewhat confused why it is necessary for DFPT.&nbsp;&nbsp;</p> 
+<p>Thank you in advance,<br /></p> 
+<p><br /></p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/21/1d67f72b_ec668c9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/03/21/1d67f72b_ec668c9/" class="post-title-link" itemprop="url">最近IE莫名奇妙不能联网</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-03-21 06:46:48" itemprop="dateCreated datePublished" datetime="2017-03-21T06:46:48+08:00">2017-03-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:26:11" itemprop="dateModified" datetime="2019-07-21T14:26:11+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近IE莫名奇妙不能联网，同时导致不能远程连接，</p> 
+<p>今天才发现是蓝灯的锅。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2017/03/21/1d67f72b_ec668c9/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/11/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/03/11/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-03-11 23:54:11" itemprop="dateCreated datePublished" datetime="2017-03-11T23:54:11+08:00">2017-03-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-19 02:58:57" itemprop="dateModified" datetime="2020-07-19T02:58:57+08:00">2020-07-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2017/03/11/hello-world/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/29/1d67f72b_d12ec34/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/11/29/1d67f72b_d12ec34/" class="post-title-link" itemprop="url">北大周记——week12</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-11-29 14:44:13" itemprop="dateCreated datePublished" datetime="2016-11-29T14:44:13+08:00">2016-11-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:26:36" itemprop="dateModified" datetime="2019-07-21T14:26:36+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>真是过得好快</p> 
+<p><strong>DAY1</strong></p> 
+<p>周一专门定了个闹钟，去看牙，上次拔牙的时候，医生说我有5颗牙齿要补。。。今天补了两颗，250+，感觉补完又要倾家荡产了。</p> 
+<p>收到了大红枣，分了实验室和宿舍。</p> 
+<p>侯博7点多就在QQ上问我在不在，说他要饿死了。我就纳闷了，他已经实习了，怎么还这样。</p> 
+<p>
+![](https://imglf.nosdn.127.net/img/b0hEc3QzYVFCMkNtR1lvdVNrdThvNXBETGFRVm5PTHY4eE5tZmptZ0lER3ZPMVFnczVuRzF3PT0.png)
+<br /><br /></p> 
+<p>下午看到了号称工院之神的吕帆的导师（我已经忘记叫什么了，鲸鱼一样的记忆力），总之很年轻，很厉害。</p> 
+<p>晚上日语课之后被男生搭讪，加了微信，聊天的时候男生表示，我们政治课也一起上，看到我好几次了，我以为他要表白，并没有，怂。。。下面就是值得吐槽的地方了，你说我陪他好好聊了一会儿，晚上十点多了，说我要去拾掇拾掇，有空再聊。。他的回复真的让我跪了。。。</p> 
+<p>
+![](https://imglf0.nosdn.127.net/img/b0hEc3QzYVFCMkNtR1lvdVNrdThvMHUvYVhjdkQvM2w1dk5FRzBYRFJ5UEgwYk92Z2ducGtBPT0.png)
+<br /><br /></p> 
+<p>晚上是露露的阴历生日，吃了小蛋糕，喝了饮料，(*^__^*)&nbsp;嘻嘻……</p> 
+<p>不过晚上作死，凌晨四点多才睡。。。。。</p> 
+<p><strong>DAY2</strong></p> 
+<p>作死的后果就是早起失败，睡懒觉失败，到实验室9点多一点。。。。困哪，十点去上课了，好消息就是先进材料化学报告从下周开始，耶！</p> 
+<p>中午，竟然没睡着，可能是有点冷。。。</p> 
+<p>下午表面物理，终于又轮到江颖老师上课了，前半截还好，后半截又撑不住了。</p> 
+<p>晚上DFT课上比较有意思，电脑借给老师在上面操作，搞笑点有三：1，MS总是出现灾难性故障。2，老师问我是不是固态硬盘，我说不是，老师说现在比较流行固态硬盘，快（我也知道啊，这不是没钱换吗）3.差一点就要没电了，最多被操作35分钟。。。电脑真的不行了。</p> 
+<p>好事：1 解决了困惑我已久的远程登陆的时候，虚拟机上键盘错乱（Fn+F8开启小键盘，你值得拥有⊙﹏⊙）</p> 
+<p>2&nbsp;虚拟机怎么也上不去了，百度解决，耶！</p> 
+<p>3&nbsp;不知道今晚能不能解决我开机界面的问题</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/29/1d67f72b_d12ebfa/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/11/29/1d67f72b_d12ebfa/" class="post-title-link" itemprop="url">北大周记——week 11</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-11-29 14:26:04" itemprop="dateCreated datePublished" datetime="2016-11-29T14:26:04+08:00">2016-11-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:26:43" itemprop="dateModified" datetime="2019-07-21T14:26:43+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今天已经是week 12的第二天了，拖了这么久才来写周记，⊙﹏⊙b汗，努力回忆吧</p> 
+<p>week 10的周日，和小明师兄，存之师兄一起吃吃吃了。老蜀人，从办公室出来，下了毛毛细雨，没带伞，刚好碰到了艳娟。</p> 
+<p>周一，材料科学基础课上夏威学长代替邹如强老师来讲了报告。好吧他已经毕业了，现在华为研究院，做能源和电池。和李亚伟师兄认识。晚上日语课吃了八桥（其实记不清是周一还是周四了）</p> 
+<p>周二上午翘掉了先进材料化学，麻蛋，竟然是实验，忘了</p> 
+<p>周三晚上奇异博士加场了，紫薇问我要不要去看，然而我拒绝了，sad，因为听说老板这周要回来，然而我是想去健身的。健身回来碰到了小明师兄，回到办公室，总觉得哪里不对劲，咦原来是屋子变干净了，我不在的时候老板打电话说周四要回来，所以打扫了卫生。</p> 
+<p>周四，早起在办公室刷脸，失败，老板下午的飞机，然而晚上也没来</p> 
+<p>周五，上午有课的我还是去实验室先刷了个脸，又失败了，滚去上课。下午还干了一会就业部的活，发bbs。晚上又是组会，感觉自己没干啥。。。。不过王老师没来，开心。露露晚上不在</p> 
+<p>周六，懒得我没去健身房，露露晚上不在。</p> 
+<p>周日，今日好多人去了工院百家行——太库VR&amp;AR，我没去，稍微有点遗憾吧。中午又和小明和存之师兄出去吃了。。。味千拉面。。。一起逛了超市。。然后拜托他俩帮我把东西拿回去，我去逛街了。。。晚上在巴黎贝甜吃的，花了我25QAQ（本来一会支付宝下单减五元的，而且我以为酸奶6元，尼玛竟然是16.。。而且店内没有减的标志，不是不参与支付宝活动，）本来晚上回来要去健身房的，懒了，没动。露露晚上没在，不过我睡得早。</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/13/1d67f72b_ce86f9d/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/11/13/1d67f72b_ce86f9d/" class="post-title-link" itemprop="url">电影，音乐，剧的总结</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-11-13 03:12:30" itemprop="dateCreated datePublished" datetime="2016-11-13T03:12:30+08:00">2016-11-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:26:56" itemprop="dateModified" datetime="2019-07-21T14:26:56+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1.&nbsp;对鹿晗有蜜汁好感，好想看择天记，可惜太长且还没完结。</p> 
+<p>2.&nbsp;你的名字　君の名は</p> 
+<p>&nbsp;&nbsp;&nbsp;夏日大作战 summer wars &nbsp;サマーワ&nbsp;打不出来了</p> 
+<p>&nbsp;&nbsp;&nbsp;想看sing street和begin again 一个导演，主要是想听歌</p> 
+<p>&nbsp;&nbsp;&nbsp;马上要去看但丁密码。</p> 
+<p>3.&nbsp;家政妇三田</p> 
+<p>&nbsp;&nbsp;&nbsp;家族的形式</p> 
+<p>&nbsp;&nbsp;&nbsp;冬季恋歌</p> 
+<p>&nbsp;&nbsp;世界奇妙物语</p> 
+<p>4. humbert humbert的歌都好好听</p> 
+<p>&nbsp;&nbsp;&nbsp;赤西仁akanishi jin：</p> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let me talk to you</p> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lionheart</p> 
+<p>&nbsp;&nbsp;&nbsp;家政妇三田的片尾曲</p> 
+<p><br /></p> 
+<p><br /></p> 
+<p><br /></p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/13/1d67f72b_ce86f7f/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/11/13/1d67f72b_ce86f7f/" class="post-title-link" itemprop="url">北大周记week9</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-11-13 03:03:06" itemprop="dateCreated datePublished" datetime="2016-11-13T03:03:06+08:00">2016-11-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:27:03" itemprop="dateModified" datetime="2019-07-21T14:27:03+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong><span style="text-decoration:underline;"  >DAY1</span></strong></p> 
+<p>这周过得特别快，上周智齿顶到了腮帮子，导致腮帮子溃疡，吃东西都不香了，决定周一走上去校医院，但是我又不想定闹铃早起，晚上睡的时候就决定听天由命。可能上苍听到了我内心的祈求，第二天7点多疼醒了。。。好，那我就去校医院。可能是因为比较早，没有预约的我没有排队就看上了牙医，医生一看，拔了吧（宝宝还没有做好拔牙的准备啊，哭），鉴于暑假拔牙的痛苦，我始终有点紧张，医生一直和我说话，不到5分钟，拔完了，咦，很快嘛！不过我那颗智齿宝宝长得还是很正的。</p> 
+<p>下午就去打羽毛球了，收到了各位师兄的指导。</p> 
+<p>吃了好几天红薯</p> 
+<p><strong><span style="text-decoration:underline;"  >DAY2</span></strong></p> 
+<p>周二没什么特别的？有！上周二落在教室的伞还在原位！开心。今天去上课了，点名了，开心！不过感觉今天艳娟有点怪，说不上来，难道是我做了什么坏事而不自知？（前一天晚上，告诉舍友她也在上超分子，可以问她呀）</p> 
+<p>有！周二我们组完成了TERS的报告，被老师问惨了ORZ。刘畅竟然是我们上一组的组长。感觉今天晚上落在DFT课上的本子应该也会在吧。</p> 
+<p><strong><span style="text-decoration:underline;"  >DAY3</span></strong><br /></p> 
+<p>周三，神奇的事情发生了，能源材料课上，曹老师问化院是不是有诺奖的讲座啊，你们是不是想去看啊，结果老师带领我们到了化院讲座（吐槽一下，化院的门，进出都要刷卡）</p> 
+<p>
+![](https://imglf0.nosdn.127.net/img/b0hEc3QzYVFCMkRicXhNWDJEV2JTWkxnRWdZZWNTUFJEOVl6SWZOc2dpVVA0YkFVSFlaaFF3PT0.jpg)
+<br />
+![](https://imglf2.nosdn.127.net/img/b0hEc3QzYVFCMkRicXhNWDJEV2JTUzhkbmlHZlorZDR1SHFRZE9TRkV3SHdhZmF4dXhpcmp3PT0.jpg)
+<br />没好意思去要合影，也没敢提问，不过宝宝基本上没听懂⊙﹏⊙b</p> 
+<p>晚上去记了党员关系回执单，宝宝22块钱就这么没有了，就寄了一张纸。。。</p> 
+<p>忘了去拿本子。</p> 
+<p><strong><span style="text-decoration:underline;"  >DAY4</span></strong><br /></p> 
+<p>周四决定了下一次先进材料化学的课题</p> 
+<p>
+![](https://imglf1.nosdn.127.net/img/b0hEc3QzYVFCMkRicXhNWDJEV2JTWkl6K0dRZGY3QUE4aGVkNEt2alVkcXJXN2FjWVdpdERRPT0.jpg)
+<br />黑磷</p> 
+<p>周四，大约就是叶小文老师讲的中国文化崛起比较有意思了吧，就是太污了，出口就是段子ORZ，</p> 
+<p>
+![](https://imglf.nosdn.127.net/img/b0hEc3QzYVFCMkRicXhNWDJEV2JTZUFaWFFMUkF0Y2ZjZ2M4ZmZ3UHdZZE9lalZvbXpXeVlnPT0.jpg)
+<br />照片拍糊了ORZ</p> 
+<p>
+![](https://imglf1.nosdn.127.net/img/b0hEc3QzYVFCMkRicXhNWDJEV2JTVUZZY2NHaHFSV3o4Y1BXK0dsbWRtVkV3UHd2N3FQa2dBPT0.jpg)
+<br />神言论</p> 
+<p>晚上补了好久英语作业——hometown tour</p> 
+<p>晚上的日语课，老师问我们明天是什么日子，独身日，不对，拉面日，不对，竟然是百奇日，给日本人跪了，老师还给我们带了百奇，感动ing
+![](https://imglf.nosdn.127.net/img/b0hEc3QzYVFCMkRicXhNWDJEV2JTVkYvR1JBWUw5WGVUaEd1Vi9kRy9FYWw4LzBnR3BJR1BRPT0.jpg)
+<br /></p> 
+<p>
+![](https://imglf2.nosdn.127.net/img/b0hEc3QzYVFCMkRicXhNWDJEV2JTUVBPM3RpZ3dITktWcGxHbzkzMUN1SmZsa29udjlUWFh3PT0.jpg)
+</p> 
+<p>英明神武的老师，和百奇。<br /><br /></p> 
+<p>晚上备战双十一，入了一些平价彩妆，还有书包（逢双十一必买书包啊），不过结账的时候天猫崩了，后来重新结账的时候忘了用优惠券，哭!最想买的裙子没有下单，不过衣服这种东西还是要试得嘛！</p> 
+<p>这天晚上竟然还记得打卡（开心词场）</p> 
+<p><strong><span style="text-decoration:underline;"  >DAY5</span></strong><br /></p> 
+<p>周五，英语课决定了，每个人要讲的那一段，╮(╯▽╰)╭下周要背英语段子了。菜名好奇怪，stewed pork ball in brown source，raised shredded chicken and ham and stried tofu，扬州炒饭就比较正常了yangzhou fired rice
+![](https://imglf.nosdn.127.net/img/b0hEc3QzYVFCMkRicXhNWDJEV2JTWGw1OE9SMFZHT2JESGFycGJ1QzFBQmk0SG5PZkNEWnFnPT0.jpg)
+<br /></p> 
+<p><br /></p> 
+<p>下课去DFT课堂上，发现本子不见了，不开心。</p> 
+<p>中午去招聘会领了一张餐券，本来要去帮忙的，谁知道中午没什么人。</p> 
+<p>下午参加了消防演练。回来睡了一觉，做组会ppt，第一次讲组会哎，但是还是没有写稿子。</p> 
+<p>晚上，王老师给发了移动硬盘，当年想买却嫌贵的WD passport。但是组会的时候被批惨了，一会说吸附位点确定的时候不要找这么多，一会儿优化的时候要开ISIF=3吗？最后让我和孙老师讨论一下，感觉老板娘不喜欢做电池的呀。自己和周文洋也就半斤八两了。哭泣！今天好多没讲的，结束的比较早。</p> 
+<p>大家决定去吃宵夜，刘杰师兄带领大家玩了一个恐怖的游戏⊙﹏⊙，然后结账的时候佳兵师兄说他请，但是很不好意思呀，也不知道别人给了么，好想AA啊。</p> 
+<p>结束回来都要12点半了，舍友还给我留了灯，感动。回来不忘学习，给老板发了ppt，不过没有老板娘的邮箱，就没抄送给她，不会看我越来越不顺眼了吧，害怕！</p> 
+<p>不过今晚忘了背单词。</p> 
+<p><strong><span style="text-decoration:underline;"  >DAY6</span></strong><br /></p> 
+<p>老板的回复竟然是：Thanks and keep doing！根本就没看我邮件好嘛！邮件里好多问题和计划。</p> 
+<p>早晨吃了丹妮舍友煮的粥！</p> 
+<p>竟然看了一天的日语，好久没有好好复习了，这样下去害怕考试会跪呀！顺便把材料科学基础的作业写了，(*^__^*)，还看了一集家政妇三田。&nbsp;</p> 
+<p>下午给广哥打电话，他竟然没有存我的信号码，生气!还想让我介绍女朋友，哼~！</p> 
+<p>晶姐的明信片还没到，着急。</p> 
+<p>约到了紫薇下周三去看《但丁密码》，本来是要约红叶的，可是她考试太多了，sad（好吧，本来是买了和侯博一起看的，可是他要工作了）</p> 
+<p>晚上借了汉蓉计算器，她也要考试了（大家考试好多呀），不过妹子住在626，这次我记住了。</p> 
+<p>感觉海狸先生的微信号真难用，刷不出来，拜托丹妮了，不过六楼1号有人洗完没拿出来，也没有盆子在哪里，我们就去了5楼。</p> 
+<p>回来后一直在八卦，不过洗衣服的时间怎么这么久？神马，故障，急急忙忙下去看衣服，感觉是洗好的，不管了。</p> 
+<p>今晚又忘了背单词。</p> 
+<p><strong><span style="text-decoration:underline;"  > DAY7</span></strong><br /></p> 
+<p>今早起来写周记，本来打算周六写的，不过没关系啦！<strong><span style="text-decoration:underline;"  ><br /></span></strong></p> 
+<p>今天还是要好好干一会儿活的，看个文献，写个作业！或许又该去超市抗牛奶了，就这样吧。</p> 
+<p>舍友又在煮粥了。</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/25/1d67f72b_cbb7fae/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/10/25/1d67f72b_cbb7fae/" class="post-title-link" itemprop="url">VASP学习笔记--第一篇</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-10-25 15:37:21" itemprop="dateCreated datePublished" datetime="2016-10-25T15:37:21+08:00">2016-10-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 14:27:26" itemprop="dateModified" datetime="2019-07-21T14:27:26+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>IBRION：</strong>离子如何移动</p> 
+<p>0：分子动力学中使用</p> 
+<p>1：准牛顿算法-use force and stress tensor to search，total energy is not taken into account. Fast and efficient.</p> 
+<p>2 :&nbsp;共轭梯度算法，比较慢，robust</p> 
+<p>结构优化时可先使用2，收敛后提高精度，使用1</p> 
+<p><strong>POTIM：</strong>&nbsp;结构弛豫时：a scaling constant for the force</p> 
+<p>**</p> 
+<p><strong>ISIF：</strong></p> 
+<p><strong>ISYM：</strong></p> 
+<p>-1 or 0：关掉对称性</p> 
+<p>1： USPP时的默认值</p> 
+<p>2：PAW时的默认值</p> 
+<p>3：force和stress tensor 对称，charge density不对称</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="QY"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">QY</p>
+  <div class="site-description" itemprop="description">Home is behind, the world ahead</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">QY</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

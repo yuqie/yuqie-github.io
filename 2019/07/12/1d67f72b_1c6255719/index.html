@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="转载：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;ShaunChen&#x2F;p&#x2F;6205330.html  其他参考：https:&#x2F;&#x2F;www.runoob.com&#x2F;python&#x2F;att-list-sort.html  https:&#x2F;&#x2F;www.runoob.com&#x2F;python3&#x2F;python3-func-sorted.html  https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python List sort() and sorted()">
+<meta property="og:url" content="http://yoursite.com/2019/07/12/1d67f72b_1c6255719/index.html">
+<meta property="og:site_name" content="Ringinmay&#39;s Blog">
+<meta property="og:description" content="转载：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;ShaunChen&#x2F;p&#x2F;6205330.html  其他参考：https:&#x2F;&#x2F;www.runoob.com&#x2F;python&#x2F;att-list-sort.html  https:&#x2F;&#x2F;www.runoob.com&#x2F;python3&#x2F;python3-func-sorted.html  https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;f">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-07-11T20:46:46.000Z">
+<meta property="article:modified_time" content="2019-07-20T23:00:33.000Z">
+<meta property="article:author" content="QY">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2019/07/12/1d67f72b_1c6255719/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>python List sort() and sorted() | Ringinmay's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ringinmay's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Home is behind, the world ahead</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/12/1d67f72b_1c6255719/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python List sort() and sorted()
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-07-12 04:46:46" itemprop="dateCreated datePublished" datetime="2019-07-12T04:46:46+08:00">2019-07-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-21 07:00:33" itemprop="dateModified" datetime="2019-07-21T07:00:33+08:00">2019-07-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>转载：<a rel="nofollow" href="https://www.cnblogs.com/ShaunChen/p/6205330.html" target="_blank"  >https://www.cnblogs.com/ShaunChen/p/6205330.html</a></p> 
+<p>其他参考：<a rel="nofollow" href="https://www.runoob.com/python/att-list-sort.html" target="_blank"  >https://www.runoob.com/python/att-list-sort.html</a></p> 
+<p><a rel="nofollow" href="https://www.runoob.com/python3/python3-func-sorted.html" target="_blank"  >https://www.runoob.com/python3/python3-func-sorted.html</a><br /></p> 
+<p><a rel="nofollow" href="https://docs.python.org/3/library/functions.html#sorted" target="_blank"  >https://docs.python.org/3/library/functions.html#sorted</a><br /></p> 
+<p><a rel="nofollow" href="https://docs.python.org/3/library/stdtypes.html?highlight=sort#list.sort" target="_blank"  >https://docs.python.org/3/library/stdtypes.html?highlight=sort#list.sort</a><br /></p> 
+<p><strong><span style="text-decoration:underline;"  >1.&nbsp;内建方法sort()</span></strong></p> 
+<p>可以直接对列表进行排序</p> 
+<p>用法：</p> 
+<p>list.sort(func=None, key=None, reverse=False(or True))</p> 
+<p>对于reverse这个bool类型参数，当reverse=False时：为正向排序；当reverse=True时：为方向排序。默认为False。</p> 
+<p><span style="text-decoration:underline;"  >执行完后会改变原来的list</span>，如果你不需要原来的list，这种效率稍微高点</p> 
+<p>为了避免混乱，其会返回none</p> 
+<p>2.&nbsp;<strong>内建函数sorted()</strong></p> 
+<p>这个和第一种的差别之处在于：</p> 
+<p>sorted()不会改变原来的list，而是会返回一个新的已经排序好的list</p> 
+<p>list.sort()方法仅仅被list所定义，sorted()可用于任何一个可迭代对象</p> 
+<p>用法：</p> 
+<p>sorted(list)</p> 
+<p>该函数也含有reverse这个bool类型的参数，当reverse=False时：为正向排序(从小到大)；当reverse=True时：为反向排序(从大到小)。当然默认为False。</p> 
+<p><span style="text-decoration:underline;"  >执行完后会有返回一个新排序好的list</span></p> 
+<p><span style="text-decoration:underline;"  ><br /></span></p> 
+<p><span style="text-decoration:underline;"  ><strong>扩展用法：</strong><strong>1.Key Function：</strong></span></p> 
+<p>从Python2.4开始，list.sort()&nbsp;和 sorted()&nbsp;都增加了一个‘key’参数用来在进行比较之前指定每个列表元素上要调用的函数。</p> 
+<p><span style="text-decoration:underline;"  >key应该是一个函数</span>，其接收一个参数，并且返回一个用于排序依据的key。其执行效率很高，因为对于输入记录key function能够准确的被调用。</p> 
+<p>&nbsp;<strong>对于复杂的对象，使用对象的下标作为key。</strong></p> 
+<p><strong>例如：</strong></p> 
+<p>&gt;&gt;&gt; student_tuples =&nbsp;[</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;('john',&nbsp;'A', 15),</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;('jane',&nbsp;'B', 12),</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;('dave',&nbsp;'B', 10),</p> 
+<p>...&nbsp;]</p> 
+<p>&gt;&gt;&gt; sorted(student_tuples,<span style="text-decoration:underline;"  > key=lambda student: student[2]</span>)&nbsp;&nbsp;&nbsp;# sort by age</p> 
+<p>[('dave',&nbsp;'B', 10),&nbsp;('jane',&nbsp;'B', 12),&nbsp;('john',&nbsp;'A', 15)]</p> 
+<p><strong>使用对象的属性进行操作：</strong></p> 
+<p><strong>例如：</strong></p> 
+<p>&gt;&gt;&gt; class Student:</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp; def __init__(self, name, grade, age):</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.name = name</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.grade = grade</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.age = age</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp; def __repr__(self):</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return repr((self.name, self.grade, self.age))</p> 
+<p>&gt;&gt;&gt;</p> 
+<p>&gt;&gt;&gt; student_objects =&nbsp;[</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp; Student('john',&nbsp;'A', 15),</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp; Student('jane',&nbsp;'B', 12),</p> 
+<p>...&nbsp;&nbsp;&nbsp;&nbsp; Student('dave',&nbsp;'B', 10),</p> 
+<p>...&nbsp;]</p> 
+<p>&gt;&gt;&gt; sorted(student_objects, key=lambda student: student.age)&nbsp;&nbsp;&nbsp;# sort by age</p> 
+<p>[('dave',&nbsp;'B', 10),&nbsp;('jane',&nbsp;'B', 12),&nbsp;('john',&nbsp;'A', 15)]</p> 
+<p><br /></p> 
+<p><strong>列表里面每一个元素不止一个元素</strong>（比如：列表里面，元素为元祖类型），除了想对第一个关键字排序之外，还想在第一次的基础上面根据第二个关键字进行排序，正好是用到的这种方法：</p> 
+<p>简化出一个例子：</p> 
+<p>先排序列表list中元素的第一个关键字，然后在第一个元素的基础上排序按第二个关键字进行排序，看结果：</p> 
+<p>&gt;&gt;&gt; list =&nbsp;[('d',3),('a',5),('d',1),('c',2),('d',2)]</p> 
+<p>&gt;&gt;&gt; print sorted(list, key = lambda x:(x[0],x[1]))</p> 
+<p>[('a', 5),&nbsp;('c', 2),&nbsp;('d', 1),&nbsp;('d', 2),&nbsp;('d', 3)]</p> 
+<p><span style="text-decoration:underline;"  ><br /></span></p> 
+<p><strong>2.Operator Module Functions</strong></p> 
+<p>这个操作模块有：</p> 
+<ul> 
+ <li><p>operator.itemgetter()&nbsp;&nbsp;&nbsp;-----&nbsp;通过下标</p></li> 
+ <li><p>operator.attrgetter()&nbsp;&nbsp;&nbsp;-----&nbsp;通过参数</p></li> 
+ <li><p>operator.methodcaller()&nbsp;-----python 2.5 被引入，下文详细介绍</p></li> 
+</ul> 
+<p>使用这几个函数，对于上面 Key Function 的例子处理起来将会更加的简便和快速</p> 
+<p>先一块介绍 operator.itemgetter()&nbsp;和 operator.attrgetter()&nbsp;这俩个，会更加容易理解：&nbsp;</p> 
+<p>例如：</p> 
+<p>&gt;&gt;&gt; from operator import itemgetter, attrgetter</p> 
+<p>&gt;&gt;&gt;</p> 
+<p>&gt;&gt;&gt; sorted(student_tuples, key=itemgetter(2))</p> 
+<p>[('dave',&nbsp;'B', 10),&nbsp;('jane',&nbsp;'B', 12),&nbsp;('john',&nbsp;'A', 15)]</p> 
+<p>&gt;&gt;&gt;</p> 
+<p>&gt;&gt;&gt; sorted(student_objects, key=attrgetter('age'))</p> 
+<p>[('dave',&nbsp;'B', 10),&nbsp;('jane',&nbsp;'B', 12),&nbsp;('john',&nbsp;'A', 15)]</p> 
+<p>这个操作模块也允许多层次的进行排序，例如可以先排序&nbsp;“成绩grand”&nbsp;再排序&nbsp;“年龄age”</p> 
+<p>例如：</p> 
+<p>&gt;&gt;&gt; sorted(student_tuples, key=itemgetter(1,2))</p> 
+<p>[('john',&nbsp;'A', 15),&nbsp;('dave',&nbsp;'B', 10),&nbsp;('jane',&nbsp;'B', 12)]</p> 
+<p>&gt;&gt;&gt;&nbsp;</p> 
+<p>&gt;&gt;&gt; sorted(student_objects, key=attrgetter('grade',&nbsp;'age'))</p> 
+<p>[('john',&nbsp;'A', 15),&nbsp;('dave',&nbsp;'B', 10),&nbsp;('jane',&nbsp;'B', 12)]</p> 
+<p><br /></p> 
+<p>现在回过头来发现，上面在前几天遇到的问题，可以用这个operator.itemgetter进行解决：</p> 
+<p>&gt;&gt;&gt; list =&nbsp;[('d',3),('a',5),('d',1),('c',2),('d',2)]</p> 
+<p>&gt;&gt;&gt; from operator import itemgetter</p> 
+<p>&gt;&gt;&gt; sorted(list, key=itemgetter(0,1))</p> 
+<p>[('a', 5),&nbsp;('c', 2),&nbsp;('d', 1),&nbsp;('d', 2),&nbsp;('d', 3)]</p> 
+<p>但是还是推荐 1.key function 中的方法，因为为了这一个排序而引入一个库文件，相对来说得不偿失。</p> 
+<p><strong>下面介绍operator.methodcaller()&nbsp;函数：</strong></p> 
+<p>这个函数是对某个对象的使用固定参数进行排序，例如：str.count()&nbsp;函数可以计算每个字符串对象中含有某个参数的个数，那运用这个函数我就可以通过 str.count()&nbsp;计算出某个字符的个数从而来确定排序的优先级：</p> 
+<p>&gt;&gt;&gt; from operator import methodcaller</p> 
+<p>&gt;&gt;&gt; messages =&nbsp;['critical!!!',&nbsp;'hurry!',&nbsp;'standby',&nbsp;'immediate!!']</p> 
+<p>&gt;&gt;&gt; sorted(messages, key=methodcaller('count',&nbsp;'!'))</p> 
+<p>['standby',&nbsp;'hurry!',&nbsp;'immediate!!',&nbsp;'critical!!!']</p> 
+<p><br /></p> 
+<p><strong>3.注意事项：排序的稳定性：</strong></p> 
+<p>从python2.2版本开始，排序是<span style="text-decoration:underline;"  >保障稳定性</span>的，意思就是说，当复杂的排序中，对象有相同的key的时候，会保持原有的顺序不变：</p> 
+<p>例如：</p> 
+<p>&gt;&gt;&gt; data =&nbsp;[('red', 1),&nbsp;('blue', 1),&nbsp;('red', 2),&nbsp;('blue', 2)]&gt;&gt;&gt; sorted(data, key=itemgetter(0))[('blue', 1),&nbsp;('blue', 2),&nbsp;('red', 1),&nbsp;('red', 2)]</p> 
+<p>可以看到，('blue',1)&nbsp;和&nbsp;(‘blue’,2)&nbsp;的顺序还是维持原来那样不改变。</p> 
+<p>&nbsp;<strong>复杂排序：</strong></p> 
+<p>这个排序的属性可以让你在一系列的步骤中构建复杂的排序操作。例如上面的例子，排序中，我想先通过&nbsp;“成绩grand”&nbsp;进行降序操作，然后再通过“年龄age”&nbsp;进行升序操作，首先先通过&nbsp;“年龄age”&nbsp;排序，然后再通过&nbsp;“成绩grand”&nbsp;排序：</p> 
+<p>&gt;&gt;&gt; s = sorted(student_objects, key=attrgetter('age'))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# sort on secondary key </p> 
+<p>&gt;&gt;&gt; sorted(s, key=attrgetter('grade'), reverse=True)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# now sort on primary key, descending </p> 
+<p>[('dave',&nbsp;'B', 10),&nbsp;('jane',&nbsp;'B', 12),&nbsp;('john',&nbsp;'A', 15)]</p> 
+<p><strong>4.新增的问题：</strong></p> 
+<p>今天遇到了这么一个问题，就是遇到一个字符串的处理问题，<strong><span style="text-decoration:underline;"  >比如说 f10 得排在 f2 的后面。找到了这么一种方法，供参考：</span></strong></p> 
+<p>#encoding=utf-8&nbsp;</p> 
+<p>print&nbsp;'中国'&nbsp;</p> 
+<p>#根据字符串中的数字排序，如f10应该在f2后面&nbsp;</p> 
+<p>import re </p> 
+<p>&nbsp;&nbsp;&nbsp;</p> 
+<p>re_digits&nbsp;= re.compile(r'(\d+)')&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp;</p> 
+<p>def emb_numbers(s):&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp; pieces=re_digits.split(s)&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp; pieces[1::2]=map(int,pieces[1::2])&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp; return pieces </p> 
+<p>&nbsp;&nbsp;&nbsp;</p> 
+<p>def sort_strings_with_emb_numbers(alist):&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp; aux =&nbsp;[(emb_numbers(s),s) for s in alist]&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp; aux.sort()&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp; return [s for __,s in aux]&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp;</p> 
+<p>def sort_strings_with_emb_numbers2(alist):&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp; return sorted(alist, key=emb_numbers)&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp;</p> 
+<p>filelist='file10.txt file2.txt file1.txt'.split()&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp;</p> 
+<p>print filelist </p> 
+<p>&nbsp;&nbsp;&nbsp;</p> 
+<p>print&nbsp;'--DSU排序'&nbsp;</p> 
+<p>print sort_strings_with_emb_numbers(filelist)&nbsp;</p> 
+<p>&nbsp;&nbsp;&nbsp;</p> 
+<p>print '--内置DSU排序'&nbsp;</p> 
+<p>print sort_strings_with_emb_numbers2(filelist)&nbsp;</p> 
+<p><br /></p> 
+<p><br /></p> 
+<p><strong><br /></strong></p> 
+<p><strong><br /></strong></p> 
+<p><br /></p>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/07/12/1d67f72b_1c6251942/" rel="prev" title="python：列表解析（list comprehension）">
+      <i class="fa fa-chevron-left"></i> python：列表解析（list comprehension）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/07/18/1d67f72b_1c6323172/" rel="next" title="困扰我很久的小学音乐书小知识">
+      困扰我很久的小学音乐书小知识 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="QY"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">QY</p>
+  <div class="site-description" itemprop="description">Home is behind, the world ahead</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">QY</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

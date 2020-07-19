@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="1.&amp;nbsp;添加行号：awk &#39;{print NR &quot;\t&quot;&amp;nbsp;$0}&#39;&amp;nbsp; input.txt &gt;output.txt  2.&amp;nbsp;提取指定列：awk&amp;nbsp;&#39;print{$1&quot;\t&quot;$2&quot;\t&quot;$5}&#39; input.txt &gt; output.txt #若干列&amp;nbsp;#\t&amp;nbsp;表示制">
+<meta property="og:type" content="article">
+<meta property="og:title" content="awk操作">
+<meta property="og:url" content="http://yoursite.com/2019/09/15/1d67f72b_1c6a3c512/index.html">
+<meta property="og:site_name" content="Ringinmay&#39;s Blog">
+<meta property="og:description" content="1.&amp;nbsp;添加行号：awk &#39;{print NR &quot;\t&quot;&amp;nbsp;$0}&#39;&amp;nbsp; input.txt &gt;output.txt  2.&amp;nbsp;提取指定列：awk&amp;nbsp;&#39;print{$1&quot;\t&quot;$2&quot;\t&quot;$5}&#39; input.txt &gt; output.txt #若干列&amp;nbsp;#\t&amp;nbsp;表示制">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-09-14T21:47:22.000Z">
+<meta property="article:modified_time" content="2019-09-14T21:50:49.000Z">
+<meta property="article:author" content="QY">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2019/09/15/1d67f72b_1c6a3c512/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>awk操作 | Ringinmay's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ringinmay's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Home is behind, the world ahead</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/15/1d67f72b_1c6a3c512/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          awk操作
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-09-15 05:47:22 / Modified: 05:50:49" itemprop="dateCreated datePublished" datetime="2019-09-15T05:47:22+08:00">2019-09-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Text/" itemprop="url" rel="index">
+                    <span itemprop="name">Text</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>1.&nbsp;添加行号：awk '{print NR &quot;\t&quot;&nbsp;$0}'&nbsp; input.txt &gt;output.txt</p> 
+<p>2.&nbsp;提取指定列：awk&nbsp;'print{$1&quot;\t&quot;$2&quot;\t&quot;$5}' input.txt &gt; output.txt #若干列&nbsp;#\t&nbsp;表示制表符</p> 
+<p>3.&nbsp;提取指定行指定列：cat input.txt|awk 'NR==2{print&nbsp;$3}'&nbsp;&gt; output.txt #&nbsp;第二行第三列</p> 
+<p>4.&nbsp;指定列之间运算：awk&nbsp;'{ for(i = 1;i&lt;=NF;i++){printf(&quot;%-15s&quot;,$i);}; if(NR!=1) print ($3&nbsp;-&nbsp;$4); else print(&quot;D-Value&quot;);&nbsp;}&nbsp;' test.txt &nbsp;#NF：number of file；NR：number of row</p> 
+<p>转载：<a rel="nofollow" href="https://www.cnblogs.com/djoker/p/9408716.html" target="_blank"  >https://www.cnblogs.com/djoker/p/9408716.html</a></p> 
+<p><strong>awk:</strong><br />　　awk是一个强大的文本分析工具，相对于grep的查找，sed的编辑，<br />　　awk在其对数据分析并生成报告时，显得尤为强大。<br />　　简单来说awk就是把文件逐行的读入，以空格为默认分隔符将每行切片，切开的部分再进行各种分析处理。<br />　　awk有3个不同版本: awk、nawk和gawk，未作特别说明，一般指gawk，gawk 是 AWK 的 GNU 版本。<br />　　awk其名称得自于它的创始人 Alfred Aho 、Peter Weinberger 和 Brian Kernighan 姓氏的首个字母。<br />　　实际上 AWK 的确拥有自己的语言： AWK 程序设计语言&nbsp;，&nbsp;三位创建者已将它正式定义为“样式扫描和处理语言”。<br />　　它允许您创建简短的程序，这些程序读取输入文件、为数据排序、处理数据、对输入执行计算以及生成报表，还有无数其他的功能。<br /></p> 
+<p><strong>awk工作流程:</strong><br />　　读入有&quot;\n&quot;换行符分割的一条记录,然后把记录按照指定的域分隔符划分域,填充域<br />　　$0表示所有的域,$1表示第一个域,以此类推<br />　　默认域分隔符是空白键或者tab键<br />　　</p> 
+<p>-F:指定域分隔符<br /></p> 
+<p>cat /etc/passwd&nbsp;| awk -F&quot;:&quot;'{print&nbsp;$1}'<br /></p> 
+<p>中间可以用\t来填充<br /></p> 
+<p>cat /etc/passwd&nbsp;| awk -F&quot;:&quot;'{print&nbsp;$1&quot;\t&quot;$7}'<br /></p> 
+<p><strong>当有BEGIN,END时AWK工作流程:</strong><br />　　先执行begin,然后读取文件,读入有\n换行符分割的第一条记录,然后安装<br />　　指定的域分隔符划分域,填充域,$0表示所有的域,$1表示第一个域,以此类推<br />　　随后开始执行模式所对应的动作action<br />　　最后都执行完,最后执行end操作</p> 
+<p>　cat /etc/passwd&nbsp;| awk -F':''BEGIN&nbsp;{print&nbsp;&quot;username bash&quot;}&nbsp;{print $1&quot;,&quot;$7} END {print&nbsp;&quot;run over&quot;}'</p> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输出内容需要用&quot;&quot;包含,其中BEGIN,END都是关键字,必须大写</p> 
+<p><strong>awk内置变量:</strong><br />　　awk中同样定义了很多内置变量，我们可以直接像使用普通变量一样使用他们，由于awk的版本众多，有些内置变量并不是得到所有awk版本的支持。</p> 
+<p>　　说明：[A][N][P][G]表示支持该变量的工具，[A]=awk、[N]=nawk、[P]=POSIXawk、[G]=gawk</p> 
+<p>&nbsp;&nbsp;</p> 
+<p>$n 当前记录的第n个字段，比如n为1表示第一个字段，n为2表示第二个字段。&nbsp;</p> 
+<p>　　$0&nbsp;这个变量包含执行过程中当前行的文本内容。</p> 
+<p>　　[N] ARGC 命令行参数的数目。</p> 
+<p>　　[G] ARGIND 命令行中当前文件的位置（从0开始算）。</p> 
+<p>　　[N] ARGV 包含命令行参数的数组。</p> 
+<p>　　[G] CONVFMT 数字转换格式（默认值为%.6g）。</p> 
+<p>　　[P] ENVIRON 环境变量关联数组。</p> 
+<p>　　[N] ERRNO 最后一个系统错误的描述。</p> 
+<p>　　[G] FIELDWIDTHS 字段宽度列表（用空格键分隔）。</p> 
+<p>　　[A] FILENAME 当前输入文件的名。</p> 
+<p>　　[P] FNR 同NR，但相对于当前文件。</p> 
+<p>　　[A] FS 字段分隔符（默认是任何空格）。</p> 
+<p>　　[G] IGNORECASE 如果为真，则进行忽略大小写的匹配。</p> 
+<p>　　[A] NF 表示字段数，在执行过程中对应于当前的字段数。</p> 
+<p>　　[A] NR 表示记录数，在执行过程中对应于当前的行号。</p> 
+<p>　　[A] OFMT 数字的输出格式（默认值是%.6g）。</p> 
+<p>　　[A] OFS 输出字段分隔符（默认值是一个空格）。</p> 
+<p>　　[A] ORS 输出记录分隔符（默认值是一个换行符）。</p> 
+<p>　　[A] RS 记录分隔符（默认是一个换行符）。</p> 
+<p>　　[N] RSTART 由match函数所匹配的字符串的第一个位置。</p> 
+<p>　　[N] RLENGTH 由match函数所匹配的字符串的长度。</p> 
+<p>　　[N] SUBSEP 数组下标分隔符（默认值是34）。</p> 
+<p><strong>awk编程:</strong><br /><strong>变量和赋值</strong><br />　　　　print只是语句<br /></p> 
+<p>awk'BEGIN {count=0}&nbsp;{count++;print&nbsp;$0} END {print&nbsp;&quot;user count is &quot;,count}'&nbsp;/etc/passwd&nbsp;　　　　</p> 
+<p>ls&nbsp;-l&nbsp;/etc/&nbsp;| grep ^-&nbsp;| awk'BEGIN{size=0}&nbsp;{size=size+$5} END{print size}'<br /></p> 
+<p><strong>条件语句:</strong><br /></p> 
+<p>if(expression){</p> 
+<p>statement;</p> 
+<p>statement;</p> 
+<p>......</p> 
+<p>}</p> 
+<p><br /></p> 
+<p><br /></p> 
+<p>if(expression){</p> 
+<p>statement;</p> 
+<p>statement;</p> 
+<p>......</p> 
+<p>} else {</p> 
+<p>statement;</p> 
+<p>}</p> 
+<p><br /></p> 
+<p>if(expression){</p> 
+<p>statement;</p> 
+<p>statement;</p> 
+<p>......</p> 
+<p>} else if (expression)&nbsp;{</p> 
+<p>statement;</p> 
+<p>} else {</p> 
+<p>statement;</p> 
+<p>}</p> 
+<p><strong>统计目录下文件大小,过滤掉4096(一般都是文件夹)<br /></strong></p> 
+<p>ls -l&nbsp;| awk'BEGIN {size=0;}&nbsp;{if($5!=4096){size=size+$5}} END {print&nbsp;&quot;size is:&quot;,size}'<br /></p> 
+<p><strong>循环语句:</strong><br />　　while循环</p> 
+<p>awk'BEGIN {count=0;while(count&lt;5){print count;count++;}}'</p> 
+<p><br />　　do...while循环</p> 
+<p>awk'BEGIN {count=0;do{print count;count++;}while(count&lt;5)}</p> 
+<p>　　for循环</p> 
+<p>awk'BEGIN {for(count=0; count&lt;5; count++){print count}}'</p> 
+<p><br />　　使用数组求和,for...in循环</p> 
+<p>awk'{sum[$1]+=$2}END{for(k in sum){print k&quot;&nbsp;&quot;sum[k]}}'</p> 
+<p><strong>awk内置函数:<br /></strong></p> 
+<p><strong>　　算术：</strong></p> 
+<p>atan2(y,x)&nbsp;返回 y/x 的反正切。&nbsp;</p> 
+<p>　　　　cos(x)&nbsp;返回 x 的余弦；x&nbsp;是弧度。&nbsp;</p> 
+<p>　　　　sin(x)&nbsp;返回 x 的正弦；x&nbsp;是弧度。&nbsp;</p> 
+<p>　　　　exp(x)&nbsp;返回 x 幂函数。&nbsp;</p> 
+<p>　　　　log(x)&nbsp;返回 x 的自然对数。&nbsp;</p> 
+<p>　　　　sqrt(x)&nbsp;返回 x 平方根。&nbsp;</p> 
+<p>　　　　int(x)&nbsp;返回 x 的截断至整数的值。&nbsp;</p> 
+<p>　　　　rand()&nbsp;返回任意数字 n，其中 0 &lt;= n &lt; 1。&nbsp;</p> 
+<p>　　　　srand([expr])&nbsp;将 rand 函数的种子值设置为 Expr 参数的值，或如果省略 Expr 参数则使用某天的时间。返回先前的种子值。</p> 
+<p><strong>　字符串：</strong></p> 
+<p>gsub(reg,str1,str2)&nbsp;使用str1替换所有str2中符合正则表达式reg的子串</p> 
+<p>　　　　sub(reg,str1,str2)&nbsp;含义与gsub相同，只不过gsub是替换所有匹配，sub只替换第一个匹配</p> 
+<p>　　　　index(str,substr)&nbsp;返回substr在str中第一次出现的索引，注意索引从1开始计算，如果没有则返回0</p> 
+<p>　　　　length(str)&nbsp;返回str字符串的长度，length函数还可以返回数组元素的个数</p> 
+<p>　　　　blength(str)&nbsp;返回字符串的字节数</p> 
+<p>　　　　match(str,reg)&nbsp;与index函数一样，只不过reg使用正则表达式，例如match(&quot;hello&quot;,/lo/)</p> 
+<p>　　　　split（str,array,reg)将str分隔成数组保存到array中，分隔使用正则reg，或者字符串都可以，返回数组长度</p> 
+<p>　　　　tolower(str)&nbsp;转换为小写</p> 
+<p>　　　　toupper(str)&nbsp;转换为大写</p> 
+<p>　　　　substr(str,start,length)&nbsp;截取字符串，从start索引开始的length个字符，如不指定length则截取到末尾，索引从1开始</p> 
+<p><strong>其他：<br /></strong></p> 
+<p>system(command)&nbsp;执行系统命令，返回退出码　　　　</p> 
+<p>mktime( YYYY MM dd HH MM ss[ DST])&nbsp;生成时间格式　　　　</p> 
+<p>strftime(format,timestamp)&nbsp;格式化时间输出，将时间戳转换为时间字符串　　　　</p> 
+<p>systime()&nbsp;得到时间戳,返回从1970年1月1日开始到当前时间(不计闰年)的整秒数<strong><br /></strong></p>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/09/06/1d67f72b_1c6948f9f/" rel="prev" title="Xming+XShell">
+      <i class="fa fa-chevron-left"></i> Xming+XShell
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/09/17/1d67f72b_1c6a74075/" rel="next" title="使用scp远程传输文件">
+      使用scp远程传输文件 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="QY"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">QY</p>
+  <div class="site-description" itemprop="description">Home is behind, the world ahead</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">QY</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
