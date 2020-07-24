@@ -89,4 +89,79 @@
         <tag>实战经验</tag>
       </tags>
   </entry>
+  <entry>
+    <title>python爬虫学习</title>
+    <url>/2020/07/24/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="1-anaconda安装"><a href="#1-anaconda安装" class="headerlink" title="1. anaconda安装"></a>1. anaconda安装</h2><ol>
+<li>配置环境，将python写入环境变量</li>
+</ol>
+<h2 id="2-IDE：-pycharm安装"><a href="#2-IDE：-pycharm安装" class="headerlink" title="2. IDE： pycharm安装"></a>2. IDE： pycharm安装</h2><ol>
+<li>使用虚拟环境（virtual environment）</li>
+<li>settings 安装python包，可以直接从anaconda中把安装包直接拷到Lib-site_package下，如果网速限制，可以替换镜像源。</li>
+</ol>
+<h2 id="3-urllib-request-和-requests"><a href="#3-urllib-request-和-requests" class="headerlink" title="3. urllib.request 和 requests"></a>3. urllib.request 和 requests</h2><p>urllib.request 为pycharm自带</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request <span class="comment">#自带</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">use_urllib</span><span class="params">(url)</span>:</span></span><br><span class="line">    response = urllib.request.urlopen(url)</span><br><span class="line">    data = response.read().decode()</span><br><span class="line">    print(data)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    use_urllib(url)</span><br></pre></td></tr></table></figure>
+
+<p>requests是用于爬取网页源码的一个库</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests    <span class="comment">#第三方包</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">use_requests</span><span class="params">(url)</span>:</span></span><br><span class="line">    response=requests.get(url) </span><br><span class="line">    data=response.text</span><br><span class="line">    print(data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    use_requests(url)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-HTTP-header之User-Agent-伪装浏览器"><a href="#1-HTTP-header之User-Agent-伪装浏览器" class="headerlink" title="1. HTTP header之User-Agent 伪装浏览器"></a>1. HTTP header之User-Agent 伪装浏览器</h3><p>一些网站反爬虫，使得不能正常访问，例如B站。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    use_urllib(url)   <span class="comment">#urllib.error.HTTPError: HTTP Error 403: Forbidden</span></span><br><span class="line">    use_requests(url)  <span class="comment">#没有问题</span></span><br></pre></td></tr></table></figure>
+
+<p>使用<a href="https://www.jianshu.com/p/da6a44d0791e" target="_blank" rel="noopener" title="User-agent大全">headers伪装浏览器</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">headers=&#123;</span><br><span class="line">    <span class="string">"User-Agent"</span>:<span class="string">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># for function use_urllib(url)</span></span><br><span class="line">req=urllib.request.Request(url, headers=headers)</span><br><span class="line">response = urllib.request.urlopen(req)</span><br><span class="line"><span class="comment"># for function use_requests(url)</span></span><br><span class="line">response=requests.get(url, headers=headers)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-将爬取到的内容写入文件"><a href="#2-将爬取到的内容写入文件" class="headerlink" title="2. 将爬取到的内容写入文件"></a>2. 将爬取到的内容写入文件</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file_path = <span class="string">r"E:\pycharm-爬虫\bilibili\首页.html"</span></span><br><span class="line"><span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(data)</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-字符串前的r作用"><a href="#1-字符串前的r作用" class="headerlink" title="1. 字符串前的r作用"></a>1. 字符串前的r作用</h4><p>在打开文件或正则表达式的时候，在字符串前 <strong>加r</strong> 和 <strong>不加r</strong> 是有区别的：</p>
+<p>‘r’是防止字符转义的， 在字符串赋值的时候， 前面加’r’可以保证字符串在输出的时候的时候不被转义，原理是在转义字符前加’&#39;。如果字符串中出现’\n’的话，不加r的话，\n就会被转义成换行符，而加了’r’之后’\n’就能保留原有的样子。否则需要将file_path中\换为/。</p>
+<h4 id="2-utf-8"><a href="#2-utf-8" class="headerlink" title="2. utf-8"></a>2. utf-8</h4><p>因为Windows操作系统默认字符编码为GBK，而Python默认Unicode.utf-8，如果不写“encoding=‘utf-8’ ”就会报错</p>
+<h2 id="4-使用selenium调用浏览器"><a href="#4-使用selenium调用浏览器" class="headerlink" title="4. 使用selenium调用浏览器"></a>4. 使用selenium调用浏览器</h2><h3 id="1-调用Chrome浏览器"><a href="#1-调用Chrome浏览器" class="headerlink" title="1. 调用Chrome浏览器"></a>1. 调用Chrome浏览器</h3><ol>
+<li><p>查看本地Chrome版本</p>
+</li>
+<li><p>下载<a href="http://npm.taobao.org/mirrors/chromedriver" target="_blank" rel="noopener">Chromedriver</a></p>
+</li>
+<li><p>将chromedriver.exe放到python path下</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> selenium.webdriver</span><br><span class="line"></span><br><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line">driver = selenium.webdriver.Chrome()</span><br><span class="line">driver.get(url)</span><br><span class="line">data = driver.page_source</span><br><span class="line"></span><br><span class="line">file_path = <span class="string">r"E:\pycharm-爬虫\bilibili\首页_selenium.html"</span></span><br><span class="line"><span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(data)</span><br><span class="line"></span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="2-调用FireFox浏览器"><a href="#2-调用FireFox浏览器" class="headerlink" title="2. 调用FireFox浏览器"></a>2. 调用FireFox浏览器</h3><ol>
+<li><p>下载<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="noopener">geckodriver</a>，并将其放入PATH中</p>
+</li>
+<li><pre><code class="python">driver = selenium.webdriver.Firefox()
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### 3. [selenium自动化资源整理]([https:&#x2F;&#x2F;blog.csdn.net&#x2F;huilan_same&#x2F;article&#x2F;details&#x2F;52615123](https:&#x2F;&#x2F;blog.csdn.net&#x2F;huilan_same&#x2F;article&#x2F;details&#x2F;52615123))</span><br><span class="line"></span><br><span class="line">## 5. 网址分析</span><br><span class="line"></span><br><span class="line">### 1. 例子：豆瓣读书</span><br><span class="line"></span><br><span class="line">​      [https:&#x2F;&#x2F;book.douban.com&#x2F;tag&#x2F;%E5%B0%8F%E8%AF%B4?start&#x3D;0&amp;type&#x3D;T](https:&#x2F;&#x2F;book.douban.com&#x2F;tag&#x2F;%E5%B0%8F%E8%AF%B4?start&#x3D;0&amp;type&#x3D;T)</span><br><span class="line"></span><br><span class="line">​      而浏览器中看到的是book.douban.com&#x2F;tag&#x2F;小说?start&#x3D;0&amp;type&#x3D;T</span><br><span class="line"></span><br><span class="line">​      其中%E5%B0%8F%E8%AF%B4为**小说**二字的ASCII码</span><br><span class="line"></span><br><span class="line">### 2. 使用quote将汉字编码为ASCII码 </span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">import urllib.parse    #都包含quote</span><br><span class="line">import urllib.request  #都包含quote</span><br><span class="line">import requests</span><br><span class="line"></span><br><span class="line"># 使用quote将汉字编码为ASCII码</span><br><span class="line">key &#x3D; &quot;小说&quot;</span><br><span class="line">key_ASCII &#x3D; urllib.request.quote(key)</span><br><span class="line">print(key_ASCII)</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ol>
+<h3 id="3-使用循环将所有页面内容存储"><a href="#3-使用循环将所有页面内容存储" class="headerlink" title="3. 使用循环将所有页面内容存储"></a>3. 使用循环将所有页面内容存储</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">50</span>): </span><br><span class="line">    <span class="comment"># 49*20=980</span></span><br><span class="line">    url = <span class="string">"https://book.douban.com/tag/"</span>+key+<span class="string">"?start="</span>+str(i*<span class="number">20</span>)+<span class="string">"&amp;type=T"</span></span><br><span class="line">    response = requests.get(url, headers = headers)</span><br><span class="line">    data = response.text</span><br><span class="line">    file_path = <span class="string">r"E:\pycharm-爬虫\豆瓣读书\第"</span>+str(i+<span class="number">1</span>)+<span class="string">"页.html"</span></span><br><span class="line">    <span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data)</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-bs4-BeautifulSoup解析HTML"><a href="#6-bs4-BeautifulSoup解析HTML" class="headerlink" title="6. bs4.BeautifulSoup解析HTML"></a>6. bs4.BeautifulSoup解析HTML</h2><h3 id="1-bs4-BeautifulSoup"><a href="#1-bs4-BeautifulSoup" class="headerlink" title="1.bs4.BeautifulSoup"></a>1.bs4.BeautifulSoup</h3><p>bs4即<a href="http://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="noopener">BeautifulSoup4</a> ，是一个可以从HTML或XML文件中提取数据的Python库。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">   </span><br><span class="line">soup = BeautifulSoup(data, <span class="string">"html.parser"</span>) <span class="comment"># data为html格式的数据</span></span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="noopener">BeautifulSoup4官方中文文档</a></p>
+<p>​          <a href="[https://www.jianshu.com/p/2b783f7914c6](https://www.jianshu.com/p/2b783f7914c6)">bs4模块使用指南</a></p>
+<h3 id="2-selector-CSS选择器-的用法"><a href="#2-selector-CSS选择器-的用法" class="headerlink" title="2. selector (CSS选择器) 的用法"></a>2. selector (CSS选择器) 的用法</h3><p>Beautiful Soup支持大部分的CSS选择器， 在 Tag 或 BeautifulSoup 对象的 .select() 方法中传入字符串参数, 即可使用CSS选择器的语法找到tag。</p>
+<p>谷歌浏览器→右键→检查→鼠标放到网页书名上，在检查窗口右键→copy→copy selector，结果如下(&gt; 找到某个tag标签下的子标签)：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#subject_list</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(1)</span> &gt; <span class="selector-tag">div</span><span class="selector-class">.info</span> &gt; <span class="selector-tag">h2</span> &gt; <span class="selector-tag">a</span></span><br></pre></td></tr></table></figure>
+
+<p>可以通过下面代码得到每一页面的书名：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">book_name_list = []</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>): <span class="comment"># 每页20本书</span></span><br><span class="line">        book_name = soup.select(<span class="string">"#subject_list &gt; ul &gt; li:nth-child("</span> + str(j) + <span class="string">") &gt; div.info &gt; h2 &gt; a"</span>)  <span class="comment"># 可用findall</span></span><br><span class="line">        <span class="comment"># 第29页只有19本书</span></span><br><span class="line">        <span class="keyword">for</span> book_name <span class="keyword">in</span> book_name:</span><br><span class="line">            book_name_list.append(book_name.get_text().replace(<span class="string">" "</span>,<span class="string">""</span>).replace(<span class="string">"\r"</span>, <span class="string">""</span>).replace(<span class="string">"\n"</span>, <span class="string">""</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>requests</tag>
+        <tag>BeautifulSoup</tag>
+      </tags>
+  </entry>
 </search>
