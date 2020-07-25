@@ -271,6 +271,81 @@
   <entry>
     <title>Markdown之表格</title>
     <url>/2020/07/25/Markdown%E4%B9%8B%E8%A1%A8%E6%A0%BC/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="1-Markdown自带表格编辑语法"><a href="#1-Markdown自带表格编辑语法" class="headerlink" title="1. Markdown自带表格编辑语法"></a>1. Markdown自带表格编辑语法</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"> |水果        | 价格    |  数量  |</span><br><span class="line"> |:--------   | -----:   | :----: |</span><br><span class="line">|香蕉        | $1      |   5    |</span><br><span class="line"> |苹果        | $1      |   6    |</span><br><span class="line"> |草莓        | $1      |   7    |</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th align="left">水果</th>
+<th align="right">价格</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">香蕉</td>
+<td align="right">$1</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="left">苹果</td>
+<td align="right">$1</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="left">草莓</td>
+<td align="right">$1</td>
+<td align="center">7</td>
+</tr>
+</tbody></table>
+<h2 id="2-HTML表格"><a href="#2-HTML表格" class="headerlink" title="2. HTML表格"></a>2. HTML表格</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">caption</span>&gt;</span>学生成绩表<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>学号<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>期中<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>期末<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>001<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>88<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>90<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>002<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>96<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>97<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<th>和<td>标签都可以显示表格单元格。不同的是<th>在单元格中加粗显示。
+
+<p><strong><th>：定义表格内的表头单元格。此th元素内部的文本通常会呈现为粗体。</strong></p>
+<p>效果：</p>
+<table>
+<caption>学生成绩表</caption>
+<tr>
+
+<th>学号</th>
+<th>期中</th>
+<th>期末</th>
+
+</tr>
+<tr>
+
+<td>001</td>
+<td>88</td>
+<td>90</td>
+
+</tr> 
+<tr>
+
+<td>002</td>
+<td>96</td>
+<td>97</td>
+
+</tr> 
+</table>
+
+<h2 id="3-Excel表格"><a href="#3-Excel表格" class="headerlink" title="3. Excel表格"></a>3. Excel表格</h2><p>markdown支持html语法，所以可以先使用Excel生成需要的表格，单击另存为，选择导出格式为html，此时可选择所需表格区间。保存后打开生成的html文件，将其中<table></table> 间的数据复制到markdown中即可。</p>
+<p><strong>此方式可以创建复杂的表格，比如合并单元格等。</strong></p>
+<h2 id="4-exceltk工具"><a href="#4-exceltk工具" class="headerlink" title="4. exceltk工具"></a>4. exceltk工具</h2><p><a href="[http://fanfeilong.github.io/](http://fanfeilong.github.io/)">范飞龙</a>开发的<a href="https://github.com/fanfeilong/exceltk" target="_blank" rel="noopener">exceltk工具</a>，通过简单的cmd命令即可把excel表格中的内容转换为Markdown所能识别的格式，直接把转换后的md格式内容复制到简书即可输出期望的表格样式。</p>
+<pre><code>exceltk用例
+整个表格： exceltk.exe -t md -xls xxx.xls  
+          exceltk.exe -t md -xls xxx.xlsx
+指定sheet：
+          exceltk.exe -t md -xls xx.xls -sheet sheetname   
+          exceltk.exe -t md -xls xx.xlsx -sheet sheetnameexceltk</code></pre><h2 id="5-在线Markdown表格生成"><a href="#5-在线Markdown表格生成" class="headerlink" title="5. 在线Markdown表格生成"></a>5. 在线Markdown表格生成</h2><p>​      <a href="https://tableconvert.com/" target="_blank" rel="noopener">tableconvert</a>可以在线制作表格，并将其转为Markdown，CSV，Excel，XML，HTML等格式。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
   </entry>
 </search>
