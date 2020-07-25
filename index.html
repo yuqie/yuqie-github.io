@@ -203,6 +203,90 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/25/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%87%E6%BB%A4%E4%BB%85%E4%BF%9D%E7%95%99%E6%95%B0%E5%AD%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QY">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/25/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%87%E6%BB%A4%E4%BB%85%E4%BF%9D%E7%95%99%E6%95%B0%E5%AD%97/" class="post-title-link" itemprop="url">python字符串过滤仅保留数字</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-07-25 20:11:58 / Modified: 20:33:13" itemprop="dateCreated datePublished" datetime="2020-07-25T20:11:58+08:00">2020-07-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-内置-filter-函数"><a href="#1-内置-filter-函数" class="headerlink" title="1. 内置 filter() 函数"></a>1. 内置 filter() 函数</h2><p><code>filter(function, iterable)</code>函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表，<font face="黑体" color=green > <strong>注意:</strong> Pyhton2.7 返回列表，Python3.x 返回迭代器对象</font>。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 过滤出列表中的所有奇数：</span></span><br><span class="line">newlist = filter(is_odd, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>])</span><br><span class="line"><span class="comment"># 过滤出1~100中平方根是整数的数：</span></span><br><span class="line">newlist = filter(is_sqr, range(<span class="number">1</span>, <span class="number">101</span>))</span><br><span class="line"><span class="comment"># 字符串过滤仅保留数字和字母</span></span><br><span class="line">string = <span class="string">'abc5fg67.!aa99'</span></span><br><span class="line">string_new = <span class="string">''</span>.join(list(filter(str.isdigit,string))) <span class="comment">#只保留数字</span></span><br><span class="line">string_new = <span class="string">''</span>.join(list(filter(str.isalpha,string))) <span class="comment">#只保留字母</span></span><br><span class="line">string_new = <span class="string">''</span>.join(list(filter(str.isalnum,string))) <span class="comment">#保留数字和字母</span></span><br><span class="line"><span class="comment"># 如果想保留数字0-9和小数点’.’ 则需要自定义函数</span></span><br><span class="line"><span class="string">''</span>.join(list(filter(<span class="keyword">lambda</span> ch: ch <span class="keyword">in</span> <span class="string">'1234567890.'</span>, string)))</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-正则表达式"><a href="#2-正则表达式" class="headerlink" title="2. 正则表达式"></a>2. 正则表达式</h2><p>python自带<code>re</code> 模块，使 Python 语言拥有全部的正则表达式功能。</p>
+<p>从字符串中提取数字，一般形式如：—.–，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">string=<span class="string">"A1.45，b5，6.45，8.82"</span></span><br><span class="line"><span class="keyword">print</span> re.findall(<span class="string">r"\d+.?\d*"</span>,string)</span><br><span class="line"><span class="comment"># \d+匹配1次或者多次数字</span></span><br><span class="line"><span class="comment"># \.?匹配小数点，可能有或者没有</span></span><br><span class="line"><span class="comment"># \d* 匹配小数点之后的数字，零到任意。</span></span><br></pre></td></tr></table></figure>
+
+<table><tr><td bgcolor= BlueViolet >，需要list(filter(a)) </td></tr></table>
+
+<hr>
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><ol>
+<li><a href="https://blog.csdn.net/huoyuanshen/article/details/83106608" target="_blank" rel="noopener">https://blog.csdn.net/huoyuanshen/article/details/83106608</a></li>
+<li><a href="https://www.runoob.com/python/python-func-filter.html" target="_blank" rel="noopener">https://www.runoob.com/python/python-func-filter.html</a></li>
+<li>​</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/25/Markdown%E4%B9%8B%E8%A1%A8%E6%A0%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -228,7 +312,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-07-25 17:20:19 / Modified: 18:20:01" itemprop="dateCreated datePublished" datetime="2020-07-25T17:20:19+08:00">2020-07-25</time>
+              <time title="Created: 2020-07-25 17:20:19 / Modified: 20:10:15" itemprop="dateCreated datePublished" datetime="2020-07-25T17:20:19+08:00">2020-07-25</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -382,7 +466,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-07-25 16:25:09 / Modified: 17:16:11" itemprop="dateCreated datePublished" datetime="2020-07-25T16:25:09+08:00">2020-07-25</time>
+              <time title="Created: 2020-07-25 16:25:09 / Modified: 18:53:22" itemprop="dateCreated datePublished" datetime="2020-07-25T16:25:09+08:00">2020-07-25</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -407,36 +491,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="什么是csv？"><a href="#什么是csv？" class="headerlink" title="什么是csv？"></a>什么是csv？</h2><p><strong>Comma Separated Values</strong> (CSV), also called called <strong>Character Separated Values</strong> or <strong>Comma Delimited files</strong>, is a file format for data storage which looks like a text file, which contains a list of data separated by commas or other characters.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#x2F;&#x2F;]: # (哈哈我是注释，不会在浏览器中显示。)</span><br></pre></td></tr></table></figure>
-
-<details>
-<summary><mark><font color=darkred>csv的格式特点</font></mark></summary>
-
-<ul>
-<li>One line for each record</li>
-<li>Comma separated fields</li>
-<li>Space-characters adjacent to commas are ignored</li>
-<li>Fields with in-built commas are separated by double quote characters</li>
-<li>Fields with double quote characters must be surrounded by double quotes. Each inbuilt double quote must be represented by a pair of consecutive quotes</li>
-<li>Fields that contain inbuilt line-breaks must be surrounded by double quotes</li>
-</ul>
-</details>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;details&gt;</span><br><span class="line">&lt;summary&gt;&lt;mark&gt;&lt;font color&#x3D;darkred&gt;Click Me&lt;&#x2F;font&gt;&lt;&#x2F;mark&gt;&lt;&#x2F;summary&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;&#x2F;details&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="为什么使用csv文件？"><a href="#为什么使用csv文件？" class="headerlink" title="为什么使用csv文件？"></a>为什么使用csv文件？</h2><p>CSV结构简单，是纯文本文件，和txt的区别仅在于后缀名不同。用来做数据存储，容量比XML小（其数据由key-value组成），功能比TXT强大，另外Excel也直接支持CSV文件的查看和生成。</p>
-<h3 id="但直接用-Excel-打开-UTF-8-编码的-CSV-文件会导致汉字部分出现乱码。"><a href="#但直接用-Excel-打开-UTF-8-编码的-CSV-文件会导致汉字部分出现乱码。" class="headerlink" title="但直接用 Excel 打开 UTF-8 编码的 CSV 文件会导致汉字部分出现乱码。"></a>但直接用 Excel 打开 UTF-8 编码的 CSV 文件会导致汉字部分出现乱码。</h3><p>原因是 Excel 以 ANSI 格式打开，不会做编码识别。打开 UTF-8 编码的 CSV 文件的方法：</p>
-<h4 id="1-从数据导入文本"><a href="#1-从数据导入文本" class="headerlink" title="1. 从数据导入文本"></a>1. 从数据导入文本</h4><ul>
-<li>打开 Excel </li>
-<li>执行“数据”-&gt;“自文本”</li>
-</ul>
-<ul>
-<li>选择 CSV 文件，出现文本导入向导</li>
-<li>选择“分隔符号”，下一步</li>
-<li>勾选“逗号”，去掉“ Tab 键”，下一步，完成</li>
-<li>在“导入数据”对话框里，直接点确定</li>
-</ul>
-<h4 id="2-用文本编辑器打开CSV文件，另存为ANSI格式，再用Excel打开。"><a href="#2-用文本编辑器打开CSV文件，另存为ANSI格式，再用Excel打开。" class="headerlink" title="2. 用文本编辑器打开CSV文件，另存为ANSI格式，再用Excel打开。"></a>2. 用文本编辑器打开CSV文件，另存为ANSI格式，再用Excel打开。</h4>
+          <h2 id="1-什么是csv？"><a href="#1-什么是csv？" class="headerlink" title="1. 什么是csv？"></a>1. 什么是csv？</h2><p><strong>Comma Separated Values</strong> (CSV), also called called <strong>Character Separated Values</strong> or <strong>Comma Delimited files</strong>, is a file format for data storage which looks like a text file, which contains a list of data separated by commas or other characters.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/25/python%E4%B9%8Bcsv/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -621,81 +684,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/18/test-my-site/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="QY">
-      <meta itemprop="description" content="Home is behind, the world ahead">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ringinmay's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/18/test-my-site/" class="post-title-link" itemprop="url">test_my_site</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-07-18 17:15:32" itemprop="dateCreated datePublished" datetime="2020-07-18T17:15:32+08:00">2020-07-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-19 03:05:26" itemprop="dateModified" datetime="2020-07-19T03:05:26+08:00">2020-07-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/11/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -857,7 +845,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
