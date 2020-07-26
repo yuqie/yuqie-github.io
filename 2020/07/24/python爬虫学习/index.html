@@ -54,8 +54,8 @@
 <meta property="og:description" content="1.前期准备1. anaconda安装 配置环境，将python写入环境变量。  2. IDE： pycharm安装 使用虚拟环境（virtual environment） settings 安装python包，可以直接从anaconda中把安装包直接拷到Lib-site_package下，如果网速限制，可以替换镜像源。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-24T09:32:46.000Z">
-<meta property="article:modified_time" content="2020-07-25T18:09:10.657Z">
-<meta property="article:author" content="QY">
+<meta property="article:modified_time" content="2020-07-26T16:39:25.429Z">
+<meta property="article:author" content="QQAI">
 <meta property="article:tag" content="爬虫">
 <meta property="article:tag" content="requests">
 <meta property="article:tag" content="BeautifulSoup">
@@ -212,7 +212,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="QY">
+      <meta itemprop="name" content="QQAI">
       <meta itemprop="description" content="Home is behind, the world ahead">
     </span>
 
@@ -238,7 +238,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-26 02:09:10" itemprop="dateModified" datetime="2020-07-26T02:09:10+08:00">2020-07-26</time>
+                <time title="Modified: 2020-07-27 00:39:25" itemprop="dateModified" datetime="2020-07-27T00:39:25+08:00">2020-07-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -395,9 +395,98 @@ soup(<span class="string">"a"</span>)
 <h3 id="修改文档树"><a href="#修改文档树" class="headerlink" title="修改文档树"></a>修改文档树</h3><h3 id="解析部分文档"><a href="#解析部分文档" class="headerlink" title="解析部分文档"></a>解析部分文档</h3><p>如果仅仅因为想要查找文档中的<a>标签而将整片文档进行解析,实在是浪费内存和时间.最快的方法是从一开始就把<a>标签以外的东西都忽略掉. <code>SoupStrainer</code> 类可以定义文档的某段内容,这样搜索文档时就不必先解析整篇文档,只会解析在 <code>SoupStrainer</code> 中定义过的文档. 创建一个 <code>SoupStrainer</code> 对象并作为 <code>parse_only</code> 参数给 <code>BeautifulSoup</code> 的构造方法即可.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> SoupStrainer</span><br><span class="line">only_a_tags = SoupStrainer(<span class="string">"a"</span>)</span><br></pre></td></tr></table></figure>
 
-<h2 id="6-使用代理IP"><a href="#6-使用代理IP" class="headerlink" title="6. 使用代理IP"></a>6. 使用代理IP</h2><hr>
 <p>参考：<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="noopener">BeautifulSoup4官方中文文档</a></p>
 <p>​           <a href="[https://www.jianshu.com/p/2b783f7914c6](https://www.jianshu.com/p/2b783f7914c6)">bs4模块使用指南</a></p>
+<h2 id="6-使用代理IP"><a href="#6-使用代理IP" class="headerlink" title="6. 使用代理IP"></a>6. 使用代理IP</h2><p>很多网站对于爬虫做了一定限制，IP容易进小黑屋，所以需要采用代理IP。</p>
+<h3 id="代理的种类"><a href="#代理的种类" class="headerlink" title="代理的种类"></a>代理的种类</h3><ul>
+<li><p><strong>透明代理 (Transparent Proxy)</strong>: 不但改动了数据包，还会告诉服务器客户端的真实IP，约等于没用。</p>
+<ul>
+<li>REMOTE_ADDR = Proxy IP</li>
+<li>HTTP_VIA = Proxy IP</li>
+<li>HTTP_X_FORWARDED_FOR = Your IP</li>
+</ul>
+</li>
+<li><p><strong>普通匿名代理 (Anonymous Proxy)</strong>：会在数据包上做一些改动，服务器上发现这是个代理服务器，但是一般不清楚真实IP地址（有一定几率能追查到）。</p>
+<ul>
+<li>REMOTE_ADDR = proxy IP</li>
+<li>HTTP_VIA = proxy IP</li>
+<li>HTTP_X_FORWARDED_FOR = proxy IP</li>
+</ul>
+</li>
+<li><p><strong>混淆代理(Distorting Proxies)</strong>：会在数据包上做一些改动，服务器上发现这是个代理服务器，但会得到一个假的IP地址.</p>
+<ul>
+<li>REMOTE_ADDR = proxy IP</li>
+<li>HTTP_VIA = proxy IP</li>
+<li>HTTP_X_FORWARDED_FOR = Random IP address</li>
+</ul>
+</li>
+<li><p><strong>高匿代理(Elite proxy或High Anonymity Proxy)</strong>：会将数据包原封不动的转发，在服务端看来就好像真的是一个普通客户端在访问，而记录的IP则是代理服务器的IP。</p>
+<ul>
+<li>REMOTE_ADDR = Proxy IP</li>
+<li>HTTP_VIA = not determined</li>
+<li>HTTP_X_FORWARDED_FOR = not determined</li>
+</ul>
+<p><strong>参考</strong>：<a href="https://blog.csdn.net/a19860903/article/details/47146715" target="_blank" rel="noopener">https://blog.csdn.net/a19860903/article/details/47146715</a></p>
+</li>
+</ul>
+<h3 id="代理IP网站"><a href="#代理IP网站" class="headerlink" title="代理IP网站"></a>代理IP网站</h3><ol>
+<li><a href="https://www.kuaidaili.com/ops/proxylist/1/" target="_blank" rel="noopener">快代理</a></li>
+<li><a href="http://www.66ip.cn/index.html" target="_blank" rel="noopener">66代理</a></li>
+</ol>
+<h3 id="建立代理IP池"><a href="#建立代理IP池" class="headerlink" title="建立代理IP池"></a>建立代理IP池</h3><p>以<a href="https://www.kuaidaili.com/ops/proxylist/1/" target="_blank" rel="noopener">快代理</a>为例：</p>
+<details>
+<summary><mark>查看隐藏代码</mark></summary>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_proxy</span><span class="params">(headers)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    获取代理IP列表</span></span><br><span class="line"><span class="string">    :return: ip_list [&#123;"https": ip&#125;,…]</span></span><br><span class="line"><span class="string">     """</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    ip_list = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">2</span>):</span><br><span class="line">        <span class="comment"># 快代理</span></span><br><span class="line">        base_url = <span class="string">"https://www.kuaidaili.com/ops/proxylist/"</span> + str(i)</span><br><span class="line">        html = requests.get(base_url, headers=headers).text</span><br><span class="line"> </span><br><span class="line">        pattern = <span class="string">'\d+\.\d+\.\d+\.\d+'</span></span><br><span class="line">        re_list = re.findall(pattern, html)</span><br><span class="line">        <span class="keyword">for</span> ip_port <span class="keyword">in</span> re_list:</span><br><span class="line">            ip_list.append(&#123;<span class="string">"https"</span>: ip_port&#125;)</span><br><span class="line">    <span class="keyword">return</span> ip_list</span><br><span class="line"><span class="comment"># 快代理 上有些IP类型仅为http，有些为http，https</span></span><br></pre></td></tr></table></figure>
+
+</details>
+
+<h4 id="测试代理IP"><a href="#测试代理IP" class="headerlink" title="测试代理IP"></a>测试代理IP</h4><p>通过request直接请求一个网址，看是否通过或者看状态码是否为200(*<em><code>request.status_code == 200</code> *</em>)</p>
+<details>
+<summary><mark>查看隐藏代码</mark></summary>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_proxy</span><span class="params">(ip_list, headers, test_url)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    测试代理IP</span></span><br><span class="line"><span class="string">    :param ip_list:</span></span><br><span class="line"><span class="string">    :return: ip_list [&#123;"https": ip&#125;,…]</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> proxy <span class="keyword">in</span> ip_list:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            response = requests.get(test_url, headers=headers, proxies=proxy, timeout=<span class="number">5</span>)  </span><br><span class="line">        <span class="keyword">except</span> requests.exceptions.ConnectTimeout:</span><br><span class="line">            ip_list.pop(i)</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> ip_list</span><br></pre></td></tr></table></figure>
+
+<details>
+**但是上述代码的问题是设置了代理IP，请求网站通过，也不代表IP有效，因为有可能不是用了设置的代理IP而是用了自己公网下的IP（可以用ifconfig查询所在局域网下的IP，及私网IP）**[参考](https://blog.csdn.net/Chenftli/article/details/86701563)
+
+<details>
+<summary><mark>查看隐藏代码</mark></summary>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_proxy_3</span><span class="params">(ip_list)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    测试是理IP</span></span><br><span class="line"><span class="string">    :param ip_list:</span></span><br><span class="line"><span class="string">    :return ip_valid_list: [&#123;https: ip&#125;,…]</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    ip_valid_list = []</span><br><span class="line">    test_url =  <span class="string">"http://httpbin.org/get"</span> <span class="comment"># 改网站可测试目前请求的IP</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> proxy <span class="keyword">in</span> ip_list:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            res = requests.get(test_url, proxies=proxy, headers=headers, timeout=<span class="number">8</span>)</span><br><span class="line">            data = response.text.strip()</span><br><span class="line">            proxyIP = json.loads(data)[<span class="string">'origin'</span>]</span><br><span class="line">            <span class="keyword">if</span> proxyIP != proxy[<span class="string">"https"</span>]:</span><br><span class="line">                ip_list.pop(i)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="comment">#print("proxy invalid")</span></span><br><span class="line">            ip_list.pop(i)</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ip_valid_list</span><br></pre></td></tr></table></figure>
+
+<details>
+
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>Max retries exceeded with url</p>
+<ol>
+<li><p>requests.exceptions.<strong>ProxyError</strong>: HTTPConnectionPool(host=’**<em>‘, port=443): Max retries exceeded with url: **\</em> (Caused by ProxyError(‘Cannot connect to proxy.’, NewConnectionError(‘&lt;urllib3.connection.HTTPConnection object at 0x0000015363189190&gt;: </p>
+<blockquote>
+<p>IP代理使用的协议不正常，http和https不能写错。</p>
+</blockquote>
+</li>
+<li><p>requests.exceptions.<strong>ConnectionError</strong>: HTTPSConnectionPool(host=<em>*<em>, , port=443): Max retries exceeded with url: \</em>*\</em> (Caused by NewConnectionError(‘&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7fb51433af98&gt;:</p>
+<blockquote>
+<p>http的连接数超过最大限制，默认的情况下连接是Keep-alive的，所以导致服务器保持了太多连接而不能再新建连接。</p>
+</blockquote>
+</li>
+<li><p>HTTPSConnectionPool(host=’***‘, port=443): Max retries exceeded with url: ***(Caused by SSLError(SSLError(1, u’[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:579)’),))</p>
+<blockquote>
+<p>Requests 可以为 HTTPS 请求验证 SSL 证书，就像 web 浏览器一样。SSL 验证默认是开启的，如果证书验证失败，Requests 会抛出 SSLError。</p>
+<ul>
+<li><p>不用ssl证书验证，将verify 设置为 False，<strong>page=requests.get(url，verify=False)</strong></p>
+</li>
+<li><p>requests默认是keep-alive的，可能没有释放，加参数 headers={‘Connection’:’close’}</p>
+</li>
+<li><p>增加连接重试次数：<code>requests.adapters.DEFAULT_RETRIES = 5</code> </p>
+</li>
+<li><p>关闭多余的连接：requests使用了urllib3库，默认的http connection是keep-alive的，requests设置False关闭。<code>s = requests.session()       s.keep_alive = False</code> </p>
+<p>参考：<a href="https://blog.csdn.net/wdh315172/article/details/80491668" target="_blank" rel="noopener">https://blog.csdn.net/wdh315172/article/details/80491668</a></p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<hr>
 
     </div>
 
@@ -484,15 +573,15 @@ soup(<span class="string">"a"</span>)
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前期准备"><span class="nav-number">1.</span> <span class="nav-text">1.前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-anaconda安装"><span class="nav-number">1.1.</span> <span class="nav-text">1. anaconda安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-IDE：-pycharm安装"><span class="nav-number">1.2.</span> <span class="nav-text">2. IDE： pycharm安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-urllib-request-和-requests"><span class="nav-number">2.</span> <span class="nav-text">2. urllib.request 和 requests</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-HTTP-header之User-Agent-伪装浏览器"><span class="nav-number">2.1.</span> <span class="nav-text">1. HTTP header之User-Agent 伪装浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-将爬取到的内容写入文件"><span class="nav-number">2.2.</span> <span class="nav-text">2. 将爬取到的内容写入文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-字符串前的r作用"><span class="nav-number">2.2.1.</span> <span class="nav-text">1. 字符串前的r作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-utf-8"><span class="nav-number">2.2.2.</span> <span class="nav-text">2. utf-8</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-使用Selenium调用浏览器"><span class="nav-number">3.</span> <span class="nav-text">3. 使用Selenium调用浏览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-调用Chrome浏览器"><span class="nav-number">3.1.</span> <span class="nav-text">1. 调用Chrome浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-调用FireFox浏览器"><span class="nav-number">3.2.</span> <span class="nav-text">2. 调用FireFox浏览器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-网址分析"><span class="nav-number">4.</span> <span class="nav-text">4. 网址分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-例子：豆瓣读书"><span class="nav-number">4.1.</span> <span class="nav-text">1. 例子：豆瓣读书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用quote将汉字编码为ASCII码"><span class="nav-number">4.2.</span> <span class="nav-text">2. 使用quote将汉字编码为ASCII码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-使用循环将所有页面内容存储"><span class="nav-number">4.3.</span> <span class="nav-text">3. 使用循环将所有页面内容存储</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-bs4-BeautifulSoup解析HTML"><span class="nav-number">5.</span> <span class="nav-text">5. bs4.BeautifulSoup解析HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag"><span class="nav-number">5.1.</span> <span class="nav-text">Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NavigableString"><span class="nav-number">5.2.</span> <span class="nav-text">NavigableString</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BeautifulSoup"><span class="nav-number">5.3.</span> <span class="nav-text">BeautifulSoup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comment"><span class="nav-number">5.4.</span> <span class="nav-text">Comment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历文档树"><span class="nav-number">5.5.</span> <span class="nav-text">遍历文档树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#子节点"><span class="nav-number">5.5.1.</span> <span class="nav-text">子节点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#contents-和-children"><span class="nav-number">5.5.1.1.</span> <span class="nav-text">.contents 和 .children</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#descendants"><span class="nav-number">5.5.1.2.</span> <span class="nav-text">.descendants</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#string"><span class="nav-number">5.5.1.3.</span> <span class="nav-text">.string</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#父节点"><span class="nav-number">5.5.2.</span> <span class="nav-text">父节点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#parent"><span class="nav-number">5.5.2.1.</span> <span class="nav-text">.parent</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#parents"><span class="nav-number">5.5.2.2.</span> <span class="nav-text">.parents</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#兄弟节点"><span class="nav-number">5.5.2.3.</span> <span class="nav-text">兄弟节点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#next-sibling-和-previous-sibling"><span class="nav-number">5.5.2.4.</span> <span class="nav-text">.next_sibling 和 .previous_sibling</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#next-siblings-和-previous-siblings"><span class="nav-number">5.5.2.5.</span> <span class="nav-text">.next_siblings 和 .previous_siblings</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索文档树"><span class="nav-number">5.6.</span> <span class="nav-text">搜索文档树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤器"><span class="nav-number">5.6.1.</span> <span class="nav-text">过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#find-all"><span class="nav-number">5.6.2.</span> <span class="nav-text">find_all())</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#selector-CSS选择器-的用法"><span class="nav-number">5.6.3.</span> <span class="nav-text">selector (CSS选择器) 的用法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出"><span class="nav-number">5.7.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文档树"><span class="nav-number">5.8.</span> <span class="nav-text">修改文档树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析部分文档"><span class="nav-number">5.9.</span> <span class="nav-text">解析部分文档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-使用代理IP"><span class="nav-number">6.</span> <span class="nav-text">6. 使用代理IP</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前期准备"><span class="nav-number">1.</span> <span class="nav-text">1.前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-anaconda安装"><span class="nav-number">1.1.</span> <span class="nav-text">1. anaconda安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-IDE：-pycharm安装"><span class="nav-number">1.2.</span> <span class="nav-text">2. IDE： pycharm安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-urllib-request-和-requests"><span class="nav-number">2.</span> <span class="nav-text">2. urllib.request 和 requests</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-HTTP-header之User-Agent-伪装浏览器"><span class="nav-number">2.1.</span> <span class="nav-text">1. HTTP header之User-Agent 伪装浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-将爬取到的内容写入文件"><span class="nav-number">2.2.</span> <span class="nav-text">2. 将爬取到的内容写入文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-字符串前的r作用"><span class="nav-number">2.2.1.</span> <span class="nav-text">1. 字符串前的r作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-utf-8"><span class="nav-number">2.2.2.</span> <span class="nav-text">2. utf-8</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-使用Selenium调用浏览器"><span class="nav-number">3.</span> <span class="nav-text">3. 使用Selenium调用浏览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-调用Chrome浏览器"><span class="nav-number">3.1.</span> <span class="nav-text">1. 调用Chrome浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-调用FireFox浏览器"><span class="nav-number">3.2.</span> <span class="nav-text">2. 调用FireFox浏览器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-网址分析"><span class="nav-number">4.</span> <span class="nav-text">4. 网址分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-例子：豆瓣读书"><span class="nav-number">4.1.</span> <span class="nav-text">1. 例子：豆瓣读书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用quote将汉字编码为ASCII码"><span class="nav-number">4.2.</span> <span class="nav-text">2. 使用quote将汉字编码为ASCII码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-使用循环将所有页面内容存储"><span class="nav-number">4.3.</span> <span class="nav-text">3. 使用循环将所有页面内容存储</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-bs4-BeautifulSoup解析HTML"><span class="nav-number">5.</span> <span class="nav-text">5. bs4.BeautifulSoup解析HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag"><span class="nav-number">5.1.</span> <span class="nav-text">Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NavigableString"><span class="nav-number">5.2.</span> <span class="nav-text">NavigableString</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BeautifulSoup"><span class="nav-number">5.3.</span> <span class="nav-text">BeautifulSoup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comment"><span class="nav-number">5.4.</span> <span class="nav-text">Comment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历文档树"><span class="nav-number">5.5.</span> <span class="nav-text">遍历文档树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#子节点"><span class="nav-number">5.5.1.</span> <span class="nav-text">子节点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#contents-和-children"><span class="nav-number">5.5.1.1.</span> <span class="nav-text">.contents 和 .children</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#descendants"><span class="nav-number">5.5.1.2.</span> <span class="nav-text">.descendants</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#string"><span class="nav-number">5.5.1.3.</span> <span class="nav-text">.string</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#父节点"><span class="nav-number">5.5.2.</span> <span class="nav-text">父节点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#parent"><span class="nav-number">5.5.2.1.</span> <span class="nav-text">.parent</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#parents"><span class="nav-number">5.5.2.2.</span> <span class="nav-text">.parents</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#兄弟节点"><span class="nav-number">5.5.2.3.</span> <span class="nav-text">兄弟节点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#next-sibling-和-previous-sibling"><span class="nav-number">5.5.2.4.</span> <span class="nav-text">.next_sibling 和 .previous_sibling</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#next-siblings-和-previous-siblings"><span class="nav-number">5.5.2.5.</span> <span class="nav-text">.next_siblings 和 .previous_siblings</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索文档树"><span class="nav-number">5.6.</span> <span class="nav-text">搜索文档树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤器"><span class="nav-number">5.6.1.</span> <span class="nav-text">过滤器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#find-all"><span class="nav-number">5.6.2.</span> <span class="nav-text">find_all())</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#selector-CSS选择器-的用法"><span class="nav-number">5.6.3.</span> <span class="nav-text">selector (CSS选择器) 的用法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出"><span class="nav-number">5.7.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文档树"><span class="nav-number">5.8.</span> <span class="nav-text">修改文档树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析部分文档"><span class="nav-number">5.9.</span> <span class="nav-text">解析部分文档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-使用代理IP"><span class="nav-number">6.</span> <span class="nav-text">6. 使用代理IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代理的种类"><span class="nav-number">6.1.</span> <span class="nav-text">代理的种类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理IP网站"><span class="nav-number">6.2.</span> <span class="nav-text">代理IP网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立代理IP池"><span class="nav-number">6.3.</span> <span class="nav-text">建立代理IP池</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#测试代理IP"><span class="nav-number">6.3.1.</span> <span class="nav-text">测试代理IP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的问题"><span class="nav-number">6.4.</span> <span class="nav-text">遇到的问题</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="QY"
+    <img class="site-author-image" itemprop="image" alt="QQAI"
       src="/images/header.jpg">
-  <p class="site-author-name" itemprop="name">QY</p>
+  <p class="site-author-name" itemprop="name">QQAI</p>
   <div class="site-description" itemprop="description">Home is behind, the world ahead</div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -542,7 +631,7 @@ soup(<span class="string">"a"</span>)
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">QY</span>
+  <span class="author" itemprop="copyrightHolder">QQAI</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
   </div>
