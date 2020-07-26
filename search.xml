@@ -605,27 +605,4 @@ soup(<span class="string">"a"</span>)
         <tag>markdown</tag>
       </tags>
   </entry>
-  <entry>
-    <title>python爬虫实战</title>
-    <url>/2020/07/25/python%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98-%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1/</url>
-    <content><![CDATA[<a id="more"></a>
-
-<p>实战：爬取豆瓣电影中“华语”标签下所有电影的名数据。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">url = <span class="string">'https://movie.douban.com/explore#!type=movie&amp;tag=%E5%8D%8E%E8%AF%AD'</span></span><br><span class="line"><span class="comment"># 点击加载更多</span></span><br><span class="line">url = <span class="string">'https://movie.douban.com/explore#!type=movie&amp;tag=%E5%8D%8E%E8%AF%AD&amp;sort=recommend&amp;page_limit=20&amp;page_start=60'</span></span><br><span class="line"><span class="comment"># 但并爬不到数据</span></span><br></pre></td></tr></table></figure>
-
-<p>原因：数据不是放在网页html文件里，通过xhr把json格式文件的数据传过来。</p>
-<p>有的会使用JS（JavaScript）将json格式文件的数据传输。</p>
-<h3 id="XHLHttpRequest（Web-API-接口参考）"><a href="#XHLHttpRequest（Web-API-接口参考）" class="headerlink" title="XHLHttpRequest（Web API 接口参考）"></a>XHLHttpRequest（Web API 接口参考）</h3><p><code>XMLHttpRequest</code>（XHR）对象用于与服务器交互。通过 XMLHttpRequest <strong>可以在不刷新页面的情况下请求特定 URL，获取数据</strong>。这允许网页在不影响用户操作的情况下，更新页面的局部内容。<code>XMLHttpRequest</code> 在 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/AJAX" target="_blank" rel="noopener">AJAX</a> 编程中被大量使用。</p>
-<h3 id="json"><a href="#json" class="headerlink" title="json"></a>json</h3><p><strong>response.json()的作用就是将API页面的json转化为字典</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5'</span></span><br><span class="line">response = requests.get(url)</span><br><span class="line">json_str = response.json()</span><br><span class="line">print(type(json_str)) <span class="comment"># dict</span></span><br><span class="line">print(json_str[<span class="string">'data'</span>][<span class="string">'lastUpdateTime'</span>])</span><br><span class="line"><span class="comment"># 结果报错：切片应该是int而不是str，仔细看了页面才知道原来data的值被封成了str</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>json.loads(</strong>response.content<strong>)作用是把str转化为字典</strong></p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
 </search>
