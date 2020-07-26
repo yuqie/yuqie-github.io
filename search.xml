@@ -90,26 +90,68 @@
 <li>使用虚拟环境（virtual environment）</li>
 <li>settings 安装python包，可以直接从anaconda中把安装包直接拷到Lib-site_package下，如果网速限制，可以替换镜像源。</li>
 </ol>
-<h2 id="2-urllib-request-和-requests"><a href="#2-urllib-request-和-requests" class="headerlink" title="2. urllib.request 和 requests"></a>2. urllib.request 和 requests</h2><p>urllib.request 为pycharm自带。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request <span class="comment">#自带</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">use_urllib</span><span class="params">(url)</span>:</span></span><br><span class="line">    response = urllib.request.urlopen(url)</span><br><span class="line">    data = response.read().decode()</span><br><span class="line">    print(data)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    use_urllib(url)</span><br></pre></td></tr></table></figure>
+<h2 id="2-urllib"><a href="#2-urllib" class="headerlink" title="2. urllib"></a>2. urllib</h2><p><code>urllib</code> 是Python 内置的 HTTP 请求库，包含如4 个模块：<code>request</code>, <code>error</code>, <code>parse</code>, <code>robotparser</code></p>
+<h3 id="request"><a href="#request" class="headerlink" title="request"></a>request</h3><p>该模块可以发送请求并得到响应。</p>
+<ol>
+<li><p><code>urlopen</code></p>
+<p>其结果返回一个 HTTPResposne 类型的对象，主要包含 <code>read、getheader、getheaders</code>等方法，以及 <code>msg、version、status、reason</code>等属性。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">response = urllib.request.urlopen(url)</span><br><span class="line">data = response.read().decode()</span><br></pre></td></tr></table></figure>
 
+</li>
+</ol>
+<blockquote>
+<p><code>response.status</code> 1**：信息状态，2**：成功状态，请求成功为200 ，3**：重定向，4**：客户端错误，400代表解析失败，404 代表网页未找到。</p>
+<p><code>response.getheaders()</code> 得到headers</p>
+</blockquote>
+<ol start="2">
+<li><p><code>Request</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">req = request.Request(url=url, data=data, headers=headers, method=<span class="string">'POST'</span>)  </span><br><span class="line">response = request.urlopen(req)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>build_opener</code> 和 <code>Handler</code> 可以实现代理，密码登录等复杂请求，例子可<a href="https://python3webspider.cuiqingcai.com/3.1-shi-yong-urllib#2-request" target="_blank" rel="noopener">参考</a></p>
+</li>
+</ol>
+<h3 id="error"><a href="#error" class="headerlink" title="error"></a>error</h3><p>该模块定义了由 request 模块产生的异常。</p>
+<ol>
+<li><p><code>URLError</code> 有一个属性<code>reason</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:  </span><br><span class="line">    response = request.urlopen(<span class="number">404</span>_url)  </span><br><span class="line"><span class="keyword">except</span> error.URLError <span class="keyword">as</span> e:  </span><br><span class="line">    print(e.reason)  <span class="comment">#  Not Found （对应403）</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>HTTPError</code> 专门处理HTTP请求的错误，具有<code>code</code>, <code>reason</code>, <code>headers</code> 三个属性</p>
+</li>
+</ol>
+<h3 id="parse"><a href="#parse" class="headerlink" title="parse"></a>parse</h3><p>该模块定义了处理 URL 的标准接口，例如实现 URL 各部分的抽取、合并以及链接转换。</p>
+<ol>
+<li><p><code>quote</code> 将内容转化为 URL 编码的格式。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">key = <span class="string">"小说"</span></span><br><span class="line">key_ASCII = quote(key)</span><br><span class="line">print(key_ASCII)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>unquote</code> 将 URL 格式内容解码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">key = <span class="string">"%E5%B0%8F%E8%AF%B4"</span></span><br><span class="line">print(unqoute(key))</span><br></pre></td></tr></table></figure>
+
+<p><strong><code>request</code> 中也有qoute</strong></p>
+</li>
+</ol>
+<h3 id="robotparser"><a href="#robotparser" class="headerlink" title="robotparser"></a>robotparser</h3><p>该模块可以实现网站 Robots 协议的分析。</p>
 <p>requests是用于爬取网页源码的一个库。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests    <span class="comment">#第三方包</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">use_requests</span><span class="params">(url)</span>:</span></span><br><span class="line">    response=requests.get(url) </span><br><span class="line">    data=response.text</span><br><span class="line">    print(data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    use_requests(url)</span><br></pre></td></tr></table></figure>
+<h2 id="3-requests"><a href="#3-requests" class="headerlink" title="3. requests"></a>3. requests</h2><h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p><code>get</code> 方法以 GET 方式请求网页，返回得到一个 Response 对象，有<code>status_code，text，cookies</code> 等属性。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">response=requests.get(url) </span><br><span class="line">data=response.text</span><br><span class="line">file_path = <span class="string">r"E:\pycharm\test.html"</span>  <span class="comment"># 'r'是防止字符转义,否则\需要变成/</span></span><br><span class="line"><span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f: </span><br><span class="line">    f.write(data)</span><br></pre></td></tr></table></figure>
 
-<h3 id="1-HTTP-header之User-Agent-伪装浏览器"><a href="#1-HTTP-header之User-Agent-伪装浏览器" class="headerlink" title="1. HTTP header之User-Agent 伪装浏览器"></a>1. HTTP header之User-Agent 伪装浏览器</h3><p>一些网站反爬虫，使得不能正常访问，例如B站。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    use_urllib(url)   <span class="comment">#urllib.error.HTTPError: HTTP Error 403: Forbidden</span></span><br><span class="line">    use_requests(url)  <span class="comment">#没有问题</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong>因为Windows操作系统默认字符编码为GBK，而Python默认Unicode.utf-8，如果不写“encoding=‘utf-8’ ”就会报错。</p>
+<p>对于二进制数据，可以使用<code>content</code> 属性，可以直接写入文件，直接获得图片，音频，视屏。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">r = requests.get(<span class="string">"https://github.com/favicon.ico"</span>)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'favicon.ico'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f: <span class="comment"># wb 以二进制方式写入</span></span><br><span class="line">    f.write(r.content)</span><br></pre></td></tr></table></figure>
 
-<p>使用<a href="https://www.jianshu.com/p/da6a44d0791e" target="_blank" rel="noopener" title="User-agent大全">headers伪装浏览器</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">headers=&#123;</span><br><span class="line">    <span class="string">"User-Agent"</span>:<span class="string">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有些网站禁止抓取，如B站，可以使用headers包含 User-Agent 字段信息，也就是浏览器标识信息。<a href="https://www.jianshu.com/p/da6a44d0791e" target="_blank" rel="noopener" title="User-agent大全">User-agent大全</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># urllib.error.HTTPError: HTTP Error 403: Forbidden</span></span><br><span class="line">response = urllib.request.urlopen(url)</span><br><span class="line">data = response.read().decode() </span><br><span class="line"><span class="comment"># 没有问题</span></span><br><span class="line">response=requests.get(url) </span><br><span class="line">data=response.text</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># for function use_urllib(url)</span></span><br><span class="line">req=urllib.request.Request(url, headers=headers)</span><br><span class="line">response = urllib.request.urlopen(req)</span><br><span class="line"><span class="comment"># for function use_requests(url)</span></span><br><span class="line">response=requests.get(url, headers=headers)</span><br></pre></td></tr></table></figure>
+<p>在设置 Headers 使用Cookie来维持登录状态：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'Cookie'</span>: <span class="string">'cookie_content'</span>,</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36'</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-将爬取到的内容写入文件"><a href="#2-将爬取到的内容写入文件" class="headerlink" title="2. 将爬取到的内容写入文件"></a>2. 将爬取到的内容写入文件</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file_path = <span class="string">r"E:\pycharm-爬虫\bilibili\首页.html"</span></span><br><span class="line"><span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(data)</span><br></pre></td></tr></table></figure>
+<p>另外，<code>request</code>还有<code>put, post, delete, options</code> 等方法实现 POST、PUT、DELETE、OPTIONS 等请求。</p>
+<h3 id="session会话维持"><a href="#session会话维持" class="headerlink" title="session会话维持"></a>session会话维持</h3><p>通过用 get 方法登录某个网站，用 get 方法第二次去请求个人信息页面，并不能成功。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">requests.get(<span class="string">'http://httpbin.org/cookies/set/number/123456789'</span>)</span><br><span class="line">r = requests.get(<span class="string">'http://httpbin.org/cookies'</span>)</span><br><span class="line">print(r.text) <span class="comment"># cookies 是空字典</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="1-字符串前的r作用"><a href="#1-字符串前的r作用" class="headerlink" title="1. 字符串前的r作用"></a>1. 字符串前的r作用</h4><p>在打开文件或正则表达式的时候，在字符串前 <strong>加r</strong> 和 <strong>不加r</strong> 是有区别的：</p>
-<p>‘r’是防止字符转义的， 在字符串赋值的时候， 前面加’r’可以保证字符串在输出的时候的时候不被转义，原理是在转义字符前加’&#39;。如果字符串中出现’\n’的话，不加r的话，\n就会被转义成换行符，而加了’r’之后’\n’就能保留原有的样子。否则需要将file_path中\换为/。</p>
-<h4 id="2-utf-8"><a href="#2-utf-8" class="headerlink" title="2. utf-8"></a>2. utf-8</h4><p>因为Windows操作系统默认字符编码为GBK，而Python默认Unicode.utf-8，如果不写“encoding=‘utf-8’ ”就会报错。</p>
-<h2 id="3-使用Selenium调用浏览器"><a href="#3-使用Selenium调用浏览器" class="headerlink" title="3. 使用Selenium调用浏览器"></a>3. 使用Selenium调用浏览器</h2><p><a href="[http://www.selenium.org.cn/](http://www.selenium.org.cn/)">Selenium</a>是web自动化测试工具集，包括IDE、Grid、RC（selenium 1.0）、WebDriver（selenium 2.0）等。</p>
+<p>如何设置一次cookies，维持对话，</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = requests.Session()</span><br><span class="line">s.get(<span class="string">'http://httpbin.org/cookies/set/number/123456789'</span>)</span><br><span class="line">r = s.get(<span class="string">'http://httpbin.org/cookies'</span>)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-使用Selenium调用浏览器"><a href="#4-使用Selenium调用浏览器" class="headerlink" title="4. 使用Selenium调用浏览器"></a>4. 使用Selenium调用浏览器</h2><p><a href="[http://www.selenium.org.cn/](http://www.selenium.org.cn/)">Selenium</a>是web自动化测试工具集，包括IDE、Grid、RC（selenium 1.0）、WebDriver（selenium 2.0）等。</p>
 <p> <a href="[https://blog.csdn.net/huilan_same/article/details/52615123](https://blog.csdn.net/huilan_same/article/details/52615123)">selenium自动化资源整理</a></p>
 <h3 id="1-调用Chrome浏览器"><a href="#1-调用Chrome浏览器" class="headerlink" title="1. 调用Chrome浏览器"></a>1. 调用Chrome浏览器</h3><ol>
 <li><p>查看本地Chrome版本</p>
@@ -125,12 +167,7 @@
 <li>下载<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="noopener">geckodriver</a>，并将其放入PATH中。</li>
 <li>driver = selenium.webdriver.Firefox()</li>
 </ol>
-<h2 id="4-网址分析"><a href="#4-网址分析" class="headerlink" title="4. 网址分析"></a>4. 网址分析</h2><h3 id="1-例子：豆瓣读书"><a href="#1-例子：豆瓣读书" class="headerlink" title="1. 例子：豆瓣读书"></a>1. 例子：豆瓣读书</h3><p>​      <a href="https://book.douban.com/tag/%E5%B0%8F%E8%AF%B4?start=0&amp;type=T" target="_blank" rel="noopener">https://book.douban.com/tag/%E5%B0%8F%E8%AF%B4?start=0&amp;type=T</a></p>
-<p>​      而浏览器中看到的是book.douban.com/tag/小说?start=0&amp;type=T</p>
-<p>​      其中%E5%B0%8F%E8%AF%B4为<strong>小说</strong>二字的ASCII码。</p>
-<h3 id="2-使用quote将汉字编码为ASCII码"><a href="#2-使用quote将汉字编码为ASCII码" class="headerlink" title="2. 使用quote将汉字编码为ASCII码"></a>2. 使用quote将汉字编码为ASCII码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.parse    <span class="comment">#都包含quote</span></span><br><span class="line"><span class="keyword">import</span> urllib.request  <span class="comment">#都包含quote</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用quote将汉字编码为ASCII码</span></span><br><span class="line">key = <span class="string">"小说"</span></span><br><span class="line">key_ASCII = urllib.request.quote(key)</span><br><span class="line">print(key_ASCII)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-使用循环将所有页面内容存储"><a href="#3-使用循环将所有页面内容存储" class="headerlink" title="3. 使用循环将所有页面内容存储"></a>3. 使用循环将所有页面内容存储</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">50</span>): </span><br><span class="line">    <span class="comment"># 49*20=980</span></span><br><span class="line">    url = <span class="string">"https://book.douban.com/tag/"</span>+key+<span class="string">"?start="</span>+str(i*<span class="number">20</span>)+<span class="string">"&amp;type=T"</span></span><br><span class="line">    response = requests.get(url, headers = headers)</span><br><span class="line">    data = response.text</span><br><span class="line">    file_path = <span class="string">r"E:\pycharm-爬虫\豆瓣读书\第"</span>+str(i+<span class="number">1</span>)+<span class="string">"页.html"</span></span><br><span class="line">    <span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">50</span>): </span><br><span class="line">    <span class="comment"># 49*20=980</span></span><br><span class="line">    url = <span class="string">"https://book.douban.com/tag/"</span>+key+<span class="string">"?start="</span>+str(i*<span class="number">20</span>)+<span class="string">"&amp;type=T"</span></span><br><span class="line">    response = requests.get(url, headers = headers)</span><br><span class="line">    data = response.text</span><br><span class="line">    file_path = <span class="string">r"E:\pycharm-爬虫\豆瓣读书\第"</span>+str(i+<span class="number">1</span>)+<span class="string">"页.html"</span></span><br><span class="line">    <span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data)</span><br></pre></td></tr></table></figure>
 
 <h2 id="5-bs4-BeautifulSoup解析HTML"><a href="#5-bs4-BeautifulSoup解析HTML" class="headerlink" title="5. bs4.BeautifulSoup解析HTML"></a>5. bs4.BeautifulSoup解析HTML</h2><p>bs4即<a href="http://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="noopener">BeautifulSoup4</a> ，是一个可以从HTML或XML文件中提取数据的Python库。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">data = <span class="string">'&lt;b class="boldest"&gt;Extremely bold&lt;/b&gt;'</span></span><br><span class="line">soup = BeautifulSoup(data, <span class="string">"html.parser"</span>) <span class="comment"># data为html格式的数据</span></span><br></pre></td></tr></table></figure>
@@ -206,8 +243,6 @@ soup(<span class="string">"a"</span>)
 <h3 id="修改文档树"><a href="#修改文档树" class="headerlink" title="修改文档树"></a>修改文档树</h3><h3 id="解析部分文档"><a href="#解析部分文档" class="headerlink" title="解析部分文档"></a>解析部分文档</h3><p>如果仅仅因为想要查找文档中的<a>标签而将整片文档进行解析,实在是浪费内存和时间.最快的方法是从一开始就把<a>标签以外的东西都忽略掉. <code>SoupStrainer</code> 类可以定义文档的某段内容,这样搜索文档时就不必先解析整篇文档,只会解析在 <code>SoupStrainer</code> 中定义过的文档. 创建一个 <code>SoupStrainer</code> 对象并作为 <code>parse_only</code> 参数给 <code>BeautifulSoup</code> 的构造方法即可.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> SoupStrainer</span><br><span class="line">only_a_tags = SoupStrainer(<span class="string">"a"</span>)</span><br></pre></td></tr></table></figure>
 
-<p>参考：<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="noopener">BeautifulSoup4官方中文文档</a></p>
-<p>​           <a href="[https://www.jianshu.com/p/2b783f7914c6](https://www.jianshu.com/p/2b783f7914c6)">bs4模块使用指南</a></p>
 <h2 id="6-使用代理IP"><a href="#6-使用代理IP" class="headerlink" title="6. 使用代理IP"></a>6. 使用代理IP</h2><p>很多网站对于爬虫做了一定限制，IP容易进小黑屋，所以需要采用代理IP。</p>
 <h3 id="代理的种类"><a href="#代理的种类" class="headerlink" title="代理的种类"></a>代理的种类</h3><ul>
 <li><p><strong>透明代理 (Transparent Proxy)</strong>: 不但改动了数据包，还会告诉服务器客户端的真实IP，约等于没用。</p>
@@ -252,7 +287,7 @@ soup(<span class="string">"a"</span>)
 
 </details>
 
-<h4 id="测试代理IP"><a href="#测试代理IP" class="headerlink" title="测试代理IP"></a>测试代理IP</h4><p>通过request直接请求一个网址，看是否通过或者看状态码是否为200(*<em><code>request.status_code == 200</code> *</em>)</p>
+<h3 id="测试代理IP"><a href="#测试代理IP" class="headerlink" title="测试代理IP"></a>测试代理IP</h3><p>通过request直接请求一个网址，看是否通过或者看状态码是否为200(*<em><code>request.status_code == 200</code> *</em>)</p>
 <details>
 <summary><mark>查看隐藏代码</mark></summary>
 
@@ -268,7 +303,10 @@ soup(<span class="string">"a"</span>)
 
 <details>
 
-<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>Max retries exceeded with url</p>
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><details>
+<summary><mark>隐藏</mark></summary>
+
+<p>Max retries exceeded with url</p>
 <ol>
 <li><p>requests.exceptions.<strong>ProxyError</strong>: HTTPConnectionPool(host=’**<em>‘, port=443): Max retries exceeded with url: **\</em> (Caused by ProxyError(‘Cannot connect to proxy.’, NewConnectionError(‘&lt;urllib3.connection.HTTPConnection object at 0x0000015363189190&gt;: </p>
 <blockquote>
@@ -295,9 +333,16 @@ soup(<span class="string">"a"</span>)
 </li>
 </ul>
 </blockquote>
+<details>
+
 </li>
 </ol>
 <hr>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ol>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="noopener">BeautifulSoup4官方中文文档</a></li>
+<li><a href="[https://www.jianshu.com/p/2b783f7914c6](https://www.jianshu.com/p/2b783f7914c6)">bs4模块使用指南</a></li>
+<li><a href="https://python3webspider.cuiqingcai.com/" target="_blank" rel="noopener">Python3网络爬虫开发实战</a>​</li>
+</ol>
 ]]></content>
       <categories>
         <category>python</category>
