@@ -81,14 +81,15 @@
     <title>python爬虫学习</title>
     <url>/2020/07/24/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h2 id="1-前期准备"><a href="#1-前期准备" class="headerlink" title="1.前期准备"></a>1.前期准备</h2><h3 id="1-anaconda安装"><a href="#1-anaconda安装" class="headerlink" title="1. anaconda安装"></a>1. anaconda安装</h3><ol>
-<li>配置环境，将python写入环境变量。</li>
+<li><p>配置环境，将python写入环境变量。</p>
+<a id="more"></a>
+
+</li>
 </ol>
 <h3 id="2-IDE：-pycharm安装"><a href="#2-IDE：-pycharm安装" class="headerlink" title="2. IDE： pycharm安装"></a>2. IDE： pycharm安装</h3><ol>
 <li>使用虚拟环境（virtual environment）</li>
 <li>settings 安装python包，可以直接从anaconda中把安装包直接拷到Lib-site_package下，如果网速限制，可以替换镜像源。</li>
 </ol>
-<a id="more"></a>
-
 <h2 id="2-urllib-request-和-requests"><a href="#2-urllib-request-和-requests" class="headerlink" title="2. urllib.request 和 requests"></a>2. urllib.request 和 requests</h2><p>urllib.request 为pycharm自带。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request <span class="comment">#自带</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">use_urllib</span><span class="params">(url)</span>:</span></span><br><span class="line">    response = urllib.request.urlopen(url)</span><br><span class="line">    data = response.read().decode()</span><br><span class="line">    print(data)</span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    use_urllib(url)</span><br></pre></td></tr></table></figure>
 
@@ -578,9 +579,9 @@ soup(<span class="string">"a"</span>)
   <entry>
     <title>Markdown之字体颜色以及背景色</title>
     <url>/2020/07/26/Markdown%E4%B9%8B%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E4%BB%A5%E5%8F%8A%E8%83%8C%E6%99%AF%E8%89%B2/</url>
-    <content><![CDATA[<h2 id="字体，大小和颜色"><a href="#字体，大小和颜色" class="headerlink" title="字体，大小和颜色"></a>字体，大小和颜色</h2><a id="more"></a>
+    <content><![CDATA[<a id="more"></a>
 
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"黑体"</span>&gt;</span></span>我是黑体字<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"微软雅黑"</span>&gt;</span></span>我是微软雅黑<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"STCAIYUN"</span>&gt;</span></span>我是华文彩云<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">red</span>&gt;</span></span>我是红色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#008000</span>&gt;</span></span>我是绿色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">Blue</span>&gt;</span></span>我是蓝色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span></span>我是尺寸<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"黑体"</span> <span class="attr">color</span>=<span class="string">green</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span></span>我是黑体，绿色，尺寸为5<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="字体，大小和颜色"><a href="#字体，大小和颜色" class="headerlink" title="字体，大小和颜色"></a>字体，大小和颜色</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"黑体"</span>&gt;</span></span>我是黑体字<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"微软雅黑"</span>&gt;</span></span>我是微软雅黑<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"STCAIYUN"</span>&gt;</span></span>我是华文彩云<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">red</span>&gt;</span></span>我是红色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#008000</span>&gt;</span></span>我是绿色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">Blue</span>&gt;</span></span>我是蓝色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span></span>我是尺寸<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"黑体"</span> <span class="attr">color</span>=<span class="string">green</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span></span>我是黑体，绿色，尺寸为5<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <p>效果如下： </p>
 <p><font face="黑体">我是黑体字</font><br><font face="微软雅黑">我是微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font color=red>我是红色</font><br><font color=#008000>我是绿色</font><br><font color=Blue>我是蓝色</font><br><font size=5>我是尺寸</font><br><font face="黑体" color=green size=5>我是黑体，绿色，尺寸为5</font></p>
@@ -605,11 +606,11 @@ soup(<span class="string">"a"</span>)
       </tags>
   </entry>
   <entry>
-    <title>python爬虫实战-豆瓣电影</title>
+    <title>python爬虫实战</title>
     <url>/2020/07/25/python%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98-%E8%B1%86%E7%93%A3%E7%94%B5%E5%BD%B1/</url>
-    <content><![CDATA[<p>实战：爬取豆瓣电影中“华语”标签下所有电影的名数据。</p>
-<a id="more"></a>
+    <content><![CDATA[<a id="more"></a>
 
+<p>实战：爬取豆瓣电影中“华语”标签下所有电影的名数据。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">url = <span class="string">'https://movie.douban.com/explore#!type=movie&amp;tag=%E5%8D%8E%E8%AF%AD'</span></span><br><span class="line"><span class="comment"># 点击加载更多</span></span><br><span class="line">url = <span class="string">'https://movie.douban.com/explore#!type=movie&amp;tag=%E5%8D%8E%E8%AF%AD&amp;sort=recommend&amp;page_limit=20&amp;page_start=60'</span></span><br><span class="line"><span class="comment"># 但并爬不到数据</span></span><br></pre></td></tr></table></figure>
 
 <p>原因：数据不是放在网页html文件里，通过xhr把json格式文件的数据传过来。</p>
@@ -624,7 +625,7 @@ soup(<span class="string">"a"</span>)
         <category>python</category>
       </categories>
       <tags>
-        <tag>爬虫，</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
 </search>
