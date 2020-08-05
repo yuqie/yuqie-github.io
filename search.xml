@@ -1065,6 +1065,20 @@ soup(<span class="string">"a"</span>)
 <p>对于<strong>爬虫的数据存储</strong>来说，一条数据可能存在<strong>某些字段提取失败而缺失</strong>的情况，而且<strong>数据可能随时调整</strong>。另外，数据之间还存在<strong>嵌套关系</strong>。如果使用关系型数据库存储，一是需要提前建表，二是如果存在数据嵌套关系的话，需要进行序列化操作才可以存储，这非常不方便。</p>
 <h4 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h4><p>MongoDB 是由 <strong>C++ ** 语言编写的非关系型数据库，是一个基于</strong>分布式文件存储** 的开源数据库系统，其内容存储形式类似 JSON 对象，它的字段值可以包含其他文档、数组及文档数组。</p>
 <p><a href="https://www.jianshu.com/p/d99f6fd8b209" target="_blank" rel="noopener">安装MongoDB</a></p>
+<p>CMD命令进入某个目录: 进入某个磁盘，直接盘符代号：如D：，不用CD 命令切换; 进入除根录以下的文件夹, cd 文件夹路径.</p>
+<p>遇到warning：Access control is not enabled for the database.</p>
+<p>原因分析：新版本的MongDB增加了安全性设计，推荐用户创建使用数据库时进行验证。如果用户想建立简单连接，则会提示警示信息。</p>
+<p>解决办法：创建管理员并设置密码</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.createUser(</span><br><span class="line">  &#123;</span><br><span class="line">    user: "userAdmin", //用户名</span><br><span class="line">    pwd: "123", //密码</span><br><span class="line">    roles: [ &#123; role: "userAdminAnyDatabase", db: "admin" &#125; ] //权限</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>重启MongoDB服务器</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mongod --auth --port <span class="number">27017</span> --dbpath &lt;关联路径:bin/&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>端口默认就是27017可以不指定</p>
+<p><a href="https://blog.csdn.net/ttxsely/article/details/77726164" target="_blank" rel="noopener">https://blog.csdn.net/ttxsely/article/details/77726164</a></p>
+</li>
+</ul>
 <h5 id="连接MongoDB"><a href="#连接MongoDB" class="headerlink" title="连接MongoDB"></a>连接MongoDB</h5><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pymongo</span><br><span class="line">client = pymongo.MongoClient(host=<span class="string">'localhost'</span>, port=<span class="number">27017</span>)</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">client = MongoClient(<span class="string">'mongodb://localhost:27017/'</span>)</span><br></pre></td></tr></table></figure>
 
 <h5 id="指定数据库"><a href="#指定数据库" class="headerlink" title="指定数据库"></a>指定数据库</h5><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">db = client.test</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">db = client[test]</span><br></pre></td></tr></table></figure>
@@ -1307,6 +1321,33 @@ soup(<span class="string">"a"</span>)
       <tags>
         <tag>数据处理</tag>
         <tag>json，csv，数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python爬虫之实战问题</title>
+    <url>/2020/08/03/python%E7%88%AC%E8%99%AB%E4%B9%8B%E5%AE%9E%E6%88%98%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="1-selenium调用Chrome打开淘宝时需要登录"><a href="#1-selenium调用Chrome打开淘宝时需要登录" class="headerlink" title="1. selenium调用Chrome打开淘宝时需要登录"></a>1. selenium调用Chrome打开淘宝时需要登录</h2><p>由于需要登录用户信息，导致爬虫程序被打断，可以再使用selenium去模拟人的登录，输入账号和密码以及滑动，但是觉得很麻烦还会有各种各样的bug，所以决定用类似于cookie的方法即利用保存在电脑上的chrome用户信息来登录淘宝。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">chrome_options = webdriver.ChromeOptions()        <span class="comment">#初始化</span></span><br><span class="line">chrome_options.add_argument(<span class="string">'--headless'</span>)         <span class="comment">#设置浏览器无头模式</span></span><br><span class="line">chrome_options.add_argument(<span class="string">'--disable-gpu'</span>)      <span class="comment">#避免一些报错</span></span><br><span class="line">chrome_options.add_argument(<span class="string">'--no-sandbox'</span>)       <span class="comment">#避免出错</span></span><br><span class="line">chrome_options.add_argument(<span class="string">r'user-data-dir=C:\Users\username\AppData\Local\Google\Chrome\User Data'</span>)</span><br><span class="line">browser = webdriver.Chrome(options=chrome_options)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>注意：</strong> 为chrome浏览器设置参数,如果使用用户信息，不会调起新的chrome，所以需要将Chrome所有窗口关闭，否则因为占用会出错。</li>
+</ul>
+<p>另外还可以直接传入cookies。或者，或者使用requests.post() 传入账号，密码。</p>
+<h2 id="2-淘宝搜索button，使用click点击无反应"><a href="#2-淘宝搜索button，使用click点击无反应" class="headerlink" title="2. 淘宝搜索button，使用click点击无反应"></a>2. 淘宝搜索button，使用click点击无反应</h2><p>有些需要enter</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">driver.get(url)</span><br><span class="line">input = driver.find_element_by_xpath(<span class="string">'//*[@id="q"]'</span>)</span><br><span class="line">input.clear()  <span class="comment"># 清空搜索框数据</span></span><br><span class="line">input.send_keys(<span class="string">'ipad'</span>)  <span class="comment"># 输入检索词</span></span><br><span class="line">input.send_keys(Keys.ENTER)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-淘宝搜索结果的下一页点击失败"><a href="#3-淘宝搜索结果的下一页点击失败" class="headerlink" title="3.淘宝搜索结果的下一页点击失败"></a>3.淘宝搜索结果的下一页点击失败</h2><p>解决方法：在页码框输入页码，然后点击确定</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">input = wait.until(EC.presence_of_element_located((By.XPATH, <span class="string">'//*[@id="mainsrp-pager"]/div/div/div/div[2]/input'</span>))) <span class="comment"># 输入框</span></span><br><span class="line">submit = wait.until(EC.element_to_be_clickable((By.XPATH, <span class="string">'//*[@id="mainsrp-pager"]/div/div/div/div[2]/span[3]'</span>))) <span class="comment"># 确定按钮</span></span><br><span class="line">input.clear()</span><br><span class="line">input.send_keys(str(page))</span><br><span class="line">submit.click()</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>实战</tag>
       </tags>
   </entry>
 </search>
