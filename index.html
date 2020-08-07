@@ -226,10 +226,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-08-03 19:11:48 / Modified: 20:21:33" itemprop="dateCreated datePublished" datetime="2020-08-03T19:11:48+08:00">2020-08-03</time>
+              <time title="Created: 2020-08-03 19:11:48" itemprop="dateCreated datePublished" datetime="2020-08-03T19:11:48+08:00">2020-08-03</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-07 09:21:17" itemprop="dateModified" datetime="2020-08-07T09:21:17+08:00">2020-08-07</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -253,22 +259,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="1-selenium调用Chrome打开淘宝时需要登录"><a href="#1-selenium调用Chrome打开淘宝时需要登录" class="headerlink" title="1. selenium调用Chrome打开淘宝时需要登录"></a>1. selenium调用Chrome打开淘宝时需要登录</h2><p>由于需要登录用户信息，导致爬虫程序被打断，可以再使用selenium去模拟人的登录，输入账号和密码以及滑动，但是觉得很麻烦还会有各种各样的bug，所以决定用类似于cookie的方法即利用保存在电脑上的chrome用户信息来登录淘宝。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">chrome_options = webdriver.ChromeOptions()        <span class="comment">#初始化</span></span><br><span class="line">chrome_options.add_argument(<span class="string">'--headless'</span>)         <span class="comment">#设置浏览器无头模式</span></span><br><span class="line">chrome_options.add_argument(<span class="string">'--disable-gpu'</span>)      <span class="comment">#避免一些报错</span></span><br><span class="line">chrome_options.add_argument(<span class="string">'--no-sandbox'</span>)       <span class="comment">#避免出错</span></span><br><span class="line">chrome_options.add_argument(<span class="string">r'user-data-dir=C:\Users\username\AppData\Local\Google\Chrome\User Data'</span>)</span><br><span class="line">browser = webdriver.Chrome(options=chrome_options)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>注意：</strong> 为chrome浏览器设置参数,如果使用用户信息，不会调起新的chrome，所以需要将Chrome所有窗口关闭，否则因为占用会出错。</li>
-</ul>
-<p>另外还可以直接传入cookies。或者，或者使用requests.post() 传入账号，密码。</p>
-<h2 id="2-淘宝搜索button，使用click点击无反应"><a href="#2-淘宝搜索button，使用click点击无反应" class="headerlink" title="2. 淘宝搜索button，使用click点击无反应"></a>2. 淘宝搜索button，使用click点击无反应</h2><p>有些需要enter</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">driver.get(url)</span><br><span class="line">input = driver.find_element_by_xpath(<span class="string">'//*[@id="q"]'</span>)</span><br><span class="line">input.clear()  <span class="comment"># 清空搜索框数据</span></span><br><span class="line">input.send_keys(<span class="string">'ipad'</span>)  <span class="comment"># 输入检索词</span></span><br><span class="line">input.send_keys(Keys.ENTER)</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-淘宝搜索结果的下一页点击失败"><a href="#3-淘宝搜索结果的下一页点击失败" class="headerlink" title="3.淘宝搜索结果的下一页点击失败"></a>3.淘宝搜索结果的下一页点击失败</h2><p>解决方法：在页码框输入页码，然后点击确定</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">input = wait.until(EC.presence_of_element_located((By.XPATH, <span class="string">'//*[@id="mainsrp-pager"]/div/div/div/div[2]/input'</span>))) <span class="comment"># 输入框</span></span><br><span class="line">submit = wait.until(EC.element_to_be_clickable((By.XPATH, <span class="string">'//*[@id="mainsrp-pager"]/div/div/div/div[2]/span[3]'</span>))) <span class="comment"># 确定按钮</span></span><br><span class="line">input.clear()</span><br><span class="line">input.send_keys(str(page))</span><br><span class="line">submit.click()</span><br></pre></td></tr></table></figure>
-
-
-
-
+          <h2 id="1-selenium调用Chrome打开淘宝时需要登录"><a href="#1-selenium调用Chrome打开淘宝时需要登录" class="headerlink" title="1. selenium调用Chrome打开淘宝时需要登录"></a>1. selenium调用Chrome打开淘宝时需要登录</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/03/python%E7%88%AC%E8%99%AB%E4%B9%8B%E5%AE%9E%E6%88%98%E9%97%AE%E9%A2%98/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -477,10 +476,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-07-28 02:18:11 / Modified: 12:10:44" itemprop="dateCreated datePublished" datetime="2020-07-28T02:18:11+08:00">2020-07-28</time>
+              <time title="Created: 2020-07-28 02:18:11" itemprop="dateCreated datePublished" datetime="2020-07-28T02:18:11+08:00">2020-07-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-07 09:21:23" itemprop="dateModified" datetime="2020-08-07T09:21:23+08:00">2020-08-07</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -504,16 +509,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="str-to-list"><a href="#str-to-list" class="headerlink" title="str to list"></a>str to list</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"12345"</span></span><br><span class="line">list1 = list(str1)</span><br><span class="line">print(list1)  <span class="comment"># ['1', '2', '3', '4', '5']</span></span><br><span class="line"></span><br><span class="line">str2 = <span class="string">"123 sjhid dhi"</span></span><br><span class="line">list2 = str2.split() <span class="comment">#or list2 = str2.split(" ")</span></span><br><span class="line">print(list2)   <span class="comment"># ['123', 'sjhid', 'dhi']</span></span><br><span class="line"> </span><br><span class="line">str3 = <span class="string">"www.google.com"</span></span><br><span class="line">list3 = str3.split(<span class="string">"."</span>)</span><br><span class="line">print(list3)   <span class="comment"># ['www', 'google', 'com']</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="list-to-str"><a href="#list-to-str" class="headerlink" title="list to str"></a>list to str</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str4 = <span class="string">""</span>.join(list3)</span><br><span class="line">print(str4)    <span class="comment"># wwwgooglecom</span></span><br><span class="line">str5 = <span class="string">"."</span>.join(list3)  <span class="comment"># www.google.com</span></span><br><span class="line">print(str5)</span><br><span class="line">str6 = <span class="string">" "</span>.join(list3)   <span class="comment"># www google com</span></span><br><span class="line"><span class="keyword">print</span> (str6)</span><br></pre></td></tr></table></figure>
-
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://blog.csdn.net/roytao2/article/details/53433373" target="_blank" rel="noopener">https://blog.csdn.net/roytao2/article/details/53433373</a></p>
-<p><a href="https://www.jb51.net/article/107092.htm" target="_blank" rel="noopener">https://www.jb51.net/article/107092.htm</a></p>
-<div style='display: none'>
-
-<p>尝试爬取博客页面</p>
-</div>
+          <h2 id="str-to-list"><a href="#str-to-list" class="headerlink" title="str to list"></a>str to list</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/28/python%E4%B9%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%88%97%E8%A1%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
