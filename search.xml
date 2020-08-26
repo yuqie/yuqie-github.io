@@ -1356,7 +1356,7 @@ soup(<span class="string">"a"</span>)
   </entry>
   <entry>
     <title>如何在Jupyter Notebook中使用Python虚拟环境？</title>
-    <url>/2017/03/11/%E5%A6%82%E4%BD%95%E5%9C%A8Jupyter%20Notebook%E4%B8%AD%E4%BD%BF%E7%94%A8Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%EF%BC%9F/</url>
+    <url>/2020/08/25/%E5%A6%82%E4%BD%95%E5%9C%A8Jupyter%20Notebook%E4%B8%AD%E4%BD%BF%E7%94%A8Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%EF%BC%9F/</url>
     <content><![CDATA[<p>电脑中多版本python并存，直接安装过python，使用过anaconda全家桶，同时创建过虚拟环境（虽然我也不知道两个都是python3.7为啥要用虚拟环境），这就导致了一个问题。</p>
 <a id="more"></a>
 
