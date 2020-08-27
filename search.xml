@@ -1360,6 +1360,8 @@ soup(<span class="string">"a"</span>)
 <li>另外，如果想在windows powershell中激活虚拟环境，可执行：<code>conda init</code></li>
 </ul>
 </li>
+<li>也可以到该文件夹下，右键-git bash，在git bash中启动jupyter notebook</li>
+<li>注意2,3需要将anaconda安装路径里面的Scripts和Library\bin路径添加到windows系统环境变量中。</li>
 </ol>
 <h2 id="jupyter-notebook快捷键"><a href="#jupyter-notebook快捷键" class="headerlink" title="jupyter notebook快捷键"></a>jupyter notebook快捷键</h2><p>Jupyter Notebook 有两种键盘输入模式。</p>
 <ol>
@@ -1783,7 +1785,6 @@ soup(<span class="string">"a"</span>)
 </ol>
 <blockquote>
 <p>测试集：用来训练模型的数据集</p>
-<p>​</p>
 </blockquote>
 <ol start="17">
 <li>验证集的目的是什么？</li>
@@ -2678,6 +2679,21 @@ np.sqrt(arr)
         <tag>python</tag>
         <tag>numpy</tag>
         <tag>pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chrome书签同步</title>
+    <url>/2020/08/27/Chrome%E4%B9%A6%E7%AD%BE%E5%90%8C%E6%AD%A5/</url>
+    <content><![CDATA[<p>最近一直在用自己的笔记本工作，有些书签没有同步到办公室电脑上，今天刚好到办公室了，设置好VPN，点击同步，竟然没有同步，后续删除账号再重新登录也没能解决。</p>
+<p><strong>手动大法</strong>: 将笔记本电脑上的bookmarks（一般在C:\Users\username\AppData\Local\Google\Chrome\User Data\Default）拷贝到台式机相应的文件夹下。</p>
+<p><strong>如何恢复书签</strong>： C:\Users\username\AppData\Local\Google\Chrome\User Data\Default 该目录下一般会有几天前的备份文件bookmarks.bak，将其重命名为bookmarks即可。</p>
+<p>PS：最后删除账号，重新添加搞定了。</p>
+]]></content>
+      <categories>
+        <category>日常记录</category>
+      </categories>
+      <tags>
+        <tag>Chrome</tag>
       </tags>
   </entry>
 </search>
