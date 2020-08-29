@@ -2814,6 +2814,8 @@ np.sqrt(arr)
     <title>Chrome书签同步</title>
     <url>/2020/08/27/Chrome%E4%B9%A6%E7%AD%BE%E5%90%8C%E6%AD%A5/</url>
     <content><![CDATA[<p>最近一直在用自己的笔记本工作，有些书签没有同步到办公室电脑上，今天刚好到办公室了，设置好VPN，点击同步，竟然没有同步，后续删除账号再重新登录也没能解决。</p>
+<a id="more"></a>
+
 <p><strong>手动大法</strong>: 将笔记本电脑上的bookmarks（一般在C:\Users\username\AppData\Local\Google\Chrome\User Data\Default）拷贝到台式机相应的文件夹下。</p>
 <p><strong>如何恢复书签</strong>： C:\Users\username\AppData\Local\Google\Chrome\User Data\Default 该目录下一般会有几天前的备份文件bookmarks.bak，将其重命名为bookmarks即可。</p>
 <p>PS：最后删除账号，重新添加搞定了。</p>
@@ -2828,13 +2830,28 @@ np.sqrt(arr)
   <entry>
     <title>Markdown之表情，删除线和任务列表</title>
     <url>/2020/08/29/Markdown%E4%B9%8B%E8%A1%A8%E6%83%85%EF%BC%8C%E5%88%A0%E9%99%A4%E7%BA%BF%E5%92%8C%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8/</url>
-    <content><![CDATA[<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p><strong>aliases编码：语法：</strong> <code>:&lt;emoji&gt;:</code></p>
+    <content><![CDATA[<p>###表情</p>
+<p><strong>aliases编码：语法：</strong> <code>:&lt;emoji&gt;:</code></p>
 <p>🔽 😓😄</p>
+<a id="more"></a>
+
 <p>可查表：</p>
 <p><a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">https://www.webfx.com/tools/emoji-cheat-sheet/</a></p>
 <p><a href="https://www.cnblogs.com/minghaiJ/p/10685965.html" target="_blank" rel="noopener">https://www.cnblogs.com/minghaiJ/p/10685965.html</a></p>
-<p>~<strong>hexdecimal编码：语法：</strong> <code>&amp;#xCODE;</code> </p>
-<p>可以从 <a href="https://link.zhihu.com/?target=https%3A//apps.timwhitlock.info/emoji/tables/unicode%23block-4-enclosed-characters">Emoji Unicode Tables</a> 中查到表情的Unicode编码，去掉开头U+即为code。~</p>
+<p><strong>hexdecimal编码：语法：</strong> <code>&amp;#xCODE;</code> </p>
+<p>可以从 <a href="https://link.zhihu.com/?target=https%3A//apps.timwhitlock.info/emoji/tables/unicode%23block-4-enclosed-characters">Emoji Unicode Tables</a> 中查到表情的Unicode编码，去掉开头U+即为code。(typora不支持ORZ)</p>
+<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>用HTML的语法<code>&lt;u&gt;Underline&lt;/u&gt;</code>将产生下划线<u>Underline</u>.</p>
+<p>###任务线</p>
+<p>GFM添加了删除文本的语法，这是标准的Markdown语法木有的。使用<code>~~</code>包裹的文本将会具有删除的样式，例如<code>~删除文本~</code>将产生<del>删除文本</del>的样式。</p>
+<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- [ ] 吃饭</span><br><span class="line">- [ ] 逛街</span><br><span class="line">- [ ] 看电影</span><br><span class="line">- [ ] 约泡</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><input disabled="" type="checkbox"> 吃饭</li>
+<li><input disabled="" type="checkbox"> 逛街</li>
+<li><input disabled="" type="checkbox"> 看电影</li>
+<li><input disabled="" type="checkbox"> 约泡</li>
+</ul>
+<p>参考：<a href="https://www.jianshu.com/p/092de536d948" target="_blank" rel="noopener">https://www.jianshu.com/p/092de536d948</a></p>
 ]]></content>
       <categories>
         <category>markdown</category>
@@ -2842,11 +2859,6 @@ np.sqrt(arr)
       <tags>
         <tag>markdown</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Markdown数学符号和公式</title>
-    <url>/2020/08/29/Markdown%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E5%92%8C%E5%85%AC%E5%BC%8F/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>《Scikit-Learn与TensorFlow机器学习实用指南》-LAPTOP-CSVRUNHI</title>
@@ -3349,6 +3361,76 @@ np.sqrt(arr)
       </categories>
       <tags>
         <tag>jupyter notebook</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown数学符号和公式</title>
+    <url>/2020/08/29/Markdown%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E5%92%8C%E5%85%AC%E5%BC%8F%20193445/</url>
+    <content><![CDATA[<p>Markdown中数学符号和公式的书写规则和<code>latex</code>非常像。</p>
+<p>行内公式或数学符号使用<code>$</code>符号包裹Tex命令即可。</p>
+<p>单独的公式段落可以用<code>$$</code>包裹，或者点击“段落” $\rightarrow$ “公式块”，或者使用快捷键Shift+Ctrl+M</p>
+<a id="more"></a>
+
+<p>常用的数学符号：</p>
+<p>###希腊字母</p>
+<p><strong>小写</strong> \alpha \beta \chi \delta \epsilon \eta \gamma \kappa \lambda \mu \nu \omega \tau \theta \xi \zeta </p>
+<p>$\alpha \beta \chi \delta \epsilon \eta \gamma \kappa \lambda \mu \nu \omega \tau \theta \xi \zeta $</p>
+<p><strong>大写</strong> 将第一个字母大写即可： $\Alpha \Beta \Chi \Delta \Epsilon $</p>
+<h3 id="操作符-关系符"><a href="#操作符-关系符" class="headerlink" title="操作符 关系符"></a>操作符 关系符</h3><p>常用的有 ：</p>
+<p>\cdot  \pm \leq \geq \gg \ll \times \div \oplus \otimes \equiv \approx \because \therefore</p>
+<p>$\cdot  \pm \leq \geq \gg \ll \times \div \oplus \otimes \equiv \approx \because \therefore$</p>
+<h3 id="数学着重号"><a href="#数学着重号" class="headerlink" title="数学着重号"></a>数学着重号</h3><p>\ddot{a} \bar{a} \dot{a} \hat{a} \vec{a} \check{a}</p>
+<p>$\ddot{a} \bar{a} \dot{a} \hat{a} \vec{a} \check{a}$</p>
+<h3 id="各式箭头"><a href="#各式箭头" class="headerlink" title="各式箭头"></a>各式箭头</h3><p>\leftarrow \rightarrow \uparrow \downarrow</p>
+<p>$\leftarrow \rightarrow \uparrow \downarrow$</p>
+<p>\Leftarrow \Rightarrow \Uparrow \Downarrow</p>
+<p>$\Leftarrow \Rightarrow \Uparrow \Downarrow$</p>
+<p>\longleftarrow \longrightarrow </p>
+<p>$\longleftarrow \longrightarrow $</p>
+<p>\leftrightarrow  \updownarrow</p>
+<p>$\leftrightarrow  \updownarrow$</p>
+<h3 id="其他符号"><a href="#其他符号" class="headerlink" title="其他符号"></a>其他符号</h3><p>\infty  \forall \nabla \partial \varnothing \hbar \exists</p>
+<p>$\infty  \forall \nabla \partial \varnothing \hbar \exists$</p>
+<p>\sum  \int  \prod \oint  \iint</p>
+<p>$\sum  \int  \prod \oint  \iint$</p>
+<h3 id="数学结构"><a href="#数学结构" class="headerlink" title="数学结构"></a>数学结构</h3><p>\frac{a}{b} $\frac{a}{b}$</p>
+<p>\sqrt[n]{a} $\sqrt[n]{a} $</p>
+<p>\overline{abc} $\overline{abc}$</p>
+<p>\widehat{abc} $\widehat{abc}$</p>
+<p>\overrightarrow{abc} $\overrightarrow{abc}$</p>
+<p>\left{ a b c}\right</p>
+<p>a = \left { \begin{array}{c} x^2 \ 2x \0 \end{array} \right } $a = \left { \begin{array}{c} x^2 \ 2x \0 \end{array} \right.$</p>
+<p>\left ( \begin{array}{cc} a &amp; b \ c &amp; d\end{array} \right) $\left ( \begin{array}{cc} a &amp; b \ c &amp; d\end{array} \right)$</p>
+<hr>
+<p>参考：</p>
+<p><a href="https://blog.csdn.net/wait_for_eva/article/details/84307306" target="_blank" rel="noopener">typora-数学符号</a> </p>
+<p><a href="https://blog.csdn.net/mingzhuo_126/article/details/82722455" target="_blank" rel="noopener">使用Typora添加数学公式</a></p>
+<p><a href="https://www.cnblogs.com/waleswood/p/6401232.html" target="_blank" rel="noopener">希腊字母、拉丁字母、Markdown、拼写与读音中英对照表</a></p>
+<p><a href="https://blog.csdn.net/katherine_hsr/article/details/79179622" target="_blank" rel="noopener">Markdown数学符号&amp;公式</a></p>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown数学符号和公式</title>
+    <url>/2020/08/29/Markdown%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/</url>
+    <content><![CDATA[<p>忘了点保存，打开一看文件是空的。</p>
+<ol>
+<li>打开Typora $\rightarrow $文件$\rightarrow $$偏好设置</li>
+<li>向下滚动到 “保存 &amp; 恢复” 区域</li>
+<li>点击 “恢复未保存的草稿”</li>
+</ol>
+<p>方法参考：<a href="https://blog.csdn.net/makesomethings/article/details/90181198" target="_blank" rel="noopener">https://blog.csdn.net/makesomethings/article/details/90181198</a></p>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
       </tags>
   </entry>
 </search>
