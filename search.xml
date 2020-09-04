@@ -1,66 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Markdown之字体颜色以及背景色</title>
-    <url>/2020/07/26/Markdown%E4%B9%8B%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E4%BB%A5%E5%8F%8A%E8%83%8C%E6%99%AF%E8%89%B2/</url>
-    <content><![CDATA[<h2 id="字体，大小和颜色"><a href="#字体，大小和颜色" class="headerlink" title="字体，大小和颜色"></a>字体，大小和颜色</h2><a id="more"></a>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"黑体"</span>&gt;</span></span>我是黑体字<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"微软雅黑"</span>&gt;</span></span>我是微软雅黑<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"STCAIYUN"</span>&gt;</span></span>我是华文彩云<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">red</span>&gt;</span></span>我是红色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#008000</span>&gt;</span></span>我是绿色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">Blue</span>&gt;</span></span>我是蓝色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span></span>我是尺寸<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"黑体"</span> <span class="attr">color</span>=<span class="string">green</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span></span>我是黑体，绿色，尺寸为5<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>效果如下： </p>
-<font face="黑体">我是黑体字</font>
-<font face="微软雅黑">我是微软雅黑</font>
-<font face="STCAIYUN">我是华文彩云</font>
-<font color=red>我是红色</font>
-<font color=#008000>我是绿色</font>
-<font color=Blue>我是蓝色</font>
-<font size=5>我是尺寸</font>
-<font face="黑体" color=green size=5>我是黑体，绿色，尺寸为5</font>
-
-<h2 id="文字背景色"><a href="#文字背景色" class="headerlink" title="文字背景色"></a>文字背景色</h2><p>由于 Markdown中不支持 style 标签和 style 属性，所以这里只能是通过 table, tr, td 等表格标签的 bgcolor 属性来实现背景色，将一整行看作一个表格，更改单元格的背景色（bgcolor）</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">bgcolor</span>=<span class="string">blue</span>&gt;</span></span>颜色测试<span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<table><tr><td bgcolor=blue>颜色测试</td></tr></table>
-
-<h2 id="图片居中"><a href="#图片居中" class="headerlink" title="图片居中"></a>图片居中</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">right</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image/timg.jfif"</span> <span class="attr">width</span>=<span class="string">"50%"</span> <span class="attr">height</span>=<span class="string">"50%"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<div align=right><img src="image/timg.jfif" width="50%" height="50%"></div>
-
-<hr>
-<p>参考：<a href="https://blog.csdn.net/heimu24/article/details/81189700" target="_blank" rel="noopener">https://blog.csdn.net/heimu24/article/details/81189700</a></p>
-]]></content>
-      <categories>
-        <category>markdown</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown之表情，删除线和任务列表</title>
-    <url>/2020/08/29/Markdown%E4%B9%8B%E8%A1%A8%E6%83%85%EF%BC%8C%E5%88%A0%E9%99%A4%E7%BA%BF%E5%92%8C%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8/</url>
-    <content><![CDATA[<h3 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h3><p><strong>aliases编码：语法：</strong> <code>:&lt;emoji&gt;:</code></p>
-<p>🔽 😓😄</p>
+    <title>Chrome书签同步</title>
+    <url>/2020/08/27/Chrome%E4%B9%A6%E7%AD%BE%E5%90%8C%E6%AD%A5/</url>
+    <content><![CDATA[<p>最近一直在用自己的笔记本工作，有些书签没有同步到办公室电脑上，今天刚好到办公室了，设置好VPN，点击同步，竟然没有同步，后续删除账号再重新登录也没能解决。</p>
 <a id="more"></a>
-<p>可查表：</p>
-<p><a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">https://www.webfx.com/tools/emoji-cheat-sheet/</a></p>
-<p><a href="https://www.cnblogs.com/minghaiJ/p/10685965.html" target="_blank" rel="noopener">https://www.cnblogs.com/minghaiJ/p/10685965.html</a></p>
-<p><strong>hexdecimal编码：语法：</strong> <code>&amp;#xCODE;</code> </p>
-<p>可以从 <a href="https://link.zhihu.com/?target=https%3A//apps.timwhitlock.info/emoji/tables/unicode%23block-4-enclosed-characters">Emoji Unicode Tables</a> 中查到表情的Unicode编码，去掉开头U+即为code。(typora不支持ORZ)</p>
-<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>用HTML的语法<code>&lt;u&gt;Underline&lt;/u&gt;</code>将产生下划线<u>Underline</u>.</p>
-<h3 id="任务线"><a href="#任务线" class="headerlink" title="任务线"></a>任务线</h3><p>GFM添加了删除文本的语法，这是标准的Markdown语法木有的。使用<code>~~</code>包裹的文本将会具有删除的样式，例如<code>~删除文本~</code>将产生<del>删除文本</del>的样式。</p>
-<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- [ ] 吃饭</span><br><span class="line">- [ ] 逛街</span><br><span class="line">- [ ] 看电影</span><br><span class="line">- [ ] 约泡</span><br></pre></td></tr></table></figure>
-<ul>
-<li>[ ] 吃饭</li>
-<li>[ ] 逛街</li>
-<li>[ ] 看电影</li>
-<li>[ ] 约泡</li>
-</ul>
-<h3 id="最大化快捷键"><a href="#最大化快捷键" class="headerlink" title="最大化快捷键"></a>最大化快捷键</h3><p>进去退出最大化：F11</p>
-<p>参考：<a href="https://www.jianshu.com/p/092de536d948" target="_blank" rel="noopener">https://www.jianshu.com/p/092de536d948</a></p>
+<p><strong>手动大法</strong>: 将笔记本电脑上的bookmarks（一般在C:\Users\username\AppData\Local\Google\Chrome\User Data\Default）拷贝到台式机相应的文件夹下。</p>
+<p><strong>如何恢复书签</strong>： C:\Users\username\AppData\Local\Google\Chrome\User Data\Default 该目录下一般会有几天前的备份文件bookmarks.bak，将其重命名为bookmarks即可。</p>
+<p>PS：最后删除账号，重新添加搞定了。</p>
 ]]></content>
       <categories>
-        <category>markdown</category>
+        <category>日常记录</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
+        <tag>Chrome</tag>
       </tags>
   </entry>
   <entry>
@@ -149,22 +102,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Chrome书签同步</title>
-    <url>/2020/08/27/Chrome%E4%B9%A6%E7%AD%BE%E5%90%8C%E6%AD%A5/</url>
-    <content><![CDATA[<p>最近一直在用自己的笔记本工作，有些书签没有同步到办公室电脑上，今天刚好到办公室了，设置好VPN，点击同步，竟然没有同步，后续删除账号再重新登录也没能解决。</p>
-<a id="more"></a>
-<p><strong>手动大法</strong>: 将笔记本电脑上的bookmarks（一般在C:\Users\username\AppData\Local\Google\Chrome\User Data\Default）拷贝到台式机相应的文件夹下。</p>
-<p><strong>如何恢复书签</strong>： C:\Users\username\AppData\Local\Google\Chrome\User Data\Default 该目录下一般会有几天前的备份文件bookmarks.bak，将其重命名为bookmarks即可。</p>
-<p>PS：最后删除账号，重新添加搞定了。</p>
-]]></content>
-      <categories>
-        <category>日常记录</category>
-      </categories>
-      <tags>
-        <tag>Chrome</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown之隐藏内容</title>
     <url>/2020/07/25/Markdown%E4%B9%8B%E9%9A%90%E8%97%8F%E5%86%85%E5%AE%B9/</url>
     <content><![CDATA[<h2 id="1-HTML标签隐藏"><a href="#1-HTML标签隐藏" class="headerlink" title="1. HTML标签隐藏"></a>1. HTML标签隐藏</h2><p>Markdown内嵌html语法，所以可以用隐藏的html标签。</p>
@@ -218,47 +155,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown数学符号和公式</title>
-    <url>/2020/08/29/Markdown%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E5%92%8C%E5%85%AC%E5%BC%8F%20193445/</url>
-    <content><![CDATA[<p>Markdown中数学符号和公式的书写规则和<code>latex</code>非常像。</p>
-<p>行内公式或数学符号使用<code>$</code>符号包裹Tex命令即可。</p>
-<p>单独的公式段落可以用$$$$包裹，或者点击“段落” $\rightarrow$ “公式块”，或者使用快捷键Shift+Ctrl+M</p>
-<a id="more"></a>
-<p>常用的数学符号：</p>
-<h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><p><strong>小写</strong> \alpha \beta \chi \delta \epsilon \eta \gamma \kappa \lambda \mu \nu \omega \tau \theta \xi \zeta </p>
-<p>$\alpha \beta \chi \delta \epsilon \eta \gamma \kappa \lambda \mu \nu \omega \tau \theta \xi \zeta $</p>
-<p><strong>大写</strong> 将第一个字母大写即可： $\Alpha \Beta \Chi \Delta \Epsilon $</p>
-<h3 id="操作符-关系符"><a href="#操作符-关系符" class="headerlink" title="操作符 关系符"></a>操作符 关系符</h3><p>常用的有 ：</p>
-<p>\cdot  \pm \leq \geq \gg \ll \times \div \oplus \otimes \equiv \approx \because \therefore</p>
-<p>$\cdot  \pm \leq \geq \gg \ll \times \div \oplus \otimes \equiv \approx \because \therefore$</p>
-<h3 id="数学着重号"><a href="#数学着重号" class="headerlink" title="数学着重号"></a>数学着重号</h3><p>\ddot{a} \bar{a} \dot{a} \hat{a} \vec{a} \check{a}</p>
-<p>$\ddot{a} \bar{a} \dot{a} \hat{a} \vec{a} \check{a}$</p>
-<h3 id="各式箭头"><a href="#各式箭头" class="headerlink" title="各式箭头"></a>各式箭头</h3><p>\leftarrow \rightarrow \uparrow \downarrow</p>
-<p>$\leftarrow \rightarrow \uparrow \downarrow$</p>
-<p>\Leftarrow \Rightarrow \Uparrow \Downarrow</p>
-<p>$\Leftarrow \Rightarrow \Uparrow \Downarrow$</p>
-<p>\longleftarrow \longrightarrow </p>
-<p>$\longleftarrow \longrightarrow $</p>
-<p>\leftrightarrow  \updownarrow</p>
-<p>$\leftrightarrow  \updownarrow$</p>
-<h3 id="其他符号"><a href="#其他符号" class="headerlink" title="其他符号"></a>其他符号</h3><p>\infty  \forall \nabla \partial \varnothing \hbar \exists</p>
-<p>$\infty  \forall \nabla \partial \varnothing \hbar \exists$</p>
-<p>\sum  \int  \prod \oint  \iint</p>
-<p>$\sum  \int  \prod \oint  \iint$</p>
-<h3 id="数学结构"><a href="#数学结构" class="headerlink" title="数学结构"></a>数学结构</h3><p>\frac{a}{b} $\frac{a}{b}$</p>
-<p>\sqrt[n]{a} $\sqrt[n]{a} $</p>
-<p>\overline{abc} $\overline{abc}$</p>
-<p>\widehat{abc} $\widehat{abc}$</p>
-<p>\overrightarrow{abc} $\overrightarrow{abc}$</p>
-<p>\left\{ a b c\}\right</p>
-<p>a = \left \{ \begin{array}{c} x^2 \\ 2x \\0 \end{array} \right. \} $a = \left \{ \begin{array}{c} x^2 \\ 2x \\0 \end{array} \right.$</p>
-<p>\left ( \begin{array}{cc} a &amp; b \\ c &amp; d\end{array} \right) $\left ( \begin{array}{cc} a &amp; b \\ c &amp; d\end{array} \right)$</p>
+    <title>Markdown之字体颜色以及背景色</title>
+    <url>/2020/07/26/Markdown%E4%B9%8B%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E4%BB%A5%E5%8F%8A%E8%83%8C%E6%99%AF%E8%89%B2/</url>
+    <content><![CDATA[<h2 id="字体，大小和颜色"><a href="#字体，大小和颜色" class="headerlink" title="字体，大小和颜色"></a>字体，大小和颜色</h2><a id="more"></a>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"黑体"</span>&gt;</span></span>我是黑体字<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"微软雅黑"</span>&gt;</span></span>我是微软雅黑<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"STCAIYUN"</span>&gt;</span></span>我是华文彩云<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">red</span>&gt;</span></span>我是红色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#008000</span>&gt;</span></span>我是绿色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">Blue</span>&gt;</span></span>我是蓝色<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span></span>我是尺寸<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"黑体"</span> <span class="attr">color</span>=<span class="string">green</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span></span>我是黑体，绿色，尺寸为5<span class="xml"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>效果如下： </p>
+<font face="黑体">我是黑体字</font>
+<font face="微软雅黑">我是微软雅黑</font>
+<font face="STCAIYUN">我是华文彩云</font>
+<font color=red>我是红色</font>
+<font color=#008000>我是绿色</font>
+<font color=Blue>我是蓝色</font>
+<font size=5>我是尺寸</font>
+<font face="黑体" color=green size=5>我是黑体，绿色，尺寸为5</font>
+
+<h2 id="文字背景色"><a href="#文字背景色" class="headerlink" title="文字背景色"></a>文字背景色</h2><p>由于 Markdown中不支持 style 标签和 style 属性，所以这里只能是通过 table, tr, td 等表格标签的 bgcolor 属性来实现背景色，将一整行看作一个表格，更改单元格的背景色（bgcolor）</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">bgcolor</span>=<span class="string">blue</span>&gt;</span></span>颜色测试<span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<table><tr><td bgcolor=blue>颜色测试</td></tr></table>
+
+<h2 id="图片居中"><a href="#图片居中" class="headerlink" title="图片居中"></a>图片居中</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">right</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image/timg.jfif"</span> <span class="attr">width</span>=<span class="string">"50%"</span> <span class="attr">height</span>=<span class="string">"50%"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<div align=right><img src="image/timg.jfif" width="50%" height="50%"></div>
+
 <hr>
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/wait_for_eva/article/details/84307306" target="_blank" rel="noopener">typora-数学符号</a> </p>
-<p><a href="https://blog.csdn.net/mingzhuo_126/article/details/82722455" target="_blank" rel="noopener">使用Typora添加数学公式</a></p>
-<p><a href="https://www.cnblogs.com/waleswood/p/6401232.html" target="_blank" rel="noopener">希腊字母、拉丁字母、Markdown、拼写与读音中英对照表</a></p>
-<p><a href="https://blog.csdn.net/katherine_hsr/article/details/79179622" target="_blank" rel="noopener">Markdown数学符号&amp;公式</a></p>
+<p>参考：<a href="https://blog.csdn.net/heimu24/article/details/81189700" target="_blank" rel="noopener">https://blog.csdn.net/heimu24/article/details/81189700</a></p>
 ]]></content>
       <categories>
         <category>markdown</category>
@@ -277,6 +197,36 @@
 <li>点击 “恢复未保存的草稿”</li>
 </ol>
 <p>方法参考：<a href="https://blog.csdn.net/makesomethings/article/details/90181198" target="_blank" rel="noopener">https://blog.csdn.net/makesomethings/article/details/90181198</a></p>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown之表情，删除线和任务列表</title>
+    <url>/2020/08/29/Markdown%E4%B9%8B%E8%A1%A8%E6%83%85%EF%BC%8C%E5%88%A0%E9%99%A4%E7%BA%BF%E5%92%8C%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8/</url>
+    <content><![CDATA[<h3 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h3><p><strong>aliases编码：语法：</strong> <code>:&lt;emoji&gt;:</code></p>
+<p>🔽 😓😄</p>
+<a id="more"></a>
+<p>可查表：</p>
+<p><a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">https://www.webfx.com/tools/emoji-cheat-sheet/</a></p>
+<p><a href="https://www.cnblogs.com/minghaiJ/p/10685965.html" target="_blank" rel="noopener">https://www.cnblogs.com/minghaiJ/p/10685965.html</a></p>
+<p><strong>hexdecimal编码：语法：</strong> <code>&amp;#xCODE;</code> </p>
+<p>可以从 <a href="https://link.zhihu.com/?target=https%3A//apps.timwhitlock.info/emoji/tables/unicode%23block-4-enclosed-characters">Emoji Unicode Tables</a> 中查到表情的Unicode编码，去掉开头U+即为code。(typora不支持ORZ)</p>
+<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>用HTML的语法<code>&lt;u&gt;Underline&lt;/u&gt;</code>将产生下划线<u>Underline</u>.</p>
+<h3 id="任务线"><a href="#任务线" class="headerlink" title="任务线"></a>任务线</h3><p>GFM添加了删除文本的语法，这是标准的Markdown语法木有的。使用<code>~~</code>包裹的文本将会具有删除的样式，例如<code>~删除文本~</code>将产生<del>删除文本</del>的样式。</p>
+<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- [ ] 吃饭</span><br><span class="line">- [ ] 逛街</span><br><span class="line">- [ ] 看电影</span><br><span class="line">- [ ] 约泡</span><br></pre></td></tr></table></figure>
+<ul>
+<li>[ ] 吃饭</li>
+<li>[ ] 逛街</li>
+<li>[ ] 看电影</li>
+<li>[ ] 约泡</li>
+</ul>
+<h3 id="最大化快捷键"><a href="#最大化快捷键" class="headerlink" title="最大化快捷键"></a>最大化快捷键</h3><p>进去退出最大化：F11</p>
+<p>参考：<a href="https://www.jianshu.com/p/092de536d948" target="_blank" rel="noopener">https://www.jianshu.com/p/092de536d948</a></p>
 ]]></content>
       <categories>
         <category>markdown</category>
@@ -382,6 +332,56 @@
       </tags>
   </entry>
   <entry>
+    <title>Markdown数学符号和公式</title>
+    <url>/2020/08/29/Markdown%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7%E5%92%8C%E5%85%AC%E5%BC%8F%20193445/</url>
+    <content><![CDATA[<p>Markdown中数学符号和公式的书写规则和<code>latex</code>非常像。</p>
+<p>行内公式或数学符号使用<code>$</code>符号包裹Tex命令即可。</p>
+<p>单独的公式段落可以用$$$$包裹，或者点击“段落” $\rightarrow$ “公式块”，或者使用快捷键Shift+Ctrl+M</p>
+<a id="more"></a>
+<p>常用的数学符号：</p>
+<h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><p><strong>小写</strong> \alpha \beta \chi \delta \epsilon \eta \gamma \kappa \lambda \mu \nu \omega \tau \theta \xi \zeta </p>
+<p>$\alpha \beta \chi \delta \epsilon \eta \gamma \kappa \lambda \mu \nu \omega \tau \theta \xi \zeta $</p>
+<p><strong>大写</strong> 将第一个字母大写即可： $\Alpha \Beta \Chi \Delta \Epsilon $</p>
+<h3 id="操作符-关系符"><a href="#操作符-关系符" class="headerlink" title="操作符 关系符"></a>操作符 关系符</h3><p>常用的有 ：</p>
+<p>\cdot  \pm \leq \geq \gg \ll \times \div \oplus \otimes \equiv \approx \because \therefore</p>
+<p>$\cdot  \pm \leq \geq \gg \ll \times \div \oplus \otimes \equiv \approx \because \therefore$</p>
+<h3 id="数学着重号"><a href="#数学着重号" class="headerlink" title="数学着重号"></a>数学着重号</h3><p>\ddot{a} \bar{a} \dot{a} \hat{a} \vec{a} \check{a}</p>
+<p>$\ddot{a} \bar{a} \dot{a} \hat{a} \vec{a} \check{a}$</p>
+<h3 id="各式箭头"><a href="#各式箭头" class="headerlink" title="各式箭头"></a>各式箭头</h3><p>\leftarrow \rightarrow \uparrow \downarrow</p>
+<p>$\leftarrow \rightarrow \uparrow \downarrow$</p>
+<p>\Leftarrow \Rightarrow \Uparrow \Downarrow</p>
+<p>$\Leftarrow \Rightarrow \Uparrow \Downarrow$</p>
+<p>\longleftarrow \longrightarrow </p>
+<p>$\longleftarrow \longrightarrow $</p>
+<p>\leftrightarrow  \updownarrow</p>
+<p>$\leftrightarrow  \updownarrow$</p>
+<h3 id="其他符号"><a href="#其他符号" class="headerlink" title="其他符号"></a>其他符号</h3><p>\infty  \forall \nabla \partial \varnothing \hbar \exists</p>
+<p>$\infty  \forall \nabla \partial \varnothing \hbar \exists$</p>
+<p>\sum  \int  \prod \oint  \iint</p>
+<p>$\sum  \int  \prod \oint  \iint$</p>
+<h3 id="数学结构"><a href="#数学结构" class="headerlink" title="数学结构"></a>数学结构</h3><p>\frac{a}{b} $\frac{a}{b}$</p>
+<p>\sqrt[n]{a} $\sqrt[n]{a} $</p>
+<p>\overline{abc} $\overline{abc}$</p>
+<p>\widehat{abc} $\widehat{abc}$</p>
+<p>\overrightarrow{abc} $\overrightarrow{abc}$</p>
+<p>\left\{ a b c\}\right</p>
+<p>a = \left \{ \begin{array}{c} x^2 \\ 2x \\0 \end{array} \right. \} $a = \left \{ \begin{array}{c} x^2 \\ 2x \\0 \end{array} \right.$</p>
+<p>\left ( \begin{array}{cc} a &amp; b \\ c &amp; d\end{array} \right) $\left ( \begin{array}{cc} a &amp; b \\ c &amp; d\end{array} \right)$</p>
+<hr>
+<p>参考：</p>
+<p><a href="https://blog.csdn.net/wait_for_eva/article/details/84307306" target="_blank" rel="noopener">typora-数学符号</a> </p>
+<p><a href="https://blog.csdn.net/mingzhuo_126/article/details/82722455" target="_blank" rel="noopener">使用Typora添加数学公式</a></p>
+<p><a href="https://www.cnblogs.com/waleswood/p/6401232.html" target="_blank" rel="noopener">希腊字母、拉丁字母、Markdown、拼写与读音中英对照表</a></p>
+<p><a href="https://blog.csdn.net/katherine_hsr/article/details/79179622" target="_blank" rel="noopener">Markdown数学符号&amp;公式</a></p>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python之字符串和列表之间的转换</title>
     <url>/2020/07/28/python%E4%B9%8B%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%88%97%E8%A1%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/</url>
     <content><![CDATA[<h2 id="str-to-list"><a href="#str-to-list" class="headerlink" title="str to list"></a>str to list</h2><a id="more"></a>
@@ -447,6 +447,295 @@
       <tags>
         <tag>爬虫</tag>
         <tag>实战</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python爬虫学习</title>
+    <url>/2020/07/24/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E6%9C%AC%E5%BA%93%E5%92%8C%E8%A7%A3%E6%9E%90%E5%BA%93/</url>
+    <content><![CDATA[<h2 id="1-前期准备"><a href="#1-前期准备" class="headerlink" title="1.前期准备"></a>1.前期准备</h2><h3 id="1-anaconda安装"><a href="#1-anaconda安装" class="headerlink" title="1. anaconda安装"></a>1. anaconda安装</h3><ol>
+<li><p>配置环境，将python写入环境变量。</p>
+<a id="more"></a>
+</li>
+</ol>
+<h3 id="2-IDE：-pycharm安装"><a href="#2-IDE：-pycharm安装" class="headerlink" title="2. IDE： pycharm安装"></a>2. IDE： pycharm安装</h3><ol>
+<li>使用虚拟环境（virtual environment）</li>
+<li>settings 安装python包，可以直接从anaconda中把安装包直接拷到Lib-site_package下，如果网速限制，可以替换镜像源。</li>
+</ol>
+<h2 id="2-urllib"><a href="#2-urllib" class="headerlink" title="2. urllib"></a>2. urllib</h2><p><code>urllib</code> 是Python 内置的 HTTP 请求库，包含如4 个模块：<code>request</code>, <code>error</code>, <code>parse</code>, <code>robotparser</code></p>
+<h3 id="request"><a href="#request" class="headerlink" title="request"></a>request</h3><p>该模块可以发送请求并得到响应。</p>
+<ol>
+<li><p><code>urlopen</code></p>
+<p>其结果返回一个 HTTPResposne 类型的对象，主要包含 <code>read、getheader、getheaders</code>等方法，以及 <code>msg、version、status、reason</code>等属性。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">response = urllib.request.urlopen(url)</span><br><span class="line">data = response.read().decode()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p><code>response.status</code> 1**：信息状态，2**：成功状态，请求成功为200 ，3**：重定向，4**：客户端错误，400代表解析失败，404 代表网页未找到。</p>
+<p><code>response.getheaders()</code> 得到headers</p>
+</blockquote>
+<ol>
+<li><p><code>Request</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">req = request.Request(url=url, data=data, headers=headers, method=<span class="string">'POST'</span>)  </span><br><span class="line">response = request.urlopen(req)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>build_opener</code> 和 <code>Handler</code> 可以实现代理，密码登录等复杂请求，例子可<a href="https://python3webspider.cuiqingcai.com/3.1-shi-yong-urllib#2-request" target="_blank" rel="noopener">参考</a></p>
+</li>
+</ol>
+<h3 id="error"><a href="#error" class="headerlink" title="error"></a>error</h3><p>该模块定义了由 request 模块产生的异常。</p>
+<ol>
+<li><p><code>URLError</code> 有一个属性<code>reason</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:  </span><br><span class="line">    response = request.urlopen(<span class="number">404</span>_url)  </span><br><span class="line"><span class="keyword">except</span> error.URLError <span class="keyword">as</span> e:  </span><br><span class="line">    print(e.reason)  <span class="comment">#  Not Found （对应403）</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>HTTPError</code> 专门处理HTTP请求的错误，具有<code>code</code>, <code>reason</code>, <code>headers</code> 三个属性</p>
+</li>
+</ol>
+<h3 id="parse"><a href="#parse" class="headerlink" title="parse"></a>parse</h3><p>该模块定义了处理 URL 的标准接口，例如实现 URL 各部分的抽取、合并以及链接转换。</p>
+<ol>
+<li><p><code>quote</code> 将内容转化为 URL 编码的格式。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">key = <span class="string">"小说"</span></span><br><span class="line">key_ASCII = quote(key)</span><br><span class="line">print(key_ASCII)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>unquote</code> 将 URL 格式内容解码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">key = <span class="string">"%E5%B0%8F%E8%AF%B4"</span></span><br><span class="line">print(unqoute(key))</span><br></pre></td></tr></table></figure>
+<p><strong><code>request</code> 中也有qoute</strong></p>
+</li>
+</ol>
+<h3 id="robotparser"><a href="#robotparser" class="headerlink" title="robotparser"></a>robotparser</h3><p>该模块可以实现网站 Robots 协议的分析。</p>
+<p>requests是用于爬取网页源码的一个库。</p>
+<h2 id="3-requests"><a href="#3-requests" class="headerlink" title="3. requests"></a>3. requests</h2><h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p><code>get</code> 方法以 GET 方式请求网页，返回得到一个 Response 对象，有<code>status_code，text，cookies</code> 等属性。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">response=requests.get(url) </span><br><span class="line">data=response.text</span><br><span class="line">file_path = <span class="string">r"E:\pycharm\test.html"</span>  <span class="comment"># 'r'是防止字符转义,否则\需要变成/</span></span><br><span class="line"><span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f: </span><br><span class="line">    f.write(data)</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong>因为Windows操作系统默认字符编码为GBK，而Python默认Unicode.utf-8，如果不写“encoding=‘utf-8’ ”就会报错。</p>
+<p>对于二进制数据，可以使用<code>content</code> 属性，可以直接写入文件，直接获得图片，音频，视屏。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">r = requests.get(<span class="string">"https://github.com/favicon.ico"</span>)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'favicon.ico'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f: <span class="comment"># wb 以二进制方式写入</span></span><br><span class="line">    f.write(r.content)</span><br></pre></td></tr></table></figure>
+<p>有些网站禁止抓取，如B站，可以使用headers包含 User-Agent 字段信息，也就是浏览器标识信息。<a href="https://www.jianshu.com/p/da6a44d0791e" target="_blank" rel="noopener" title="User-agent大全">User-agent大全</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># urllib.error.HTTPError: HTTP Error 403: Forbidden</span></span><br><span class="line">response = urllib.request.urlopen(url)</span><br><span class="line">data = response.read().decode() </span><br><span class="line"><span class="comment"># 没有问题</span></span><br><span class="line">response=requests.get(url) </span><br><span class="line">data=response.text</span><br></pre></td></tr></table></figure>
+<p>在设置 Headers 使用Cookie来维持登录状态：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'Cookie'</span>: <span class="string">'cookie_content'</span>,</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36'</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另外，<code>request</code>还有<code>put, post, delete, options</code> 等方法实现 POST、PUT、DELETE、OPTIONS 等请求。</p>
+<h3 id="session会话维持"><a href="#session会话维持" class="headerlink" title="session会话维持"></a>session会话维持</h3><p>通过用 get 方法登录某个网站，用 get 方法第二次去请求个人信息页面，并不能成功。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">requests.get(<span class="string">'http://httpbin.org/cookies/set/number/123456789'</span>)</span><br><span class="line">r = requests.get(<span class="string">'http://httpbin.org/cookies'</span>)</span><br><span class="line">print(r.text) <span class="comment"># cookies 是空字典</span></span><br></pre></td></tr></table></figure>
+<p>如何设置一次cookies，维持对话，</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = requests.Session()</span><br><span class="line">s.get(<span class="string">'http://httpbin.org/cookies/set/number/123456789'</span>)</span><br><span class="line">r = s.get(<span class="string">'http://httpbin.org/cookies'</span>)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<h2 id="4-使用Selenium调用浏览器"><a href="#4-使用Selenium调用浏览器" class="headerlink" title="4. 使用Selenium调用浏览器"></a>4. 使用Selenium调用浏览器</h2><p><a href="[http://www.selenium.org.cn/](http://www.selenium.org.cn/">Selenium</a>)是web自动化测试工具集，包括IDE、Grid、RC（selenium 1.0）、WebDriver（selenium 2.0）等。</p>
+<p> <a href="[https://blog.csdn.net/huilan_same/article/details/52615123](https://blog.csdn.net/huilan_same/article/details/52615123">selenium自动化资源整理</a>)</p>
+<h3 id="1-调用Chrome浏览器"><a href="#1-调用Chrome浏览器" class="headerlink" title="1. 调用Chrome浏览器"></a>1. 调用Chrome浏览器</h3><ol>
+<li><p>查看本地Chrome版本</p>
+</li>
+<li><p>下载<a href="http://npm.taobao.org/mirrors/chromedriver" target="_blank" rel="noopener">Chromedriver</a></p>
+</li>
+<li><p>将chromedriver.exe放到python path下</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> selenium.webdriver</span><br><span class="line"></span><br><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line">driver = selenium.webdriver.Chrome()</span><br><span class="line">driver.get(url)</span><br><span class="line">data = driver.page_source</span><br><span class="line"></span><br><span class="line">file_path = <span class="string">r"E:\pycharm-爬虫\bilibili\首页_selenium.html"</span></span><br><span class="line"><span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(data)</span><br><span class="line"></span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="2-调用FireFox浏览器"><a href="#2-调用FireFox浏览器" class="headerlink" title="2. 调用FireFox浏览器"></a>2. 调用FireFox浏览器</h3><ol>
+<li>下载<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="noopener">geckodriver</a>，并将其放入PATH中。</li>
+<li>driver = selenium.webdriver.Firefox()</li>
+</ol>
+<h2 id="5-bs4-BeautifulSoup解析HTML"><a href="#5-bs4-BeautifulSoup解析HTML" class="headerlink" title="5. bs4.BeautifulSoup解析HTML"></a>5. bs4.BeautifulSoup解析HTML</h2><p>bs4即<a href="http://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="noopener">BeautifulSoup4</a> ，是一个可以从HTML或XML文件中提取数据的Python库。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">data = <span class="string">'&lt;b class="boldest"&gt;Extremely bold&lt;/b&gt;'</span></span><br><span class="line">soup = BeautifulSoup(data, <span class="string">"html.parser"</span>) <span class="comment"># data为html格式的数据</span></span><br></pre></td></tr></table></figure>
+<p>Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种: <code>Tag</code>, <code>NavigableString</code> , <code>BeautifulSoup</code> , <code>Comment</code> 。</p>
+<h3 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h3><p><code>tag</code> 的属性有<code>name</code> 和 <code>attributes</code>，方法<code>get()</code> , 如果不确定某个属性是否存在时,用 <code>tag.get(&#39;attr&#39;)</code> 方法去获取它,跟获取Python字典的key一样&gt;</p>
+<p>一个<code>tag</code> 可能有很多属性，属性的操作与<strong>字典</strong>相同，可以被添加，删除或修改。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tag = soup.b <span class="comment"># tag b</span></span><br><span class="line">tag.name  <span class="comment"># 'b'</span></span><br><span class="line">tag.name = <span class="string">"blockquote"</span> <span class="comment"># tag &lt;blockquote class="boldest"&gt;Extremely bold&lt;/blockquote&gt;</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line">tag[<span class="string">'class'</span>] <span class="comment"># boldest</span></span><br><span class="line">tag.attrs <span class="comment"># &#123;'class': 'boldest'&#125;</span></span><br><span class="line">tag[<span class="string">'class'</span>] = <span class="string">'verybold'</span> <span class="comment"># 修改 &lt;blockquote class="verybold" &gt;Extremely bold&lt;/blockquote&gt;</span></span><br><span class="line">tag[<span class="string">'id'</span>] = <span class="number">1</span>   <span class="comment"># 添加 &lt;blockquote class="verybold" id="1"&gt;Extremely bold&lt;/blockquote&gt;</span></span><br><span class="line"><span class="keyword">del</span> tag[<span class="string">'class'</span>] <span class="comment"># &lt;blockquote id="1"&gt;Extremely bold&lt;/blockquote&gt;</span></span><br><span class="line"><span class="keyword">del</span> tag[<span class="string">'id'</span>]    <span class="comment"># &lt;blockquote&gt;Extremely bold&lt;/blockquote&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>HTML5</code> 中定义了一系列可以包含多个值的属性，<code>class</code> (一个tag可以有多个CSS的class). <code>rel</code>  <code>rev</code> ， <code>accept-charset</code> ， <code>headers</code> ， <code>accesskey</code> 等。</p>
+<p>多值属性的返回值为list， 非多值属性的返回值为字符串：</p>
+<p><strong>注意：XML格式的tag不包含多值属性。</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 多值属性class</span></span><br><span class="line">css_soup = BeautifulSoup(<span class="string">'&lt;p class="body strikeout"&gt;&lt;/p&gt;'</span>)</span><br><span class="line">css_soup.p[<span class="string">'class'</span>]</span><br><span class="line"><span class="comment"># ["body", "strikeout"]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 非多值属性id</span></span><br><span class="line">id_soup = BeautifulSoup(<span class="string">'&lt;p id="my id"&gt;&lt;/p&gt;'</span>)</span><br><span class="line">id_soup.p[<span class="string">'id'</span>]</span><br><span class="line"><span class="comment"># 'my id'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 多值属性修改时</span></span><br><span class="line">rel_soup = BeautifulSoup(<span class="string">'&lt;p&gt;Back to the &lt;a rel="index"&gt;homepage&lt;/a&gt;&lt;/p&gt;'</span>)</span><br><span class="line">rel_soup.a[<span class="string">'rel'</span>] = [<span class="string">'index'</span>, <span class="string">'contents'</span>]</span><br><span class="line">print(rel_soup.p)</span><br><span class="line"><span class="comment"># &lt;p&gt;Back to the &lt;a rel="index contents"&gt;homepage&lt;/a&gt;&lt;/p&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="NavigableString"><a href="#NavigableString" class="headerlink" title="NavigableString"></a>NavigableString</h3><p>字符串常被包含在<code>tag</code> 内。Beautiful Soup用<code>NavigableString</code>类来包装tag中的字符串: <code>tag.string</code></p>
+<p>tag中包含的字符串不能编辑,但是可以用 <code>replace_with()</code> 方法替换成其它的字符串</p>
+<h3 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h3><p><code>BeautifulSoup</code> 对象表示的是一个文档的全部内容.大部分时候,可以把它当作 <code>Tag</code> 对象，它支持 遍历文档树 和 搜索文档树 中描述的大部分的方法。</p>
+<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><p>处理HTML和XML中的注释部分，<code>Comment</code> 对象是一个特殊类型的 <code>NavigableString</code> 对象，但是当它出现在HTML文档中时, <code>Comment</code> 对象会使用特殊的格式输出。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">markup = <span class="string">"&lt;b&gt;&lt;!--Hey, buddy. Want to buy a used parser?--&gt;&lt;/b&gt;"</span></span><br><span class="line">soup = BeautifulSoup(markup)</span><br><span class="line">comment = soup.b.string</span><br><span class="line">type(comment)</span><br><span class="line"><span class="comment"># &lt;class 'bs4.element.Comment'&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="遍历文档树"><a href="#遍历文档树" class="headerlink" title="遍历文档树"></a>遍历文档树</h3><p>一个<code>tag</code> 可能包含多个字符串或其他<code>tag</code> ，这些都是该<code>tag</code> 的子节点。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 点取属性的方式只能获得当前名字的第一个tag</span></span><br><span class="line">soup.head</span><br><span class="line">soup.body.b</span><br><span class="line"><span class="comment"># 想要得到所有的&lt;a&gt;标签</span></span><br><span class="line">soup.find_all(<span class="string">'a'</span>) <span class="comment"># 返回list</span></span><br></pre></td></tr></table></figure>
+<h4 id="子节点"><a href="#子节点" class="headerlink" title="子节点"></a>子节点</h4><h5 id="contents-和-children"><a href="#contents-和-children" class="headerlink" title=".contents 和 .children"></a>.contents 和 .children</h5><p><code>tag</code> 的 <code>.contents</code> 属性可以将<code>tag</code> 的子节点以列表的方式输出:</p>
+<p>通过<code>tag</code> 的 <code>.children</code> 生成器,可以对<code>tag</code> 的子节点进行循环:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">head_tag = soup.head  <span class="comment"># &lt;head&gt;&lt;title&gt;The Dormouse's story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line">title_tag = head_tag.contents[<span class="number">0</span>]  <span class="comment"># &lt;title&gt;The Dormouse's story&lt;/title&gt;</span></span><br><span class="line">title_tag.contents    <span class="comment"># [u'The Dormouse's story']</span></span><br><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> title_tag.children:</span><br><span class="line">    print(child)      <span class="comment"># The Dormouse's story</span></span><br></pre></td></tr></table></figure>
+<h5 id="descendants"><a href="#descendants" class="headerlink" title=".descendants"></a>.descendants</h5><p><code>.contents</code> 和 <code>.children</code> 属性仅包含tag的直接子节点.例如,<head>标签只有一个直接子节点<code>&lt;title&gt;</code> 但<code>&lt;title&gt;</code> 标签也包含一个子节点:字符串 “The Dormouse’s story”，这种情况下字符串 “The Dormouse’s story”也属于<code>&lt;head&gt;</code> 标签的子孙节点. <code>.descendants</code> 属性可以对所有tag的子孙节点进行递归循环。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> head_tag.descendants:</span><br><span class="line">    print(child)</span><br><span class="line">    <span class="comment"># &lt;title&gt;The Dormouse's story&lt;/title&gt;</span></span><br><span class="line">    <span class="comment"># The Dormouse's story</span></span><br></pre></td></tr></table></figure>
+<h5 id="string"><a href="#string" class="headerlink" title=".string"></a>.string</h5><p>如果<code>tag</code> 只有一个 <code>NavigableString</code> 类型子节点,那么这个<code>tag</code> 可以使用 <code>.string</code> 得到子节点</p>
+<p>否则，<code>.string</code> 的输出结果是 <code>None</code></p>
+<p>输出的字符串中可能包含了很多空格或空行,使用 <code>.stripped_strings</code> 可以去除多余空白内容</p>
+<h6 id="bs4-element-get-text"><a href="#bs4-element-get-text" class="headerlink" title="bs4.element.get_text()"></a>bs4.element.get_text()</h6><p> Get all child strings, concatenated using the given separator (默认是空格)</p>
+<h4 id="父节点"><a href="#父节点" class="headerlink" title="父节点"></a>父节点</h4><h5 id="parent"><a href="#parent" class="headerlink" title=".parent"></a>.parent</h5><h5 id="parents"><a href="#parents" class="headerlink" title=".parents"></a>.parents</h5><p>通过元素的 <code>.parents</code> 属性可以递归得到元素的所有父辈节点</p>
+<h5 id="兄弟节点"><a href="#兄弟节点" class="headerlink" title="兄弟节点"></a>兄弟节点</h5><p>同一个元素的子节点</p>
+<h5 id="next-sibling-和-previous-sibling"><a href="#next-sibling-和-previous-sibling" class="headerlink" title=".next_sibling 和 .previous_sibling"></a>.next_sibling 和 .previous_sibling</h5><p>在文档树中,使用 <code>.next_sibling</code> 和 <code>.previous_sibling</code> 属性来查询兄弟节点</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sibling_soup = BeautifulSoup(<span class="string">"&lt;a&gt;&lt;b&gt;text1&lt;/b&gt;&lt;c&gt;text2&lt;/c&gt;&lt;/b&gt;&lt;/a&gt;"</span>)</span><br><span class="line">sibling_soup.b.next_sibling  <span class="comment"># &lt;c&gt;text2&lt;/c&gt;</span></span><br><span class="line">sibling_soup.c.previous_sibling <span class="comment"># &lt;b&gt;text1&lt;/b&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="next-siblings-和-previous-siblings"><a href="#next-siblings-和-previous-siblings" class="headerlink" title=".next_siblings 和 .previous_siblings"></a>.next_siblings 和 .previous_siblings</h5><p>对当前节点的兄弟节点迭代输出</p>
+<h3 id="搜索文档树"><a href="#搜索文档树" class="headerlink" title="搜索文档树"></a>搜索文档树</h3><p><code>Beautiful Soup</code> 中定义的搜索方法，比如 <code>find()</code> 和 <code>find_all()</code></p>
+<h4 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h4><p>find_all()</p>
+<p>可以是字符串，正则表达式，列表，True，方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup.find_all(<span class="string">'b'</span>) <span class="comment"># b 标签</span></span><br><span class="line">soup.find_all(re.compile(<span class="string">"^b"</span>)) <span class="comment"># 以b开头的标签</span></span><br><span class="line">soup.find_all([<span class="string">"a"</span>, <span class="string">"b"</span>]) <span class="comment"># 含有a或b的标签</span></span><br><span class="line">soup.find_all(<span class="literal">True</span>) <span class="comment"># True 可以匹配任何值,找到所有的tag,但是不会返回字符串节点</span></span><br><span class="line"><span class="comment"># 方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">has_class_but_no_id</span><span class="params">(tag)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> tag.has_attr(<span class="string">'class'</span>) <span class="keyword">and</span> <span class="keyword">not</span> tag.has_attr(<span class="string">'id'</span>) <span class="comment"># 有class，无id</span></span><br><span class="line">soup.find_all(has_class_but_no_id)</span><br></pre></td></tr></table></figure>
+<h4 id="find-all"><a href="#find-all" class="headerlink" title="find_all())"></a>find_all())</h4><p><code>find_all(name, attrs, recursive , text , **kwargs)</code></p>
+<ol>
+<li><p>如果一个指定名字的参数不是搜索内置的参数名,搜索时会把该参数当作指定名字<code>tag</code> 的属性来搜索<code>soup.find_all(id=&#39;link2&#39;)</code> </p>
+</li>
+<li><p>有些tag属性在搜索不能使用,比如HTML5中的 data-* 属性,但是可以通过 <code>find_all()</code> 方法的 <code>attrs</code> 参数定义一个字典参数来搜索包含特殊属性的tag: <code>data_soup.find_all(attrs={&quot;data-foo&quot;: &quot;value&quot;})</code></p>
+</li>
+<li><p>按照CSS类名搜索<code>tag</code> , 但标识CSS类名的关键字 <code>class</code> 在Python中是保留字,使用 <code>class</code> 做参数会导致语法错误.从<code>Beautiful Soup</code> 的4.1.1版本开始,可以通过 class_ 参数搜索有指定CSS类名的<code>tag</code> : <code>soup.find_all(&quot;a&quot;, class_=&quot;sister&quot;)</code></p>
+</li>
+<li><p>通过 <code>text</code> 参数可以搜搜文档中的字符串内容</p>
+</li>
+<li><p><code>find_all()</code> 方法返回全部的搜索结构,如果文档树很大那么搜索会很慢.如果不需要全部结果,可以使用 <code>limit</code> 参数限制返回结果的数量.效果与SQL中的limit关键字类似,当搜索到的结果数量达到 <code>limit</code> 的限制时,就停止搜索返回结果.  <code>soup.find_all(&quot;a&quot;, limit=2)</code></p>
+</li>
+<li><p>recursive 默认为True，检索当前tag的所有子孙节点，<code>soup.html.find_all(&quot;title&quot;, recursive=False)</code> 搜索<code>tag</code> 的直接子节点</p>
+</li>
+<li><p>```python</p>
+<h1 id="这两行代码等价"><a href="#这两行代码等价" class="headerlink" title="这两行代码等价"></a>这两行代码等价</h1><p>soup.find_all(“a”)<br>soup(“a”)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### find()</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line"># 这两行代码几乎等价</span><br><span class="line">soup.find_all(&#39;title&#39;, limit&#x3D;1) # 返回列表</span><br><span class="line">soup.find(&#39;title&#39;) # 返回结果 等价于 soup.title</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="selector-CSS选择器-的用法"><a href="#selector-CSS选择器-的用法" class="headerlink" title="selector (CSS选择器) 的用法"></a>selector (CSS选择器) 的用法</h4><p>Beautiful Soup支持大部分的CSS（CSS，全称叫作 Cascading Style Sheets，即层叠样式表）选择器， 在 Tag 或 BeautifulSoup 对象的 .select() 方法中传入字符串参数, 即可使用CSS选择器的语法找到tag。</p>
+<h5 id="CSS样式"><a href="#CSS样式" class="headerlink" title="CSS样式"></a>CSS样式</h5><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#head_wrapper</span><span class="selector-class">.s-ps-islite</span> <span class="selector-class">.s-p-top</span> &#123;   </span><br><span class="line">    <span class="attribute">position</span>: absolute;  </span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">40px</span>;  </span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;  </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">181px</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>表示 id =head_wrapper 且（没有空格表是&amp;）class 为 s-ps-islite的节点，然后再选中其内部（有空格表示内部）的 class 为 s-p-top 的节点。字典定义了这个元素的布局方式</p>
+<p>谷歌浏览器→右键→检查→鼠标放到网页书名上，在检查窗口右键→copy→copy selector，结果如下(&gt; 找到某个tag标签下的子标签)：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#subject_list</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(1)</span> &gt; <span class="selector-tag">div</span><span class="selector-class">.info</span> &gt; <span class="selector-tag">h2</span> &gt; <span class="selector-tag">a</span></span><br></pre></td></tr></table></figure>
+<h5 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h5><ul>
+<li>CSS 选择器用来定位节点，根据 <strong>id、class、标签名筛选</strong>是其中最常用的3种表示方式。</li>
+<li>CSS 选择器还支持嵌套选择，各个选择器之间<strong>空格分隔</strong>代表<strong>嵌套关系</strong>，如果<strong>不加空格</strong>，代表<strong>并列</strong>关系。</li>
+<li><code>ul &gt; li</code>表示选择父节点为 ul 节点的所有 li 节点</li>
+<li><code>li:nth-child(n)</code> 表示选择属于其父节点的第n个子节点的所有 li 节点</li>
+<li>CSS选择器及其他语法规则参见<a href="https://python3webspider.cuiqingcai.com/2.2web-wang-ye-ji-chu#2-2-4-xuan-ze-qi" target="_blank" rel="noopener">该表格</a></li>
+</ul>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>通过get_text()可以通过下面代码得到每一页面的书名：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">book_name_list = []</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>): <span class="comment"># 每页20本书</span></span><br><span class="line">        book_name = soup.select(<span class="string">"#subject_list &gt; ul &gt; li:nth-child("</span> + str(j) + <span class="string">") &gt; div.info &gt; h2 &gt; a"</span>)  </span><br><span class="line">        <span class="comment"># 第29页只有19本书</span></span><br><span class="line">        <span class="keyword">for</span> book_name <span class="keyword">in</span> book_name:</span><br><span class="line">            book_name_list.append(book_name.get_text().replace(<span class="string">" "</span>,<span class="string">""</span>).replace(<span class="string">"\r"</span>, <span class="string">""</span>).replace(<span class="string">"\n"</span>, <span class="string">""</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="修改文档树"><a href="#修改文档树" class="headerlink" title="修改文档树"></a>修改文档树</h3><h3 id="解析部分文档"><a href="#解析部分文档" class="headerlink" title="解析部分文档"></a>解析部分文档</h3><p>如果仅仅因为想要查找文档中的<a>标签而将整片文档进行解析,实在是浪费内存和时间.最快的方法是从一开始就把<a>标签以外的东西都忽略掉. <code>SoupStrainer</code> 类可以定义文档的某段内容,这样搜索文档时就不必先解析整篇文档,只会解析在 <code>SoupStrainer</code> 中定义过的文档. 创建一个 <code>SoupStrainer</code> 对象并作为 <code>parse_only</code> 参数给 <code>BeautifulSoup</code> 的构造方法即可.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> SoupStrainer</span><br><span class="line">only_a_tags = SoupStrainer(<span class="string">"a"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="6-解析库pyquery"><a href="#6-解析库pyquery" class="headerlink" title="6. 解析库pyquery"></a>6. 解析库pyquery</h2><p>用法和JQuery类似</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><h4 id="字符串初始化"><a href="#字符串初始化" class="headerlink" title="字符串初始化"></a>字符串初始化</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">html = <span class="string">" &lt;html blabla"</span></span><br><span class="line">pq(html)</span><br></pre></td></tr></table></figure>
+<h4 id="URL初始化"><a href="#URL初始化" class="headerlink" title="URL初始化"></a>URL初始化</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pyquery <span class="keyword">import</span> PyQuery <span class="keyword">as</span> pq</span><br><span class="line">doc = pq(url=<span class="string">'http://cuiqingcai.com'</span>)</span><br><span class="line">print(doc(<span class="string">'title'</span>))</span><br></pre></td></tr></table></figure>
+<p>PyQuery 对象会首先请求这个 URL，然后用得到的 HTML 内容完成初始化，这其实就相当于用网页的源代码以字符串的形式传递给 PyQuery 类来初始化。</p>
+<p>相当于：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">doc = pq(requests.get(<span class="string">'http://cuiqingcai.com'</span>).text)</span><br><span class="line">print(doc(<span class="string">'title'</span>))</span><br></pre></td></tr></table></figure>
+<h4 id="文件初始化"><a href="#文件初始化" class="headerlink" title="文件初始化"></a>文件初始化</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pq(filename=<span class="string">'dem.html'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="CSS选择器-1"><a href="#CSS选择器-1" class="headerlink" title="CSS选择器"></a>CSS选择器</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">doc=pq(html)</span><br><span class="line">print(doc(<span class="string">"#content .info name"</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="查找节点"><a href="#查找节点" class="headerlink" title="查找节点"></a>查找节点</h3><h4 id="子节点-1"><a href="#子节点-1" class="headerlink" title="子节点"></a>子节点</h4><h5 id="find"><a href="#find" class="headerlink" title="find()"></a>find()</h5><p>查找所有子孙节点</p>
+<p>会找到所有符合条件的节点，和BeautifulSoup中的find()不同，类似于BS中的find_all()</p>
+<h5 id="children"><a href="#children" class="headerlink" title="children()"></a>children()</h5><p>只查找子节点 ， 支持CSS选择器</p>
+<h4 id="父节点-1"><a href="#父节点-1" class="headerlink" title="父节点"></a>父节点</h4><h5 id="parent-1"><a href="#parent-1" class="headerlink" title="parent()"></a>parent()</h5><p>直接父节点</p>
+<h5 id="parents-1"><a href="#parents-1" class="headerlink" title="parents()"></a>parents()</h5><p>祖贤父节点</p>
+<h4 id="兄弟节点-1"><a href="#兄弟节点-1" class="headerlink" title="兄弟节点"></a>兄弟节点</h4><h5 id="sublings"><a href="#sublings" class="headerlink" title="sublings()"></a>sublings()</h5><h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><p>PyQuery的选择结果不会像BeautifulSoup一样返回list，而是直接返回多个或单个节点</p>
+<p>返回单个节点可以直接用str()u转化为字符串，</p>
+<p>返回多个节点需要遍历，斯奥用items()方法，返回生成器</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">lis = doc(<span class="string">'li'</span>).items()</span><br><span class="line">print(type(lis)) <span class="comment"># class 'generator'</span></span><br><span class="line"><span class="keyword">for</span> li <span class="keyword">in</span> lis:</span><br><span class="line">    print(li, type(li))</span><br></pre></td></tr></table></figure>
+<h3 id="获取信息"><a href="#获取信息" class="headerlink" title="获取信息"></a>获取信息</h3><h4 id="获取属性attr"><a href="#获取属性attr" class="headerlink" title="获取属性attr()"></a>获取属性attr()</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = doc(<span class="string">'a'</span>)</span><br><span class="line">a.attr(<span class="string">'href'</span>)  <span class="comment"># 只会返回第一个满足条件的标签（节点）的href属性</span></span><br></pre></td></tr></table></figure>
+<p>如果获取所有节点的属性，需要调用items()遍历。</p>
+<h4 id="获取文本"><a href="#获取文本" class="headerlink" title="获取文本"></a>获取文本</h4><p>text()方法返回<strong>所有</strong>节点下纯文字内容，即不需要遍历。</p>
+<p>html()方法返回HTML文本，多个节点时，需要<strong>遍历</strong>。</p>
+<h3 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h3><h4 id="addClass-和-removeClass"><a href="#addClass-和-removeClass" class="headerlink" title="addClass 和 removeClass"></a>addClass 和 removeClass</h4><p>添加，删除class这个属性</p>
+<h4 id="attr、text、html"><a href="#attr、text、html" class="headerlink" title="attr、text、html"></a>attr、text、html</h4><p>attr操作其他属性，<code>li.attr(&#39;name&#39;, &#39;link&#39;)</code> 将name属性的值修改为link，如果不存在，则创建改属性。</p>
+<p>如果 attr 方法只传入第一个参数的属性名，则是获取这个属性值；如果传入第二个参数，可以用来修改属性值。text 和 html 方法如果不传参数，则是获取节点内纯文本和 HTML 文本；如果传入参数，则进行赋值。</p>
+<h4 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h4><p><strong>为提取信息带来便利</strong></p>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p>CSS选择器支持各种各样的伪类选择器</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">doc = pq(html)</span><br><span class="line">li = doc(<span class="string">'li:first-child'</span>)</span><br><span class="line">print(li)</span><br><span class="line">li = doc(<span class="string">'li:last-child'</span>)</span><br><span class="line">print(li)</span><br><span class="line">li = doc(<span class="string">'li:nth-child(2)'</span>)</span><br><span class="line">print(li)</span><br><span class="line">li = doc(<span class="string">'li:gt(2)'</span>) <span class="comment"># 三个以后的li节点</span></span><br><span class="line">print(li)</span><br><span class="line">li = doc(<span class="string">'li:nth-child(2n)'</span>) <span class="comment"># 偶数位置的li节点</span></span><br><span class="line">print(li)</span><br><span class="line">li = doc(<span class="string">'li:contains(second)'</span>) <span class="comment">#包含second的li节点</span></span><br><span class="line">print(li)</span><br></pre></td></tr></table></figure>
+<h2 id="7-使用代理IP"><a href="#7-使用代理IP" class="headerlink" title="7. 使用代理IP"></a>7. 使用代理IP</h2><p>很多网站对于爬虫做了一定限制，IP容易进小黑屋，所以需要采用代理IP。</p>
+<h3 id="代理的种类"><a href="#代理的种类" class="headerlink" title="代理的种类"></a>代理的种类</h3><ul>
+<li><p><strong>透明代理 (Transparent Proxy)</strong>: 不但改动了数据包，还会告诉服务器客户端的真实IP，约等于没用。</p>
+<ul>
+<li>REMOTE_ADDR = Proxy IP</li>
+<li>HTTP_VIA = Proxy IP</li>
+<li>HTTP_X_FORWARDED_FOR = Your IP</li>
+</ul>
+</li>
+<li><p><strong>普通匿名代理 (Anonymous Proxy)</strong>：会在数据包上做一些改动，服务器上发现这是个代理服务器，但是一般不清楚真实IP地址（有一定几率能追查到）。</p>
+<ul>
+<li>REMOTE_ADDR = proxy IP</li>
+<li>HTTP_VIA = proxy IP</li>
+<li>HTTP_X_FORWARDED_FOR = proxy IP</li>
+</ul>
+</li>
+<li><p><strong>混淆代理(Distorting Proxies)</strong>：会在数据包上做一些改动，服务器上发现这是个代理服务器，但会得到一个假的IP地址.</p>
+<ul>
+<li>REMOTE_ADDR = proxy IP</li>
+<li>HTTP_VIA = proxy IP</li>
+<li>HTTP_X_FORWARDED_FOR = Random IP address</li>
+</ul>
+</li>
+<li><p><strong>高匿代理(Elite proxy或High Anonymity Proxy)</strong>：会将数据包原封不动的转发，在服务端看来就好像真的是一个普通客户端在访问，而记录的IP则是代理服务器的IP。</p>
+<ul>
+<li>REMOTE_ADDR = Proxy IP</li>
+<li>HTTP_VIA = not determined</li>
+<li>HTTP_X_FORWARDED_FOR = not determined</li>
+</ul>
+<p><strong>参考</strong>：<a href="https://blog.csdn.net/a19860903/article/details/47146715" target="_blank" rel="noopener">https://blog.csdn.net/a19860903/article/details/47146715</a></p>
+</li>
+</ul>
+<h3 id="代理IP网站"><a href="#代理IP网站" class="headerlink" title="代理IP网站"></a>代理IP网站</h3><ol>
+<li><a href="https://www.kuaidaili.com/ops/proxylist/1/" target="_blank" rel="noopener">快代理</a></li>
+<li><a href="http://www.66ip.cn/index.html" target="_blank" rel="noopener">66代理</a></li>
+</ol>
+<h3 id="建立代理IP池"><a href="#建立代理IP池" class="headerlink" title="建立代理IP池"></a>建立代理IP池</h3><p>以<a href="https://www.kuaidaili.com/ops/proxylist/1/" target="_blank" rel="noopener">快代理</a>为例：</p>
+<details>
+<summary><mark>查看隐藏代码</mark></summary>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_proxy</span><span class="params">(headers)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    获取代理IP列表</span></span><br><span class="line"><span class="string">    :return: ip_list [&#123;"https": ip&#125;,…]</span></span><br><span class="line"><span class="string">     """</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    ip_list = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">2</span>):</span><br><span class="line">        <span class="comment"># 快代理</span></span><br><span class="line">        base_url = <span class="string">"https://www.kuaidaili.com/ops/proxylist/"</span> + str(i)</span><br><span class="line">        html = requests.get(base_url, headers=headers).text</span><br><span class="line"> </span><br><span class="line">        pattern = <span class="string">'\d+\.\d+\.\d+\.\d+'</span></span><br><span class="line">        re_list = re.findall(pattern, html)</span><br><span class="line">        <span class="keyword">for</span> ip_port <span class="keyword">in</span> re_list:</span><br><span class="line">            ip_list.append(&#123;<span class="string">"https"</span>: ip_port&#125;)</span><br><span class="line">    <span class="keyword">return</span> ip_list</span><br><span class="line"><span class="comment"># 快代理 上有些IP类型仅为http，有些为http，https</span></span><br></pre></td></tr></table></figure>
+
+</details>
+
+<h3 id="测试代理IP"><a href="#测试代理IP" class="headerlink" title="测试代理IP"></a>测试代理IP</h3><p>通过request直接请求一个网址，看是否通过或者看状态码是否为200(<strong><code>request.status_code == 200</code></strong>)</p>
+<p><details></p>
+<summary><mark>查看隐藏代码</mark></summary>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_proxy</span><span class="params">(ip_list, headers, test_url)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    测试代理IP</span></span><br><span class="line"><span class="string">    :param ip_list:</span></span><br><span class="line"><span class="string">    :return: ip_list [&#123;"https": ip&#125;,…]</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> proxy <span class="keyword">in</span> ip_list:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            response = requests.get(test_url, headers=headers, proxies=proxy, timeout=<span class="number">5</span>)  </span><br><span class="line">        <span class="keyword">except</span> requests.exceptions.ConnectTimeout:</span><br><span class="line">            ip_list.pop(i)</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> ip_list</span><br></pre></td></tr></table></figure>
+<p><details><br><strong>但是上述代码的问题是设置了代理IP，请求网站通过，也不代表IP有效，因为有可能不是用了设置的代理IP而是用了自己公网下的IP（可以用ifconfig查询所在局域网下的IP，及私网IP）</strong><a href="https://blog.csdn.net/Chenftli/article/details/86701563" target="_blank" rel="noopener">参考</a></p>
+<p><details></p>
+<summary><mark>查看隐藏代码</mark></summary>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_proxy_3</span><span class="params">(ip_list)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    测试是理IP</span></span><br><span class="line"><span class="string">    :param ip_list:</span></span><br><span class="line"><span class="string">    :return ip_valid_list: [&#123;https: ip&#125;,…]</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    ip_valid_list = []</span><br><span class="line">    test_url =  <span class="string">"http://httpbin.org/get"</span> <span class="comment"># 改网站可测试目前请求的IP</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> proxy <span class="keyword">in</span> ip_list:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            res = requests.get(test_url, proxies=proxy, headers=headers, timeout=<span class="number">8</span>)</span><br><span class="line">            data = response.text.strip()</span><br><span class="line">            proxyIP = json.loads(data)[<span class="string">'origin'</span>]</span><br><span class="line">            <span class="keyword">if</span> proxyIP != proxy[<span class="string">"https"</span>]:</span><br><span class="line">                ip_list.pop(i)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="comment">#print("proxy invalid")</span></span><br><span class="line">            ip_list.pop(i)</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ip_valid_list</span><br></pre></td></tr></table></figure>
+<details>
+
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p><details></p>
+<summary><mark>隐藏</mark></summary>
+
+<p>Max retries exceeded with url</p>
+<ol>
+<li><p>requests.exceptions.<strong>ProxyError</strong>: HTTPConnectionPool(host=’**<em>‘, port=443): Max retries exceeded with url: \</em>** (Caused by ProxyError(‘Cannot connect to proxy.’, NewConnectionError(‘<urllib3.connection.HTTPConnection object at 0x0000015363189190>: </p>
+<blockquote>
+<p>IP代理使用的协议不正常，http和https不能写错。</p>
+</blockquote>
+</li>
+<li><p>requests.exceptions.<strong>ConnectionError</strong>: HTTPSConnectionPool(host=<em>**, , port=443): Max retries exceeded with url: \</em>** (Caused by NewConnectionError(‘<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb51433af98>:</p>
+<blockquote>
+<p>http的连接数超过最大限制，默认的情况下连接是Keep-alive的，所以导致服务器保持了太多连接而不能再新建连接。</p>
+</blockquote>
+</li>
+<li><p>HTTPSConnectionPool(host=’***‘, port=443): Max retries exceeded with url: ***(Caused by SSLError(SSLError(1, u’[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:579)’),))</p>
+<blockquote>
+<p>Requests 可以为 HTTPS 请求验证 SSL 证书，就像 web 浏览器一样。SSL 验证默认是开启的，如果证书验证失败，Requests 会抛出 SSLError。</p>
+<ul>
+<li><p>不用ssl证书验证，将verify 设置为 False，<strong>page=requests.get(url，verify=False)</strong></p>
+</li>
+<li><p>requests默认是keep-alive的，可能没有释放，加参数 headers={‘Connection’:’close’}</p>
+</li>
+<li><p>增加连接重试次数：<code>requests.adapters.DEFAULT_RETRIES = 5</code> </p>
+</li>
+<li><p>关闭多余的连接：requests使用了urllib3库，默认的http connection是keep-alive的，requests设置False关闭。<code>s = requests.session()       s.keep_alive = False</code> </p>
+<p>参考：<a href="https://blog.csdn.net/wdh315172/article/details/80491668" target="_blank" rel="noopener">https://blog.csdn.net/wdh315172/article/details/80491668</a></p>
+</li>
+</ul>
+</blockquote>
+<details>
+
+</li>
+</ol>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><ul>
+<li><a href="https://github.com/Hopetree/Jobs-search" target="_blank" rel="noopener">招聘网站爬虫</a></li>
+<li><a href="https://github.com/Hopetree/E-commerce-crawlers" target="_blank" rel="noopener">电商网站爬虫</a></li>
+<li><a href="https://github.com/Hopetree/Spiders100" target="_blank" rel="noopener">Spiders100</a></li>
+<li><a href="https://github.com/Hopetree/MyTools" target="_blank" rel="noopener">一些界面化的爬虫小工具</a></li>
+</ul>
+<hr>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ol>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="noopener">BeautifulSoup4官方中文文档</a></li>
+<li><a href="[https://www.jianshu.com/p/2b783f7914c6](https://www.jianshu.com/p/2b783f7914c6">bs4模块使用指南</a>)</li>
+<li><a href="https://python3webspider.cuiqingcai.com/" target="_blank" rel="noopener">Python3网络爬虫开发实战</a>​</li>
+</ol>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>requests</tag>
+        <tag>BeautifulSoup</tag>
       </tags>
   </entry>
   <entry>
@@ -1015,370 +1304,52 @@
       </tags>
   </entry>
   <entry>
-    <title>python爬虫学习</title>
-    <url>/2020/07/24/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E6%9C%AC%E5%BA%93%E5%92%8C%E8%A7%A3%E6%9E%90%E5%BA%93/</url>
-    <content><![CDATA[<h2 id="1-前期准备"><a href="#1-前期准备" class="headerlink" title="1.前期准备"></a>1.前期准备</h2><h3 id="1-anaconda安装"><a href="#1-anaconda安装" class="headerlink" title="1. anaconda安装"></a>1. anaconda安装</h3><ol>
-<li><p>配置环境，将python写入环境变量。</p>
+    <title>记人生的第一次面试</title>
+    <url>/2020/07/21/%E8%AE%B0%E4%BA%BA%E7%94%9F%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95/</url>
+    <content><![CDATA[<p>写在最前面：快26岁高龄才经历人生中第一次工作面试，值得写篇博客纪念一下。</p>
 <a id="more"></a>
+<h2 id="形式："><a href="#形式：" class="headerlink" title="形式："></a>形式：</h2><p>网络面试；2个HR，10分钟。</p>
+<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><ol>
+<li><p>1分钟自我介绍；</p>
 </li>
-</ol>
-<h3 id="2-IDE：-pycharm安装"><a href="#2-IDE：-pycharm安装" class="headerlink" title="2. IDE： pycharm安装"></a>2. IDE： pycharm安装</h3><ol>
-<li>使用虚拟环境（virtual environment）</li>
-<li>settings 安装python包，可以直接从anaconda中把安装包直接拷到Lib-site_package下，如果网速限制，可以替换镜像源。</li>
-</ol>
-<h2 id="2-urllib"><a href="#2-urllib" class="headerlink" title="2. urllib"></a>2. urllib</h2><p><code>urllib</code> 是Python 内置的 HTTP 请求库，包含如4 个模块：<code>request</code>, <code>error</code>, <code>parse</code>, <code>robotparser</code></p>
-<h3 id="request"><a href="#request" class="headerlink" title="request"></a>request</h3><p>该模块可以发送请求并得到响应。</p>
-<ol>
-<li><p><code>urlopen</code></p>
-<p>其结果返回一个 HTTPResposne 类型的对象，主要包含 <code>read、getheader、getheaders</code>等方法，以及 <code>msg、version、status、reason</code>等属性。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">response = urllib.request.urlopen(url)</span><br><span class="line">data = response.read().decode()</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<li><p>问了本科院系是下属院系（民办挂名）还是正经院系？</p>
 <blockquote>
-<p><code>response.status</code> 1**：信息状态，2**：成功状态，请求成功为200 ，3**：重定向，4**：客户端错误，400代表解析失败，404 代表网页未找到。</p>
-<p><code>response.getheaders()</code> 得到headers</p>
-</blockquote>
-<ol>
-<li><p><code>Request</code></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">req = request.Request(url=url, data=data, headers=headers, method=<span class="string">'POST'</span>)  </span><br><span class="line">response = request.urlopen(req)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>build_opener</code> 和 <code>Handler</code> 可以实现代理，密码登录等复杂请求，例子可<a href="https://python3webspider.cuiqingcai.com/3.1-shi-yong-urllib#2-request" target="_blank" rel="noopener">参考</a></p>
-</li>
-</ol>
-<h3 id="error"><a href="#error" class="headerlink" title="error"></a>error</h3><p>该模块定义了由 request 模块产生的异常。</p>
-<ol>
-<li><p><code>URLError</code> 有一个属性<code>reason</code></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:  </span><br><span class="line">    response = request.urlopen(<span class="number">404</span>_url)  </span><br><span class="line"><span class="keyword">except</span> error.URLError <span class="keyword">as</span> e:  </span><br><span class="line">    print(e.reason)  <span class="comment">#  Not Found （对应403）</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>HTTPError</code> 专门处理HTTP请求的错误，具有<code>code</code>, <code>reason</code>, <code>headers</code> 三个属性</p>
-</li>
-</ol>
-<h3 id="parse"><a href="#parse" class="headerlink" title="parse"></a>parse</h3><p>该模块定义了处理 URL 的标准接口，例如实现 URL 各部分的抽取、合并以及链接转换。</p>
-<ol>
-<li><p><code>quote</code> 将内容转化为 URL 编码的格式。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">key = <span class="string">"小说"</span></span><br><span class="line">key_ASCII = quote(key)</span><br><span class="line">print(key_ASCII)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>unquote</code> 将 URL 格式内容解码</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">key = <span class="string">"%E5%B0%8F%E8%AF%B4"</span></span><br><span class="line">print(unqoute(key))</span><br></pre></td></tr></table></figure>
-<p><strong><code>request</code> 中也有qoute</strong></p>
-</li>
-</ol>
-<h3 id="robotparser"><a href="#robotparser" class="headerlink" title="robotparser"></a>robotparser</h3><p>该模块可以实现网站 Robots 协议的分析。</p>
-<p>requests是用于爬取网页源码的一个库。</p>
-<h2 id="3-requests"><a href="#3-requests" class="headerlink" title="3. requests"></a>3. requests</h2><h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p><code>get</code> 方法以 GET 方式请求网页，返回得到一个 Response 对象，有<code>status_code，text，cookies</code> 等属性。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">response=requests.get(url) </span><br><span class="line">data=response.text</span><br><span class="line">file_path = <span class="string">r"E:\pycharm\test.html"</span>  <span class="comment"># 'r'是防止字符转义,否则\需要变成/</span></span><br><span class="line"><span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f: </span><br><span class="line">    f.write(data)</span><br></pre></td></tr></table></figure>
-<p><strong>注意：</strong>因为Windows操作系统默认字符编码为GBK，而Python默认Unicode.utf-8，如果不写“encoding=‘utf-8’ ”就会报错。</p>
-<p>对于二进制数据，可以使用<code>content</code> 属性，可以直接写入文件，直接获得图片，音频，视屏。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">r = requests.get(<span class="string">"https://github.com/favicon.ico"</span>)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'favicon.ico'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f: <span class="comment"># wb 以二进制方式写入</span></span><br><span class="line">    f.write(r.content)</span><br></pre></td></tr></table></figure>
-<p>有些网站禁止抓取，如B站，可以使用headers包含 User-Agent 字段信息，也就是浏览器标识信息。<a href="https://www.jianshu.com/p/da6a44d0791e" target="_blank" rel="noopener" title="User-agent大全">User-agent大全</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># urllib.error.HTTPError: HTTP Error 403: Forbidden</span></span><br><span class="line">response = urllib.request.urlopen(url)</span><br><span class="line">data = response.read().decode() </span><br><span class="line"><span class="comment"># 没有问题</span></span><br><span class="line">response=requests.get(url) </span><br><span class="line">data=response.text</span><br></pre></td></tr></table></figure>
-<p>在设置 Headers 使用Cookie来维持登录状态：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'Cookie'</span>: <span class="string">'cookie_content'</span>,</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36'</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>另外，<code>request</code>还有<code>put, post, delete, options</code> 等方法实现 POST、PUT、DELETE、OPTIONS 等请求。</p>
-<h3 id="session会话维持"><a href="#session会话维持" class="headerlink" title="session会话维持"></a>session会话维持</h3><p>通过用 get 方法登录某个网站，用 get 方法第二次去请求个人信息页面，并不能成功。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">requests.get(<span class="string">'http://httpbin.org/cookies/set/number/123456789'</span>)</span><br><span class="line">r = requests.get(<span class="string">'http://httpbin.org/cookies'</span>)</span><br><span class="line">print(r.text) <span class="comment"># cookies 是空字典</span></span><br></pre></td></tr></table></figure>
-<p>如何设置一次cookies，维持对话，</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = requests.Session()</span><br><span class="line">s.get(<span class="string">'http://httpbin.org/cookies/set/number/123456789'</span>)</span><br><span class="line">r = s.get(<span class="string">'http://httpbin.org/cookies'</span>)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
-<h2 id="4-使用Selenium调用浏览器"><a href="#4-使用Selenium调用浏览器" class="headerlink" title="4. 使用Selenium调用浏览器"></a>4. 使用Selenium调用浏览器</h2><p><a href="[http://www.selenium.org.cn/](http://www.selenium.org.cn/">Selenium</a>)是web自动化测试工具集，包括IDE、Grid、RC（selenium 1.0）、WebDriver（selenium 2.0）等。</p>
-<p> <a href="[https://blog.csdn.net/huilan_same/article/details/52615123](https://blog.csdn.net/huilan_same/article/details/52615123">selenium自动化资源整理</a>)</p>
-<h3 id="1-调用Chrome浏览器"><a href="#1-调用Chrome浏览器" class="headerlink" title="1. 调用Chrome浏览器"></a>1. 调用Chrome浏览器</h3><ol>
-<li><p>查看本地Chrome版本</p>
-</li>
-<li><p>下载<a href="http://npm.taobao.org/mirrors/chromedriver" target="_blank" rel="noopener">Chromedriver</a></p>
-</li>
-<li><p>将chromedriver.exe放到python path下</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> selenium.webdriver</span><br><span class="line"></span><br><span class="line">url = <span class="string">"https://www.bilibili.com/"</span></span><br><span class="line"></span><br><span class="line">driver = selenium.webdriver.Chrome()</span><br><span class="line">driver.get(url)</span><br><span class="line">data = driver.page_source</span><br><span class="line"></span><br><span class="line">file_path = <span class="string">r"E:\pycharm-爬虫\bilibili\首页_selenium.html"</span></span><br><span class="line"><span class="keyword">with</span> open(file_path, <span class="string">'w'</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(data)</span><br><span class="line"></span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="2-调用FireFox浏览器"><a href="#2-调用FireFox浏览器" class="headerlink" title="2. 调用FireFox浏览器"></a>2. 调用FireFox浏览器</h3><ol>
-<li>下载<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="noopener">geckodriver</a>，并将其放入PATH中。</li>
-<li>driver = selenium.webdriver.Firefox()</li>
-</ol>
-<h2 id="5-bs4-BeautifulSoup解析HTML"><a href="#5-bs4-BeautifulSoup解析HTML" class="headerlink" title="5. bs4.BeautifulSoup解析HTML"></a>5. bs4.BeautifulSoup解析HTML</h2><p>bs4即<a href="http://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="noopener">BeautifulSoup4</a> ，是一个可以从HTML或XML文件中提取数据的Python库。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">data = <span class="string">'&lt;b class="boldest"&gt;Extremely bold&lt;/b&gt;'</span></span><br><span class="line">soup = BeautifulSoup(data, <span class="string">"html.parser"</span>) <span class="comment"># data为html格式的数据</span></span><br></pre></td></tr></table></figure>
-<p>Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种: <code>Tag</code>, <code>NavigableString</code> , <code>BeautifulSoup</code> , <code>Comment</code> 。</p>
-<h3 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h3><p><code>tag</code> 的属性有<code>name</code> 和 <code>attributes</code>，方法<code>get()</code> , 如果不确定某个属性是否存在时,用 <code>tag.get(&#39;attr&#39;)</code> 方法去获取它,跟获取Python字典的key一样&gt;</p>
-<p>一个<code>tag</code> 可能有很多属性，属性的操作与<strong>字典</strong>相同，可以被添加，删除或修改。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tag = soup.b <span class="comment"># tag b</span></span><br><span class="line">tag.name  <span class="comment"># 'b'</span></span><br><span class="line">tag.name = <span class="string">"blockquote"</span> <span class="comment"># tag &lt;blockquote class="boldest"&gt;Extremely bold&lt;/blockquote&gt;</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line">tag[<span class="string">'class'</span>] <span class="comment"># boldest</span></span><br><span class="line">tag.attrs <span class="comment"># &#123;'class': 'boldest'&#125;</span></span><br><span class="line">tag[<span class="string">'class'</span>] = <span class="string">'verybold'</span> <span class="comment"># 修改 &lt;blockquote class="verybold" &gt;Extremely bold&lt;/blockquote&gt;</span></span><br><span class="line">tag[<span class="string">'id'</span>] = <span class="number">1</span>   <span class="comment"># 添加 &lt;blockquote class="verybold" id="1"&gt;Extremely bold&lt;/blockquote&gt;</span></span><br><span class="line"><span class="keyword">del</span> tag[<span class="string">'class'</span>] <span class="comment"># &lt;blockquote id="1"&gt;Extremely bold&lt;/blockquote&gt;</span></span><br><span class="line"><span class="keyword">del</span> tag[<span class="string">'id'</span>]    <span class="comment"># &lt;blockquote&gt;Extremely bold&lt;/blockquote&gt;</span></span><br></pre></td></tr></table></figure>
-<p><code>HTML5</code> 中定义了一系列可以包含多个值的属性，<code>class</code> (一个tag可以有多个CSS的class). <code>rel</code>  <code>rev</code> ， <code>accept-charset</code> ， <code>headers</code> ， <code>accesskey</code> 等。</p>
-<p>多值属性的返回值为list， 非多值属性的返回值为字符串：</p>
-<p><strong>注意：XML格式的tag不包含多值属性。</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 多值属性class</span></span><br><span class="line">css_soup = BeautifulSoup(<span class="string">'&lt;p class="body strikeout"&gt;&lt;/p&gt;'</span>)</span><br><span class="line">css_soup.p[<span class="string">'class'</span>]</span><br><span class="line"><span class="comment"># ["body", "strikeout"]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 非多值属性id</span></span><br><span class="line">id_soup = BeautifulSoup(<span class="string">'&lt;p id="my id"&gt;&lt;/p&gt;'</span>)</span><br><span class="line">id_soup.p[<span class="string">'id'</span>]</span><br><span class="line"><span class="comment"># 'my id'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 多值属性修改时</span></span><br><span class="line">rel_soup = BeautifulSoup(<span class="string">'&lt;p&gt;Back to the &lt;a rel="index"&gt;homepage&lt;/a&gt;&lt;/p&gt;'</span>)</span><br><span class="line">rel_soup.a[<span class="string">'rel'</span>] = [<span class="string">'index'</span>, <span class="string">'contents'</span>]</span><br><span class="line">print(rel_soup.p)</span><br><span class="line"><span class="comment"># &lt;p&gt;Back to the &lt;a rel="index contents"&gt;homepage&lt;/a&gt;&lt;/p&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="NavigableString"><a href="#NavigableString" class="headerlink" title="NavigableString"></a>NavigableString</h3><p>字符串常被包含在<code>tag</code> 内。Beautiful Soup用<code>NavigableString</code>类来包装tag中的字符串: <code>tag.string</code></p>
-<p>tag中包含的字符串不能编辑,但是可以用 <code>replace_with()</code> 方法替换成其它的字符串</p>
-<h3 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h3><p><code>BeautifulSoup</code> 对象表示的是一个文档的全部内容.大部分时候,可以把它当作 <code>Tag</code> 对象，它支持 遍历文档树 和 搜索文档树 中描述的大部分的方法。</p>
-<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><p>处理HTML和XML中的注释部分，<code>Comment</code> 对象是一个特殊类型的 <code>NavigableString</code> 对象，但是当它出现在HTML文档中时, <code>Comment</code> 对象会使用特殊的格式输出。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">markup = <span class="string">"&lt;b&gt;&lt;!--Hey, buddy. Want to buy a used parser?--&gt;&lt;/b&gt;"</span></span><br><span class="line">soup = BeautifulSoup(markup)</span><br><span class="line">comment = soup.b.string</span><br><span class="line">type(comment)</span><br><span class="line"><span class="comment"># &lt;class 'bs4.element.Comment'&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="遍历文档树"><a href="#遍历文档树" class="headerlink" title="遍历文档树"></a>遍历文档树</h3><p>一个<code>tag</code> 可能包含多个字符串或其他<code>tag</code> ，这些都是该<code>tag</code> 的子节点。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 点取属性的方式只能获得当前名字的第一个tag</span></span><br><span class="line">soup.head</span><br><span class="line">soup.body.b</span><br><span class="line"><span class="comment"># 想要得到所有的&lt;a&gt;标签</span></span><br><span class="line">soup.find_all(<span class="string">'a'</span>) <span class="comment"># 返回list</span></span><br></pre></td></tr></table></figure>
-<h4 id="子节点"><a href="#子节点" class="headerlink" title="子节点"></a>子节点</h4><h5 id="contents-和-children"><a href="#contents-和-children" class="headerlink" title=".contents 和 .children"></a>.contents 和 .children</h5><p><code>tag</code> 的 <code>.contents</code> 属性可以将<code>tag</code> 的子节点以列表的方式输出:</p>
-<p>通过<code>tag</code> 的 <code>.children</code> 生成器,可以对<code>tag</code> 的子节点进行循环:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">head_tag = soup.head  <span class="comment"># &lt;head&gt;&lt;title&gt;The Dormouse's story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line">title_tag = head_tag.contents[<span class="number">0</span>]  <span class="comment"># &lt;title&gt;The Dormouse's story&lt;/title&gt;</span></span><br><span class="line">title_tag.contents    <span class="comment"># [u'The Dormouse's story']</span></span><br><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> title_tag.children:</span><br><span class="line">    print(child)      <span class="comment"># The Dormouse's story</span></span><br></pre></td></tr></table></figure>
-<h5 id="descendants"><a href="#descendants" class="headerlink" title=".descendants"></a>.descendants</h5><p><code>.contents</code> 和 <code>.children</code> 属性仅包含tag的直接子节点.例如,<head>标签只有一个直接子节点<code>&lt;title&gt;</code> 但<code>&lt;title&gt;</code> 标签也包含一个子节点:字符串 “The Dormouse’s story”，这种情况下字符串 “The Dormouse’s story”也属于<code>&lt;head&gt;</code> 标签的子孙节点. <code>.descendants</code> 属性可以对所有tag的子孙节点进行递归循环。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> head_tag.descendants:</span><br><span class="line">    print(child)</span><br><span class="line">    <span class="comment"># &lt;title&gt;The Dormouse's story&lt;/title&gt;</span></span><br><span class="line">    <span class="comment"># The Dormouse's story</span></span><br></pre></td></tr></table></figure>
-<h5 id="string"><a href="#string" class="headerlink" title=".string"></a>.string</h5><p>如果<code>tag</code> 只有一个 <code>NavigableString</code> 类型子节点,那么这个<code>tag</code> 可以使用 <code>.string</code> 得到子节点</p>
-<p>否则，<code>.string</code> 的输出结果是 <code>None</code></p>
-<p>输出的字符串中可能包含了很多空格或空行,使用 <code>.stripped_strings</code> 可以去除多余空白内容</p>
-<h6 id="bs4-element-get-text"><a href="#bs4-element-get-text" class="headerlink" title="bs4.element.get_text()"></a>bs4.element.get_text()</h6><p> Get all child strings, concatenated using the given separator (默认是空格)</p>
-<h4 id="父节点"><a href="#父节点" class="headerlink" title="父节点"></a>父节点</h4><h5 id="parent"><a href="#parent" class="headerlink" title=".parent"></a>.parent</h5><h5 id="parents"><a href="#parents" class="headerlink" title=".parents"></a>.parents</h5><p>通过元素的 <code>.parents</code> 属性可以递归得到元素的所有父辈节点</p>
-<h5 id="兄弟节点"><a href="#兄弟节点" class="headerlink" title="兄弟节点"></a>兄弟节点</h5><p>同一个元素的子节点</p>
-<h5 id="next-sibling-和-previous-sibling"><a href="#next-sibling-和-previous-sibling" class="headerlink" title=".next_sibling 和 .previous_sibling"></a>.next_sibling 和 .previous_sibling</h5><p>在文档树中,使用 <code>.next_sibling</code> 和 <code>.previous_sibling</code> 属性来查询兄弟节点</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sibling_soup = BeautifulSoup(<span class="string">"&lt;a&gt;&lt;b&gt;text1&lt;/b&gt;&lt;c&gt;text2&lt;/c&gt;&lt;/b&gt;&lt;/a&gt;"</span>)</span><br><span class="line">sibling_soup.b.next_sibling  <span class="comment"># &lt;c&gt;text2&lt;/c&gt;</span></span><br><span class="line">sibling_soup.c.previous_sibling <span class="comment"># &lt;b&gt;text1&lt;/b&gt;</span></span><br></pre></td></tr></table></figure>
-<h5 id="next-siblings-和-previous-siblings"><a href="#next-siblings-和-previous-siblings" class="headerlink" title=".next_siblings 和 .previous_siblings"></a>.next_siblings 和 .previous_siblings</h5><p>对当前节点的兄弟节点迭代输出</p>
-<h3 id="搜索文档树"><a href="#搜索文档树" class="headerlink" title="搜索文档树"></a>搜索文档树</h3><p><code>Beautiful Soup</code> 中定义的搜索方法，比如 <code>find()</code> 和 <code>find_all()</code></p>
-<h4 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h4><p>find_all()</p>
-<p>可以是字符串，正则表达式，列表，True，方法</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">soup.find_all(<span class="string">'b'</span>) <span class="comment"># b 标签</span></span><br><span class="line">soup.find_all(re.compile(<span class="string">"^b"</span>)) <span class="comment"># 以b开头的标签</span></span><br><span class="line">soup.find_all([<span class="string">"a"</span>, <span class="string">"b"</span>]) <span class="comment"># 含有a或b的标签</span></span><br><span class="line">soup.find_all(<span class="literal">True</span>) <span class="comment"># True 可以匹配任何值,找到所有的tag,但是不会返回字符串节点</span></span><br><span class="line"><span class="comment"># 方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">has_class_but_no_id</span><span class="params">(tag)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> tag.has_attr(<span class="string">'class'</span>) <span class="keyword">and</span> <span class="keyword">not</span> tag.has_attr(<span class="string">'id'</span>) <span class="comment"># 有class，无id</span></span><br><span class="line">soup.find_all(has_class_but_no_id)</span><br></pre></td></tr></table></figure>
-<h4 id="find-all"><a href="#find-all" class="headerlink" title="find_all())"></a>find_all())</h4><p><code>find_all(name, attrs, recursive , text , **kwargs)</code></p>
-<ol>
-<li><p>如果一个指定名字的参数不是搜索内置的参数名,搜索时会把该参数当作指定名字<code>tag</code> 的属性来搜索<code>soup.find_all(id=&#39;link2&#39;)</code> </p>
-</li>
-<li><p>有些tag属性在搜索不能使用,比如HTML5中的 data-* 属性,但是可以通过 <code>find_all()</code> 方法的 <code>attrs</code> 参数定义一个字典参数来搜索包含特殊属性的tag: <code>data_soup.find_all(attrs={&quot;data-foo&quot;: &quot;value&quot;})</code></p>
-</li>
-<li><p>按照CSS类名搜索<code>tag</code> , 但标识CSS类名的关键字 <code>class</code> 在Python中是保留字,使用 <code>class</code> 做参数会导致语法错误.从<code>Beautiful Soup</code> 的4.1.1版本开始,可以通过 class_ 参数搜索有指定CSS类名的<code>tag</code> : <code>soup.find_all(&quot;a&quot;, class_=&quot;sister&quot;)</code></p>
-</li>
-<li><p>通过 <code>text</code> 参数可以搜搜文档中的字符串内容</p>
-</li>
-<li><p><code>find_all()</code> 方法返回全部的搜索结构,如果文档树很大那么搜索会很慢.如果不需要全部结果,可以使用 <code>limit</code> 参数限制返回结果的数量.效果与SQL中的limit关键字类似,当搜索到的结果数量达到 <code>limit</code> 的限制时,就停止搜索返回结果.  <code>soup.find_all(&quot;a&quot;, limit=2)</code></p>
-</li>
-<li><p>recursive 默认为True，检索当前tag的所有子孙节点，<code>soup.html.find_all(&quot;title&quot;, recursive=False)</code> 搜索<code>tag</code> 的直接子节点</p>
-</li>
-<li><p>```python</p>
-<h1 id="这两行代码等价"><a href="#这两行代码等价" class="headerlink" title="这两行代码等价"></a>这两行代码等价</h1><p>soup.find_all(“a”)<br>soup(“a”)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### find()</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line"># 这两行代码几乎等价</span><br><span class="line">soup.find_all(&#39;title&#39;, limit&#x3D;1) # 返回列表</span><br><span class="line">soup.find(&#39;title&#39;) # 返回结果 等价于 soup.title</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="selector-CSS选择器-的用法"><a href="#selector-CSS选择器-的用法" class="headerlink" title="selector (CSS选择器) 的用法"></a>selector (CSS选择器) 的用法</h4><p>Beautiful Soup支持大部分的CSS（CSS，全称叫作 Cascading Style Sheets，即层叠样式表）选择器， 在 Tag 或 BeautifulSoup 对象的 .select() 方法中传入字符串参数, 即可使用CSS选择器的语法找到tag。</p>
-<h5 id="CSS样式"><a href="#CSS样式" class="headerlink" title="CSS样式"></a>CSS样式</h5><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#head_wrapper</span><span class="selector-class">.s-ps-islite</span> <span class="selector-class">.s-p-top</span> &#123;   </span><br><span class="line">    <span class="attribute">position</span>: absolute;  </span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">40px</span>;  </span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;  </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">181px</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>表示 id =head_wrapper 且（没有空格表是&amp;）class 为 s-ps-islite的节点，然后再选中其内部（有空格表示内部）的 class 为 s-p-top 的节点。字典定义了这个元素的布局方式</p>
-<p>谷歌浏览器→右键→检查→鼠标放到网页书名上，在检查窗口右键→copy→copy selector，结果如下(&gt; 找到某个tag标签下的子标签)：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#subject_list</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(1)</span> &gt; <span class="selector-tag">div</span><span class="selector-class">.info</span> &gt; <span class="selector-tag">h2</span> &gt; <span class="selector-tag">a</span></span><br></pre></td></tr></table></figure>
-<h5 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h5><ul>
-<li>CSS 选择器用来定位节点，根据 <strong>id、class、标签名筛选</strong>是其中最常用的3种表示方式。</li>
-<li>CSS 选择器还支持嵌套选择，各个选择器之间<strong>空格分隔</strong>代表<strong>嵌套关系</strong>，如果<strong>不加空格</strong>，代表<strong>并列</strong>关系。</li>
-<li><code>ul &gt; li</code>表示选择父节点为 ul 节点的所有 li 节点</li>
-<li><code>li:nth-child(n)</code> 表示选择属于其父节点的第n个子节点的所有 li 节点</li>
-<li>CSS选择器及其他语法规则参见<a href="https://python3webspider.cuiqingcai.com/2.2web-wang-ye-ji-chu#2-2-4-xuan-ze-qi" target="_blank" rel="noopener">该表格</a></li>
-</ul>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>通过get_text()可以通过下面代码得到每一页面的书名：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">book_name_list = []</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>): <span class="comment"># 每页20本书</span></span><br><span class="line">        book_name = soup.select(<span class="string">"#subject_list &gt; ul &gt; li:nth-child("</span> + str(j) + <span class="string">") &gt; div.info &gt; h2 &gt; a"</span>)  </span><br><span class="line">        <span class="comment"># 第29页只有19本书</span></span><br><span class="line">        <span class="keyword">for</span> book_name <span class="keyword">in</span> book_name:</span><br><span class="line">            book_name_list.append(book_name.get_text().replace(<span class="string">" "</span>,<span class="string">""</span>).replace(<span class="string">"\r"</span>, <span class="string">""</span>).replace(<span class="string">"\n"</span>, <span class="string">""</span>))</span><br></pre></td></tr></table></figure>
-<h3 id="修改文档树"><a href="#修改文档树" class="headerlink" title="修改文档树"></a>修改文档树</h3><h3 id="解析部分文档"><a href="#解析部分文档" class="headerlink" title="解析部分文档"></a>解析部分文档</h3><p>如果仅仅因为想要查找文档中的<a>标签而将整片文档进行解析,实在是浪费内存和时间.最快的方法是从一开始就把<a>标签以外的东西都忽略掉. <code>SoupStrainer</code> 类可以定义文档的某段内容,这样搜索文档时就不必先解析整篇文档,只会解析在 <code>SoupStrainer</code> 中定义过的文档. 创建一个 <code>SoupStrainer</code> 对象并作为 <code>parse_only</code> 参数给 <code>BeautifulSoup</code> 的构造方法即可.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> SoupStrainer</span><br><span class="line">only_a_tags = SoupStrainer(<span class="string">"a"</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="6-解析库pyquery"><a href="#6-解析库pyquery" class="headerlink" title="6. 解析库pyquery"></a>6. 解析库pyquery</h2><p>用法和JQuery类似</p>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><h4 id="字符串初始化"><a href="#字符串初始化" class="headerlink" title="字符串初始化"></a>字符串初始化</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">html = <span class="string">" &lt;html blabla"</span></span><br><span class="line">pq(html)</span><br></pre></td></tr></table></figure>
-<h4 id="URL初始化"><a href="#URL初始化" class="headerlink" title="URL初始化"></a>URL初始化</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pyquery <span class="keyword">import</span> PyQuery <span class="keyword">as</span> pq</span><br><span class="line">doc = pq(url=<span class="string">'http://cuiqingcai.com'</span>)</span><br><span class="line">print(doc(<span class="string">'title'</span>))</span><br></pre></td></tr></table></figure>
-<p>PyQuery 对象会首先请求这个 URL，然后用得到的 HTML 内容完成初始化，这其实就相当于用网页的源代码以字符串的形式传递给 PyQuery 类来初始化。</p>
-<p>相当于：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">doc = pq(requests.get(<span class="string">'http://cuiqingcai.com'</span>).text)</span><br><span class="line">print(doc(<span class="string">'title'</span>))</span><br></pre></td></tr></table></figure>
-<h4 id="文件初始化"><a href="#文件初始化" class="headerlink" title="文件初始化"></a>文件初始化</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pq(filename=<span class="string">'dem.html'</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="CSS选择器-1"><a href="#CSS选择器-1" class="headerlink" title="CSS选择器"></a>CSS选择器</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">doc=pq(html)</span><br><span class="line">print(doc(<span class="string">"#content .info name"</span>))</span><br></pre></td></tr></table></figure>
-<h3 id="查找节点"><a href="#查找节点" class="headerlink" title="查找节点"></a>查找节点</h3><h4 id="子节点-1"><a href="#子节点-1" class="headerlink" title="子节点"></a>子节点</h4><h5 id="find"><a href="#find" class="headerlink" title="find()"></a>find()</h5><p>查找所有子孙节点</p>
-<p>会找到所有符合条件的节点，和BeautifulSoup中的find()不同，类似于BS中的find_all()</p>
-<h5 id="children"><a href="#children" class="headerlink" title="children()"></a>children()</h5><p>只查找子节点 ， 支持CSS选择器</p>
-<h4 id="父节点-1"><a href="#父节点-1" class="headerlink" title="父节点"></a>父节点</h4><h5 id="parent-1"><a href="#parent-1" class="headerlink" title="parent()"></a>parent()</h5><p>直接父节点</p>
-<h5 id="parents-1"><a href="#parents-1" class="headerlink" title="parents()"></a>parents()</h5><p>祖贤父节点</p>
-<h4 id="兄弟节点-1"><a href="#兄弟节点-1" class="headerlink" title="兄弟节点"></a>兄弟节点</h4><h5 id="sublings"><a href="#sublings" class="headerlink" title="sublings()"></a>sublings()</h5><h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><p>PyQuery的选择结果不会像BeautifulSoup一样返回list，而是直接返回多个或单个节点</p>
-<p>返回单个节点可以直接用str()u转化为字符串，</p>
-<p>返回多个节点需要遍历，斯奥用items()方法，返回生成器</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">lis = doc(<span class="string">'li'</span>).items()</span><br><span class="line">print(type(lis)) <span class="comment"># class 'generator'</span></span><br><span class="line"><span class="keyword">for</span> li <span class="keyword">in</span> lis:</span><br><span class="line">    print(li, type(li))</span><br></pre></td></tr></table></figure>
-<h3 id="获取信息"><a href="#获取信息" class="headerlink" title="获取信息"></a>获取信息</h3><h4 id="获取属性attr"><a href="#获取属性attr" class="headerlink" title="获取属性attr()"></a>获取属性attr()</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = doc(<span class="string">'a'</span>)</span><br><span class="line">a.attr(<span class="string">'href'</span>)  <span class="comment"># 只会返回第一个满足条件的标签（节点）的href属性</span></span><br></pre></td></tr></table></figure>
-<p>如果获取所有节点的属性，需要调用items()遍历。</p>
-<h4 id="获取文本"><a href="#获取文本" class="headerlink" title="获取文本"></a>获取文本</h4><p>text()方法返回<strong>所有</strong>节点下纯文字内容，即不需要遍历。</p>
-<p>html()方法返回HTML文本，多个节点时，需要<strong>遍历</strong>。</p>
-<h3 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h3><h4 id="addClass-和-removeClass"><a href="#addClass-和-removeClass" class="headerlink" title="addClass 和 removeClass"></a>addClass 和 removeClass</h4><p>添加，删除class这个属性</p>
-<h4 id="attr、text、html"><a href="#attr、text、html" class="headerlink" title="attr、text、html"></a>attr、text、html</h4><p>attr操作其他属性，<code>li.attr(&#39;name&#39;, &#39;link&#39;)</code> 将name属性的值修改为link，如果不存在，则创建改属性。</p>
-<p>如果 attr 方法只传入第一个参数的属性名，则是获取这个属性值；如果传入第二个参数，可以用来修改属性值。text 和 html 方法如果不传参数，则是获取节点内纯文本和 HTML 文本；如果传入参数，则进行赋值。</p>
-<h4 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h4><p><strong>为提取信息带来便利</strong></p>
-<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p>CSS选择器支持各种各样的伪类选择器</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">doc = pq(html)</span><br><span class="line">li = doc(<span class="string">'li:first-child'</span>)</span><br><span class="line">print(li)</span><br><span class="line">li = doc(<span class="string">'li:last-child'</span>)</span><br><span class="line">print(li)</span><br><span class="line">li = doc(<span class="string">'li:nth-child(2)'</span>)</span><br><span class="line">print(li)</span><br><span class="line">li = doc(<span class="string">'li:gt(2)'</span>) <span class="comment"># 三个以后的li节点</span></span><br><span class="line">print(li)</span><br><span class="line">li = doc(<span class="string">'li:nth-child(2n)'</span>) <span class="comment"># 偶数位置的li节点</span></span><br><span class="line">print(li)</span><br><span class="line">li = doc(<span class="string">'li:contains(second)'</span>) <span class="comment">#包含second的li节点</span></span><br><span class="line">print(li)</span><br></pre></td></tr></table></figure>
-<h2 id="7-使用代理IP"><a href="#7-使用代理IP" class="headerlink" title="7. 使用代理IP"></a>7. 使用代理IP</h2><p>很多网站对于爬虫做了一定限制，IP容易进小黑屋，所以需要采用代理IP。</p>
-<h3 id="代理的种类"><a href="#代理的种类" class="headerlink" title="代理的种类"></a>代理的种类</h3><ul>
-<li><p><strong>透明代理 (Transparent Proxy)</strong>: 不但改动了数据包，还会告诉服务器客户端的真实IP，约等于没用。</p>
-<ul>
-<li>REMOTE_ADDR = Proxy IP</li>
-<li>HTTP_VIA = Proxy IP</li>
-<li>HTTP_X_FORWARDED_FOR = Your IP</li>
-</ul>
-</li>
-<li><p><strong>普通匿名代理 (Anonymous Proxy)</strong>：会在数据包上做一些改动，服务器上发现这是个代理服务器，但是一般不清楚真实IP地址（有一定几率能追查到）。</p>
-<ul>
-<li>REMOTE_ADDR = proxy IP</li>
-<li>HTTP_VIA = proxy IP</li>
-<li>HTTP_X_FORWARDED_FOR = proxy IP</li>
-</ul>
-</li>
-<li><p><strong>混淆代理(Distorting Proxies)</strong>：会在数据包上做一些改动，服务器上发现这是个代理服务器，但会得到一个假的IP地址.</p>
-<ul>
-<li>REMOTE_ADDR = proxy IP</li>
-<li>HTTP_VIA = proxy IP</li>
-<li>HTTP_X_FORWARDED_FOR = Random IP address</li>
-</ul>
-</li>
-<li><p><strong>高匿代理(Elite proxy或High Anonymity Proxy)</strong>：会将数据包原封不动的转发，在服务端看来就好像真的是一个普通客户端在访问，而记录的IP则是代理服务器的IP。</p>
-<ul>
-<li>REMOTE_ADDR = Proxy IP</li>
-<li>HTTP_VIA = not determined</li>
-<li>HTTP_X_FORWARDED_FOR = not determined</li>
-</ul>
-<p><strong>参考</strong>：<a href="https://blog.csdn.net/a19860903/article/details/47146715" target="_blank" rel="noopener">https://blog.csdn.net/a19860903/article/details/47146715</a></p>
-</li>
-</ul>
-<h3 id="代理IP网站"><a href="#代理IP网站" class="headerlink" title="代理IP网站"></a>代理IP网站</h3><ol>
-<li><a href="https://www.kuaidaili.com/ops/proxylist/1/" target="_blank" rel="noopener">快代理</a></li>
-<li><a href="http://www.66ip.cn/index.html" target="_blank" rel="noopener">66代理</a></li>
-</ol>
-<h3 id="建立代理IP池"><a href="#建立代理IP池" class="headerlink" title="建立代理IP池"></a>建立代理IP池</h3><p>以<a href="https://www.kuaidaili.com/ops/proxylist/1/" target="_blank" rel="noopener">快代理</a>为例：</p>
-<details>
-<summary><mark>查看隐藏代码</mark></summary>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_proxy</span><span class="params">(headers)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    获取代理IP列表</span></span><br><span class="line"><span class="string">    :return: ip_list [&#123;"https": ip&#125;,…]</span></span><br><span class="line"><span class="string">     """</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    ip_list = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">2</span>):</span><br><span class="line">        <span class="comment"># 快代理</span></span><br><span class="line">        base_url = <span class="string">"https://www.kuaidaili.com/ops/proxylist/"</span> + str(i)</span><br><span class="line">        html = requests.get(base_url, headers=headers).text</span><br><span class="line"> </span><br><span class="line">        pattern = <span class="string">'\d+\.\d+\.\d+\.\d+'</span></span><br><span class="line">        re_list = re.findall(pattern, html)</span><br><span class="line">        <span class="keyword">for</span> ip_port <span class="keyword">in</span> re_list:</span><br><span class="line">            ip_list.append(&#123;<span class="string">"https"</span>: ip_port&#125;)</span><br><span class="line">    <span class="keyword">return</span> ip_list</span><br><span class="line"><span class="comment"># 快代理 上有些IP类型仅为http，有些为http，https</span></span><br></pre></td></tr></table></figure>
-
-</details>
-
-<h3 id="测试代理IP"><a href="#测试代理IP" class="headerlink" title="测试代理IP"></a>测试代理IP</h3><p>通过request直接请求一个网址，看是否通过或者看状态码是否为200(<strong><code>request.status_code == 200</code></strong>)</p>
-<p><details></p>
-<summary><mark>查看隐藏代码</mark></summary>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_proxy</span><span class="params">(ip_list, headers, test_url)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    测试代理IP</span></span><br><span class="line"><span class="string">    :param ip_list:</span></span><br><span class="line"><span class="string">    :return: ip_list [&#123;"https": ip&#125;,…]</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> proxy <span class="keyword">in</span> ip_list:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            response = requests.get(test_url, headers=headers, proxies=proxy, timeout=<span class="number">5</span>)  </span><br><span class="line">        <span class="keyword">except</span> requests.exceptions.ConnectTimeout:</span><br><span class="line">            ip_list.pop(i)</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> ip_list</span><br></pre></td></tr></table></figure>
-<p><details><br><strong>但是上述代码的问题是设置了代理IP，请求网站通过，也不代表IP有效，因为有可能不是用了设置的代理IP而是用了自己公网下的IP（可以用ifconfig查询所在局域网下的IP，及私网IP）</strong><a href="https://blog.csdn.net/Chenftli/article/details/86701563" target="_blank" rel="noopener">参考</a></p>
-<p><details></p>
-<summary><mark>查看隐藏代码</mark></summary>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_proxy_3</span><span class="params">(ip_list)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    测试是理IP</span></span><br><span class="line"><span class="string">    :param ip_list:</span></span><br><span class="line"><span class="string">    :return ip_valid_list: [&#123;https: ip&#125;,…]</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    ip_valid_list = []</span><br><span class="line">    test_url =  <span class="string">"http://httpbin.org/get"</span> <span class="comment"># 改网站可测试目前请求的IP</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> proxy <span class="keyword">in</span> ip_list:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            res = requests.get(test_url, proxies=proxy, headers=headers, timeout=<span class="number">8</span>)</span><br><span class="line">            data = response.text.strip()</span><br><span class="line">            proxyIP = json.loads(data)[<span class="string">'origin'</span>]</span><br><span class="line">            <span class="keyword">if</span> proxyIP != proxy[<span class="string">"https"</span>]:</span><br><span class="line">                ip_list.pop(i)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="comment">#print("proxy invalid")</span></span><br><span class="line">            ip_list.pop(i)</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ip_valid_list</span><br></pre></td></tr></table></figure>
-<details>
-
-<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p><details></p>
-<summary><mark>隐藏</mark></summary>
-
-<p>Max retries exceeded with url</p>
-<ol>
-<li><p>requests.exceptions.<strong>ProxyError</strong>: HTTPConnectionPool(host=’**<em>‘, port=443): Max retries exceeded with url: \</em>** (Caused by ProxyError(‘Cannot connect to proxy.’, NewConnectionError(‘<urllib3.connection.HTTPConnection object at 0x0000015363189190>: </p>
-<blockquote>
-<p>IP代理使用的协议不正常，http和https不能写错。</p>
+<p>原话不太一样，导致一开始竟然没有听出来HR的意思，还一本正经地向HR介绍。</p>
 </blockquote>
 </li>
-<li><p>requests.exceptions.<strong>ConnectionError</strong>: HTTPSConnectionPool(host=<em>**, , port=443): Max retries exceeded with url: \</em>** (Caused by NewConnectionError(‘<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb51433af98>:</p>
+<li><p>研究生升学是保研还是考研？</p>
+</li>
+<li><p>为什么选择招商银行，之后不打算做研究了么？</p>
 <blockquote>
-<p>http的连接数超过最大限制，默认的情况下连接是Keep-alive的，所以导致服务器保持了太多连接而不能再新建连接。</p>
+<p>主要从所学专业既可以继续在实验室探究更前沿的东西，也可以与企业，工业结合起来，并且战略客户部（有细分，房地产，新能源，电力等等）以及投资银行部（涉及行业研究）的岗位和专业有相关性，这样可以做到学以致用。</p>
 </blockquote>
 </li>
-<li><p>HTTPSConnectionPool(host=’***‘, port=443): Max retries exceeded with url: ***(Caused by SSLError(SSLError(1, u’[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:579)’),))</p>
+<li><p>能否接受城市的调剂？</p>
 <blockquote>
-<p>Requests 可以为 HTTPS 请求验证 SSL 证书，就像 web 浏览器一样。SSL 验证默认是开启的，如果证书验证失败，Requests 会抛出 SSLError。</p>
-<ul>
-<li><p>不用ssl证书验证，将verify 设置为 False，<strong>page=requests.get(url，verify=False)</strong></p>
-</li>
-<li><p>requests默认是keep-alive的，可能没有释放，加参数 headers={‘Connection’:’close’}</p>
-</li>
-<li><p>增加连接重试次数：<code>requests.adapters.DEFAULT_RETRIES = 5</code> </p>
-</li>
-<li><p>关闭多余的连接：requests使用了urllib3库，默认的http connection是keep-alive的，requests设置False关闭。<code>s = requests.session()       s.keep_alive = False</code> </p>
-<p>参考：<a href="https://blog.csdn.net/wdh315172/article/details/80491668" target="_blank" rel="noopener">https://blog.csdn.net/wdh315172/article/details/80491668</a></p>
-</li>
-</ul>
+<p>只有北京和深圳两个选项，个人无所谓，所以回答可以接受。</p>
 </blockquote>
-<details>
-
+</li>
+<li><p>能否接受岗位的调剂？</p>
+<blockquote>
+<p>报名表需要填写三个志愿，我先表示可以接受调剂，然后陈述第二个志愿与自己的契合点，但第三个志愿表现得有点不太乐意，HR问我帮你修改成前两个志愿可以么，我表示可以ORZ。深圳的职位和北京的不太一样（不一样怎么调剂城市呢），忘了问能不能加上深圳那边的某一个岗位。</p>
+</blockquote>
 </li>
 </ol>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><ul>
-<li><a href="https://github.com/Hopetree/Jobs-search" target="_blank" rel="noopener">招聘网站爬虫</a></li>
-<li><a href="https://github.com/Hopetree/E-commerce-crawlers" target="_blank" rel="noopener">电商网站爬虫</a></li>
-<li><a href="https://github.com/Hopetree/Spiders100" target="_blank" rel="noopener">Spiders100</a></li>
-<li><a href="https://github.com/Hopetree/MyTools" target="_blank" rel="noopener">一些界面化的爬虫小工具</a></li>
-</ul>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ol>
+<li>语速过快。</li>
+<li>有点抢话，有时候没有听完HR的问题就开始接话准备回答了。</li>
+</ol>
 <hr>
-<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ol>
-<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="noopener">BeautifulSoup4官方中文文档</a></li>
-<li><a href="[https://www.jianshu.com/p/2b783f7914c6](https://www.jianshu.com/p/2b783f7914c6">bs4模块使用指南</a>)</li>
-<li><a href="https://python3webspider.cuiqingcai.com/" target="_blank" rel="noopener">Python3网络爬虫开发实战</a>​</li>
-</ol>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>爬虫</tag>
-        <tag>requests</tag>
-        <tag>BeautifulSoup</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>三星平板N8000刷机</title>
-    <url>/2020/08/26/%E4%B8%89%E6%98%9F%E5%B9%B3%E6%9D%BFN8000%E5%88%B7%E6%9C%BA/</url>
-    <content><![CDATA[<blockquote>
-<p>刷机包+工具如下：</p>
-<p>CWMRecoveryGTN8000.tar +  lineage-14.1-20170116-UNOFFICIAL-n8000.zip</p>
-<p>线刷宝（用以进入挖煤模式）+ Odin</p>
-</blockquote>
-<a id="more"></a>
-<p>家里小朋友在上网课，想买个平板，唤起了我对三星平板的记忆，大概13年入手，不过一两年没开过机了。</p>
-<p>好不容易返校，拿出平板，发现不错，还能充电，也能开机。里面乱七八糟都是些啥，还有人人，干脆恢复出厂设置吧。</p>
-<p>问题就出在这里，恢复出厂设置后发现没有三星应用中心了，也不能更新，因为之前用了kingsroot。那似乎只能刷机了。</p>
-<ol>
-<li><p>开机键+电源上键进入recovery模式，有install from external storage的选项，但是不支持第三方ROM包。</p>
-<p>强行刷第三方包，会出出现：</p>
-<p>E:failed to verify whole-file signature<br>e:signature verification failed<br>installation aborted</p>
-</li>
-<li><p>要刷第三方ROM包，需要先刷第三方recovery包。</p>
-<p>电源键+音量下键进入挖煤模式，使用Odin刷入第三方REC包，旧版选择PDA，新版选择AP，其他不要勾选，一些默认勾选的也要去掉，点击start，几秒钟就可以了。</p>
-</li>
-</ol>
-<p><img src="http://www.galaxyclub.cn//Upload/IMAGES/18/0507/126b124121ee40feb9f95aa5bc78c040_650x0.png" alt="【技术】Odin中的术语BL、AP、CP、CSC是什么意思？"></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><strong>BL(Bootloader) **</strong>：**</th>
-<th>代表 <strong>引导程序</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>AP (Application Processor or PDA)  **</strong>：**</td>
-<td>表示<strong>Android系统</strong>（可能代表Android系统分区）; 在之前的Odin版本中，这被称为“PDA”</td>
-</tr>
-<tr>
-<td><strong>CP(Core Processor**</strong>） ：**</td>
-<td><strong> </strong>代表 <strong>调制解调器</strong></td>
-</tr>
-<tr>
-<td><strong>CSC(Co numer Software Customization) **</strong>：**</td>
-<td>代表 <strong>消费者软件定制</strong>，它包含特定于该地区的软件包，运营商品牌和APN设置（就像不同的运营商的数据接入点名称不通）。</td>
-</tr>
-<tr>
-<td><strong>PIT (Partition Information Table)  **</strong>：**</td>
-<td>代表 <strong>分区信息表</strong>，如果你搞砸分区表，或者由于分区表布局的变化，你只需要用它就好了。</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>但又遇到问题了：电源键+音量下键无法进入挖煤模式，不知道是否跟之前用第三方软件root过有关，并且我的板子的电源键也不太好用，事态似乎陷入了僵局，只能求助第三方刷机软件<a href="http://www.xianshuabao.com/features/?fromsite=bd_xsb" target="_blank" rel="noopener">线刷宝</a>。</p>
-<p>进入挖煤模式后，ID:COM 变成蓝色（实际上，正常开机连接时，应该是蓝色，挖煤模式连接时应为黄色，可能还是之前root过得原因）</p>
-<p>不需要付费模式，只需要借助工具箱进入挖煤模式即可！也可以通过线刷宝进入recovery模式（谁让我的电源键不好用呢）。</p>
-<ol>
-<li>输入第三方ROM包</li>
-</ol>
-<p>将第三方包的zip文件放大存储卡中，卡刷，选择external card，这一步比较顺利。</p>
-<p>因为一些帖子有反馈说无法联网，我没有遇到这个问题，顺利进入系统。但是无法调出键盘输入界面。</p>
-<ol>
-<li>将平板变成显示器</li>
-</ol>
-<p><a href="https://zhuanlan.zhihu.com/p/81255397" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/81255397</a></p>
-<p><strong>Spacedesk</strong> 电脑和平板需要处于同一局域网下</p>
-<p><strong>Splashtop Wired XDisplay</strong> 通过数据线连接，需要在google play上下载</p>
-<p><strong>Twomon SE</strong></p>
-<p><a href="https://www.splashtop.com/cn/wiredxdisplay](https://www.splashtop.com/cn/wiredxdisplay" target="_blank" rel="noopener">https://www.splashtop.com/cn/wiredxdisplay](https://www.splashtop.com/cn/wiredxdisplay</a>)</p>
-<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><p>主要参考<a href="https://www.jianshu.com/p/182975bd9ee6" target="_blank" rel="noopener">简书</a>和<a href="https://blog.csdn.net/wulong710/article/details/91956773" target="_blank" rel="noopener">CSDN</a> 上的两个帖子。</p>
-<p><a href="https://sspai.com/post/43338" target="_blank" rel="noopener">Android 玩机终极指南</a> 这个也值得一看。</p>
+<p>耐心等待结果！</p>
+<p>​</p>
+<p>​</p>
+<p>​</p>
 ]]></content>
       <categories>
         <category>日常记录</category>
       </categories>
       <tags>
-        <tag>刷机</tag>
-        <tag>三星</tag>
-        <tag>N8000</tag>
+        <tag>interview</tag>
       </tags>
   </entry>
   <entry>
@@ -1727,52 +1698,81 @@ sgn(z)=\left \{ \begin{array} {ll} 0& if\ z<0\\0 & if\ z =0\\1&if \ z\gt 0 \end{
       </tags>
   </entry>
   <entry>
-    <title>记人生的第一次面试</title>
-    <url>/2020/07/21/%E8%AE%B0%E4%BA%BA%E7%94%9F%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95/</url>
-    <content><![CDATA[<p>写在最前面：快26岁高龄才经历人生中第一次工作面试，值得写篇博客纪念一下。</p>
+    <title>三星平板N8000刷机</title>
+    <url>/2020/08/26/%E4%B8%89%E6%98%9F%E5%B9%B3%E6%9D%BFN8000%E5%88%B7%E6%9C%BA/</url>
+    <content><![CDATA[<blockquote>
+<p>刷机包+工具如下：</p>
+<p>CWMRecoveryGTN8000.tar +  lineage-14.1-20170116-UNOFFICIAL-n8000.zip</p>
+<p>线刷宝（用以进入挖煤模式）+ Odin</p>
+</blockquote>
 <a id="more"></a>
-<h2 id="形式："><a href="#形式：" class="headerlink" title="形式："></a>形式：</h2><p>网络面试；2个HR，10分钟。</p>
-<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><ol>
-<li><p>1分钟自我介绍；</p>
+<p>家里小朋友在上网课，想买个平板，唤起了我对三星平板的记忆，大概13年入手，不过一两年没开过机了。</p>
+<p>好不容易返校，拿出平板，发现不错，还能充电，也能开机。里面乱七八糟都是些啥，还有人人，干脆恢复出厂设置吧。</p>
+<p>问题就出在这里，恢复出厂设置后发现没有三星应用中心了，也不能更新，因为之前用了kingsroot。那似乎只能刷机了。</p>
+<ol>
+<li><p>开机键+电源上键进入recovery模式，有install from external storage的选项，但是不支持第三方ROM包。</p>
+<p>强行刷第三方包，会出出现：</p>
+<p>E:failed to verify whole-file signature<br>e:signature verification failed<br>installation aborted</p>
 </li>
-<li><p>问了本科院系是下属院系（民办挂名）还是正经院系？</p>
-<blockquote>
-<p>原话不太一样，导致一开始竟然没有听出来HR的意思，还一本正经地向HR介绍。</p>
-</blockquote>
-</li>
-<li><p>研究生升学是保研还是考研？</p>
-</li>
-<li><p>为什么选择招商银行，之后不打算做研究了么？</p>
-<blockquote>
-<p>主要从所学专业既可以继续在实验室探究更前沿的东西，也可以与企业，工业结合起来，并且战略客户部（有细分，房地产，新能源，电力等等）以及投资银行部（涉及行业研究）的岗位和专业有相关性，这样可以做到学以致用。</p>
-</blockquote>
-</li>
-<li><p>能否接受城市的调剂？</p>
-<blockquote>
-<p>只有北京和深圳两个选项，个人无所谓，所以回答可以接受。</p>
-</blockquote>
-</li>
-<li><p>能否接受岗位的调剂？</p>
-<blockquote>
-<p>报名表需要填写三个志愿，我先表示可以接受调剂，然后陈述第二个志愿与自己的契合点，但第三个志愿表现得有点不太乐意，HR问我帮你修改成前两个志愿可以么，我表示可以ORZ。深圳的职位和北京的不太一样（不一样怎么调剂城市呢），忘了问能不能加上深圳那边的某一个岗位。</p>
-</blockquote>
+<li><p>要刷第三方ROM包，需要先刷第三方recovery包。</p>
+<p>电源键+音量下键进入挖煤模式，使用Odin刷入第三方REC包，旧版选择PDA，新版选择AP，其他不要勾选，一些默认勾选的也要去掉，点击start，几秒钟就可以了。</p>
 </li>
 </ol>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ol>
-<li>语速过快。</li>
-<li>有点抢话，有时候没有听完HR的问题就开始接话准备回答了。</li>
+<p><img src="http://www.galaxyclub.cn//Upload/IMAGES/18/0507/126b124121ee40feb9f95aa5bc78c040_650x0.png" alt="【技术】Odin中的术语BL、AP、CP、CSC是什么意思？"></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>BL(Bootloader) **</strong>：**</th>
+<th>代表 <strong>引导程序</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AP (Application Processor or PDA)  **</strong>：**</td>
+<td>表示<strong>Android系统</strong>（可能代表Android系统分区）; 在之前的Odin版本中，这被称为“PDA”</td>
+</tr>
+<tr>
+<td><strong>CP(Core Processor**</strong>） ：**</td>
+<td><strong> </strong>代表 <strong>调制解调器</strong></td>
+</tr>
+<tr>
+<td><strong>CSC(Co numer Software Customization) **</strong>：**</td>
+<td>代表 <strong>消费者软件定制</strong>，它包含特定于该地区的软件包，运营商品牌和APN设置（就像不同的运营商的数据接入点名称不通）。</td>
+</tr>
+<tr>
+<td><strong>PIT (Partition Information Table)  **</strong>：**</td>
+<td>代表 <strong>分区信息表</strong>，如果你搞砸分区表，或者由于分区表布局的变化，你只需要用它就好了。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>但又遇到问题了：电源键+音量下键无法进入挖煤模式，不知道是否跟之前用第三方软件root过有关，并且我的板子的电源键也不太好用，事态似乎陷入了僵局，只能求助第三方刷机软件<a href="http://www.xianshuabao.com/features/?fromsite=bd_xsb" target="_blank" rel="noopener">线刷宝</a>。</p>
+<p>进入挖煤模式后，ID:COM 变成蓝色（实际上，正常开机连接时，应该是蓝色，挖煤模式连接时应为黄色，可能还是之前root过得原因）</p>
+<p>不需要付费模式，只需要借助工具箱进入挖煤模式即可！也可以通过线刷宝进入recovery模式（谁让我的电源键不好用呢）。</p>
+<ol>
+<li>输入第三方ROM包</li>
 </ol>
-<hr>
-<p>耐心等待结果！</p>
-<p>​</p>
-<p>​</p>
-<p>​</p>
+<p>将第三方包的zip文件放大存储卡中，卡刷，选择external card，这一步比较顺利。</p>
+<p>因为一些帖子有反馈说无法联网，我没有遇到这个问题，顺利进入系统。但是无法调出键盘输入界面。</p>
+<ol>
+<li>将平板变成显示器</li>
+</ol>
+<p><a href="https://zhuanlan.zhihu.com/p/81255397" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/81255397</a></p>
+<p><strong>Spacedesk</strong> 电脑和平板需要处于同一局域网下</p>
+<p><strong>Splashtop Wired XDisplay</strong> 通过数据线连接，需要在google play上下载</p>
+<p><strong>Twomon SE</strong></p>
+<p><a href="https://www.splashtop.com/cn/wiredxdisplay](https://www.splashtop.com/cn/wiredxdisplay" target="_blank" rel="noopener">https://www.splashtop.com/cn/wiredxdisplay](https://www.splashtop.com/cn/wiredxdisplay</a>)</p>
+<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><p>主要参考<a href="https://www.jianshu.com/p/182975bd9ee6" target="_blank" rel="noopener">简书</a>和<a href="https://blog.csdn.net/wulong710/article/details/91956773" target="_blank" rel="noopener">CSDN</a> 上的两个帖子。</p>
+<p><a href="https://sspai.com/post/43338" target="_blank" rel="noopener">Android 玩机终极指南</a> 这个也值得一看。</p>
 ]]></content>
       <categories>
         <category>日常记录</category>
       </categories>
       <tags>
-        <tag>interview</tag>
+        <tag>刷机</tag>
+        <tag>三星</tag>
+        <tag>N8000</tag>
       </tags>
   </entry>
   <entry>
@@ -1979,7 +1979,8 @@ sgn(z)=\left \{ \begin{array} {ll} 0& if\ z<0\\0 & if\ z =0\\1&if \ z\gt 0 \end{
 </blockquote>
 </li>
 </ol>
-<h2 id="第02章-一个完整的机器学习项目"><a href="#第02章-一个完整的机器学习项目" class="headerlink" title="第02章 一个完整的机器学习项目"></a>第02章 一个完整的机器学习项目</h2><p>[Python API：crc32函数 计算CRC校验值](https://b</p>
+<hr>
+<h2 id="第02章-一个完整的机器学习项目"><a href="#第02章-一个完整的机器学习项目" class="headerlink" title="第02章 一个完整的机器学习项目"></a>第02章 一个完整的机器学习项目</h2><p>[Python API：crc32函数 计算CRC校验值](<a href="https://b）" target="_blank" rel="noopener">https://b）</a></p>
 <p><a href="https://blog.csdn.net/liuyu60305002/article/details/6307152" target="_blank" rel="noopener">模2运算</a></p>
 <p><a href="https://blog.csdn.net/sparkliang/article/details/5671510" target="_blank" rel="noopener">CRC32算法详细推导</a></p>
 <blockquote>
@@ -2324,6 +2325,7 @@ J (\theta) = -\frac{1}{m} \sum_{i=1}^{m}\sum_{k=1}^{K}y^{(i)}_klog(\hat p^{(i)}_
 </blockquote>
 </li>
 </ol>
+<hr>
 <h2 id="第05章-支持向量机"><a href="#第05章-支持向量机" class="headerlink" title="第05章 支持向量机"></a>第05章 支持向量机</h2><p>能够做线性或者非线性的分类，回归，甚至异常值检测。SVM 特别适合应用于复杂但中小规模数据集的分类问题。</p>
 <h4 id="线性支持向量机分类"><a href="#线性支持向量机分类" class="headerlink" title="线性支持向量机分类"></a>线性支持向量机分类</h4><p>SVM 分类器的判定边界实线，不仅分开了两种类别，而且还尽可能地远离了最靠近的训练数据点。（最大间隔分类）</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/5-1.jpg" alt="img"></p>
@@ -2472,6 +2474,7 @@ subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1-\zeta^{(i)}\ \  and \ \ \zeta^{
 <li><p>在加利福尼亚住宅（California housing）数据集上训练一个 SVM 回归模型</p>
 </li>
 </ol>
+<hr>
 <h2 id="第06章-决策树"><a href="#第06章-决策树" class="headerlink" title="第06章 决策树"></a>第06章 决策树</h2><p>决策树是一种多功能机器学习算法， 即可以执行分类任务也可以执行回归任务， 甚至包括多输出（multioutput）任务。</p>
 <h3 id="决策树的训练和可视化"><a href="#决策树的训练和可视化" class="headerlink" title="决策树的训练和可视化"></a>决策树的训练和可视化</h3><blockquote>
 <p>决策树的众多特性之一就是， 它不需要太多的数据预处理， 尤其是不需要进行特征的缩放或者归一化。</p>
