@@ -289,33 +289,33 @@
 <p><a href="https://www.jianshu.com/p/4a94798f7dcc" target="_blank" rel="noopener">简书《Scikit-Learn、Keras与TensorFlow机器学习实用指南》第一版和第二版对照</a></p>
 <p><a href="https://blog.csdn.net/jiaoyangwm/article/details/82387883#%E7%BB%83%E4%B9%A0%E9%A2%987" target="_blank" rel="noopener">练习题答案参考</a> <a href="https://blog.csdn.net/leowinbow/article/details/88581039" target="_blank" rel="noopener">参考2</a></p>
 <a id="more"></a>
-
 <h2 id="第10章-使用Keras搭建人工神经网络"><a href="#第10章-使用Keras搭建人工神经网络" class="headerlink" title="第10章 使用Keras搭建人工神经网络"></a>第10章 使用Keras搭建人工神经网络</h2><p>需要安装<a href="https://www.jianshu.com/p/3a76e4f0504a" target="_blank" rel="noopener">Tensorflow</a>和Keras</p>
 <p>人工神经网络是受大脑中的生物神经元启发而来的机器学习模型。</p>
 <p>人工神经网络是深度学习的核心，它不仅样式多样、功能强大，还具有可伸缩性，这让人工神经网络适宜处理庞大且复杂的机器学习任务，例如对数十亿张图片分类（谷歌图片）、语音识别（苹果Siri）、向数亿用户每天推荐视频（Youtube）、或者通过学习几百围棋世界冠军（DeepMind的AlphaGo）。</p>
-<p>###神经元的逻辑计算</p>
-<p>1943年神经生理学家Warren McCulloch和数学家Walter Pitts在他们里程碑的论文<a href="https://scholar.google.com/scholar?q=A+Logical+Calculus+of+Ideas+Immanent+in+Nervous+Activity+author%3Amcculloch" target="_blank" rel="noopener">《A Logical Calculus of Ideas Immanent in Nervous Activity》</a> 中介绍了一个简单的生物神经元模型，它后来演化成了人工神经元：一个或多个二元（开或关）输入，一个二元输出。当达到一定的输入量时，神经元就会产生输出。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7178691-51a591f44c8f7bba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<h3 id="神经元的逻辑计算"><a href="#神经元的逻辑计算" class="headerlink" title="神经元的逻辑计算"></a>神经元的逻辑计算</h3><p>1943年神经生理学家Warren McCulloch和数学家Walter Pitts在他们里程碑的论文<a href="https://scholar.google.com/scholar?q=A+Logical+Calculus+of+Ideas+Immanent+in+Nervous+Activity+author%3Amcculloch" target="_blank" rel="noopener">《A Logical Calculus of Ideas Immanent in Nervous Activity》</a> 中介绍了一个简单的生物神经元模型，它后来演化成了人工神经元：一个或多个二元（开或关）输入，一个二元输出。当达到一定的输入量时，神经元就会产生输出。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-51a591f44c8f7bba.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" alt="img"></p>
 <h3 id="感知机（单个TLU）"><a href="#感知机（单个TLU）" class="headerlink" title="感知机（单个TLU）"></a>感知机（单个TLU）</h3><p>感知机是最简单的人工神经网络结构之一，由 Frank Rosenblatt 发明于 1957年。</p>
 <p>它基于一种稍微不同的人工神经元，阈值逻辑单元（TLU），或称为线性阈值单元（LTU）：输入和输出是数字（而不是二元开/关值），并且每个输入连接都一个权重。TLU计算其输入的加权和（$z = W_1x_1 + W_2x_2 + … + W_nx_n = x^T·W）$，然后将阶跃函数应用于该和，并输出结果：$h_W(x) = step(z)$，其中$z = x^T·W$。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7178691-c40c1380818019d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1113/format/webp" alt="img"></p>
-<p>####<strong>阶跃函数</strong>：</p>
-<p>单位阶跃函数（Heaviside step function）:<br>$$<br>heaviside(z)=\left { \begin{array} {ll} 0&amp; if\ z&lt;0\1&amp;if \ z\geq 0 \end{array} \right.\<br>sgn(z)=\left { \begin{array} {ll} 0&amp; if\ z&lt;0\0 &amp; if\ z =0\1&amp;if \ z\gt 0 \end{array} \right.<br>$$<br>单一TLU 可用于简单的线性二元分类。它计算输入的线性组合，如果结果超过阈值，它输出正类或者输出负类（就像逻辑回归分类或线性SVM分类）。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-c40c1380818019d3.png?imageMogr2/auto-orient/strip|imageView2/2/w/1113/format/webp" alt="img"></p>
+<h4 id="阶跃函数："><a href="#阶跃函数：" class="headerlink" title="阶跃函数："></a><strong>阶跃函数</strong>：</h4><p>单位阶跃函数（Heaviside step function）:</p>
+<script type="math/tex; mode=display">
+heaviside(z)=\left \{ \begin{array} {ll} 0& if\ z<0\\1&if \ z\geq 0 \end{array} \right.\\
+sgn(z)=\left \{ \begin{array} {ll} 0& if\ z<0\\0 & if\ z =0\\1&if \ z\gt 0 \end{array} \right.</script><p>单一TLU 可用于简单的线性二元分类。它计算输入的线性组合，如果结果超过阈值，它输出正类或者输出负类（就像逻辑回归分类或线性SVM分类）。</p>
 <p><strong>感知器只由一层 TLU 组成，每个TLU连接到所有输入</strong>。当一层的神经元连接着前一层的每个神经元时，该层被称为<strong>全连接层，或紧密层</strong>。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7178691-878dec9a6b1e9c09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-878dec9a6b1e9c09.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" alt="img"></p>
 <p>通常再添加一个<strong>偏置特征（$X_0=1$）</strong>：这种偏置特性通常用一种称为偏置神经元的特殊类型的神经元来表示，它总是输出 1。</p>
 <p>一个全连接层神经网络的输出：$h_{W,b}(x) = \phi (XW+B)$</p>
-<p>####Hebb规则</p>
-<p>如何训练感知机：感知器一次被馈送一个训练实例，对于每个实例，它进行预测。对于每一个产生错误预测的输出神经元，修正输入的连接权重，以获得正确的预测。<br>$$<br>\omega_{i,j}^{(next \ step)}=\omega_{i,j}+\eta (y_j-\hat y_j)x_i<br>$$<br><strong>每个输出神经元的决策边界是线性的，因此感知器不能学习复杂的模式</strong>（比如 Logistic 回归分类器）。如果训练实例是线性可分的，Rosenblatt 证明该算法将收敛到一个解。这被称为<strong>感知器收敛定理</strong>。</p>
+<h4 id="Hebb规则"><a href="#Hebb规则" class="headerlink" title="Hebb规则"></a>Hebb规则</h4><p>如何训练感知机：感知器一次被馈送一个训练实例，对于每个实例，它进行预测。对于每一个产生错误预测的输出神经元，修正输入的连接权重，以获得正确的预测。</p>
+<script type="math/tex; mode=display">
+\omega_{i,j}^{(next \ step)}=\omega_{i,j}+\eta (y_j-\hat y_j)x_i</script><p><strong>每个输出神经元的决策边界是线性的，因此感知器不能学习复杂的模式</strong>（比如 Logistic 回归分类器）。如果训练实例是线性可分的，Rosenblatt 证明该算法将收敛到一个解。这被称为<strong>感知器收敛定理</strong>。</p>
 <p><strong>感知机不输出类概率，而是基于硬阈值进行预测。</strong></p>
-<p>####感知机的局限性</p>
-<ol>
+<h4 id="感知机的局限性"><a href="#感知机的局限性" class="headerlink" title="感知机的局限性"></a>感知机的局限性</h4><ol>
 <li>不能解决一些琐碎的问题（例如，异或（XOR）分类问题）（线性分类模型都不能解决异或问题）</li>
 </ol>
 <p>可以通过堆叠多个感知机消除，由此产生的人工神经网络被称为<strong>多层感知机（MLP）</strong>。特别地，MLP 可以解决 XOR 问题：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7178691-a8b41a11c481fc03.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-a8b41a11c481fc03.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" alt="img"></p>
 <h3 id="多层感知机（MLP）"><a href="#多层感知机（MLP）" class="headerlink" title="多层感知机（MLP）"></a>多层感知机（MLP）</h3><p>MLP 由一个输入层、一个或多个称为隐藏层的 TLU 组成，一个 TLU 层称为输出层（见图 10-7）。靠近输入层的层，通常被称为浅层，靠近输出层的层通常被称为上层。除了输出层，每一层都有一个偏置神经元，并且全连接到下一层。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7178691-eb971779e84208ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-eb971779e84208ec.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" alt="img"></p>
 <p>信号是从输入到输出单向流动，因此这种架构被称为<strong>前馈神经网络（FNN）</strong></p>
 <p>当人工神经网络有多个隐含层时，称为<strong>深度神经网络（DNN）</strong></p>
 <h3 id="反向传播（Back-Propagation）"><a href="#反向传播（Back-Propagation）" class="headerlink" title="反向传播（Back Propagation）"></a>反向传播（Back Propagation）</h3><p>一种训练 MLP 的方法，使用了高效梯度计算的梯度下降算法只需要两次网络传播（一次向前，一次向后），就可以算出网络误差的、和每个独立模型参数相关的梯度。</p>
@@ -333,8 +333,6 @@
 <p><strong>注意：</strong></p>
 <blockquote>
 <p><strong>要机初始化隐藏层的连接权重</strong>。假如所有的权重和偏置都初始化为0，则在给定一层的所有神经元都是一样的，BP算法对这些神经元的调整也会是一样的。换句话，就算每层有几百个神经元，模型的整体表现就像每层只有一个神经元一样，模型会显得笨笨的。如果权重是随机初始化的，就可以打破对称性，训练出不同的神经元。</p>
-</blockquote>
-<blockquote>
 <p><strong>自动计算梯度被称为自动微分。</strong>反向传播使用的是<strong>反向模式自微分</strong>。这种方法快而准，当函数有多个变量（连接权重）和多个输出（损失函数）要微分时也能应对。</p>
 </blockquote>
 <h4 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h4><p>用其他激活函数代替阶跃函数（因为阶跃函数只包含平坦的段，因此没有梯度，而 Logistic函数处处都有一个定义良好的非零导数，允许梯度下降在每步上取得一些进展。）</p>
@@ -354,25 +352,24 @@
 <p>$softplus(z) = log(1 + exp(z))$</p>
 </li>
 </ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/7178691-cfc40648369f3b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-cfc40648369f3b02.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" alt="img"></p>
 <p><strong>设置激活函数的原因</strong>：</p>
 <p>如果将几个线性变化链式组合起来，得到的还是线性变换。比如，对于 <code>f(x) = 2x + 3</code> 和 <code>g(x) = 5x – 1</code> ，两者组合起来仍是线性变换：<code>f(g(x)) = 2(5x – 1) + 3 = 10x + 1</code>。<strong>如果层之间不具有非线性，则深层网络和单层网络其实是等同的，这样就不能解决复杂问题。</strong>相反的，足够深且有非线性激活函数的DNN（深度神经网络），在理论上可以近似于任意连续函数。</p>
-<p>###回归MLP</p>
-<p>预测一个单值，就只需要一个输出神经元；一次预测多个值，则每一维度都要有一个神经元。</p>
+<h3 id="回归MLP"><a href="#回归MLP" class="headerlink" title="回归MLP"></a>回归MLP</h3><p>预测一个单值，就只需要一个输出神经元；一次预测多个值，则每一维度都要有一个神经元。</p>
 <p>回归问题可以不用激活函数，如果想限制输出落到一定范围内，可以使用激活函数。</p>
 <p><strong>损失函数</strong>：一般使用<strong>均方误差</strong>，但如果训练集有许多异常值，则可以使用<strong>平均绝对误差</strong>。也可以使用<strong>Huber损失函数</strong>，它是前两者的组合。</p>
 <blockquote>
 <p>提示：当误差小于阈值δ时（一般为1），Huber损失函数是二次的；误差大于阈值时，Huber损失函数是线性的。相比均方误差，线性部分可以让Huber对异常值不那么敏感，二次部分可以让收敛更快，也比均绝对误差更精确。</p>
 </blockquote>
 <p><strong>回归MLP的典型架构</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7178691-51306abe073c8ea2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-51306abe073c8ea2.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" alt="img"></p>
 <h3 id="分类MLP"><a href="#分类MLP" class="headerlink" title="分类MLP"></a>分类MLP</h3><p>二元分类问题：需要一个使用Logistic激活的输出神经元：输出一个0和1之间的值，作为正类的估计概率。</p>
 <p>多标签二元分类问题：需要为每个正类配一个输出神经元。多个输出概率的和不一定非要等于1。</p>
 <p>多分类：softmax函数可以保证，每个估计概率位于0和1之间，并且各个值相加等于1。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7178691-be616eb033cc7b19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-be616eb033cc7b19.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" alt="img"></p>
 <p><strong>损失函数</strong>： 预测概率分布，可以使用交叉商损失函数</p>
 <p><strong>分类MLP的典型架构</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/7178691-9e017b74d26835cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-9e017b74d26835cf.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" alt="img"></p>
 
     </div>
 
@@ -455,7 +452,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第10章-使用Keras搭建人工神经网络"><span class="nav-number">1.</span> <span class="nav-text">第10章 使用Keras搭建人工神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机（单个TLU）"><span class="nav-number">1.1.</span> <span class="nav-text">感知机（单个TLU）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多层感知机（MLP）"><span class="nav-number">1.2.</span> <span class="nav-text">多层感知机（MLP）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反向传播（Back-Propagation）"><span class="nav-number">1.3.</span> <span class="nav-text">反向传播（Back Propagation）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#激活函数"><span class="nav-number">1.3.1.</span> <span class="nav-text">激活函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类MLP"><span class="nav-number">1.4.</span> <span class="nav-text">分类MLP</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第10章-使用Keras搭建人工神经网络"><span class="nav-number">1.</span> <span class="nav-text">第10章 使用Keras搭建人工神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#神经元的逻辑计算"><span class="nav-number">1.1.</span> <span class="nav-text">神经元的逻辑计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机（单个TLU）"><span class="nav-number">1.2.</span> <span class="nav-text">感知机（单个TLU）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#阶跃函数："><span class="nav-number">1.2.1.</span> <span class="nav-text">阶跃函数：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hebb规则"><span class="nav-number">1.2.2.</span> <span class="nav-text">Hebb规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#感知机的局限性"><span class="nav-number">1.2.3.</span> <span class="nav-text">感知机的局限性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多层感知机（MLP）"><span class="nav-number">1.3.</span> <span class="nav-text">多层感知机（MLP）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反向传播（Back-Propagation）"><span class="nav-number">1.4.</span> <span class="nav-text">反向传播（Back Propagation）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#激活函数"><span class="nav-number">1.4.1.</span> <span class="nav-text">激活函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回归MLP"><span class="nav-number">1.5.</span> <span class="nav-text">回归MLP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类MLP"><span class="nav-number">1.6.</span> <span class="nav-text">分类MLP</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

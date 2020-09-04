@@ -271,10 +271,8 @@
       
         <h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><p>TXT, JSON, CSV等，以及关系型数据库MySQL，菲关系型数据库MongoDB、Redis 等</p>
 <a id="more"></a>
-
 <h3 id="文件存储"><a href="#文件存储" class="headerlink" title="文件存储"></a>文件存储</h3><h4 id="TXT文本存储"><a href="#TXT文本存储" class="headerlink" title="TXT文本存储"></a>TXT文本存储</h4><p>文件写入还有一种简写方法，那就是使用 with as 语法。在 with 控制块结束时，文件会自动关闭，所以就不需要再调用 close 方法了。这种保存方式可以简写如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'explore.txt'</span>, <span class="string">'a'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> file:</span><br><span class="line">    file.write(<span class="string">'\n'</span>.join([question, author, answer]))</span><br><span class="line">    file.write(<span class="string">'\n'</span> + <span class="string">'='</span> * <span class="number">50</span> + <span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
-
 <h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><p>JSON，全称为 JavaScript Object Notation, 也就是 JavaScript 对象标记，它通过对象和数组的组合来表示数据，构造简洁但是结构化程度非常高，是一种轻量级的数据交换格式。</p>
 <h5 id="对象和数组"><a href="#对象和数组" class="headerlink" title="对象和数组"></a>对象和数组</h5><p>在 JavaScript 语言中，一切都是对象。因此，任何支持的类型都可以通过 JSON 来表示，例如字符串、数字、对象、数组等</p>
 <p><strong>对象</strong> ：它在 JavaScript 中是使用花括号 {} 包裹起来的内容，数据结构为 {key1：value1, key2：value2, …} 的键值对结构。在面向对象的语言中，key 为对象的属性，value 为对应的值。键名可以使用整数和字符串来表示。值的类型可以是任意类型。</p>
@@ -283,27 +281,24 @@
 <p>dumps() json to string <code>son.dumps(data, indent=2)</code></p>
 <p>注意：文本含有中文字符时，指定编码方式为<strong>utf-8</strong> 并且将ensure_ascii设为False：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'MaoYan_result.txt'</span>, <span class="string">'a'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(json.dumps(content, ensure_ascii=<span class="literal">False</span>) + <span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
-
 <h4 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h4><p>见前篇：<a href="https://yuqie.github.io/2020/07/25/python%E4%B9%8Bcsv/" target="_blank" rel="noopener">python之csv</a></p>
 <h3 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h3><p>关系型数据库是基于<strong>关系模型</strong>的数据库，而关系模型是通过二维表来保存的，所以它的存储方式就是行列组成的表，每一列是一个字段，每一行是一条记录。表可以看作某个实体的集合，而实体之间存在联系，这就需要表与表之间的关联关系来体现，如主键外键的关联关系。多个表组成一个数据库，也就是关系型数据库。</p>
 <p>关系型数据库有多种，如 SQLite、MySQL、Oracle、SQL Server、DB2 等。</p>
 <h4 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h4><p>在 Python 2 中，连接 MySQL 的库大多是使用 MySQLdb，但是此库的官方并不支持 Python 3，所以在Python3中使用 PyMySQL 操作 MySQL 数据库。</p>
 <h5 id="创建新的数据库："><a href="#创建新的数据库：" class="headerlink" title="创建新的数据库："></a>创建新的数据库：</h5><p><code>&quot;CREATE DATABASE spiders DEFAULT CHARACTER SET utf8&quot;</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql  </span><br><span class="line"></span><br><span class="line">db = pymysql.connect(host=<span class="string">'localhost'</span>,user=<span class="string">'root'</span>, password=<span class="string">'123456'</span>, port=<span class="number">3306</span>)  </span><br><span class="line">cursor = db.cursor()  </span><br><span class="line">cursor.execute(<span class="string">"CREATE DATABASE spiders DEFAULT CHARACTER SET utf8"</span>)  </span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
-
 <p>之后重新连接数据库，指定参数db</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db = pymysql.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, password=<span class="string">'123456'</span>, port=<span class="number">3306</span>, db=<span class="string">'spiders'</span>)</span><br><span class="line">cursor = db.cursor()</span><br></pre></td></tr></table></figure>
-
 <h5 id="创建表："><a href="#创建表：" class="headerlink" title="创建表："></a>创建表：</h5><p><code>&#39;CREATE TABLE IF NOT EXISTS students (id VARCHAR(255) NOT NULL, name VARCHAR(255) NOT NULL, age INT NOT NULL, PRIMARY KEY (id))&#39;</code></p>
 <h5 id="插入数据："><a href="#插入数据：" class="headerlink" title="插入数据："></a>插入数据：</h5><p><code>&#39;INSERT INTO students(id, name, age) values(% s, % s, % s)&#39;</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    cursor.execute(sql, (id, user, age))</span><br><span class="line">    db.commit()</span><br><span class="line">except:</span><br><span class="line">    db.rollback()</span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>对于数据插入、更新、删除操作，都需要执行 db 对象的 commit 方法才能真正生效，这个方法才是真正将语句提交到数据库执行的方法。</li>
 <li>异常处理。如果执行失败，则调用 rollback 执行数据回滚，可以保证事务的一致性。</li>
 <li>事务机制可以确保数据的一致性，也就是这件事要么发生了，要么没有发生。比如插入一条数据，不会存在插入一半的情况，要么全部插入，要么都不插入，这就是事务的原子性。</li>
 <li>事务的 4 个属性，也称为 ACID 特性。</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -311,7 +306,8 @@
 <th>解释</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>原子性（atomicity）</td>
 <td>事务是一个不可分割的工作单位，事务中包括的诸操作要么都做，要么都不做</td>
 </tr>
@@ -327,23 +323,22 @@
 <td>持久性（durability）</td>
 <td>持续性也称永久性（permanence），指一个事务一旦提交，它对数据库中数据的改变就应该是永久性的。接下来的其他操作或故障不应该对其有任何影响</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><strong>动态数据传入</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;</span><br><span class="line">    <span class="string">'id'</span>: <span class="string">'20120001'</span>,</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">'Bob'</span>,</span><br><span class="line">    <span class="string">'age'</span>: <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line">table = <span class="string">'students'</span></span><br><span class="line">keys = <span class="string">', '</span>.join(data.keys())</span><br><span class="line">values = <span class="string">', '</span>.join([<span class="string">'% s'</span>] * len(data))</span><br><span class="line">sql = <span class="string">'INSERT INTO &#123;table&#125;(&#123;keys&#125;) VALUES (&#123;values&#125;)'</span>.format(table=table, keys=keys, values=values)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   <span class="keyword">if</span> cursor.execute(sql, tuple(data.values())):</span><br><span class="line">       print(<span class="string">'Successful'</span>)</span><br><span class="line">       db.commit()</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">'Failed'</span>)</span><br><span class="line">    db.rollback()</span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
-
 <h5 id="更新数据："><a href="#更新数据：" class="headerlink" title="更新数据："></a>更新数据：</h5><p>现一种去重的方法，如果数据存在，则更新数据；如果数据不存在，则插入数据。</p>
 <p><code>INSERT INTO students(id, name, age) VALUES (% s, % s, % s) ON DUPLICATE KEY UPDATE id = % s, name = % s, age = % s</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">'INSERT INTO &#123;table&#125;(&#123;keys&#125;) VALUES (&#123;values&#125;) ON DUPLICATE KEY UPDATE'</span>.format(table=table, keys=keys, values=values)</span><br><span class="line">update = <span class="string">','</span>.join([<span class="string">"&#123;key&#125; = % s"</span>.format(key=key) <span class="keyword">for</span> key <span class="keyword">in</span> data])</span><br><span class="line">sql += update</span><br></pre></td></tr></table></figure>
-
 <h5 id="删除数据："><a href="#删除数据：" class="headerlink" title="删除数据："></a>删除数据：</h5><p><code>&#39;DELETE FROM  {table} WHERE {condition}&#39;.format(table=table, condition=condition)</code></p>
 <h5 id="查询数据："><a href="#查询数据：" class="headerlink" title="查询数据："></a>查询数据：</h5><p>查询年龄 20 岁及以上的学生<code>&#39;SELECT * FROM students WHERE age &gt;= 20&#39;</code></p>
 <p>fetchone 方法，这个方法可以获取结果的第一条数据，返回结果是元组形式.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">'SELECT * FROM students WHERE age &gt;= 20'</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    cursor.execute(sql)</span><br><span class="line">    print(<span class="string">'Count:'</span>, cursor.rowcount)</span><br><span class="line">    row = cursor.fetchone()</span><br><span class="line">    <span class="keyword">while</span> row:</span><br><span class="line">        print(<span class="string">'Row:'</span>, row)</span><br><span class="line">        row = cursor.fetchone()</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">'Error'</span>)</span><br></pre></td></tr></table></figure>
-
 <p>fetchall 方法，它可以得到结果的所有数据。然后将其结果和类型打印出来，它是二重元组，每个元素都是一条记录，我们将其遍历输出出来。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">'SELECT * FROM students WHERE age &gt;= 20'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    cursor.execute(sql)</span><br><span class="line">    results = cursor.fetchall()</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> results:</span><br><span class="line">        print(row)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">'Error'</span>)</span><br></pre></td></tr></table></figure>
-
 <h3 id="非关系型数据库存储"><a href="#非关系型数据库存储" class="headerlink" title="非关系型数据库存储"></a>非关系型数据库存储</h3><p>NoSQL，全称 Not Only SQL，意为不仅仅是 SQL，泛指非关系型数据库。NoSQL 是基于<strong>键值对</strong>的，而且不需要经过 SQL 层的解析，数据之间没有耦合性，性能非常高。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -351,7 +346,8 @@
 <th>代表</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>键值存储数据库</td>
 <td>Redis、Voldemort 和 Oracle BDB 等</td>
 </tr>
@@ -367,33 +363,29 @@
 <td>图形数据库</td>
 <td>Neo4J、InfoGrid 和 Infinite Graph 等</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>对于<strong>爬虫的数据存储</strong>来说，一条数据可能存在<strong>某些字段提取失败而缺失</strong>的情况，而且<strong>数据可能随时调整</strong>。另外，数据之间还存在<strong>嵌套关系</strong>。如果使用关系型数据库存储，一是需要提前建表，二是如果存在数据嵌套关系的话，需要进行序列化操作才可以存储，这非常不方便。</p>
-<h4 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h4><p>MongoDB 是由 <strong>C++ ** 语言编写的非关系型数据库，是一个基于</strong>分布式文件存储** 的开源数据库系统，其内容存储形式类似 JSON 对象，它的字段值可以包含其他文档、数组及文档数组。</p>
+<h4 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h4><p>MongoDB 是由 <strong>C++ </strong> 语言编写的非关系型数据库，是一个基于<strong>分布式文件存储</strong> 的开源数据库系统，其内容存储形式类似 JSON 对象，它的字段值可以包含其他文档、数组及文档数组。</p>
 <p><a href="https://www.jianshu.com/p/d99f6fd8b209" target="_blank" rel="noopener">安装MongoDB</a></p>
 <p>CMD命令进入某个目录: 进入某个磁盘，直接盘符代号：如D：，不用CD 命令切换; 进入除根录以下的文件夹, cd 文件夹路径.</p>
 <p>遇到warning：Access control is not enabled for the database.</p>
 <p>原因分析：新版本的MongDB增加了安全性设计，推荐用户创建使用数据库时进行验证。如果用户想建立简单连接，则会提示警示信息。</p>
 <p>解决办法：创建管理员并设置密码</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.createUser(</span><br><span class="line">  &#123;</span><br><span class="line">    user: "userAdmin", //用户名</span><br><span class="line">    pwd: "123", //密码</span><br><span class="line">    roles: [ &#123; role: "userAdminAnyDatabase", db: "admin" &#125; ] //权限</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
 <p>重启MongoDB服务器</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --auth --port <span class="number">27017</span> --dbpath &lt;关联路径:bin/&gt;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>端口默认就是27017可以不指定</p>
 <p><a href="https://blog.csdn.net/ttxsely/article/details/77726164" target="_blank" rel="noopener">https://blog.csdn.net/ttxsely/article/details/77726164</a></p>
 </li>
 </ul>
 <h5 id="连接MongoDB"><a href="#连接MongoDB" class="headerlink" title="连接MongoDB"></a>连接MongoDB</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymongo</span><br><span class="line">client = pymongo.MongoClient(host=<span class="string">'localhost'</span>, port=<span class="number">27017</span>)</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">client = MongoClient(<span class="string">'mongodb://localhost:27017/'</span>)</span><br></pre></td></tr></table></figure>
-
 <h5 id="指定数据库"><a href="#指定数据库" class="headerlink" title="指定数据库"></a>指定数据库</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db = client.test</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">db = client[test]</span><br></pre></td></tr></table></figure>
-
 <h5 id="指定集合（collection）"><a href="#指定集合（collection）" class="headerlink" title="指定集合（collection）"></a>指定集合（collection）</h5><p><strong>集合</strong>类似于关系型数据库中的<strong>表</strong>。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">collection = db.students</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">collection = db[<span class="string">'students'</span>]</span><br></pre></td></tr></table></figure>
-
 <h5 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">student = &#123;</span><br><span class="line">    <span class="string">'id'</span>: <span class="string">'20170101'</span>,</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">'Jordan'</span>,</span><br><span class="line">    <span class="string">'age'</span>: <span class="number">20</span>,</span><br><span class="line">    <span class="string">'gender'</span>: <span class="string">'male'</span></span><br><span class="line">&#125;</span><br><span class="line">result = collection.insert(student)</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>在 MongoDB 中，每条数据其实都有一个_id 属性来唯一标识。如果没有显式指明该属性，MongoDB 会自动产生一个 ObjectId 类型的_id 属性。insert() 方法会在执行后返回_id 值。</p>
 </li>
@@ -409,6 +401,7 @@
 <li>find() 则返结果是 Cursor 类型，它相当于一个生成器：<code>results = collection.find({&#39;age&#39;: 20})</code></li>
 <li>比较符号和功能符号：</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -417,7 +410,8 @@
 <th>示例</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>$lt</td>
 <td>小于</td>
 <td>{‘age’: {‘$lt’: 20}}</td>
@@ -457,7 +451,10 @@
 <td>以 M 开头</td>
 <td>{‘$regex’: ‘^M.*’}</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -467,7 +464,8 @@
 <th>示例含义</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>$regex</td>
 <td>匹配正则表达式</td>
 <td>{‘$regex’: ‘^M.*’}</td>
@@ -503,7 +501,9 @@
 <td>{‘$where’: ‘obj.fans_count == obj.follows_count’}</td>
 <td>自身粉丝数等于关注数</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h5 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h5><p><code>count = collection.find({&#39;age&#39;: 20}).count()</code></p>
 <h5 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h5><p><code>results = collection.find().sort(&#39;name&#39;, pymongo.ASCENDING)</code></p>
 <p>调用 pymongo.ASCENDING 指定升序。如果要降序排列，可以传入 pymongo.DESCENDING。</p>
@@ -514,7 +514,6 @@
 <ul>
 <li><p>在数据库数量非常庞大的时候，如千万、亿级别，最好不要使用大的偏移量来查询数据，因为这样很可能导致内存溢出。这时需要记录好上次查询的_id，使用类似如下操作来查询:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from bson.objectid import ObjectId</span><br><span class="line">collection.find(&#123;&#39;_id&#39;: &#123;&#39;$gt&#39;: ObjectId(&#39;593278c815c2602678bb2b8d&#39;)&#125;&#125;)</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <h5 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h5><ul>
@@ -526,7 +525,6 @@
 </li>
 <li><p>update_many()，则会将所有符合条件的数据都更新</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = collection.update_many(condition, &#123;<span class="string">'$inc'</span>: &#123;<span class="string">'age'</span>: <span class="number">1</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><ul>
@@ -538,7 +536,6 @@
 </li>
 <li><p>delete_many()</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = collection.delete_many(&#123;<span class="string">'age'</span>: &#123;<span class="string">'$lt'</span>: <span class="number">25</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <h5 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h5><ul>
@@ -548,13 +545,10 @@
 <h4 id="Redis-存储"><a href="#Redis-存储" class="headerlink" title="Redis 存储"></a>Redis 存储</h4><p>Redis 是一个基于<strong>内存</strong> 的高效的键值型非关系型数据库，存取效率极高，而且支持多种存储数据结构。</p>
 <p>StrictRedis：set和get操作。</p>
 <h5 id="连接-Redis"><a href="#连接-Redis" class="headerlink" title="连接 Redis"></a>连接 Redis</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> redis <span class="keyword">import</span> StrictRedis  </span><br><span class="line"></span><br><span class="line">redis = StrictRedis(host=<span class="string">'localhost'</span>, port=<span class="number">6379</span>, db=<span class="number">0</span>, password=<span class="string">'foobared'</span>)  <span class="comment"># default： localhost、6379、0 和 None</span></span><br></pre></td></tr></table></figure>
-
 <p>使用 ConnectionPool 来连接</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> redis <span class="keyword">import</span> StrictRedis, ConnectionPool  </span><br><span class="line"></span><br><span class="line">pool = ConnectionPool(host=<span class="string">'localhost'</span>, port=<span class="number">6379</span>, db=<span class="number">0</span>, password=<span class="string">'foobared'</span>)  </span><br><span class="line">redis = StrictRedis(connection_pool=pool)</span><br></pre></td></tr></table></figure>
-
 <p>ConnectionPool 还支持通过 URL 来构建, URL 的格式支持有如下 3 种</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># redis://[:password]@host:port/db   # 创建 Redis TCP 连接</span></span><br><span class="line"><span class="comment"># rediss://[:password]@host:port/db  # Redis TCP+SSL 连接</span></span><br><span class="line"><span class="comment"># unix://[:password]@/path/to/socket.sock?db=db # Redis UNIX socket 连接</span></span><br><span class="line">    </span><br><span class="line">url = <span class="string">'redis://:foobared@localhost:6379/0'</span>  </span><br><span class="line">pool = ConnectionPool.from_url(url)  </span><br><span class="line">redis = StrictRedis(connection_pool=pool)</span><br></pre></td></tr></table></figure>
-
 <h5 id="键操作"><a href="#键操作" class="headerlink" title="键操作"></a>键操作</h5><h5 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h5><p>键值对形式存储</p>
 <p>set(name,value) </p>
 <p>mset(name,value)</p>
@@ -564,7 +558,8 @@
 <p>incr(name, amount=1)  键名为 name 的 value 增值操作，默认为 1，键不存在则被创建并设为 </p>
 <p>decr(name, amount=1)</p>
 <p>append(key, value)</p>
-<h5 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h5><table>
+<h5 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h5><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>方　　法</th>
@@ -575,7 +570,8 @@
 <th>示例结果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>rpush(name, *values)</td>
 <td>在键名为 name 的列表末尾添加值为 value 的元素，可以传多个</td>
 <td>name：键名；values：值</td>
@@ -615,7 +611,9 @@
 <td>保留键名为 list 的索引为 1 到 3 的元素</td>
 <td>True</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h5 id="集合操作"><a href="#集合操作" class="headerlink" title="集合操作"></a>集合操作</h5><p>集合中的元素都是不重复的</p>
 <h5 id="有序集合操作"><a href="#有序集合操作" class="headerlink" title="有序集合操作"></a>有序集合操作</h5><p>有序集合比集合多了一个分数字段，利用它可以对集合中的数据进行排序</p>
 <h5 id="散列操作"><a href="#散列操作" class="headerlink" title="散列操作"></a>散列操作</h5><p>散列表的数据结构</p>

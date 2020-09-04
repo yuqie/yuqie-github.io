@@ -265,18 +265,16 @@
       
         <h2 id="1-什么是csv？"><a href="#1-什么是csv？" class="headerlink" title="1. 什么是csv？"></a>1. 什么是csv？</h2><p><strong>Comma Separated Values</strong> (CSV), also called called <strong>Character Separated Values</strong> or <strong>Comma Delimited files</strong>, is a file format for data storage which looks like a text file, which contains a list of data separated by commas or other characters.</p>
 <a id="more"></a>
-
 <details>
 <summary><mark><font color=darkred>csv的格式特点</font></mark></summary>
 
-<ul>
-<li>One line for each record</li>
-<li>Comma separated fields</li>
-<li>Space-characters adjacent to commas are ignored</li>
-<li>Fields with in-built commas are separated by double quote characters</li>
-<li>Fields with double quote characters must be surrounded by double quotes. Each inbuilt double quote must be represented by a pair of consecutive quotes</li>
-<li>Fields that contain inbuilt line-breaks must be surrounded by double quotes</li>
-</ul>
+- One line for each record
+- Comma separated fields
+- Space-characters adjacent to commas are ignored
+- Fields with in-built commas are separated by double quote characters
+- Fields with double quote characters must be surrounded by double quotes. Each inbuilt double quote must be represented by a pair of consecutive quotes
+- Fields that contain inbuilt line-breaks must be surrounded by double quotes
+
 </details>
 
 <h2 id="2-为什么使用csv文件？"><a href="#2-为什么使用csv文件？" class="headerlink" title="2. 为什么使用csv文件？"></a>2. 为什么使用csv文件？</h2><p>CSV结构简单，是纯文本文件，和txt的区别仅在于后缀名不同。用来做数据存储，容量比XML小（其数据由key-value组成），功能比TXT强大，另外Excel也直接支持CSV文件的查看和生成。</p>
@@ -297,7 +295,6 @@
 <blockquote>
 <p><code>csv.reader</code>(<em>csvfile</em>, <em>dialect=’excel’</em>, **fmtparams)</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'eggs.csv'</span>, newline=<span class="string">''</span>) <span class="keyword">as</span> csvfile:</span><br><span class="line">    spamreader = csv.reader(csvfile, delimiter=<span class="string">' '</span>, quotechar=<span class="string">'|'</span>)</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> spamreader:</span><br><span class="line">        print(<span class="string">', '</span>.join(row))</span><br></pre></td></tr></table></figure>
-
 <p><code>csv.writer</code>(<em>csvfile</em>, <em>dialect=’excel’</em>, **fmtparams)</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'eggs.csv'</span>, <span class="string">'w'</span>, newline=<span class="string">''</span>) <span class="keyword">as</span> csvfile:</span><br><span class="line">    spamwriter = csv.writer(csvfile, delimiter=<span class="string">' '</span>,</span><br><span class="line">                            quotechar=<span class="string">'|'</span>, quoting=csv.QUOTE_MINIMAL)</span><br><span class="line">    spamwriter.writerow([<span class="string">'Spam'</span>] * <span class="number">5</span> + [<span class="string">'Baked Beans'</span>])</span><br><span class="line">    spamwriter.writerow([<span class="string">'Spam'</span>, <span class="string">'Lovely Spam'</span>, <span class="string">'Wonderful Spam'</span>])</span><br></pre></td></tr></table></figure>
 </blockquote>
@@ -305,42 +302,45 @@
 <blockquote>
 <p>class csv.DictReader(<em>f</em>, <em>fieldnames=None</em>, <em>restkey=None</em>, <em>restval=None</em>, <em>dialect=’excel’</em>, <em>args, *</em>kwds) </p>
 <p>将csv数据读取为字典</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">Name</th>
-<th align="right">Age</th>
-<th align="center">Class</th>
+<th style="text-align:left">Name</th>
+<th style="text-align:right">Age</th>
+<th style="text-align:center">Class</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">A</td>
-<td align="right">20</td>
-<td align="center">two</td>
+<tbody>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:right">20</td>
+<td style="text-align:center">two</td>
 </tr>
 <tr>
-<td align="left">B</td>
-<td align="right">21</td>
-<td align="center">one</td>
+<td style="text-align:left">B</td>
+<td style="text-align:right">21</td>
+<td style="text-align:center">one</td>
 </tr>
 <tr>
-<td align="left">C</td>
-<td align="right">22</td>
-<td align="center">one</td>
+<td style="text-align:left">C</td>
+<td style="text-align:right">22</td>
+<td style="text-align:center">one</td>
 </tr>
 <tr>
-<td align="left">D</td>
-<td align="right">23</td>
-<td align="center">three</td>
+<td style="text-align:left">D</td>
+<td style="text-align:right">23</td>
+<td style="text-align:center">three</td>
 </tr>
 <tr>
-<td align="left">E</td>
-<td align="right">24</td>
-<td align="center">one</td>
+<td style="text-align:left">E</td>
+<td style="text-align:right">24</td>
+<td style="text-align:center">one</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"csv.csv"</span>,<span class="string">'r'</span>,encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line"> reader = csv.reader(f)</span><br><span class="line"> fieldnames = next(reader)<span class="comment">#获取数据的第一列，作为后续要转为字典的键名 生成器，next方法获取</span></span><br><span class="line"> <span class="comment"># print(fieldnames)</span></span><br><span class="line"> csv_reader = csv.DictReader(f,fieldnames=fieldnames) <span class="comment">#self._fieldnames = fieldnames # list of keys for the dict 以list的形式存放键名</span></span><br><span class="line"> <span class="keyword">for</span> row <span class="keyword">in</span> csv_reader:</span><br><span class="line">  d=&#123;&#125;</span><br><span class="line">  <span class="keyword">for</span> k,v <span class="keyword">in</span> row.items():</span><br><span class="line">   d[k]=v</span><br><span class="line">  print(d)</span><br></pre></td></tr></table></figure>
-
 <p>class csv.DictWriter(<em>f</em>, <em>fieldnames=None</em>, <em>extrasaction=’raise’</em>, <em>dialect=’excel’</em>, <em>args, *</em>kwds)</p>
 <p>将字典写入csv文件</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">file_path = <span class="string">r"E:\new.csv"</span></span><br><span class="line"><span class="keyword">with</span> open(file_path, <span class="string">"w"</span>, newline=<span class="string">""</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    fieldnames = [<span class="string">"书名"</span>, <span class="string">"作者"</span>, <span class="string">"出版时间"</span>, <span class="string">"价格"</span>, <span class="string">"评分"</span>, <span class="string">"评价人数"</span>]</span><br><span class="line">    f_csv = csv.DictWriter(f, fieldnames)</span><br><span class="line">    f_csv.writeheader()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(time_list)):</span><br><span class="line">        f_csv.writerow(</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"书名"</span>: book_name_list[i],</span><br><span class="line">                <span class="string">"作者"</span>: author_list[i],</span><br><span class="line">                <span class="string">"出版时间"</span>: time_list[i],</span><br><span class="line">                <span class="string">"价格"</span>: price_list[i],</span><br><span class="line">                <span class="string">"评分"</span>: score_list[i],</span><br><span class="line">                <span class="string">"评价人数"</span>: evaluator_list[i]</span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br></pre></td></tr></table></figure>

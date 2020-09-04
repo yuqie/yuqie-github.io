@@ -264,20 +264,14 @@
       
         <h2 id="1-HTML标签隐藏"><a href="#1-HTML标签隐藏" class="headerlink" title="1. HTML标签隐藏"></a>1. HTML标签隐藏</h2><p>Markdown内嵌html语法，所以可以用隐藏的html标签。</p>
 <a id="more"></a>
-
 <p><strong>注意：前面需空一行</strong></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'display: none'</span>&gt;</span></span><br><span class="line">注释</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>测试（在浏览器中看不到即为成功）：</p>
 <div style='display: none'>
 注释
 </div>
 
 <h2 id="2-HTML注释隐藏"><a href="#2-HTML注释隐藏" class="headerlink" title="2. HTML注释隐藏"></a>2. HTML注释隐藏</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--注释，不会在浏览器中显示。--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">多段</span></span><br><span class="line"><span class="comment">注释，</span></span><br><span class="line"><span class="comment">不会在浏览器中显示。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-
 <p>测试（在浏览器中看不到即为成功）：</p>
 <!--注释，不会在浏览器中显示。-->
 <!--
@@ -285,17 +279,15 @@
 注释，
 不会在浏览器中显示。
 -->
-
 <h2 id="3-hack-方法隐藏"><a href="#3-hack-方法隐藏" class="headerlink" title="3. hack 方法隐藏"></a>3. hack 方法隐藏</h2><p>hack方法利用markdown的解析原理来实现注释。一般有的markdown解析器不支持上面的注释方法，这个时候就可以用hack方法。</p>
-<p>hack方法比上面2种方法稳定，但是语义化太差。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[comment]: <span class="tag">&lt;&gt;</span> (注释，不会在浏览器中显示。)</span><br><span class="line">[//]: <span class="tag">&lt;&gt;</span> (注释，不会在浏览器中显示。)</span><br><span class="line">[//]: # (注释，不会在浏览器中显示。)</span><br></pre></td></tr></table></figure>
-<p>其中，这种方法最稳定，适用性最强：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[//]: # (注释，不会在浏览器中显示。)</span><br></pre></td></tr></table></figure>
-<p>还可以：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[^_^]: # (注释，不会在浏览器中显示。)</span><br></pre></td></tr></table></figure>
-<p>测试（在浏览器中看不到即为成功）：</p>
+<p>hack方法比上面2种方法稳定，但是语义化太差。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[comment]: <span class="tag">&lt;&gt;</span> (注释，不会在浏览器中显示。)</span><br><span class="line">[//]: <span class="tag">&lt;&gt;</span> (注释，不会在浏览器中显示。)</span><br><span class="line">[//]: # (注释，不会在浏览器中显示。)</span><br></pre></td></tr></table></figure><br>其中，这种方法最稳定，适用性最强：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[//]: # (注释，不会在浏览器中显示。)</span><br></pre></td></tr></table></figure><br>还可以：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[^_^]: # (注释，不会在浏览器中显示。)</span><br></pre></td></tr></table></figure><br>测试（在浏览器中看不到即为成功）：</p>
+<blockquote id="fn__^">
+<sup>_^</sup>. # (注释，不会在浏览器中显示。)<a href="#reffn__^" title="Jump back to footnote [_^] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn__^">
+<sup>_^</sup>. # (注释，不会在浏览器中显示。)<a href="#reffn__^" title="Jump back to footnote [_^] in the text."> &#8617;</a>
+</blockquote>
 <h2 id="4-HTML标签折叠"><a href="#4-HTML标签折叠" class="headerlink" title="4. HTML标签折叠"></a>4. HTML标签折叠</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">summary</span>&gt;</span><span class="tag">&lt;<span class="name">mark</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">darkred</span>&gt;</span>摘要<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">mark</span>&gt;</span><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span> -title<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">pre</span>&gt;</span><span class="tag">&lt;<span class="name">code</span>&gt;</span>  </span><br><span class="line">   隐藏代码块</span><br><span class="line">  <span class="tag">&lt;/<span class="name">code</span>&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>summary：折叠语法展示的摘要</p>
 <p>details：折叠语法标签</p>
 <p>pre：以原有格式显示元素内的文字是已经格式化的文本。</p>
@@ -312,7 +304,7 @@
 
 <hr>
 <p>来源：<a href="https://www.imooc.com/article/23400" target="_blank" rel="noopener">慕课网CandyBullet</a></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2>
     </div>
 
     
@@ -396,7 +388,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-HTML标签隐藏"><span class="nav-number">1.</span> <span class="nav-text">1. HTML标签隐藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-HTML注释隐藏"><span class="nav-number">2.</span> <span class="nav-text">2. HTML注释隐藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-hack-方法隐藏"><span class="nav-number">3.</span> <span class="nav-text">3. hack 方法隐藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-HTML标签折叠"><span class="nav-number">4.</span> <span class="nav-text">4. HTML标签折叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">5.</span> <span class="nav-text"></span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-HTML标签隐藏"><span class="nav-number">1.</span> <span class="nav-text">1. HTML标签隐藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-HTML注释隐藏"><span class="nav-number">2.</span> <span class="nav-text">2. HTML注释隐藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-hack-方法隐藏"><span class="nav-number">3.</span> <span class="nav-text">3. hack 方法隐藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-HTML标签折叠"><span class="nav-number">4.</span> <span class="nav-text">4. HTML标签折叠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">5.</span> <span class="nav-text"> </span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

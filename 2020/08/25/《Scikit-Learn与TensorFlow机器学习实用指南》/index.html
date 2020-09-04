@@ -350,15 +350,12 @@
 <p><a href="https://www.jianshu.com/p/4a94798f7dcc" target="_blank" rel="noopener">简书《Scikit-Learn、Keras与TensorFlow机器学习实用指南》第一版和第二版对照</a></p>
 <p><a href="https://blog.csdn.net/jiaoyangwm/article/details/82387883#%E7%BB%83%E4%B9%A0%E9%A2%987" target="_blank" rel="noopener">练习题答案参考</a> <a href="https://blog.csdn.net/leowinbow/article/details/88581039" target="_blank" rel="noopener">参考2</a></p>
 <a id="more"></a>
-
-<p>##第01章 机器学习概览</p>
-<ol>
+<h2 id="第01章-机器学习概览"><a href="#第01章-机器学习概览" class="headerlink" title="第01章 机器学习概览"></a>第01章 机器学习概览</h2><ol>
 <li><p>os.makedirs(IMAGES_PATH, exist_ok=True)</p>
 </li>
 <li><p>pd.merge(left=oecd_bli, right=gdp_per_capita, left_index=True, right_index=True)</p>
 <p>left_index和right_index：指定是否以索引为参考进行合并</p>
 <!--more-->
-
 <h4 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h4><ol>
 <li>如何定义机器学习？</li>
 </ol>
@@ -369,20 +366,20 @@
 <p><strong>工程性的概念：</strong></p>
 <p>计算机程序利用经验 E 学习任务 T，性能是 P，如果针对任务 T 的性能 P 随着经验 E 不断增长，则称为机器学习。 —— 汤姆·米切尔，1997</p>
 </blockquote>
-<ol start="2">
+<ol>
 <li>机器学习可以解决的四类问题？</li>
 </ol>
 <blockquote>
 <p>分类，回归，聚类，降维</p>
 <p>机器学习可以根据训练时监督的量和类型进行分类。主要有四类：监督学习、非监督学习、半监督学习和强化学习。</p>
 </blockquote>
-<ol start="3">
+<ol>
 <li>什么是带标签的训练集？</li>
 </ol>
 <blockquote>
 <p>在监督学习中，用来训练算法的训练数据包含了答案，称为标签。</p>
 </blockquote>
-<ol start="4">
+<ol>
 <li>最常见的两个监督任务是什么？</li>
 </ol>
 <blockquote>
@@ -391,7 +388,7 @@
 <li>回归：预测目标数值，例如给出一些特征（里程数、车龄、品牌等等）称作预测值，来预测一辆汽车的价格。。要训练这个系统，需要给出大量汽车样本，包括它们的预测值和标签（即，它们的价格）。</li>
 </ol>
 </blockquote>
-<ol start="5">
+<ol>
 <li>指出四个常见的非监督任务？</li>
 </ol>
 <blockquote>
@@ -402,25 +399,25 @@
 <li><strong>异常检测（anomaly detection）</strong> ：例如，检测异常的信用卡转账以防欺诈，检测制造缺陷，或者在训练之前自动从训练数据集去除异常值。异常检测的系统使用正常值训练的，当它碰到一个新实例，它可以判断这个新实例是像正常值还是异常值。</li>
 </ol>
 </blockquote>
-<ol start="6">
+<ol>
 <li>要让一个机器人能在各种未知地形行走，你会采用什么机器学习算法？</li>
 </ol>
 <blockquote>
 <p>强化学习：</p>
 </blockquote>
-<ol start="7">
+<ol>
 <li>要对你的顾客进行分组，你会采用哪类算法？</li>
 </ol>
 <blockquote>
 <p>非监督学习</p>
 </blockquote>
-<ol start="8">
+<ol>
 <li>垃圾邮件检测是监督学习问题，还是非监督学习问题？</li>
 </ol>
 <blockquote>
 <p>监督学习：因为有标签</p>
 </blockquote>
-<ol start="9">
+<ol>
 <li>什么是在线学习系统？</li>
 </ol>
 <blockquote>
@@ -428,27 +425,27 @@
 <p>在在线学习中，是用数据实例持续地进行训练，可以一次一个或一次几个实例（称为小批量）。每个学习步骤都很快且廉价，所以系统可以动态地学习收到的最新数据</p>
 <p><img src="https://github.com/apachecn/hands-on-ml-zh/raw/master/images/chapter_1/1-13.png" alt="img"></p>
 </blockquote>
-<ol start="10">
+<ol>
 <li>什么是核外学习？</li>
 </ol>
 <blockquote>
 <p>在线学习算法也适用于在超大数据集（一台计算机不足以用于存储它）上训练系统（这称作核外学习，<em>out-of-core</em> learning）。算法每次只加载部分数据，用这些数据进行训练，然后重复这个过程，直到使用完所有数据</p>
 </blockquote>
-<ol start="11">
+<ol>
 <li>什么学习算法是用相似度做预测？</li>
 </ol>
 <blockquote>
 <p>基于实例学习：系统先用记忆学习案例，然后使用相似度测量推广到新的例子</p>
 <p>例如，垃圾邮件检测器，不仅能标记和已知的垃圾邮件相同的邮件，也要能标记类似垃圾邮件的邮件。需要测量两封邮件的相似性。一个（简单的）相似度测量方法是统计两封邮件包含的相同单词的数量。如果一封邮件含有许多垃圾邮件中的词，就会被标记为垃圾邮件。</p>
 </blockquote>
-<ol start="12">
+<ol>
 <li>模型参数和学习算法的超参数的区别是什么？</li>
 </ol>
 <blockquote>
 <p>学习算法搜寻模型参数值，使代价函数最小</p>
 <p>超参数（hyperparameter）是一个学习算法的参数（而不是模型的），控制正则化的度。</p>
 </blockquote>
-<ol start="13">
+<ol>
 <li>基于模型学习的算法搜寻的是什么？最成功的策略是什么？基于模型学习如何做预测？</li>
 </ol>
 <blockquote>
@@ -456,7 +453,7 @@
 <p>线性回归算法</p>
 <p>研究数据-选择模型-用训练数据进行训练（学习算法搜寻模型参数值，使得代价函数最小）-使用模型对新案例进行预测（这称作推断）</p>
 </blockquote>
-<ol start="14">
+<ol>
 <li>机器学习的四个主要挑战是什么？</li>
 </ol>
 <blockquote>
@@ -467,7 +464,7 @@
 <p>过拟合</p>
 <p>欠拟合</p>
 </blockquote>
-<ol start="15">
+<ol>
 <li>如果模型在训练集上表现好，但推广到新实例表现差，问题是什么？给出三个可能的解决方案。</li>
 </ol>
 <blockquote>
@@ -484,27 +481,27 @@
 <li>如果一些实例缺少特征（比如，你的 5% 的顾客没有说明年龄），你必须决定是否忽略这个属性、忽略这些实例、填入缺失值（比如，年龄中位数），或者训练一个含有这个特征的模型和一个不含有这个特征的模型，等等。</li>
 </ul>
 </blockquote>
-<ol start="16">
+<ol>
 <li>什么是测试集，为什么要使用它？</li>
 </ol>
 <blockquote>
 <p>测试集：用来训练模型的数据集</p>
 </blockquote>
-<ol start="17">
+<ol>
 <li>验证集的目的是什么？</li>
 </ol>
 <blockquote>
 <p>验证集：数据中分出来，对模型进行测试的数据集。</p>
 <p>评估模型推广到新样本的效果（即对新样本的性能），可以将模型部署到生产环境，观察它的性能。这么做可以，但如果模型的性能很差，就会引起用户抱怨。更好的选项是将数据分成训练集和测试集。用训练集进行训练，用测试集进行测试。对新样本的错误率称作<strong>推广错误（或样本外错误）</strong> ，通过模型对测试集的评估，可以预估这个错误。这个值可以我们模型对新样本的性能。</p>
 </blockquote>
-<ol start="18">
+<ol>
 <li>如果用测试集调节超参数，会发生什么？</li>
 </ol>
 <blockquote>
 <p>过拟合</p>
 <p>在测试集上多次测量了推广误差率，调整了模型和超参数，以使模型最适合这个集合。这意味着模型对新数据的性能不会高。</p>
 </blockquote>
-<ol start="19">
+<ol>
 <li>什么是交叉验证，为什么它比验证集好？</li>
 </ol>
 <blockquote>
@@ -513,8 +510,7 @@
 </blockquote>
 </li>
 </ol>
-<p>##第02章 一个完整的机器学习项目</p>
-<p>[Python API：crc32函数 计算CRC校验值](<a href="https://b" target="_blank" rel="noopener">https://b</a></p>
+<h2 id="第02章-一个完整的机器学习项目"><a href="#第02章-一个完整的机器学习项目" class="headerlink" title="第02章 一个完整的机器学习项目"></a>第02章 一个完整的机器学习项目</h2><p>[Python API：crc32函数 计算CRC校验值](https://b</p>
 <p><a href="https://blog.csdn.net/liuyu60305002/article/details/6307152" target="_blank" rel="noopener">模2运算</a></p>
 <p><a href="https://blog.csdn.net/sparkliang/article/details/5671510" target="_blank" rel="noopener">CRC32算法详细推导</a></p>
 <blockquote>
@@ -540,6 +536,7 @@
 <p>1 ）接收数据 n(x) ，这个 n(x) 就是包含了 CRC 校验码的 m+r 位数据；</p>
 <p>2 ）计算 n(x) 除以 g(x) ，如果余数为 0 则表示传输过程没有错误，否则表示有错误。从 n(x) 去掉尾部的 r 位数据，得到的就是原始数据。</p>
 <p>生成多项式不是随意选择的，以下是一些标准的 CRC 算法的生成多项式：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -548,7 +545,8 @@
 <th>16 进制表示</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>CRC12</td>
 <td>x^12 + x^11 + x^3 + x^2 + x + 1</td>
 <td>0x80F</td>
@@ -568,7 +566,9 @@
 <td>x^32 + x^26 + x^23 + x^22 + x^16 + x^12 + x^11+ x^10 + x^8 + x^7 + x^5 + x^4 + x^2 + x + 1</td>
 <td>0x04C11DB7</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>在python 3.0 之后: 返回值永远是无符号数。要在所有的 Python 版本和平台上获得相同的值，请使用 <strong>crc32(data) &amp; 0xffffffff</strong>。</p>
 </blockquote>
 <p><strong>问题：</strong> </p>
@@ -578,34 +578,31 @@
 </ol>
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">from</span> sklearn.svm <span class="keyword">import</span> SVR</span><br><span class="line"></span><br><span class="line">&gt;svm_reg = SVR(kernel=<span class="string">"linear"</span>)</span><br><span class="line">&gt;svm_reg.fit(housing_prepared, housing_labels)</span><br><span class="line">&gt;housing_predictions = svm_reg.predict(housing_prepared)</span><br><span class="line">&gt;svm_mse = mean_squared_error(housing_labels, housing_predictions)</span><br><span class="line">&gt;svm_rmse = np.sqrt(svm_mse)</span><br><span class="line">&gt;svm_rmse <span class="comment"># output: 111094.6308539982</span></span><br></pre></td></tr></table></figure>
-
 <p>结果不好。</p>
 </blockquote>
-<ol start="2">
+<ol>
 <li>尝试用<code>RandomizedSearchCV</code>替换<code>GridSearchCV</code>。</li>
 </ol>
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> RandomizedSearchCV</span><br><span class="line">&gt;<span class="keyword">from</span> scipy.stats <span class="keyword">import</span> randint</span><br><span class="line"></span><br><span class="line">&gt;param_distribs = &#123;</span><br><span class="line">       <span class="string">'n_estimators'</span>: randint(low=<span class="number">1</span>, high=<span class="number">200</span>),</span><br><span class="line">       <span class="string">'max_features'</span>: randint(low=<span class="number">1</span>, high=<span class="number">8</span>),</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&gt;forest_reg = RandomForestRegressor(random_state=<span class="number">42</span>)</span><br><span class="line">&gt;rnd_search = RandomizedSearchCV(forest_reg, param_distributions=param_distribs,</span><br><span class="line">                               n_iter=<span class="number">10</span>, cv=<span class="number">5</span>, scoring=<span class="string">'neg_mean_squared_error'</span>, random_state=<span class="number">42</span>)</span><br><span class="line">&gt;rnd_search.fit(housing_prepared, housing_labels)</span><br></pre></td></tr></table></figure>
 </blockquote>
-<ol start="3">
+<ol>
 <li>尝试在准备流水线中添加一个只选择最重要属性的转换器。</li>
 </ol>
 <blockquote>
 <p>​</p>
 </blockquote>
-<ol start="4">
+<ol>
 <li>尝试创建一个单独的可以完成数据准备和最终预测的流水线。</li>
 </ol>
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;full_pipeline_with_predictor = Pipeline([</span><br><span class="line">       (<span class="string">"preparation"</span>, full_pipeline),</span><br><span class="line">       (<span class="string">"linear"</span>, LinearRegression())</span><br><span class="line">   ])</span><br><span class="line"></span><br><span class="line">&gt;full_pipeline_with_predictor.fit(housing, housing_labels)</span><br><span class="line">&gt;full_pipeline_with_predictor.predict(some_data)</span><br></pre></td></tr></table></figure>
 </blockquote>
-<ol start="5">
+<ol>
 <li>使用<code>GridSearchCV</code>自动探索一些准备过程中的候选项。</li>
 </ol>
-<p>##第03章 分类</p>
-<p><a href="https://blog.csdn.net/weixin_38145317/article/details/79650188" target="_blank" rel="noopener">SVM、SVC、SVR</a> </p>
-<p>####练习</p>
-<ol>
+<h2 id="第03章-分类"><a href="#第03章-分类" class="headerlink" title="第03章 分类"></a>第03章 分类</h2><p><a href="https://blog.csdn.net/weixin_38145317/article/details/79650188" target="_blank" rel="noopener">SVM、SVC、SVR</a> </p>
+<h4 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h4><ol>
 <li><p>尝试在 MNIST 数据集上建立一个分类器，使它在测试集上的精度超过 97%。提示：<code>KNeighborsClassifier</code>非常适合这个任务。你只需要找出一个好的超参数值（试一下对权重和超参数<code>n_neighbors</code>进行网格搜索）。</p>
 <p>​</p>
 </li>
@@ -626,8 +623,7 @@
 <li>你也许想给你的流水线增加超参数，控制是否剥过邮件头、将邮件转换为小写、去除标点符号、将所有 URL 替换成<code>&quot;URL&quot;</code>，将所有数字替换成<code>&quot;NUMBER&quot;</code>，或者甚至提取词干（比如，截断词尾。有现成的 Python 库可以做到这点）。</li>
 <li>然后 尝试几个不同的分类器，看看你可否建立一个很棒的垃圾邮件分类器，同时有着高召回率和高准确率。</li>
 </ul>
-<p>##第04章 训练模型</p>
-<p>线性回归预测模型：</p>
+<h2 id="第04章-训练模型"><a href="#第04章-训练模型" class="headerlink" title="第04章 训练模型"></a>第04章 训练模型</h2><p>线性回归预测模型：</p>
 <p>$\hat y = h_{\theta}(x)=\theta ^T\cdot x$</p>
 <p>线性回归模型的MSE损失函数:</p>
 <p>$MSE(X,h_\theta)=\frac{1}{m}\sum_{i=1}^{n}(\theta^T\cdot x^{(i)}-y^{(i)})^2$</p>
@@ -635,14 +631,10 @@
 <p>复杂度：需要计算$X^T\cdot X$ 的逆矩阵，是一个n*n的矩阵，运算复杂度大约在$O(n^{24})$ 到$O(n^{3})$之间。</p>
 <p>可以numpy直接求解，也可以使用sklearn：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line"></span><br><span class="line">lin_reg = LinearRegression()</span><br><span class="line">lin_reg.fit(X, y)</span><br><span class="line">lin_reg.intercept_, lin_reg.coef_</span><br></pre></td></tr></table></figure>
-
 <p><code>LinearRegression类基于numpy.linalg.lstsq （least squares）</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">theta_best_svd, residuals, rank, s = np.linalg.lstsq(X_b, y, rcond=<span class="number">1e-6</span>)</span><br><span class="line">theta_best_svd</span><br></pre></td></tr></table></figure>
-
-<p>#####pseudoinverse (Moore-Penrose inverse)</p>
-<p>该函数求解的是伪逆矩阵（pseudoinverse），即广义矩阵。其中最著名的伪逆矩阵为摩尔－彭若斯广义逆 A+（Moore–Penrose pseudoinverse)，常应用于求非一致线性方程组的最小范数最小二乘解（最小二乘法），并使得解的形式变得简单。矩阵的摩尔－彭若斯广义逆在实数域和复数域上都是唯一的，并且可以通过奇异值分解求得。</p>
+<h5 id="pseudoinverse-Moore-Penrose-inverse"><a href="#pseudoinverse-Moore-Penrose-inverse" class="headerlink" title="pseudoinverse (Moore-Penrose inverse)"></a>pseudoinverse (Moore-Penrose inverse)</h5><p>该函数求解的是伪逆矩阵（pseudoinverse），即广义矩阵。其中最著名的伪逆矩阵为摩尔－彭若斯广义逆 A+（Moore–Penrose pseudoinverse)，常应用于求非一致线性方程组的最小范数最小二乘解（最小二乘法），并使得解的形式变得简单。矩阵的摩尔－彭若斯广义逆在实数域和复数域上都是唯一的，并且可以通过奇异值分解求得。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linalg.pinv(X_b).dot(y)</span><br></pre></td></tr></table></figure>
-
 <p>满足摩尔-彭若斯条件的矩阵G称为矩阵A的摩尔－彭若斯广义逆矩阵，记作A+：</p>
 <p><img src="https://img-blog.csdn.net/20170824103329707?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemVhbGZvcnk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="条件"></p>
 <p>从摩尔－彭若斯条件出发，彭若斯推导出了摩尔－彭若斯广义逆的一些性质：<br><img src="https://img-blog.csdn.net/20170824103423352?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemVhbGZvcnk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
@@ -660,15 +652,12 @@
 </ol>
 <p>当使用梯度下降的时候，应该确保所有的特征有着相近的尺度范围（例如：使用 Scikit Learn 的 <code>StandardScaler</code>类），否则它将需要很长的时间才能够收敛。</p>
 <h4 id="batch-GD"><a href="#batch-GD" class="headerlink" title="batch-GD"></a>batch-GD</h4><p>使用梯度下降的过程中，需要计算每一个 $\theta_j$ 下损失函数的梯度，即计算关于$\theta_j$ 的损失函数的偏导数，记为： </p>
-<p>$$\frac{\partial}{\partial \theta_j} MSE(\theta)=\frac{2}{m}\sum_{i=1}^{m}({\theta^T\cdot x^{(i)}-y^{(i)})x_j^{}(i)}$$</p>
-<p>写成矩阵的形式：</p>
-<p>$$\nabla_\theta MSE(\theta)=\left( \begin{array}{c} \frac{\partial}{\partial \theta_0} MSE(\theta)\\frac{\partial}{\partial \theta_1} MSE(\theta)\…\\frac{\partial}{\partial \theta_n} MSE(\theta) \end{array} \right)=\frac {2}{m} X^T\cdot (X\cdot \theta-y)$$</p>
-<blockquote>
+<script type="math/tex; mode=display">\frac{\partial}{\partial \theta_j} MSE(\theta)=\frac{2}{m}\sum_{i=1}^{m}({\theta^T\cdot x^{(i)}-y^{(i)})x_j^{}(i)}</script><p>写成矩阵的形式：</p>
+<script type="math/tex; mode=display">\nabla_\theta MSE(\theta)=\left( \begin{array}{c} \frac{\partial}{\partial \theta_0} MSE(\theta)\\\frac{\partial}{\partial \theta_1} MSE(\theta)\\...\\\frac{\partial}{\partial \theta_n} MSE(\theta) \end{array} \right)=\frac {2}{m} X^T\cdot (X\cdot \theta-y)</script><blockquote>
 <p>在这个方程中每一步计算时都包含了整个训练集$X$，这也是为什么这个算法称为<strong>批量梯度下降</strong>：每一次训练过程都使用所有的的训练数据。因此，在大数据集上，其会变得相当的慢。然而，梯度下降的运算规模和特征的数量成正比。训练一个数千数量特征的线性回归模型使用梯度下降要比使用正态方程快的多。</p>
 </blockquote>
 <p>梯度下降的步长：</p>
-<p>$$\theta^{(next step)}=\theta-\eta\nabla_\theta MSE(\theta)$$</p>
-<p>$\eta$ 为学习率</p>
+<script type="math/tex; mode=display">\theta^{(next step)}=\theta-\eta\nabla_\theta MSE(\theta)</script><p>$\eta$ 为学习率</p>
 <p>为了找到一个好的学习率，可以使用网格搜索，设置一个<strong>迭代次数</strong>。设置一个非常大的迭代次数，但是当梯度向量变得非常小（容差 $\epsilon$ ）的时候，结束迭代。</p>
 <blockquote>
 <p>收敛速率：</p>
@@ -722,11 +711,8 @@
 <p>$J(\theta)=MSE(\theta)+\alpha \frac{1}{2} \sum_{i=1}^{n}{\theta _i ^2}$</p>
 <p>$\theta_0$是没有被正则化的，所以累加从i=1开始，而不是i=0开始。如果定义w作为特征的权重向量（$\theta_1$到$\theta_n$），则正则项可以简写成$\frac{1}{2}(||w||_2)^2$ ，$||\cdot||_2$表示$l_2$范数。</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_4/%E5%9B%BE4-17.PNG" alt="img"></p>
-<p>######封闭方程的解</p>
-<p>$$\hat \theta=(X^T\cdot X+\alpha A)^{-1}\cdot X^T\cdot y$$</p>
-<p>A是一个除了左上角有一个0的nxn的单位矩阵，表示偏差$\theta_0​$不被正则化。</p>
+<h6 id="封闭方程的解"><a href="#封闭方程的解" class="headerlink" title="封闭方程的解"></a>封闭方程的解</h6><script type="math/tex; mode=display">\hat \theta=(X^T\cdot X+\alpha A)^{-1}\cdot X^T\cdot y</script><p>A是一个除了左上角有一个0的nxn的单位矩阵，表示偏差$\theta_0​$不被正则化。</p>
 <h6 id="随机梯度下降法求解"><a href="#随机梯度下降法求解" class="headerlink" title="随机梯度下降法求解"></a>随机梯度下降法求解</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sgd_reg = SGDRegressor(penalty=<span class="string">"l2"</span>)</span><br><span class="line"><span class="comment"># penalty参数指的是正则项的惩罚类型。指定“l2”表明你要在损失函数上添加一项：权重向量 l2 范数平方的一半，这就是简单的岭回归。</span></span><br></pre></td></tr></table></figure>
-
 <h5 id="Lasso回归"><a href="#Lasso回归" class="headerlink" title="Lasso回归"></a>Lasso回归</h5><p>Lasso 回归（也称 Least Absolute Shrinkage，或者 Selection Operator Regression）是另一种正则化版的线性回归：就像岭回归那样，它也在损失函数上添加了一个正则化项，但是它使用权重向量的$l_1$ 范数而不是权重向量 $l_2$范数平方的一半。</p>
 <p>$J(\theta)=MSE(\theta)+\alpha \sum_{i=1}^{n}{|\theta _i|}$</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_4/%E5%9B%BE4-18.PNG" alt="img"></p>
@@ -735,11 +721,9 @@
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-93eea6b5c197bbc8d7be8b4c14e9f8f3.gif" alt="g(\theta,J)=\nabla_{\theta}MSE(\theta)+ \alpha{\left(\begin{matrix} sign(\theta_1)\\ sign(\theta_2)\\ \vdots \\ sign(\theta_n)\\ \end{matrix}\right)}\ where\ sign(\theta_i)= \begin{cases} -1, &amp;\theta_i&lt;0 \\ 0, &amp;\theta_i=0 \\ +1,&amp;\theta_i&gt;0 \\ \end{cases}"></p>
 <h5 id="弹性网络（ElasticNet）"><a href="#弹性网络（ElasticNet）" class="headerlink" title="弹性网络（ElasticNet）"></a>弹性网络（ElasticNet）</h5><p>弹性网络介于 Ridge 回归和 Lasso 回归之间。它的正则项是 Ridge 回归和 Lasso 回归正则项的简单混合，同时你可以控制它们的混合率 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-4b43b0aee35624cd95b910189b3dc231.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-4b43b0aee35624cd95b910189b3dc231.gif" alt="r"></a></p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-e4da079f692fe35778bbdf1fdf120d99.gif" alt="J(\theta)=MSE(\theta)+r\alpha\sum\limits_{i=1}n\left|\theta_i \right|+\frac{1-r}{2}\alpha\sum\limits_{i=1}n\theta_i^2"></p>
-<p>#####早起停止法（Early Stopping）</p>
-<p>对于迭代学习算法，有一种非常特殊的正则化方法，就像梯度下降在验证错误达到最小值时立即停止训练那样。我们称为早期停止法。</p>
+<h5 id="早起停止法（Early-Stopping）"><a href="#早起停止法（Early-Stopping）" class="headerlink" title="早起停止法（Early Stopping）"></a>早起停止法（Early Stopping）</h5><p>对于迭代学习算法，有一种非常特殊的正则化方法，就像梯度下降在验证错误达到最小值时立即停止训练那样。我们称为早期停止法。</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_4/%E5%9B%BE4-20.PNG" alt="img"></p>
-<p>#####逻辑回归</p>
-<blockquote>
+<h5 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h5><blockquote>
 <p>一些回归算法也可以用于分类（反之亦然）。 Logistic 回归（也称为 Logit 回归）通常用于估计一个实例属于某个特定类别的概率。 若估计的概率大于 50%，则模型预测这个实例属于当前类（称为正类，标记为“1”），反之预测它不属于当前类（即属于负类 ，标记为“0”）。 这样便成为了一个二元分类器。</p>
 </blockquote>
 <p>逻辑回归模型的概率估计：</p>
@@ -749,15 +733,14 @@
 <p>$\sigma(t)=\frac{1}{1+\exp(-t)}$</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_4/%E5%9B%BE4-21.PNG" alt="img"></p>
 <p>逻辑回归预测模型：</p>
-<p>$\hat y = \left{ \begin{array}{cl} 0,&amp; \hat p &lt; 0.5 \ 1,&amp; \hat p \geq 0.5 \end{array} \right.$</p>
+<p>$\hat y = \left\{ \begin{array}{cl} 0,&amp; \hat p &lt; 0.5 \\ 1,&amp; \hat p \geq 0.5 \end{array} \right.$</p>
 <h6 id="训练和损失函数"><a href="#训练和损失函数" class="headerlink" title="训练和损失函数"></a>训练和损失函数</h6><p>单个样本的损失函数：</p>
-<p>$c(\theta)=\left { \begin{array}{lc} -\log(\hat p), &amp;y=1 \ -\log(1-\hat p),&amp; y=0 \end{array}\right.$</p>
+<p>$c(\theta)=\left \{ \begin{array}{lc} -\log(\hat p), &amp;y=1 \\ -\log(1-\hat p),&amp; y=0 \end{array}\right.$</p>
 <p>整个训练集的损失函数只是所有训练实例的平均值。</p>
 <p>逻辑回归的损失函数：<br>$J (\theta) = -\frac{1}{m} \sum_{i=1}^{m}[y^{(i)}log(\hat p^{(i)})+(1-y^{(i)})log(1-\hat p^{(i)})]$</p>
 <p>但是这个损失函数对于求解最小化损失函数的$\theta是没有公式解的（没有等价的正态方程），但该损失函数是凸的，所以梯度下降（或任何其他优化算法）一定能够找到全局最小值。</p>
 <p>逻辑回归损失函数的偏导数：</p>
-<p>$$\frac{\partial}{\partial \theta_j}J(\theta_J)=\frac{1}{m}\sum_{i=1}^{m}(\sigma({\theta^T\cdot x^{(i)})-y^{(i)})x_j^{}(i)}$$</p>
-<h6 id="决策边界"><a href="#决策边界" class="headerlink" title="决策边界"></a>决策边界</h6><p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_4/%E5%9B%BE4-23.PNG" alt="img"></p>
+<script type="math/tex; mode=display">\frac{\partial}{\partial \theta_j}J(\theta_J)=\frac{1}{m}\sum_{i=1}^{m}(\sigma({\theta^T\cdot x^{(i)})-y^{(i)})x_j^{}(i)}</script><h6 id="决策边界"><a href="#决策边界" class="headerlink" title="决策边界"></a>决策边界</h6><p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_4/%E5%9B%BE4-23.PNG" alt="img"></p>
 <p>概率=0.5的分界线</p>
 <p>逻辑回归模型也可以 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-8524eb1789cf2093cfccc4c297138c7f.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-8524eb1789cf2093cfccc4c297138c7f.gif" alt="\ell_1"></a> 或者 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-f2d02eaf32cb7a351989198531c0d12a.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-f2d02eaf32cb7a351989198531c0d12a.gif" alt="\ell_2"></a> 惩罚使用进行正则化。Scikit-Learn 默认添加了 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-f2d02eaf32cb7a351989198531c0d12a.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-f2d02eaf32cb7a351989198531c0d12a.gif" alt="\ell_2"></a> 惩罚。</p>
 <h5 id="Softmax回归"><a href="#Softmax回归" class="headerlink" title="Softmax回归"></a>Softmax回归</h5><p>Logistic 回归模型可以直接推广到支持多类别分类，不必组合和训练多个二分类器， 其称为 Softmax 回归或多类别 Logistic 回归。</p>
@@ -767,15 +750,18 @@
 <blockquote>
 <p>每个类都有自己独一无二的参数向量 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9f888eddb683fe5f80f87f44bd727b08.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9f888eddb683fe5f80f87f44bd727b08.gif" alt="\theta_k"></a>。 所有这些向量通常作为行放在参数矩阵 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-b9dce96eb3d5a71b28f9f198c28d2d1b.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-b9dce96eb3d5a71b28f9f198c28d2d1b.gif" alt="\Theta"></a> 中。</p>
 </blockquote>
-<p>Softmax函数：<br>$$<br>\hat p_k=\sigma(s(x))<em>k=\frac{\exp(s_k(x))}{\sum</em>{j=1}^{K}{\exp(s_j(x))}}<br>$$<br>$K$ 表示类的总数</p>
+<p>Softmax函数：</p>
+<script type="math/tex; mode=display">
+\hat p_k=\sigma(s(x))_k=\frac{\exp(s_k(x))}{\sum_{j=1}^{K}{\exp(s_j(x))}}</script><p>$K$ 表示类的总数</p>
 <p>Softmax 回归模型分类器预测结果:</p>
 <p>$\hat y=argmax\  \sigma(s(x))_k=argmax\ s_k(x) = argmax \ (\theta_k^T\cdot x)$</p>
 <blockquote>
 <p>Softmax 回归分类器一次只能预测一个类（即它是多类的，但不是多输出的），因此它只能用于判断互斥的类别，如不同类型的植物。 不能用它来识别一张照片中的多个人。</p>
 </blockquote>
 <h6 id="训练和损失函数-1"><a href="#训练和损失函数-1" class="headerlink" title="训练和损失函数"></a>训练和损失函数</h6><p>目标是建立一个模型在目标类别上有着较高的概率（因此其他类别的概率较低）</p>
-<p>交叉熵:<br>$$<br>J (\theta) = -\frac{1}{m} \sum_{i=1}^{m}\sum_{k=1}^{K}y^{(i)}_klog(\hat p^{(i)}_k)<br>$$</p>
-<blockquote>
+<p>交叉熵:</p>
+<script type="math/tex; mode=display">
+J (\theta) = -\frac{1}{m} \sum_{i=1}^{m}\sum_{k=1}^{K}y^{(i)}_klog(\hat p^{(i)}_k)</script><blockquote>
 <p>交叉熵源于信息论。</p>
 <p>假设你想要高效地传输每天的天气信息。如果有八个选项（晴天，雨天等），则可以使用3位对每个选项进行编码，因为 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-5f344a952e29992de54b8cfe645b2d5b.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-5f344a952e29992de54b8cfe645b2d5b.gif" alt="2^3=8"></a>。但是，如果你认为几乎每天都是晴天，更高效的编码“晴天”的方式是：只用一位（0）。剩下的七项使用四位（从 1 开始）。交叉熵度量每个选项实际发送的平均比特数。 如果你对天气的假设是完美的，交叉熵就等于天气本身的熵（即其内部的不确定性）。 但是，如果你的假设是错误的（例如，如果经常下雨）交叉熵将会更大，称为 Kullback-Leibler 散度（KL 散度）。</p>
 <p>两个概率分布 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-83878c91171338902e0fe0fb97a8c47a.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-83878c91171338902e0fe0fb97a8c47a.gif" alt="p"></a> 和 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7694f4a66316e53c8cdd9d9954bd611d.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7694f4a66316e53c8cdd9d9954bd611d.gif" alt="q"></a> 之间的交叉熵定义为：<a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-6bc68f603b52e51645b4bbd318f8cdfe.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-6bc68f603b52e51645b4bbd318f8cdfe.gif" alt="H(p,q)=-\sum_xp(x)\log q(x)"></a>（分布至少是离散的）</p>
@@ -857,7 +843,7 @@
 </blockquote>
 </li>
 </ul>
-<ol start="11">
+<ol>
 <li><p>假设你想判断一副图片是室内还是室外，白天还是晚上。你应该选择二个逻辑回归分类器，还是一个 Softmax 分类器？</p>
 <blockquote>
 <p>两个逻辑回归分类器</p>
@@ -869,10 +855,8 @@
 </blockquote>
 </li>
 </ol>
-<p>##第05章 支持向量机</p>
-<p>能够做线性或者非线性的分类，回归，甚至异常值检测。SVM 特别适合应用于复杂但中小规模数据集的分类问题。</p>
-<p>####线性支持向量机分类</p>
-<p>SVM 分类器的判定边界实线，不仅分开了两种类别，而且还尽可能地远离了最靠近的训练数据点。（最大间隔分类）</p>
+<h2 id="第05章-支持向量机"><a href="#第05章-支持向量机" class="headerlink" title="第05章 支持向量机"></a>第05章 支持向量机</h2><p>能够做线性或者非线性的分类，回归，甚至异常值检测。SVM 特别适合应用于复杂但中小规模数据集的分类问题。</p>
+<h4 id="线性支持向量机分类"><a href="#线性支持向量机分类" class="headerlink" title="线性支持向量机分类"></a>线性支持向量机分类</h4><p>SVM 分类器的判定边界实线，不仅分开了两种类别，而且还尽可能地远离了最靠近的训练数据点。（最大间隔分类）</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/5-1.jpg" alt="img"></p>
 <p>判定边界是由位于“街道”边缘的样本点确定的，这些样本点被称为“支持向量”</p>
 <h5 id="软间隔分类"><a href="#软间隔分类" class="headerlink" title="软间隔分类"></a>软间隔分类</h5><p>硬间隔分类有两个问题，</p>
@@ -884,8 +868,7 @@
 <blockquote>
 <p>SVM 模型过拟合，可以尝试通过减小超参数<code>C</code>去调整</p>
 </blockquote>
-<h4 id="非线性支持向量机分类"><a href="#非线性支持向量机分类" class="headerlink" title="非线性支持向量机分类"></a>非线性支持向量机分类</h4><p>#####增加更多的特征</p>
-<p>通过 Scikit-Learn，可以创建一个流水线（Pipeline）去包含多项式特征（PolynomialFeatures）变换，然后StandardScaler.</p>
+<h4 id="非线性支持向量机分类"><a href="#非线性支持向量机分类" class="headerlink" title="非线性支持向量机分类"></a>非线性支持向量机分类</h4><h5 id="增加更多的特征"><a href="#增加更多的特征" class="headerlink" title="增加更多的特征"></a>增加更多的特征</h5><p>通过 Scikit-Learn，可以创建一个流水线（Pipeline）去包含多项式特征（PolynomialFeatures）变换，然后StandardScaler.</p>
 <h5 id="多项式核"><a href="#多项式核" class="headerlink" title="多项式核"></a>多项式核</h5><p>添加多项式特征会：大量特征导致的组合爆炸</p>
 <h5 id="增加相似特征"><a href="#增加相似特征" class="headerlink" title="增加相似特征"></a>增加相似特征</h5><p>使用相似函数（similarity funtion）计算每个样本与特定地标（landmark）的相似度。</p>
 <p>定义一个相似函数，即<strong>高斯径向基函数（Gaussian Radial Basis Function，RBF）</strong>，设置<code>γ = 0.3</code></p>
@@ -903,14 +886,15 @@
 </blockquote>
 <h4 id="背后机制"><a href="#背后机制" class="headerlink" title="背后机制"></a>背后机制</h4><p>首先，关于符号的约定：在第 4 章，我们将所有模型参数放在一个矢量<code>θ</code>里，包括偏置项<code>θ0</code>，<code>θ1</code>到<code>θn</code>的输入特征权重，和增加一个偏差输入<code>x0 = 1</code>到所有样本。</p>
 <p>在本章中，我们将使用一个不同的符号约定，在处理 SVM 上，这更方便，也更常见：<strong>偏置项被命名为b，特征权重向量被称为w</strong>，在输入特征向量中不再添加偏置特征。</p>
-<p>#####决策函数和预测</p>
-<p>线性 SVM 分类器通过简单地计算决策函数 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7781983bd977537b3c5d060e217ea82a.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7781983bd977537b3c5d060e217ea82a.gif" alt="w \cdot x+b = w_1 x_1 + ... + w_n x_n + b"></a> 来预测新样本的类别：如果结果是正的，预测类别<code>ŷ</code>是正类，为 1，否则他就是负类，为 0。</p>
-<p>$\hat y = \left { \begin{array}{ll}  0 &amp; if \ w^T\cdot x+b&lt;0 \1 &amp; \ w^T\cdot x+b\geq0\end{array}\right.$</p>
+<h5 id="决策函数和预测"><a href="#决策函数和预测" class="headerlink" title="决策函数和预测"></a>决策函数和预测</h5><p>线性 SVM 分类器通过简单地计算决策函数 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7781983bd977537b3c5d060e217ea82a.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7781983bd977537b3c5d060e217ea82a.gif" alt="w \cdot x+b = w_1 x_1 + ... + w_n x_n + b"></a> 来预测新样本的类别：如果结果是正的，预测类别<code>ŷ</code>是正类，为 1，否则他就是负类，为 0。</p>
+<p>$\hat y = \left \{ \begin{array}{ll}  0 &amp; if \ w^T\cdot x+b&lt;0 \\1 &amp; \ w^T\cdot x+b\geq0\end{array}\right.$</p>
 <p>训练线性 SVM 分类器意味着找到<code>w</code>值和<code>b</code>值使得这一个间隔尽可能大，同时避免间隔违规（硬间隔）或限制它们（软间隔）</p>
 <h5 id="训练目标"><a href="#训练目标" class="headerlink" title="训练目标"></a>训练目标</h5><p>决策函数的斜率：它等于权重向量的范数 $||\omega||$ ，斜率除于 2，那么间隔将增加两倍。权重向量<code>w</code>越小，间隔越大。</p>
 <p>目标是最小化$||\omega||$ ，从而获得大的间隔。如果想要避免间隔违规（硬间隔），对于正的训练样本，需要决策函数大于 1，对于负训练样本，小于 -1。即：$t^{(i)}\ w^T\cdot x^{(i)}+b\geq1$</p>
-<p><strong>可以将硬间隔线性 SVM 分类器表示为约束优化问题:</strong><br>$$<br>minimize \frac{1}{2} \omega^T\cdot \omega \<br>subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1 \ \ \ for \ i=1,2,3,\cdots , m<br>$$</p>
-<blockquote>
+<p><strong>可以将硬间隔线性 SVM 分类器表示为约束优化问题:</strong></p>
+<script type="math/tex; mode=display">
+minimize \frac{1}{2} \omega^T\cdot \omega \\
+subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1 \ \ \ for \ i=1,2,3,\cdots , m</script><blockquote>
 <p><a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9a84ebda628c391e3046dfc2307e3c85.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9a84ebda628c391e3046dfc2307e3c85.gif" alt="1/2 w^T w"></a> 等于 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-98c822c91ab5af02c383eb03fa5b5446.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-98c822c91ab5af02c383eb03fa5b5446.gif" alt="1/2 \|w\|^2"></a>，最小化 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9a84ebda628c391e3046dfc2307e3c85.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9a84ebda628c391e3046dfc2307e3c85.gif" alt="1/2 w^T w"></a>，而不是最小化 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-03549015bd48d379883d926e6857b448.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-03549015bd48d379883d926e6857b448.gif" alt="\|w\|"></a>。因为<a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-03549015bd48d379883d926e6857b448.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-03549015bd48d379883d926e6857b448.gif" alt="\|w\|"></a> 在<code>w=0</code>处是不可微的。优化算法在可微函数表现得更好。</p>
 </blockquote>
 <p>软间隔：</p>
@@ -920,9 +904,11 @@
 <li>使松弛变量尽可能的小，从而减小间隔违规.</li>
 <li>使<code>1/2 w·w</code>尽量小，从而增大间隔。</li>
 </ol>
-<p>这时<code>C</code>超参数发挥作用：它允许我们在两个目标之间权衡。<br>$$<br>minimize\  \frac{1}{2} \omega^T\cdot \omega +C\sum_{i=1}^{m}\zeta^{(i)}\</p>
-<p>subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1-\zeta^{(i)}\ \  and \ \ \zeta^{(i)} \geq0 \ \  for \ i=1,2,3,\cdots , m<br>$$</p>
-<h5 id="二次间隔"><a href="#二次间隔" class="headerlink" title="二次间隔"></a>二次间隔</h5><p>硬间隔和软间隔都是<strong>线性约束的凸二次规划优化问题</strong>。这些问题被称之为二次规划（QP）问题。</p>
+<p>这时<code>C</code>超参数发挥作用：它允许我们在两个目标之间权衡。</p>
+<script type="math/tex; mode=display">
+minimize\  \frac{1}{2} \omega^T\cdot \omega +C\sum_{i=1}^{m}\zeta^{(i)}\\
+
+subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1-\zeta^{(i)}\ \  and \ \ \zeta^{(i)} \geq0 \ \  for \ i=1,2,3,\cdots , m</script><h5 id="二次间隔"><a href="#二次间隔" class="headerlink" title="二次间隔"></a>二次间隔</h5><p>硬间隔和软间隔都是<strong>线性约束的凸二次规划优化问题</strong>。这些问题被称之为二次规划（QP）问题。</p>
 <h5 id="对偶问题"><a href="#对偶问题" class="headerlink" title="对偶问题"></a>对偶问题</h5><p>给出一个约束优化问题，即原始问题（primal problem），它可能表示不同但是和另一个问题紧密相连，称为对偶问题（Dual Problem）。对偶问题的解通常是对原始问题的解给出一个下界约束，但在某些条件下，它们可以获得相同解。</p>
 <p><strong>线性 SVM 的对偶形式（核技巧的基本）</strong>：</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-6.gif" alt="img"></p>
@@ -994,8 +980,11 @@
 </li>
 <li><p>使用现有的 QP 解决方案，你应该怎么样设置 QP 参数（<code>H</code>，<code>f</code>，<code>A</code>，和<code>b</code>）去解决一个软间隔线性 SVM 分类器问题？</p>
 <blockquote>
-<p>软间隔分类：<br>$$<br>minimize\  \frac{1}{2} \omega^T\cdot \omega +C\sum_{i=1}^{m}\zeta^{(i)}\</p>
-<p>subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1-\zeta^{(i)}\ \  and \ \ \zeta^{(i)} \geq0 \ \  for \ i=1,2,3,\cdots , m<br>$$<br>QP(二次规划问题，即线性约束的凸二次规划优化问题)</p>
+<p>软间隔分类：</p>
+<script type="math/tex; mode=display">
+minimize\  \frac{1}{2} \omega^T\cdot \omega +C\sum_{i=1}^{m}\zeta^{(i)}\\
+
+subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1-\zeta^{(i)}\ \  and \ \ \zeta^{(i)} \geq0 \ \  for \ i=1,2,3,\cdots , m</script><p>QP(二次规划问题，即线性约束的凸二次规划优化问题)</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-5.gif" alt="img"></p>
 <p>H 是 $n_p \times n_p$的单位矩阵，左上角为0（忽略偏置向）</p>
 <p>p = $（b,\ \omega_1\ \cdots\ \omega_n)^T$</p>
@@ -1045,15 +1034,13 @@
 </blockquote>
 <h4 id="NP完全问题"><a href="#NP完全问题" class="headerlink" title="NP完全问题"></a>NP完全问题</h4><p>寻找最佳的决策树是NP完成问题(<code>Non-deterministic Polynomial</code>，即多项式复杂程度的非确定性问题)，也会简称为NP-C问题。</p>
 <p>决策树的这一特点，说明无法利用计算机在多项式时间内，找出全局最优的解。也正因为如此，大多数决策树算法都采用启发式的算法，如&amp;<strong>贪心算法</strong>，来指导对假设空间的搜索。可以说，决策树最后的结果，是在每一步、每一个节点上做的局部最优选择。决策树得到的结果，无法保证是全局最优解。</p>
-<p>#####P类问题</p>
-<blockquote>
+<h5 id="P类问题"><a href="#P类问题" class="headerlink" title="P类问题"></a>P类问题</h5><blockquote>
 <p> 所有可以在多项式时间内求解的判定问题构成<strong>P类问题</strong></p>
 </blockquote>
 <p><strong>判定问题</strong>是指回答结果输出为<code>Yes</code>或<code>No</code>的问题，比如：3233是否可以写成两个大于1的数字的乘积？</p>
 <p>在设计程序时，需要评估这个程序的时间复杂度，即衡量当问题规模变大后，程序执行所需的时间增长会有多快。如$O(1)$表示常数级别，即不管问题的规模变大多少倍，所耗的时间不会改变；$O(N^2)$表示平方级别，即当问题规模增大至2倍时，所花费的时间则放大至4倍；$O(2^N)$表示指数级别，即当问题规模倍数扩大时，所用时间会呈指数放大。</p>
 <p><strong>多项式时间</strong>则是指$O(1)、O(logN)、O(N^2)$等这类可用多项式表示的时间复杂度，通常认为计算机可解决的问题只限于多项式时间内。而$O(2^N)、O(N!)$这类非多项式级别的问题，其复杂度往往已经到了计算机都接受不了的程度。</p>
-<p>#####NP类问题</p>
-<blockquote>
+<h5 id="NP类问题"><a href="#NP类问题" class="headerlink" title="NP类问题"></a>NP类问题</h5><blockquote>
 <p>所有非确定性多项式时间内可解的判定问题构成<strong>NP类问题</strong></p>
 </blockquote>
 <p>NP类问题将问题分为求解和验证两个阶段，问题的求解是非确定性的，无法在多项式时间内得到答案，而问题的验证却是确定的，能够在多项式时间里确定结果。</p>
@@ -1062,6 +1049,7 @@
 <p>NP类问题的一种特殊情况，这类问题中每个问题的复杂度与整个类的复杂度有关联性，假如其中任意一个问题在多项式时间内可解的，则这一类问题都是多项式时间可解。这些问题被称为<strong>NP完全问题</strong>。</p>
 </blockquote>
 <p>总结这几类问题的特点，可参考如下这个表格：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1070,7 +1058,8 @@
 <th>是否能在多项式时间内验证</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>P</td>
 <td>是</td>
 <td>是</td>
@@ -1085,19 +1074,21 @@
 <td>未知</td>
 <td>是</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>参考：<a href="https://www.jianshu.com/p/dcb0b52f4935" target="_blank" rel="noopener">https://www.jianshu.com/p/dcb0b52f4935</a></p>
-<p>###计算复杂度</p>
-<p>建立好决策树模型后， 做出<strong>预测</strong>需要遍历决策树， 从根节点一直到叶节点。决策树通常近似左右平衡，因此遍历决策树需要经历大致  $O(log_2m)$个节点。由于每个节点只需要检查一个特征的值，因此总体预测复杂度仅为 $O(log_2m)$，与特征的数量无关。</p>
+<h3 id="计算复杂度"><a href="#计算复杂度" class="headerlink" title="计算复杂度"></a>计算复杂度</h3><p>建立好决策树模型后， 做出<strong>预测</strong>需要遍历决策树， 从根节点一直到叶节点。决策树通常近似左右平衡，因此遍历决策树需要经历大致  $O(log_2m)$个节点。由于每个节点只需要检查一个特征的值，因此总体预测复杂度仅为 $O(log_2m)$，与特征的数量无关。</p>
 <p><strong>训练</strong>算法的时候（训练和预测不同）需要比较所有特征（如果设置了<code>max_features</code>会更少一些）在每个节点的所有样本上。训练复杂度为$O(nmlog_m)$</p>
 <h3 id="基尼不纯度和信息熵"><a href="#基尼不纯度和信息熵" class="headerlink" title="基尼不纯度和信息熵"></a>基尼不纯度和信息熵</h3><p>默认算法使用 Gini 不纯度来进行检测， 但是也可以通过将标准超参数设置为<code>&quot;entropy&quot;</code>来使用熵不纯度进行检测。</p>
-<p><strong>熵的计算：</strong><br>$$<br>H_i=-\sum_{k=1\ P_{i,k=!0}}^n{P_{i,k}}log(p_{i,k})<br>$$<br>熵的减少通常称为<strong>信息增益</strong></p>
+<p><strong>熵的计算：</strong></p>
+<script type="math/tex; mode=display">
+H_i=-\sum_{k=1\ P_{i,k=!0}}^n{P_{i,k}}log(p_{i,k})</script><p>熵的减少通常称为<strong>信息增益</strong></p>
 <blockquote>
 <p>基尼指数计算稍微快一点，所以这是一个很好的默认值。</p>
 <p>但是，也有的时候它们会产生不同的树，基尼指数会趋于在树的分支中将最多的类隔离出来，而熵指数趋向于产生略微平衡一些的决策树模型。</p>
 </blockquote>
-<p>###正则化超参数</p>
-<p>决策树几乎不对训练数据做任何假设（于此相反的是线性回归等模型，这类模型通常会假设数据是符合线性关系的）。这一类的模型通常会被称为<strong>非参数模型&amp;</strong>，这不是因为它没有任何参数（通常也有很多），而是因为<strong>在训练之前没有确定参数的具体数量，所以模型结构可以根据数据的特性自由生长。</strong></p>
+<h3 id="正则化超参数"><a href="#正则化超参数" class="headerlink" title="正则化超参数"></a>正则化超参数</h3><p>决策树几乎不对训练数据做任何假设（于此相反的是线性回归等模型，这类模型通常会假设数据是符合线性关系的）。这一类的模型通常会被称为<strong>非参数模型&amp;</strong>，这不是因为它没有任何参数（通常也有很多），而是因为<strong>在训练之前没有确定参数的具体数量，所以模型结构可以根据数据的特性自由生长。</strong></p>
 <p>如果不添加约束，树结构模型通常将根据训练数据调整自己，使自身能够很好的拟合数据，而这种情况下大多数会导致<strong>模型过拟合</strong>。</p>
 <blockquote>
 <p><strong><code>DecisionTreeClassifier</code>类还有一些其他的参数用于限制树模型的形状:</strong></p>
@@ -1109,7 +1100,7 @@
 <p><strong>剪枝</strong></p>
 <p>在没有任何约束条件下训练决策树模型，让模型自由生长，然后再对不需要的节点进行剪枝。</p>
 <p>当一个节点的全部子节点都是叶节点时，如果它对纯度的提升不具有统计学意义，我们就认为这个分支是不必要的。</p>
-<p>标准的假设检验，例如卡方检测，通常会被用于评估一个概率值 – 即改进是否纯粹是偶然性的结果（也叫原假设）</p>
+<p>标准的假设检验，例如卡方检测，通常会被用于评估一个概率值 — 即改进是否纯粹是偶然性的结果（也叫原假设）</p>
 <p>如果 p 值比给定的阈值更高（通常设定为 5%，也就是 95% 置信度，通过超参数设置），那么节点就被认为是非必要的，它的子节点会被删除。</p>
 <p>这种剪枝方式将会一直进行，直到所有的非必要节点都被删光。</p>
 </blockquote>
@@ -1118,8 +1109,7 @@
 <p> 每个区域的预测值总是该区域中实例的平均目标值。</p>
 </blockquote>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_6/108" alt="1528375227547"></p>
-<p>###不稳定性</p>
-<p>决策树的特点：</p>
+<h3 id="不稳定性"><a href="#不稳定性" class="headerlink" title="不稳定性"></a>不稳定性</h3><p>决策树的特点：</p>
 <ol>
 <li><p>容易理解和解释，易于使用且功能丰富而强大。</p>
 </li>
@@ -1184,41 +1174,35 @@
 </ol>
 </li>
 </ol>
-<p>##第07章 集成学习和随机森林</p>
-<p>合并了一组分类器的预测（像分类或者回归），得到一个比单一分类器更好的预测结果。这一组分类器就叫做<strong>集成</strong>；因此，这个技术就叫做<strong>集成学习</strong>，一个集成学习算法就叫做<strong>集成方法</strong>。一种决策树的集成就叫做<strong>随机森林</strong>。</p>
+<h2 id="第07章-集成学习和随机森林"><a href="#第07章-集成学习和随机森林" class="headerlink" title="第07章 集成学习和随机森林"></a>第07章 集成学习和随机森林</h2><p>合并了一组分类器的预测（像分类或者回归），得到一个比单一分类器更好的预测结果。这一组分类器就叫做<strong>集成</strong>；因此，这个技术就叫做<strong>集成学习</strong>，一个集成学习算法就叫做<strong>集成方法</strong>。一种决策树的集成就叫做<strong>随机森林</strong>。</p>
 <p>即使每一个分类器都是一个<strong>弱学习器</strong>（意味着它们也就比瞎猜好点），集成后仍然是一个<strong>强学习器</strong>（高准确率），只要有足够数量的弱学习者，他们就足够多样化。</p>
-<p>###投票分类</p>
-<p>一个非常简单去创建一个更好的分类器的方法就是去整合每一个分类器的预测然后经过投票去预测分类。这种分类器就叫做<strong>硬投票分类器</strong></p>
+<h3 id="投票分类"><a href="#投票分类" class="headerlink" title="投票分类"></a>投票分类</h3><p>一个非常简单去创建一个更好的分类器的方法就是去整合每一个分类器的预测然后经过投票去预测分类。这种分类器就叫做<strong>硬投票分类器</strong></p>
 <blockquote>
 <p>每一个分类器都在同一个数据集上训练，导致其很可能会发生这样的错误。他们可能会犯同一种错误，所以也会有很多票投给了错误类别导致集成的准确率下降。</p>
 </blockquote>
 <p>所以应该用完全不同的算法得到多样的分类器，使它们会做出不同种类的错误，提高集成的正确率。</p>
 <p>如果所有的分类器都能够预测类别的概率（有一个<code>predict_proba()</code>方法），可以让 sklearn 以最高的类概率来预测这个类，平均在所有的分类器上。这种方式叫做<strong>软投票</strong>。其表现比硬投票更好，因为给予高自信的投票更大的权重。</p>
-<h3 id="Bagging"><a href="#Bagging" class="headerlink" title="Bagging"></a>Bagging</h3><p><strong>有放回采样被称为装袋（<em>Bagging*，是 *bootstrap aggregating</em> 的缩写）。无放回采样称为粘贴（<em>pasting</em>）</strong></p>
+<h3 id="Bagging"><a href="#Bagging" class="headerlink" title="Bagging"></a>Bagging</h3><p><strong>有放回采样被称为装袋（<em>Bagging</em>，是 <em>bootstrap aggregating</em> 的缩写）。无放回采样称为粘贴（<em>pasting</em>）</strong></p>
 <p>Bagging 和 Pasting 都允许在多个分类器间对训练集进行多次采样，但只有 Bagging可以通过使用不同的训练算法去得到一些不同的分类器。 Pasting是对每一个分类器都使用相同的训练算法，但是在不同的训练集上去训练。</p>
 <blockquote>
 <p>当所有的分类器被训练后，集成可以通过对所有分类器结果的简单聚合来对新的实例进行预测。<strong>聚合函数</strong>通常对分类是<em>统计模式</em>（例如硬投票分类器）或者对回归是平均。</p>
 <p>每一个单独的分类器在如果在原始训练集上都是高偏差，但是聚合降低了偏差和方差。通常情况下，集成的结果是有一个相似的偏差，但是对比与在原始训练集上的单一分类器来讲有更小的方差。</p>
 </blockquote>
 <p>如果基分类器可以预测类别概率（例如它拥有<code>predict_proba()</code>方法），那么<code>BaggingClassifier</code>会自动的运行软投票。</p>
-<p>####Out-of-bag</p>
-<p>对于 Bagging 来说，一些实例可能被一些分类器重复采样，但其他的有可能不会被采样。<code>BaggingClassifier</code>默认是有放回的采样<code>m</code>个实例 （<code>bootstrap=True</code>）。意味着平均下来只有63%的训练实例被每个分类器采样，剩下的37%个没有被采样的训练实例就叫做 <em>Out-of-Bag</em> 实例。注意对于每一个的分类器它们的 37% 不是相同的。</p>
+<h4 id="Out-of-bag"><a href="#Out-of-bag" class="headerlink" title="Out-of-bag"></a>Out-of-bag</h4><p>对于 Bagging 来说，一些实例可能被一些分类器重复采样，但其他的有可能不会被采样。<code>BaggingClassifier</code>默认是有放回的采样<code>m</code>个实例 （<code>bootstrap=True</code>）。意味着平均下来只有63%的训练实例被每个分类器采样，剩下的37%个没有被采样的训练实例就叫做 <em>Out-of-Bag</em> 实例。注意对于每一个的分类器它们的 37% 不是相同的。</p>
 <p>可以拿出每一个分类器的 oob 来评估集成本身。</p>
 <h4 id="随机贴片与随机子空间"><a href="#随机贴片与随机子空间" class="headerlink" title="随机贴片与随机子空间"></a>随机贴片与随机子空间</h4><p><code>BaggingClassifier</code>也支持采样特征。</p>
 <p>对训练实例和特征的采样被叫做随机贴片。保留了所有的训练实例（例如<code>bootstrap=False</code>和<code>max_samples=1.0</code>），但是对特征采样（<code>bootstrap_features=True</code>并且/或者<code>max_features</code>小于 1.0）叫做随机子空间。</p>
 <p><strong>采样特征导致更多的预测多样性，用高偏差换低方差。</strong></p>
 <h3 id="随机森林（一种bagging模型）"><a href="#随机森林（一种bagging模型）" class="headerlink" title="随机森林（一种bagging模型）"></a>随机森林（一种bagging模型）</h3><p>随机森林算法在树生长时引入了额外的随机；与在节点分裂时需要找到最好分裂特征相反（详见第六章），它<strong>在一个随机的特征集中找最好的特征，</strong>导致了树的差异性，<strong>再一次用高偏差换低方差</strong>，总的来说是一个更好的模型。</p>
-<p>####极端随机树</p>
-<p>在随机森林上生长树时，在每个结点分裂时只考虑随机特征集上的特征。可以通过对特征使用随机阈值使树更加随机。<strong>这种极端随机的树被称为Extremely Randomized Trees简称为 <em>Extra-Tree</em>。</strong></p>
+<h4 id="极端随机树"><a href="#极端随机树" class="headerlink" title="极端随机树"></a>极端随机树</h4><p>在随机森林上生长树时，在每个结点分裂时只考虑随机特征集上的特征。可以通过对特征使用随机阈值使树更加随机。<strong>这种极端随机的树被称为Extremely Randomized Trees简称为 <em>Extra-Tree</em>。</strong></p>
 <blockquote>
 <p>因为在每个节点上找到每个特征的最佳阈值是生长树最耗时的任务之一，所以 <em>Extra-Tree</em> 比规则的随机森林训练更快。</p>
 </blockquote>
-<p>####特征重要度</p>
-<p><strong>重要的特征会出现在单一决策树更靠近根部的位置，而不重要的特征会经常出现在靠近叶子的位置。因此可以通过计算一个特征在森林的全部树中出现的平均深度来预测特征的重要性。</strong></p>
+<h4 id="特征重要度"><a href="#特征重要度" class="headerlink" title="特征重要度"></a>特征重要度</h4><p><strong>重要的特征会出现在单一决策树更靠近根部的位置，而不重要的特征会经常出现在靠近叶子的位置。因此可以通过计算一个特征在森林的全部树中出现的平均深度来预测特征的重要性。</strong></p>
 <p>随机森林可以非常方便快速得了解哪些特征实际上是重要的，特别是你需要进行特征选择的时候。</p>
-<h3 id="提升"><a href="#提升" class="headerlink" title="提升"></a>提升</h3><p>提升（Boosting，最初称为<em>假设增强<em>）指的是可以将几个弱学习者组合成强学习者的集成方法。对于大多数的提升方法的思想就是按顺序去训练分类器，每一个都要尝试修正前面的分类。现如今已经有很多的提升方法了，但最著名的就是 *Adaboost</em>（适应性提升，是 *Adaptive Boosting</em> 的简称） 和 <em>Gradient Boosting</em>（梯度提升）。</p>
-<p>####Adaboost</p>
-<p>使一个新的分类器去修正之前分类结果的方法就是<strong>对之前分类结果错误的训练实例多加关注</strong>。这导致新的预测因子越来越多地聚焦于这种情况。这是 <em>Adaboost</em> 使用的技术。</p>
+<h3 id="提升"><a href="#提升" class="headerlink" title="提升"></a>提升</h3><p>提升（Boosting，最初称为<em>假设增强</em>）指的是可以将几个弱学习者组合成强学习者的集成方法。对于大多数的提升方法的思想就是按顺序去训练分类器，每一个都要尝试修正前面的分类。现如今已经有很多的提升方法了，但最著名的就是 <em>Adaboost</em>（适应性提升，是 <em>Adaptive Boosting</em> 的简称） 和 <em>Gradient Boosting</em>（梯度提升）。</p>
+<h4 id="Adaboost"><a href="#Adaboost" class="headerlink" title="Adaboost"></a>Adaboost</h4><p>使一个新的分类器去修正之前分类结果的方法就是<strong>对之前分类结果错误的训练实例多加关注</strong>。这导致新的预测因子越来越多地聚焦于这种情况。这是 <em>Adaboost</em> 使用的技术。</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_7/7-7.png" alt="图7-7"></p>
 <blockquote>
 <p>序列学习技术的一个重要的<strong>缺点</strong>是：它不能被并行化（只能按步骤），因为每个分类器只能在之前的分类器已经被训练和评价后再进行训练。</p>
@@ -1226,28 +1210,32 @@
 <p><strong>Adaboost的算法</strong></p>
 <p>每一个实例的权重<code>wi</code>初始都被设为<code>1/m</code></p>
 <p>第一个分类器被训练后，在训练集上算出权重误差率<code>r1</code>：</p>
-<p><strong>第j个分类器的权重误差率：</strong><br>$$<br>r_j\ = \ \frac{\sum_{i=1,\hat y_j^{(i)}\neq y^{(i)}}^m \omega^{(i)}}{\sum _{i=1}^m \omega^{(i)}}<br>$$<br>$\hat y_j^i$ 是第j个分类器对于第i个实例的预测。</p>
+<p><strong>第j个分类器的权重误差率：</strong></p>
+<script type="math/tex; mode=display">
+r_j\ = \ \frac{\sum_{i=1,\hat y_j^{(i)}\neq y^{(i)}}^m \omega^{(i)}}{\sum _{i=1}^m \omega^{(i)}}</script><p>$\hat y_j^i$ 是第j个分类器对于第i个实例的预测。</p>
 <p><strong>分类器的权重</strong></p>
-<p>其中<code>η</code>是超参数学习率（默认为 1）。分类器准确率越高，它的权重就越高。<br>$$<br>\alpha_j = \eta \log \frac{1-r_j}{r_j}<br>$$<br><strong>权重更新规则</strong></p>
+<p>其中<code>η</code>是超参数学习率（默认为 1）。分类器准确率越高，它的权重就越高。</p>
+<script type="math/tex; mode=display">
+\alpha_j = \eta \log \frac{1-r_j}{r_j}</script><p><strong>权重更新规则</strong></p>
 <p>对于<code>i=1, 2, ..., m</code></p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_7/E7-3.png" alt="公式7-3"></p>
 <p>随后所有实例的权重都被归一化。</p>
 <p>为了进行预测，Adaboost 通过分类器权重 $α_{j}$简单的计算了所有的分类器和权重。预测类别会是权重投票中主要的类别。</p>
-<p><strong>Adaboost 分类器</strong><br>$$<br>\hat y(x)\ = \ {argmax}<em>k \ \ \sum^N</em>{j=1,\hat y_j(x)=k} \alpha_j<br>$$<br>其中<code>N</code>是分类器的数量。</p>
+<p><strong>Adaboost 分类器</strong></p>
+<script type="math/tex; mode=display">
+\hat y(x)\ = \ {argmax}_k \ \ \sum^N_{j=1,\hat y_j(x)=k} \alpha_j</script><p>其中<code>N</code>是分类器的数量。</p>
 <blockquote>
-<p>sklearn 通常使用 Adaboost 的多分类版本 <em>SAMME<em>（</em>分段加建模使用多类指数损失函数*）。如果只有两类别，那么 *SAMME</em> 是与 Adaboost 相同的。如果分类器可以预测类别概率（有<code>predict_proba()</code>），如果 sklearn 可以使用 <em>SAMME</em> 叫做<code>SAMME.R</code>的变量（R 代表“REAL”），这种依赖于类别概率的通常比依赖于分类器的更好。</p>
+<p>sklearn 通常使用 Adaboost 的多分类版本 <em>SAMME</em>（<em>分段加建模使用多类指数损失函数</em>）。如果只有两类别，那么 <em>SAMME</em> 是与 Adaboost 相同的。如果分类器可以预测类别概率（有<code>predict_proba()</code>），如果 sklearn 可以使用 <em>SAMME</em> 叫做<code>SAMME.R</code>的变量（R 代表“REAL”），这种依赖于类别概率的通常比依赖于分类器的更好。</p>
 </blockquote>
 <p>如果 Adaboost 集成<strong>过拟合</strong>，可以尝试<strong>减少基分类器的数量</strong>或者<strong>对基分类器使用更强的正则化</strong>。</p>
-<p>####梯度提升</p>
-<p>梯度提升也是通过向集成中逐步增加分类器运行的，每一个分类器都修正之前的分类结果。然而，并不像 Adaboost 那样每一次迭代都更改实例的权重，这个方法<em><em>使用新的分类器去拟合前面分类器预测的</em>残差</em> **。</p>
+<h4 id="梯度提升"><a href="#梯度提升" class="headerlink" title="梯度提升"></a>梯度提升</h4><p>梯度提升也是通过向集成中逐步增加分类器运行的，每一个分类器都修正之前的分类结果。然而，并不像 Adaboost 那样每一次迭代都更改实例的权重，这个方法<strong>使用新的分类器去拟合前面分类器预测的<em>残差</em> </strong>。</p>
 <p><strong>梯度提升回归树</strong>（GBRT，<em>Gradient Tree Boosting</em> 或者 <em>Gradient Boosted Regression Trees</em>）</p>
 <p><strong>梯度提升决策树</strong> (GBDT， <em>Gradient Boosted Decision Trees</em>)是梯度提升(GB)算法限定基学习器是<strong>回归决策树时的模型，尤其是CART回归树</strong>。</p>
 <p>sklean 中的<code>GradientBoostingRegressor</code>可以用来训练 GBRT 集成，也有超参数去控制集成训练，例如基分类器的数量（<code>n_estimators</code>）。超参数<code>learning_rate</code> 确立了每个树的贡献。</p>
 <blockquote>
 <p>如果把<code>learning_rate</code>设置为一个很小的树，例如 0.1，在集成中就需要更多的树去拟合训练集，但预测通常会更好。这个正则化技术叫做 <strong><em>shrinkage</em></strong>。</p>
 </blockquote>
-<p>#####Early stop(早停)</p>
-<p><code>GradientBoostingRegressor</code>有方法<code>staged_predict()</code>：它在训练的每个阶段返回一个迭代器。</p>
+<h5 id="Early-stop-早停"><a href="#Early-stop-早停" class="headerlink" title="Early stop(早停)"></a>Early stop(早停)</h5><p><code>GradientBoostingRegressor</code>有方法<code>staged_predict()</code>：它在训练的每个阶段返回一个迭代器。</p>
 <p>与先在一大堆树中训练，然后再回头去找最优数目相反。可以通过设置<code>warm_start=True</code>来实现 早停，这使得当<code>fit()</code>方法被调用时 sklearn 保留现有树，并允许增量训练。</p>
 <p><code>GradientBoostingRegressor</code>也支持指定用于训练每棵树的训练实例比例的超参数<code>subsample</code>。例如如果<code>subsample=0.25</code>，那么每个树都会在 25% 随机选择的训练实例上训练。这也是个高偏差换低方差的作用。同样也加速了训练。这个技术叫做<strong><em>随机梯度提升</em></strong>。</p>
 <h4 id="极端梯度提升（XGBoost）"><a href="#极端梯度提升（XGBoost）" class="headerlink" title="极端梯度提升（XGBoost）"></a>极端梯度提升（XGBoost）</h4><ol>
@@ -1258,7 +1246,7 @@
 </ol>
 <p>xgboost工具支持自定义代价函数，只要函数可一阶和二阶求导。例如，xgboost支持线性分类器，这个时候xgboost相当于带L1和L2正则化项的逻辑斯蒂回归（分类问题）或者线性回归（回归问题）</p>
 <p><a href="https://zhuanlan.zhihu.com/p/57814935" target="_blank" rel="noopener">参考</a></p>
-<h3 id="Stacking"><a href="#Stacking" class="headerlink" title="Stacking"></a>Stacking</h3><p><strong><em>Stacking<em>（</em>stacked generalization</em> 的缩写），这个算法不使用琐碎的函数（如硬投票）来聚合集合中所有分类器的预测，我直接训练一个模型来执行这个聚合。</strong></p>
+<h3 id="Stacking"><a href="#Stacking" class="headerlink" title="Stacking"></a>Stacking</h3><p><strong><em>Stacking</em>（<em>stacked generalization</em> 的缩写），这个算法不使用琐碎的函数（如硬投票）来聚合集合中所有分类器的预测，我直接训练一个模型来执行这个聚合。</strong></p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_7/7-12.png" alt="图7-12"></p>
 <p>为了训练这个 <em>blender</em> ，一个通用的方法是<strong>采用保持集</strong>。</p>
 <ol>
@@ -1267,7 +1255,7 @@
 <li>使用这些预测结果作为输入特征来创建一个新的训练集，保持目标数值不变，随后 <em>blender</em> 在这个新的训练集上训练。</li>
 </ol>
 <p>sklearn 并不直接支持 stacking ，但可以使用开源项目<a href="https://github.com/Menelau/DESlib" target="_blank" rel="noopener">DESlib</a>（基于sklearn）</p>
-<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><ol>
+<h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><ol>
 <li><p>如果你在相同训练集上训练 5 个不同的模型，它们都有 95% 的准确率，那么你是否可以通过组合这个模型来得到更好的结果？如果可以那怎么做呢？如果不可以请给出理由。</p>
 <blockquote>
 <p>可以通过集成学习将5个模型集成在一起</p>
@@ -1316,15 +1304,13 @@
 </blockquote>
 <p>降维除了可以加快训练速度外，在数据可视化方面（或者 DataViz）也十分有用。降低特征维度到 2（或者 3）维从而可以在图中画出一个高维度的训练集，让我们可以通过视觉直观的发现一些非常重要的信息，比如聚类。</p>
 <p><strong>两种主要的降维方法：投影（projection）和流形学习（Manifold Learning），三种流行的降维技术：主成分分析（PCA），核主成分分析（Kernel PCA）和局部线性嵌入（LLE）。</strong></p>
-<p>###维数灾难（curse of dimentionality）</p>
-<p>一个 1,0000 维的单位超正方体中，随机选的点离所有边界大于 0.001（靠近中间位置）的概率（$1-0.998^{10000}$），近似于1，在高维超正方体中，大多数点都分布在边界处。</p>
+<h3 id="维数灾难（curse-of-dimentionality）"><a href="#维数灾难（curse-of-dimentionality）" class="headerlink" title="维数灾难（curse of dimentionality）"></a>维数灾难（curse of dimentionality）</h3><p>一个 1,0000 维的单位超正方体中，随机选的点离所有边界大于 0.001（靠近中间位置）的概率（$1-0.998^{10000}$），近似于1，在高维超正方体中，大多数点都分布在边界处。</p>
 <p>在一个 1,000,000 维超立方体中随机抽取两点的平均距离，大概为 408.25（大致 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-50eeccb6ef846e2d0af5daef5cab1fa0.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-50eeccb6ef846e2d0af5daef5cab1fa0.gif" alt="\sqrt{1,000,000/6}"></a>）</p>
 <p>表明高维数据集有很大风险分布的非常稀疏：大多数训练实例可能彼此远离。也意味着一个新实例可能远离任何训练实例，使得预测的可靠性远低于较低维度数据的预测，因为它们将基于更大的推测（extrapolations）。简而言之，训练集的维度越高，过拟合的风险就越大。</p>
 <p>理论上来说，维数爆炸的一个解决方案是增加训练集的大小从而达到拥有足够密度的训练集。</p>
 <h3 id="降维的主要方法"><a href="#降维的主要方法" class="headerlink" title="降维的主要方法"></a>降维的主要方法</h3><h4 id="投影（Projection）"><a href="#投影（Projection）" class="headerlink" title="投影（Projection）"></a>投影（Projection）</h4><p>大多数现实生活的问题中，训练实例并不是在所有维度上均匀分布的，许多特征几乎是常数，而其他特征则高度相关（如前面讨论的 MNIST）。<strong>所有训练实例实际上位于（或接近）高维空间的低维子空间内。</strong></p>
 <p>投影并不总是降维的最佳方法。在很多情况下，子空间可能会扭曲和转动。</p>
-<p>####流形学习（Manifold Learning）</p>
-<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_8/8-4.jpeg" alt="img"></p>
+<h4 id="流形学习（Manifold-Learning）"><a href="#流形学习（Manifold-Learning）" class="headerlink" title="流形学习（Manifold Learning）"></a>流形学习（Manifold Learning）</h4><p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_8/8-4.jpeg" alt="img"></p>
 <p>瑞士卷一个是二维流形的例子。简而言之，二维流形是一种二维形状，它可以在更高维空间中弯曲或扭曲。一个<code>d</code>维流形是类似于<code>d</code>维超平面的<code>n</code>维空间（其中<code>d &lt; n</code>）的一部分。瑞士卷有些像 2D 平面，但是它实际上是在第三维中卷曲。</p>
 <p><strong>通过对训练实例所在的流形进行建模从而达到降维目的，叫做流形学习。</strong>它依赖于流形猜想（manifold assumption），也被称为流形假设（manifold hypothesis），认为大多数现实世界的高维数据集大都靠近一个更低维的流形。</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_8/8-6.jpeg" alt="img"></p>
@@ -1337,17 +1323,17 @@
 <blockquote>
 <p>PCA 假定数据集以原点为中心。Scikit-Learn 的<code>PCA</code>类负责数据集中心化处理。但是，如果自己实现 PCA，或者使用其他库，首先要先对数据做中心化处理。</p>
 </blockquote>
-<h5 id="投影到d维空间"><a href="#投影到d维空间" class="headerlink" title="投影到d维空间"></a>投影到<code>d</code>维空间</h5><p>$$<br>X_{d-proj} = X\cdot W_d<br>$$</p>
-<p>$W_d$定义为包含前<code>d</code>个主成分的矩阵（即由<code>V^T</code>的前<code>d</code>列组成的矩阵）</p>
+<h5 id="投影到d维空间"><a href="#投影到d维空间" class="headerlink" title="投影到d维空间"></a>投影到<code>d</code>维空间</h5><script type="math/tex; mode=display">
+X_{d-proj} = X\cdot W_d</script><p>$W_d$定义为包含前<code>d</code>个主成分的矩阵（即由<code>V^T</code>的前<code>d</code>列组成的矩阵）</p>
 <h5 id="方差解释率（Explained-Variance-Ratio）"><a href="#方差解释率（Explained-Variance-Ratio）" class="headerlink" title="方差解释率（Explained Variance Ratio）"></a>方差解释率（Explained Variance Ratio）</h5><p>每个主成分的方差解释率，可通过<code>explained_variance_ratio_</code>变量获得。它表示位于每个主成分轴上的数据集方差的比例。</p>
 <h5 id="选择正确的维度"><a href="#选择正确的维度" class="headerlink" title="选择正确的维度"></a>选择正确的维度</h5><p>倾向于选择加起来到方差解释率能够达到足够占比（例如 95%）的维度的数量，而不是任意选择要降低到的维度数量。</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_8/8-8.jpeg" alt="img"></p>
 <h5 id="PCA压缩"><a href="#PCA压缩" class="headerlink" title="PCA压缩"></a>PCA压缩</h5><p>原始数据和重构数据之间的均方距离（压缩然后解压缩）被称为重构误差（reconstruction error）。</p>
-<p>PCA逆变换<br>$$<br>X_{recovered} = X_{d-proj}\cdot W_d^T<br>$$</p>
-<h5 id="增量-PCA（Incremental-PCA）"><a href="#增量-PCA（Incremental-PCA）" class="headerlink" title="增量 PCA（Incremental PCA）"></a>增量 PCA（Incremental PCA）</h5><p>有些算法如SVD需要在内存中处理整个训练集。可以将训练集分批，一次只对一个批量使用 IPCA 算法。这对大型训练集非常有用，并且可以在线应用 PCA（即在新实例到达时即时运行）。</p>
+<p>PCA逆变换</p>
+<script type="math/tex; mode=display">
+X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-PCA）"><a href="#增量-PCA（Incremental-PCA）" class="headerlink" title="增量 PCA（Incremental PCA）"></a>增量 PCA（Incremental PCA）</h5><p>有些算法如SVD需要在内存中处理整个训练集。可以将训练集分批，一次只对一个批量使用 IPCA 算法。这对大型训练集非常有用，并且可以在线应用 PCA（即在新实例到达时即时运行）。</p>
 <h5 id="随机-PCA（Randomized-PCA）"><a href="#随机-PCA（Randomized-PCA）" class="headerlink" title="随机 PCA（Randomized PCA）"></a>随机 PCA（Randomized PCA）</h5><p>这是一种随机算法，可以快速找到前d个主成分的近似值。它的计算复杂度是<code>O(m × d^2) + O(d^3)</code>，而不是<code>O(m × n^2) + O(n^3)</code>，所以当<code>d</code>远小于<code>n</code>时，它比之前的算法快得多。</p>
-<p>####核 PCA（Kernel PCA）</p>
-<p>核技巧，一种将实例隐式映射到非常高维空间（称为特征空间）的数学技术，让支持向量机可以应用于非线性分类和回归。高维特征空间中的线性决策边界对应于原始空间中的复杂非线性决策边界。</p>
+<h4 id="核-PCA（Kernel-PCA）"><a href="#核-PCA（Kernel-PCA）" class="headerlink" title="核 PCA（Kernel PCA）"></a>核 PCA（Kernel PCA）</h4><p>核技巧，一种将实例隐式映射到非常高维空间（称为特征空间）的数学技术，让支持向量机可以应用于非线性分类和回归。高维特征空间中的线性决策边界对应于原始空间中的复杂非线性决策边界。</p>
 <p>同样的技巧可以应用于 PCA，从而可以执行复杂的非线性投影来降低维度。这就是所谓的核 PCA（kPCA）。它通常能够很好地保留投影后的簇，有时甚至可以展开分布近似于扭曲流形的数据集。</p>
 <p><strong>如何选择一种核并调整参数</strong></p>
 <blockquote>
@@ -1363,7 +1349,7 @@
 </blockquote>
 <h5 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h5><p>对于每个训练实例 $x^{(i)}$，该算法识别其最近的<code>k</code>个邻居，然后尝试将 $x^{(i)}$重构为这些邻居的线性函数。找到权重 $w_{i,j}$从而使  $x^{(i)}$和 $\sum_{j=1}^{m}w_{i,j} x^{(j)}$之间的平方距离尽可能的小，假设如果 $x^{(j)}$不是 $x^{(i)}$的<code>k</code>个最近邻时 $w_{i,j}=0$。</p>
 <p>第一步：对局部关系进行线性建模 </p>
-<p>$W=argmin_w\ \sum_{i=1}^m | x^{(i)}-\sum_{j=1}^m w_{i,j}x^{(j)}| ^2 \ subject \ to \ \left {  \begin{array}{cc} w_{i,j}=0&amp;\ \ if \ x^{j} \  is \ not \ one \ of \ the \ k \ c.n. \ of \ x^{i} \ \sum_{j=1}^m w_{i,j}=1&amp; for\ i=1,2, \cdots ,m\end{array}\right.$</p>
+<p>$W=argmin_w\ \sum_{i=1}^m | x^{(i)}-\sum_{j=1}^m w_{i,j}x^{(j)}| ^2 \\ subject \ to \ \left \{  \begin{array}{cc} w_{i,j}=0&amp;\ \ if \ x^{j} \  is \ not \ one \ of \ the \ k \ c.n. \ of \ x^{i} \\ \sum_{j=1}^m w_{i,j}=1&amp; for\ i=1,2, \cdots ,m\end{array}\right.$</p>
 <p>第二个约束简单地对每个训练实例 $x^{(i)}$的权重进行归一化。</p>
 <p>权重矩阵 $\widehat{W}$包含权重 $\hat{w_{i,j}}$]对训练实例的线形关系进行编码。第二步是将训练实例投影到一个<code>d</code>维空间（<code>d &lt; n</code>）中去，同时尽可能的保留这些局部关系。如果 $z^{(i)}$是 $x^{(i)}$]在这个<code>d</code>维空间的图像，那么需要 $z^{(i)}$和 $\sum_{j=1}^{m}\hat{w_{i,j}}\ z^{(j)}$之间的平方距离尽可能的小。看起来与第一步非常相似，但不是保持实例固定并找到最佳权重，而是<strong>保持权重不变，并在低维空间中找到实例图像的最佳位置</strong>。<code>Z</code>是包含所有 $z^{(i)}$]的矩阵。</p>
 <p>第二步：保持关系的同时进行降维</p>
@@ -1375,7 +1361,7 @@
 <li>t-分布随机邻域嵌入（t-Distributed Stochastic Neighbor Embedding，<strong>t-SNE</strong>）可以用于降低维度，同时试图保持相似的实例临近并将不相似的实例分开。它主要用于可视化，尤其是用于可视化高维空间中的实例（例如，可以将MNIST图像降维到 2D 可视化）。</li>
 <li>线性判别分析（Linear Discriminant Analysis，LDA）实际上是一种分类算法，但在训练过程中，它会学习类之间最有区别的轴，然后使用这些轴来定义用于投影数据的超平面。LDA 的好处是投影会尽可能地保持各个类之间距离，所以在运行另一种分类算法（如 SVM 分类器）之前，LDA 是很好的降维技术。</li>
 </ul>
-<h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><ol>
+<h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习"></a>练习</h3><ol>
 <li><p>减少数据集维度的主要动机是什么？主要缺点是什么？</p>
 <blockquote>
 <p>动机：</p>
@@ -1442,8 +1428,7 @@
 </li>
 </ol>
 <h2 id="第09章-非监督学习"><a href="#第09章-非监督学习" class="headerlink" title="第09章 非监督学习"></a>第09章 非监督学习</h2><p>降维就是最常用的非监督机器学习方法之一。</p>
-<p>###聚类（clustering）</p>
-<p>将相似的实例聚集在一起</p>
+<h3 id="聚类（clustering）"><a href="#聚类（clustering）" class="headerlink" title="聚类（clustering）"></a>聚类（clustering）</h3><p>将相似的实例聚集在一起</p>
 <p><strong>和分类的区别：分类问题有标签，而聚类问题没有标签。</strong></p>
 <p><strong>应用场景：</strong></p>
 <p>降维，半监督学习，图像分类，推荐系统，搜索引擎，客户细分等</p>
@@ -1547,7 +1532,7 @@
 <li>重复上述过程</li>
 </ol>
 <p>更深入了解可以参考：<a href="https://blog.csdn.net/qq_39856931/article/details/106433187" target="_blank" rel="noopener">https://blog.csdn.net/qq_39856931/article/details/106433187</a></p>
-<p>####KNN和K-Means的区别</p>
+<h4 id="KNN和K-Means的区别"><a href="#KNN和K-Means的区别" class="headerlink" title="KNN和K-Means的区别"></a>KNN和K-Means的区别</h4><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1555,7 +1540,8 @@
 <th><strong>K-Means</strong></th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>1.KNN是分类算法  2.监督学习 3.喂给它的数据集是带label的数据，已经是完全正确的数据</td>
 <td>1.K-Means是聚类算法  2.非监督学习 3.喂给它的数据集是无label的数据，是杂乱无章的，经过聚类后才变得有点顺序，先无序，后有序</td>
 </tr>
@@ -1573,9 +1559,10 @@
 </tr>
 <tr>
 <td>相似点：都包含这样的过程，给定一个点，在数据集中找离它最近的点。即二者都用到了NN(Nears Neighbor)算法，一般用KD树来实现NN。</td>
-<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="DBSCAN（Density-Based-Spatial-Clustering-of-Applications-with-Noise）"><a href="#DBSCAN（Density-Based-Spatial-Clustering-of-Applications-with-Noise）" class="headerlink" title="DBSCAN（Density-Based Spatial Clustering of Applications with Noise）"></a>DBSCAN（Density-Based Spatial Clustering of Applications with Noise）</h4><p>基于局部密度估计（local density estimation），该算法允许对任意形状的数据进行聚类。</p>
 <ol>
 <li>对于每一个实例，算法计算一个小范围$\epsilon$ 内有多少实例，该范围叫做：实例的$\epsilon$-neighborhood</li>
@@ -1591,8 +1578,7 @@
 <p>其实有两个数据需要被判定为异常值。</p>
 <p>DBSCAN是一个简单但是强大的聚类算法，可以对不规则形状分布的数据进行聚类，并且只有两个超参数eps和min_samples，但如果类中密度变化很大，DBSCAN的表现可能没有那么好。</p>
 <p><strong>计算复杂度</strong>：O(m log m)</p>
-<h4 id="其他聚类算法"><a href="#其他聚类算法" class="headerlink" title="其他聚类算法"></a>其他聚类算法</h4><p>#####层次聚类(Agglomerative clustering)</p>
-<p>是一种自底而上的层次聚类方法，它能够根据指定的相似度或距离定义计算出类之间的距离。</p>
+<h4 id="其他聚类算法"><a href="#其他聚类算法" class="headerlink" title="其他聚类算法"></a>其他聚类算法</h4><h5 id="层次聚类-Agglomerative-clustering"><a href="#层次聚类-Agglomerative-clustering" class="headerlink" title="层次聚类(Agglomerative clustering)"></a>层次聚类(Agglomerative clustering)</h5><p>是一种自底而上的层次聚类方法，它能够根据指定的相似度或距离定义计算出类之间的距离。</p>
 <ol>
 <li>将每一个元素单独定为一类</li>
 <li>重复：每一轮都合并指定距离(对指定距离的理解很重要)最小的类</li>
@@ -1620,8 +1606,6 @@
 <p><strong>一种投票机制</strong>，每个实例对相似的实例投票，选出代表（representatives）一旦算法收敛，每个代表和其投票者聚成一簇。</p>
 <blockquote>
 <p>计算复杂度：$O(m^2)$,不适合大的数据集</p>
-</blockquote>
-<blockquote>
 <p>AP算法的基本思想是将全部数据点都当作潜在的聚类中心(称之为exemplar)，然后数据点两两之间连线构成一个网络(相似度矩阵)，再通过网络中各条边的消息(responsibility和availability)传递计算出各样本的聚类中心。</p>
 <p>聚类过程中，共有两种消息在各节点间传递，分别是吸引度（responsibility）和归属度（availability）。</p>
 <p>AP算法通过迭代过程不断更新每一个点的吸引度和归属度，直到产生m个高质量的Exemplar（相当于质心），同时将其余的数据点分配到相应的聚类中。</p>
@@ -1644,7 +1628,7 @@
 <li>expectation step</li>
 </ol>
 <p>计算每个实例属于各个簇的概率（软分类）</p>
-<ol start="2">
+<ol>
 <li>maximization step</li>
 </ol>
 <p>迭代</p>
@@ -1652,7 +1636,7 @@
 </blockquote>
 <p>GMM是一个生成模型，可以用来生成新的实例。</p>
 <p>还可以预测每个实例周围的密度，<code>score_samples()</code>方法，计算实例的PDF（probability density function）的l对数。</p>
-<p>对于高维数据，GMM可能陷入困难，需要对模型加以限制（减少自由度，限制分布的形状，大小和取向），通过超参数``covariance_type<code></code></p>
+<p>对于高维数据，GMM可能陷入困难，需要对模型加以限制（减少自由度，限制分布的形状，大小和取向），通过超参数<code>`covariance_type</code> `</p>
 <blockquote>
 <p>取值可以是：sphere，diag，tied default：full</p>
 </blockquote>
@@ -1661,14 +1645,12 @@
 <p>diag or spherical：$O(kmn)$</p>
 <p>tied or full: $O()kmn^2+kn^3$</p>
 </blockquote>
-<p>####异常值检测</p>
-<p>GMM用于异常值检测（anomaly detection）也叫做outlier detection。</p>
+<h4 id="异常值检测"><a href="#异常值检测" class="headerlink" title="异常值检测"></a>异常值检测</h4><p>GMM用于异常值检测（anomaly detection）也叫做outlier detection。</p>
 <blockquote>
 <p>处在GMM低密度区域的实例可以被认为是异常值。可以自己规定阈值。</p>
 </blockquote>
 <p>观察学习“正常（normal）”的数据是什么样子的，来检测出异常数据（应用场景：生产线产品部件的检测&amp;异常访问）</p>
-<p>####新颖性检测</p>
-<p>novelty detection：检测新观察是否是异常值。 在这种情况下，异常值也被称为新颖点（a novelty）。是一种半监督的异常检测方法，在新颖性检测的背景下，新颖点可以形成密集的簇，只要它们处于训练数据的低密度区域中。</p>
+<h4 id="新颖性检测"><a href="#新颖性检测" class="headerlink" title="新颖性检测"></a>新颖性检测</h4><p>novelty detection：检测新观察是否是异常值。 在这种情况下，异常值也被称为新颖点（a novelty）。是一种半监督的异常检测方法，在新颖性检测的背景下，新颖点可以形成密集的簇，只要它们处于训练数据的低密度区域中。</p>
 <p>GMM尝试fit所有的数据，包括异常值，如果异常点过多，可以</p>
 <blockquote>
 <ol>
@@ -1679,7 +1661,7 @@
 <h4 id="如何确定cluster的个数"><a href="#如何确定cluster的个数" class="headerlink" title="如何确定cluster的个数"></a>如何确定cluster的个数</h4><p>对于大小不一致或者非球型分布的数据，K-Means中用来确定cluster数目的inertia和轮廓系数都不可行。</p>
 <p>我们通过<strong>最小化理论信息标准（theoretical information criterion），如赤池信息量（<em>Akaike information criterion</em> ，AIC）,贝叶斯信息量（BIC，<em>Bayesian information criterion</em>）</strong></p>
 <p>定义：(m是实例的个数，p是模型的参数，$\hat L$ 是模型似然函数（likelihood function）的最大值)</p>
-<p>$BIC\ = \ \log(m)p-2\ \log(\hat L) \ AIC  \ = 2p-2\ \log(\hat L)$</p>
+<p>$BIC\ = \ \log(m)p-2\ \log(\hat L) \\ AIC  \ = 2p-2\ \log(\hat L)$</p>
 <p>BIC和AIC对参数多模型加上penalty，一般情况下，BIC选择的模型比AIC简单，但是不如AIC的模型和数据吻合得好。</p>
 <p><strong>似然函数</strong></p>
 <p>概率（probability）是指：给定模型的参数，输出x的可信程度。（下图水平黑线，和PDF图）</p>
@@ -1702,9 +1684,8 @@
 <h4 id="One-class-SVM"><a href="#One-class-SVM" class="headerlink" title="One-class SVM"></a>One-class SVM</h4><p>单分类算法，寻找一个超平面将样本中的正例圈出来，预测就是用这个超平面做决策，在圈内的样本就认为是正样本。由于<strong>核函数</strong>计算比较耗时，在海量数据的场景用的并不多；</p>
 <p><strong>适用于新颖性检测</strong></p>
 <p><img src="https://img2018.cnblogs.com/blog/1226410/201904/1226410-20190424112057869-1957699378.png" alt="img"></p>
-<p>###密度估计（density estimation）</p>
-<p>用来估计随机过程的概率密度函数（probability density function（PDF））（应用场景：异常检测（密度低的地方异常的概率大），数据分析和可视化）</p>
-<h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习"></a>练习</h3><ol>
+<h3 id="密度估计（density-estimation）"><a href="#密度估计（density-estimation）" class="headerlink" title="密度估计（density estimation）"></a>密度估计（density estimation）</h3><p>用来估计随机过程的概率密度函数（probability density function（PDF））（应用场景：异常检测（密度低的地方异常的概率大），数据分析和可视化）</p>
+<h3 id="练习-3"><a href="#练习-3" class="headerlink" title="练习"></a>练习</h3><ol>
 <li><p>How would you define clustering? Can you name a few clustering algorithms?</p>
 <blockquote>
 <p>聚类是一种无监督学习，将具有相似特征的实例聚集在一起。</p>
@@ -1857,7 +1838,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题："><span class="nav-number">1.</span> <span class="nav-text">问题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点：检错能力极强，开销小等"><span class="nav-number">2.</span> <span class="nav-text">特点：检错能力极强，开销小等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本质"><span class="nav-number">3.</span> <span class="nav-text">本质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CRC-校验的基本过程"><span class="nav-number">4.</span> <span class="nav-text">CRC 校验的基本过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正态方程"><span class="nav-number">5.</span> <span class="nav-text">正态方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度下降法"><span class="nav-number">6.</span> <span class="nav-text">梯度下降法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#batch-GD"><span class="nav-number">7.</span> <span class="nav-text">batch-GD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stochastic-gradient-descent"><span class="nav-number">8.</span> <span class="nav-text">stochastic gradient descent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mini-batch-GD"><span class="nav-number">9.</span> <span class="nav-text">mini-batch GD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式回归"><span class="nav-number">10.</span> <span class="nav-text">多项式回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#学习曲线"><span class="nav-number">11.</span> <span class="nav-text">学习曲线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线性模型的正则化"><span class="nav-number">12.</span> <span class="nav-text">线性模型的正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#岭回归（Ridge）"><span class="nav-number">12.1.</span> <span class="nav-text">岭回归（Ridge）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#随机梯度下降法求解"><span class="nav-number">12.1.1.</span> <span class="nav-text">随机梯度下降法求解</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Lasso回归"><span class="nav-number">12.2.</span> <span class="nav-text">Lasso回归</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#弹性网络（ElasticNet）"><span class="nav-number">12.3.</span> <span class="nav-text">弹性网络（ElasticNet）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#训练和损失函数"><span class="nav-number">12.3.1.</span> <span class="nav-text">训练和损失函数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#决策边界"><span class="nav-number">12.3.2.</span> <span class="nav-text">决策边界</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Softmax回归"><span class="nav-number">12.4.</span> <span class="nav-text">Softmax回归</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#训练和损失函数-1"><span class="nav-number">12.4.1.</span> <span class="nav-text">训练和损失函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Exercise"><span class="nav-number">13.</span> <span class="nav-text">Exercise</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#软间隔分类"><span class="nav-number">13.1.</span> <span class="nav-text">软间隔分类</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非线性支持向量机分类"><span class="nav-number">14.</span> <span class="nav-text">非线性支持向量机分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#多项式核"><span class="nav-number">14.1.</span> <span class="nav-text">多项式核</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#增加相似特征"><span class="nav-number">14.2.</span> <span class="nav-text">增加相似特征</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#高斯-RBF-核"><span class="nav-number">14.3.</span> <span class="nav-text">高斯 RBF 核</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计算复杂性"><span class="nav-number">14.4.</span> <span class="nav-text">计算复杂性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SVM回归"><span class="nav-number">15.</span> <span class="nav-text">SVM回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#背后机制"><span class="nav-number">16.</span> <span class="nav-text">背后机制</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#训练目标"><span class="nav-number">16.1.</span> <span class="nav-text">训练目标</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二次间隔"><span class="nav-number">16.2.</span> <span class="nav-text">二次间隔</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对偶问题"><span class="nav-number">16.3.</span> <span class="nav-text">对偶问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#核化支持向量机"><span class="nav-number">16.4.</span> <span class="nav-text">核化支持向量机</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在线支持向量机"><span class="nav-number">16.5.</span> <span class="nav-text">在线支持向量机</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Exercise-1"><span class="nav-number">17.</span> <span class="nav-text">Exercise</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第06章-决策树"><span class="nav-number"></span> <span class="nav-text">第06章 决策树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树的训练和可视化"><span class="nav-number"></span> <span class="nav-text">决策树的训练和可视化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#估计分类概率"><span class="nav-number"></span> <span class="nav-text">估计分类概率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CART训练算法"><span class="nav-number"></span> <span class="nav-text">CART训练算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NP完全问题"><span class="nav-number">1.</span> <span class="nav-text">NP完全问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#NP完全问题-1"><span class="nav-number">1.1.</span> <span class="nav-text">NP完全问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基尼不纯度和信息熵"><span class="nav-number"></span> <span class="nav-text">基尼不纯度和信息熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回归"><span class="nav-number"></span> <span class="nav-text">回归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exercise"><span class="nav-number"></span> <span class="nav-text">exercise</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bagging"><span class="nav-number"></span> <span class="nav-text">Bagging</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#随机贴片与随机子空间"><span class="nav-number">1.</span> <span class="nav-text">随机贴片与随机子空间</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机森林（一种bagging模型）"><span class="nav-number"></span> <span class="nav-text">随机森林（一种bagging模型）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提升"><span class="nav-number"></span> <span class="nav-text">提升</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#极端梯度提升（XGBoost）"><span class="nav-number">1.</span> <span class="nav-text">极端梯度提升（XGBoost）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stacking"><span class="nav-number"></span> <span class="nav-text">Stacking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#练习"><span class="nav-number"></span> <span class="nav-text">练习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第08章-降维"><span class="nav-number"></span> <span class="nav-text">第08章 降维</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#降维的主要方法"><span class="nav-number"></span> <span class="nav-text">降维的主要方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#投影（Projection）"><span class="nav-number">1.</span> <span class="nav-text">投影（Projection）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#降维技术"><span class="nav-number"></span> <span class="nav-text">降维技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主成分分析（PCA）"><span class="nav-number">1.</span> <span class="nav-text">主成分分析（PCA）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#保留最大方差"><span class="nav-number">1.1.</span> <span class="nav-text">保留最大方差</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主成分（Principle-Componets）"><span class="nav-number">1.2.</span> <span class="nav-text">主成分（Principle Componets）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#投影到d维空间"><span class="nav-number">1.3.</span> <span class="nav-text">投影到d维空间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方差解释率（Explained-Variance-Ratio）"><span class="nav-number">1.4.</span> <span class="nav-text">方差解释率（Explained Variance Ratio）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#选择正确的维度"><span class="nav-number">1.5.</span> <span class="nav-text">选择正确的维度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PCA压缩"><span class="nav-number">1.6.</span> <span class="nav-text">PCA压缩</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#增量-PCA（Incremental-PCA）"><span class="nav-number">1.7.</span> <span class="nav-text">增量 PCA（Incremental PCA）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#随机-PCA（Randomized-PCA）"><span class="nav-number">1.8.</span> <span class="nav-text">随机 PCA（Randomized PCA）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局部线性嵌入（LLE）"><span class="nav-number">2.</span> <span class="nav-text">局部线性嵌入（LLE）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#工作原理"><span class="nav-number">2.1.</span> <span class="nav-text">工作原理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他降维方法"><span class="nav-number">3.</span> <span class="nav-text">其他降维方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#练习-1"><span class="nav-number"></span> <span class="nav-text">练习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第09章-非监督学习"><span class="nav-number"></span> <span class="nav-text">第09章 非监督学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#K-Means"><span class="nav-number">1.</span> <span class="nav-text">K-Means</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加速K-Means算法"><span class="nav-number">2.</span> <span class="nav-text">加速K-Means算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mini-batch-K-Means算法"><span class="nav-number">3.</span> <span class="nav-text">mini-batch K-Means算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#确定最佳类的个数"><span class="nav-number">4.</span> <span class="nav-text">确定最佳类的个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#silhouette-score（平均轮廓系数）"><span class="nav-number">5.</span> <span class="nav-text">silhouette score（平均轮廓系数）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-Means的局限性"><span class="nav-number">6.</span> <span class="nav-text">K-Means的局限性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-Means的具体应用"><span class="nav-number">7.</span> <span class="nav-text">K-Means的具体应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主动学习-active-learning"><span class="nav-number">8.</span> <span class="nav-text">主动学习(active learning)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DBSCAN（Density-Based-Spatial-Clustering-of-Applications-with-Noise）"><span class="nav-number">9.</span> <span class="nav-text">DBSCAN（Density-Based Spatial Clustering of Applications with Noise）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他聚类算法"><span class="nav-number">10.</span> <span class="nav-text">其他聚类算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#BIRCH"><span class="nav-number">10.1.</span> <span class="nav-text">BIRCH</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Mean-Shift"><span class="nav-number">10.2.</span> <span class="nav-text">Mean-Shift</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Affinity-propagation"><span class="nav-number">10.3.</span> <span class="nav-text">Affinity propagation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#谱聚类"><span class="nav-number">10.4.</span> <span class="nav-text">谱聚类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高斯混合模型-Gaussian-mixtures"><span class="nav-number"></span> <span class="nav-text">高斯混合模型 Gaussian mixtures</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EM算法"><span class="nav-number">1.</span> <span class="nav-text">EM算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何确定cluster的个数"><span class="nav-number">2.</span> <span class="nav-text">如何确定cluster的个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bayesian-Gaussian-Mixture-Models"><span class="nav-number">3.</span> <span class="nav-text">Bayesian Gaussian Mixture Models</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他处理异常值和新颖性检测的算法"><span class="nav-number"></span> <span class="nav-text">其他处理异常值和新颖性检测的算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PCA"><span class="nav-number">1.</span> <span class="nav-text">PCA</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fast-MCD"><span class="nav-number">2.</span> <span class="nav-text">Fast-MCD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Isolation-Forest"><span class="nav-number">3.</span> <span class="nav-text">Isolation Forest</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Local-Outlier-Factoer（LOF）"><span class="nav-number">4.</span> <span class="nav-text">Local Outlier Factoer（LOF）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#One-class-SVM"><span class="nav-number">5.</span> <span class="nav-text">One-class SVM</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#练习-2"><span class="nav-number"></span> <span class="nav-text">练习</span></a></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第01章-机器学习概览"><span class="nav-number">1.</span> <span class="nav-text">第01章 机器学习概览</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题："><span class="nav-number">1.0.1.</span> <span class="nav-text">问题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第02章-一个完整的机器学习项目"><span class="nav-number">2.</span> <span class="nav-text">第02章 一个完整的机器学习项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特点：检错能力极强，开销小等"><span class="nav-number">2.0.1.</span> <span class="nav-text">特点：检错能力极强，开销小等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本质"><span class="nav-number">2.0.2.</span> <span class="nav-text">本质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CRC-校验的基本过程"><span class="nav-number">2.0.3.</span> <span class="nav-text">CRC 校验的基本过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第03章-分类"><span class="nav-number">3.</span> <span class="nav-text">第03章 分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#练习"><span class="nav-number">3.0.1.</span> <span class="nav-text">练习</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第04章-训练模型"><span class="nav-number">4.</span> <span class="nav-text">第04章 训练模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正态方程"><span class="nav-number">4.0.1.</span> <span class="nav-text">正态方程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#pseudoinverse-Moore-Penrose-inverse"><span class="nav-number">4.0.1.1.</span> <span class="nav-text">pseudoinverse (Moore-Penrose inverse)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度下降法"><span class="nav-number">4.0.2.</span> <span class="nav-text">梯度下降法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#batch-GD"><span class="nav-number">4.0.3.</span> <span class="nav-text">batch-GD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stochastic-gradient-descent"><span class="nav-number">4.0.4.</span> <span class="nav-text">stochastic gradient descent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mini-batch-GD"><span class="nav-number">4.0.5.</span> <span class="nav-text">mini-batch GD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式回归"><span class="nav-number">4.0.6.</span> <span class="nav-text">多项式回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#学习曲线"><span class="nav-number">4.0.7.</span> <span class="nav-text">学习曲线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线性模型的正则化"><span class="nav-number">4.0.8.</span> <span class="nav-text">线性模型的正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#岭回归（Ridge）"><span class="nav-number">4.0.8.1.</span> <span class="nav-text">岭回归（Ridge）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#封闭方程的解"><span class="nav-number">4.0.8.1.1.</span> <span class="nav-text">封闭方程的解</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#随机梯度下降法求解"><span class="nav-number">4.0.8.1.2.</span> <span class="nav-text">随机梯度下降法求解</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Lasso回归"><span class="nav-number">4.0.8.2.</span> <span class="nav-text">Lasso回归</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#弹性网络（ElasticNet）"><span class="nav-number">4.0.8.3.</span> <span class="nav-text">弹性网络（ElasticNet）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#早起停止法（Early-Stopping）"><span class="nav-number">4.0.8.4.</span> <span class="nav-text">早起停止法（Early Stopping）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逻辑回归"><span class="nav-number">4.0.8.5.</span> <span class="nav-text">逻辑回归</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#训练和损失函数"><span class="nav-number">4.0.8.5.1.</span> <span class="nav-text">训练和损失函数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#决策边界"><span class="nav-number">4.0.8.5.2.</span> <span class="nav-text">决策边界</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Softmax回归"><span class="nav-number">4.0.8.6.</span> <span class="nav-text">Softmax回归</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#训练和损失函数-1"><span class="nav-number">4.0.8.6.1.</span> <span class="nav-text">训练和损失函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Exercise"><span class="nav-number">4.0.9.</span> <span class="nav-text">Exercise</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第05章-支持向量机"><span class="nav-number">5.</span> <span class="nav-text">第05章 支持向量机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#线性支持向量机分类"><span class="nav-number">5.0.1.</span> <span class="nav-text">线性支持向量机分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#软间隔分类"><span class="nav-number">5.0.1.1.</span> <span class="nav-text">软间隔分类</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非线性支持向量机分类"><span class="nav-number">5.0.2.</span> <span class="nav-text">非线性支持向量机分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#增加更多的特征"><span class="nav-number">5.0.2.1.</span> <span class="nav-text">增加更多的特征</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多项式核"><span class="nav-number">5.0.2.2.</span> <span class="nav-text">多项式核</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#增加相似特征"><span class="nav-number">5.0.2.3.</span> <span class="nav-text">增加相似特征</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#高斯-RBF-核"><span class="nav-number">5.0.2.4.</span> <span class="nav-text">高斯 RBF 核</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计算复杂性"><span class="nav-number">5.0.2.5.</span> <span class="nav-text">计算复杂性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SVM回归"><span class="nav-number">5.0.3.</span> <span class="nav-text">SVM回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#背后机制"><span class="nav-number">5.0.4.</span> <span class="nav-text">背后机制</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#决策函数和预测"><span class="nav-number">5.0.4.1.</span> <span class="nav-text">决策函数和预测</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#训练目标"><span class="nav-number">5.0.4.2.</span> <span class="nav-text">训练目标</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二次间隔"><span class="nav-number">5.0.4.3.</span> <span class="nav-text">二次间隔</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对偶问题"><span class="nav-number">5.0.4.4.</span> <span class="nav-text">对偶问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#核化支持向量机"><span class="nav-number">5.0.4.5.</span> <span class="nav-text">核化支持向量机</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在线支持向量机"><span class="nav-number">5.0.4.6.</span> <span class="nav-text">在线支持向量机</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Exercise-1"><span class="nav-number">5.0.5.</span> <span class="nav-text">Exercise</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第06章-决策树"><span class="nav-number">6.</span> <span class="nav-text">第06章 决策树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树的训练和可视化"><span class="nav-number">6.1.</span> <span class="nav-text">决策树的训练和可视化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#估计分类概率"><span class="nav-number">6.2.</span> <span class="nav-text">估计分类概率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CART训练算法"><span class="nav-number">6.3.</span> <span class="nav-text">CART训练算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NP完全问题"><span class="nav-number">6.3.1.</span> <span class="nav-text">NP完全问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#P类问题"><span class="nav-number">6.3.1.1.</span> <span class="nav-text">P类问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NP类问题"><span class="nav-number">6.3.1.2.</span> <span class="nav-text">NP类问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NP完全问题-1"><span class="nav-number">6.3.1.3.</span> <span class="nav-text">NP完全问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算复杂度"><span class="nav-number">6.4.</span> <span class="nav-text">计算复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基尼不纯度和信息熵"><span class="nav-number">6.5.</span> <span class="nav-text">基尼不纯度和信息熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则化超参数"><span class="nav-number">6.6.</span> <span class="nav-text">正则化超参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回归"><span class="nav-number">6.7.</span> <span class="nav-text">回归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不稳定性"><span class="nav-number">6.8.</span> <span class="nav-text">不稳定性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exercise"><span class="nav-number">6.9.</span> <span class="nav-text">exercise</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第07章-集成学习和随机森林"><span class="nav-number">7.</span> <span class="nav-text">第07章 集成学习和随机森林</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#投票分类"><span class="nav-number">7.1.</span> <span class="nav-text">投票分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bagging"><span class="nav-number">7.2.</span> <span class="nav-text">Bagging</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Out-of-bag"><span class="nav-number">7.2.1.</span> <span class="nav-text">Out-of-bag</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#随机贴片与随机子空间"><span class="nav-number">7.2.2.</span> <span class="nav-text">随机贴片与随机子空间</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机森林（一种bagging模型）"><span class="nav-number">7.3.</span> <span class="nav-text">随机森林（一种bagging模型）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#极端随机树"><span class="nav-number">7.3.1.</span> <span class="nav-text">极端随机树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特征重要度"><span class="nav-number">7.3.2.</span> <span class="nav-text">特征重要度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提升"><span class="nav-number">7.4.</span> <span class="nav-text">提升</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Adaboost"><span class="nav-number">7.4.1.</span> <span class="nav-text">Adaboost</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度提升"><span class="nav-number">7.4.2.</span> <span class="nav-text">梯度提升</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Early-stop-早停"><span class="nav-number">7.4.2.1.</span> <span class="nav-text">Early stop(早停)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#极端梯度提升（XGBoost）"><span class="nav-number">7.4.3.</span> <span class="nav-text">极端梯度提升（XGBoost）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stacking"><span class="nav-number">7.5.</span> <span class="nav-text">Stacking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#练习-1"><span class="nav-number">7.6.</span> <span class="nav-text">练习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第08章-降维"><span class="nav-number">8.</span> <span class="nav-text">第08章 降维</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#维数灾难（curse-of-dimentionality）"><span class="nav-number">8.1.</span> <span class="nav-text">维数灾难（curse of dimentionality）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#降维的主要方法"><span class="nav-number">8.2.</span> <span class="nav-text">降维的主要方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#投影（Projection）"><span class="nav-number">8.2.1.</span> <span class="nav-text">投影（Projection）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#流形学习（Manifold-Learning）"><span class="nav-number">8.2.2.</span> <span class="nav-text">流形学习（Manifold Learning）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#降维技术"><span class="nav-number">8.3.</span> <span class="nav-text">降维技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主成分分析（PCA）"><span class="nav-number">8.3.1.</span> <span class="nav-text">主成分分析（PCA）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#保留最大方差"><span class="nav-number">8.3.1.1.</span> <span class="nav-text">保留最大方差</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主成分（Principle-Componets）"><span class="nav-number">8.3.1.2.</span> <span class="nav-text">主成分（Principle Componets）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#投影到d维空间"><span class="nav-number">8.3.1.3.</span> <span class="nav-text">投影到d维空间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方差解释率（Explained-Variance-Ratio）"><span class="nav-number">8.3.1.4.</span> <span class="nav-text">方差解释率（Explained Variance Ratio）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#选择正确的维度"><span class="nav-number">8.3.1.5.</span> <span class="nav-text">选择正确的维度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PCA压缩"><span class="nav-number">8.3.1.6.</span> <span class="nav-text">PCA压缩</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#增量-PCA（Incremental-PCA）"><span class="nav-number">8.3.1.7.</span> <span class="nav-text">增量 PCA（Incremental PCA）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#随机-PCA（Randomized-PCA）"><span class="nav-number">8.3.1.8.</span> <span class="nav-text">随机 PCA（Randomized PCA）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#核-PCA（Kernel-PCA）"><span class="nav-number">8.3.2.</span> <span class="nav-text">核 PCA（Kernel PCA）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局部线性嵌入（LLE）"><span class="nav-number">8.3.3.</span> <span class="nav-text">局部线性嵌入（LLE）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#工作原理"><span class="nav-number">8.3.3.1.</span> <span class="nav-text">工作原理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他降维方法"><span class="nav-number">8.3.4.</span> <span class="nav-text">其他降维方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#练习-2"><span class="nav-number">8.4.</span> <span class="nav-text">练习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第09章-非监督学习"><span class="nav-number">9.</span> <span class="nav-text">第09章 非监督学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#聚类（clustering）"><span class="nav-number">9.1.</span> <span class="nav-text">聚类（clustering）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#K-Means"><span class="nav-number">9.1.1.</span> <span class="nav-text">K-Means</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加速K-Means算法"><span class="nav-number">9.1.2.</span> <span class="nav-text">加速K-Means算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mini-batch-K-Means算法"><span class="nav-number">9.1.3.</span> <span class="nav-text">mini-batch K-Means算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#确定最佳类的个数"><span class="nav-number">9.1.4.</span> <span class="nav-text">确定最佳类的个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#silhouette-score（平均轮廓系数）"><span class="nav-number">9.1.5.</span> <span class="nav-text">silhouette score（平均轮廓系数）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-Means的局限性"><span class="nav-number">9.1.6.</span> <span class="nav-text">K-Means的局限性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-Means的具体应用"><span class="nav-number">9.1.7.</span> <span class="nav-text">K-Means的具体应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主动学习-active-learning"><span class="nav-number">9.1.8.</span> <span class="nav-text">主动学习(active learning)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KNN和K-Means的区别"><span class="nav-number">9.1.9.</span> <span class="nav-text">KNN和K-Means的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DBSCAN（Density-Based-Spatial-Clustering-of-Applications-with-Noise）"><span class="nav-number">9.1.10.</span> <span class="nav-text">DBSCAN（Density-Based Spatial Clustering of Applications with Noise）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他聚类算法"><span class="nav-number">9.1.11.</span> <span class="nav-text">其他聚类算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#层次聚类-Agglomerative-clustering"><span class="nav-number">9.1.11.1.</span> <span class="nav-text">层次聚类(Agglomerative clustering)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#BIRCH"><span class="nav-number">9.1.11.2.</span> <span class="nav-text">BIRCH</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Mean-Shift"><span class="nav-number">9.1.11.3.</span> <span class="nav-text">Mean-Shift</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Affinity-propagation"><span class="nav-number">9.1.11.4.</span> <span class="nav-text">Affinity propagation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#谱聚类"><span class="nav-number">9.1.11.5.</span> <span class="nav-text">谱聚类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高斯混合模型-Gaussian-mixtures"><span class="nav-number">9.2.</span> <span class="nav-text">高斯混合模型 Gaussian mixtures</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EM算法"><span class="nav-number">9.2.1.</span> <span class="nav-text">EM算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#异常值检测"><span class="nav-number">9.2.2.</span> <span class="nav-text">异常值检测</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新颖性检测"><span class="nav-number">9.2.3.</span> <span class="nav-text">新颖性检测</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何确定cluster的个数"><span class="nav-number">9.2.4.</span> <span class="nav-text">如何确定cluster的个数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bayesian-Gaussian-Mixture-Models"><span class="nav-number">9.2.5.</span> <span class="nav-text">Bayesian Gaussian Mixture Models</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他处理异常值和新颖性检测的算法"><span class="nav-number">9.3.</span> <span class="nav-text">其他处理异常值和新颖性检测的算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PCA"><span class="nav-number">9.3.1.</span> <span class="nav-text">PCA</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fast-MCD"><span class="nav-number">9.3.2.</span> <span class="nav-text">Fast-MCD</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Isolation-Forest"><span class="nav-number">9.3.3.</span> <span class="nav-text">Isolation Forest</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Local-Outlier-Factoer（LOF）"><span class="nav-number">9.3.4.</span> <span class="nav-text">Local Outlier Factoer（LOF）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#One-class-SVM"><span class="nav-number">9.3.5.</span> <span class="nav-text">One-class SVM</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#密度估计（density-estimation）"><span class="nav-number">9.4.</span> <span class="nav-text">密度估计（density estimation）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#练习-3"><span class="nav-number">9.5.</span> <span class="nav-text">练习</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
