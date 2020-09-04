@@ -124,7 +124,7 @@
 <meta property="og:image" content="https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/assets/mls2_0922.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1226410/201904/1226410-20190424112057869-1957699378.png">
 <meta property="article:published_time" content="2020-08-25T11:26:00.000Z">
-<meta property="article:modified_time" content="2020-09-04T07:23:39.870Z">
+<meta property="article:modified_time" content="2020-09-04T07:56:34.187Z">
 <meta property="article:author" content="QQAI">
 <meta property="article:tag" content="sklearn">
 <meta property="article:tag" content="机器学习">
@@ -308,7 +308,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-09-04 15:23:39" itemprop="dateModified" datetime="2020-09-04T15:23:39+08:00">2020-09-04</time>
+                <time title="Modified: 2020-09-04 15:56:34" itemprop="dateModified" datetime="2020-09-04T15:56:34+08:00">2020-09-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -350,6 +350,7 @@
 <p><a href="https://www.jianshu.com/p/4a94798f7dcc" target="_blank" rel="noopener">简书《Scikit-Learn、Keras与TensorFlow机器学习实用指南》第一版和第二版对照</a></p>
 <p><a href="https://blog.csdn.net/jiaoyangwm/article/details/82387883#%E7%BB%83%E4%B9%A0%E9%A2%987" target="_blank" rel="noopener">练习题答案参考</a> <a href="https://blog.csdn.net/leowinbow/article/details/88581039" target="_blank" rel="noopener">参考2</a></p>
 <a id="more"></a>
+<p>[TOC]</p>
 <h2 id="第01章-机器学习概览"><a href="#第01章-机器学习概览" class="headerlink" title="第01章 机器学习概览"></a>第01章 机器学习概览</h2><ol>
 <li><p>os.makedirs(IMAGES_PATH, exist_ok=True)</p>
 </li>
@@ -973,7 +974,7 @@ subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1-\zeta^{(i)}\ \  and \ \ \zeta^{
 </li>
 <li><p>假设你用 RBF 核来训练一个 SVM 分类器，如果对训练集欠拟合：你应该增大或者减小<code>γ</code>吗？调整参数<code>C</code>呢？</p>
 <blockquote>
-<p>RBF的形式：$\phi_{\gamma}(x, \ell) = exp(-\gamma |x - \ell |^2)$，是一个钟形曲线，<code>γ</code>越大，钟形曲线越窄，每个样本的影响范围变得更小，边界更细化。</p>
+<p>RBF的形式：$\phi_{\gamma}(x, \ell) = exp(-\gamma |x - \ell |^2)$，是一个钟形曲线，<code>γ</code> 越大，钟形曲线越窄，每个样本的影响范围变得更小，边界更细化。</p>
 <p>超参数<code>C</code>控制SCM分类模型的软硬，较小的<code>C</code>会导致更宽的分类间隔平面，但更多的间隔违规。</p>
 <p>所以欠拟合时可以增大<code>γ</code>，增大<code>C</code></p>
 </blockquote>
@@ -1299,6 +1300,7 @@ r_j\ = \ \frac{\sum_{i=1,\hat y_j^{(i)}\neq y^{(i)}}^m \omega^{(i)}}{\sum _{i=1}
 <li><p>从练习 8 中运行个体分类器来对验证集进行预测，并创建一个新的训练集并生成预测：每个训练实例是一个向量，包含来自所有分类器的图像的预测集，目标是图像类别。祝贺你，你刚刚训练了一个 <em>blender</em> ，和分类器一起组成了一个叠加组合！现在让我们来评估测试集上的集合。对于测试集中的每个图像，用所有分类器进行预测，然后将预测馈送到 <em>blender</em> 以获得集合的预测。它与你早期训练过的投票分类器相比如何？</p>
 </li>
 </ol>
+<hr>
 <h2 id="第08章-降维"><a href="#第08章-降维" class="headerlink" title="第08章 降维"></a>第08章 降维</h2><blockquote>
 <p>警告：降维会丢失一些信息，因此即使这种方法可以加快训练的速度，同时也会让系统表现的稍微差一点。降维会让工作流水线更复杂因而更难维护。所有应该先尝试使用原始的数据来训练，如果训练速度太慢的话再考虑使用降维。在某些情况下，降低训练集数据的维度可能会筛选掉一些噪音和不必要的细节，这可能会让结果比降维之前更好（这种情况通常不会发生；它只会加快训练的速度）。</p>
 </blockquote>
@@ -1427,6 +1429,7 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 <li><p>使用 t-SNE 将 MNIST 数据集缩减到二维，并使用 Matplotlib 绘制结果图。您可以使用 10 种不同颜色的散点图来表示每个图像的目标类别。或者，您可以在每个实例的位置写入彩色数字，甚至可以绘制数字图像本身的降维版本（如果绘制所有数字，则可视化可能会过于混乱，因此您应该绘制随机样本或只在周围没有其他实例被绘制的情况下绘制）。你将会得到一个分隔良好的的可视化数字集群。尝试使用其他降维算法，如 PCA，LLE 或 MDS，并比较可视化结果。</p>
 </li>
 </ol>
+<hr>
 <h2 id="第09章-非监督学习"><a href="#第09章-非监督学习" class="headerlink" title="第09章 非监督学习"></a>第09章 非监督学习</h2><p>降维就是最常用的非监督机器学习方法之一。</p>
 <h3 id="聚类（clustering）"><a href="#聚类（clustering）" class="headerlink" title="聚类（clustering）"></a>聚类（clustering）</h3><p>将相似的实例聚集在一起</p>
 <p><strong>和分类的区别：分类问题有标签，而聚类问题没有标签。</strong></p>
