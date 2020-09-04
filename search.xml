@@ -1643,18 +1643,25 @@ soup(<span class="string">"a"</span>)
   <entry>
     <title>《Scikit-Learn与TensorFlow机器学习实用指南》</title>
     <url>/2020/08/25/%E3%80%8AScikit-Learn%E4%B8%8ETensorFlow%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E7%94%A8%E6%8C%87%E5%8D%97%E3%80%8B/</url>
-    <content><![CDATA[<p><a href="https://www.cntofu.com/book/27/docs/2.%E4%B8%80%E4%B8%AA%E5%AE%8C%E6%95%B4%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE.md" target="_blank" rel="noopener">https://www.cntofu.com/book/27/docs/2.一个完整的机器学习项目.md</a></p>
-<p><a href="https://github.com/ageron/handson-ml2" target="_blank" rel="noopener">https://github.com/ageron/handson-ml2</a></p>
-<p><a href="https://github.com/apachecn/hands-on-ml-zh/blob/master/docs/1.%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%A7%88.md" target="_blank" rel="noopener">https://github.com/apachecn/hands-on-ml-zh/blob/master/docs/</a></p>
-<p><a href="https://www.jianshu.com/p/3470a6efbe8d" target="_blank" rel="noopener">https://www.jianshu.com/p/3470a6efbe8d</a></p>
+    <content><![CDATA[<p>学习资料参考：</p>
+<p><a href="https://www.cntofu.com/book/27/docs/2.%E4%B8%80%E4%B8%AA%E5%AE%8C%E6%95%B4%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE.md" target="_blank" rel="noopener">一个完整的机器学习项目.md</a></p>
+<p><a href="https://github.com/ageron/handson-ml2" target="_blank" rel="noopener">原书Github上代码</a></p>
+<p><a href="https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/" target="_blank" rel="noopener">Oreilly上原书第二版（可以在线阅读）</a></p>
+<p><a href="https://github.com/apachecn/hands-on-ml-zh/blob/master/docs/1.%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%A7%88.md" target="_blank" rel="noopener">第一版翻译</a></p>
+<p><a href="https://www.jianshu.com/p/3470a6efbe8d" target="_blank" rel="noopener">简书第一版</a></p>
+<p><a href="https://www.jianshu.com/p/86626c79814a" target="_blank" rel="noopener">简书第二版第二部分</a></p>
+<p><a href="https://www.jianshu.com/p/4a94798f7dcc" target="_blank" rel="noopener">简书《Scikit-Learn、Keras与TensorFlow机器学习实用指南》第一版和第二版对照</a></p>
+<p><a href="https://blog.csdn.net/jiaoyangwm/article/details/82387883#%E7%BB%83%E4%B9%A0%E9%A2%987" target="_blank" rel="noopener">练习题答案参考</a> <a href="https://blog.csdn.net/leowinbow/article/details/88581039" target="_blank" rel="noopener">参考2</a></p>
 <a id="more"></a>
 
-<h2 id="《Scikit-Learn与TensorFlow机器学习实用指南》"><a href="#《Scikit-Learn与TensorFlow机器学习实用指南》" class="headerlink" title="《Scikit-Learn与TensorFlow机器学习实用指南》"></a>《Scikit-Learn与TensorFlow机器学习实用指南》</h2><h3 id="第01章-机器学习概览"><a href="#第01章-机器学习概览" class="headerlink" title="第01章 机器学习概览"></a>第01章 机器学习概览</h3><ol>
+<p>##第01章 机器学习概览</p>
+<ol>
 <li><p>os.makedirs(IMAGES_PATH, exist_ok=True)</p>
 </li>
 <li><p>pd.merge(left=oecd_bli, right=gdp_per_capita, left_index=True, right_index=True)</p>
 <p>left_index和right_index：指定是否以索引为参考进行合并</p>
-<p>​</p>
+<!--more-->
+
 <h4 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h4><ol>
 <li>如何定义机器学习？</li>
 </ol>
@@ -1809,7 +1816,8 @@ soup(<span class="string">"a"</span>)
 </blockquote>
 </li>
 </ol>
-<h3 id="第02章-一个完整的机器学习项目"><a href="#第02章-一个完整的机器学习项目" class="headerlink" title="第02章 一个完整的机器学习项目"></a>第02章 一个完整的机器学习项目</h3><p>[Python API：crc32函数 计算CRC校验值](<a href="https://b" target="_blank" rel="noopener">https://b</a></p>
+<p>##第02章 一个完整的机器学习项目</p>
+<p>[Python API：crc32函数 计算CRC校验值](<a href="https://b" target="_blank" rel="noopener">https://b</a></p>
 <p><a href="https://blog.csdn.net/liuyu60305002/article/details/6307152" target="_blank" rel="noopener">模2运算</a></p>
 <p><a href="https://blog.csdn.net/sparkliang/article/details/5671510" target="_blank" rel="noopener">CRC32算法详细推导</a></p>
 <blockquote>
@@ -1897,7 +1905,8 @@ soup(<span class="string">"a"</span>)
 <ol start="5">
 <li>使用<code>GridSearchCV</code>自动探索一些准备过程中的候选项。</li>
 </ol>
-<h3 id="第03章-分类"><a href="#第03章-分类" class="headerlink" title="第03章 分类"></a>第03章 分类</h3><p><a href="https://blog.csdn.net/weixin_38145317/article/details/79650188" target="_blank" rel="noopener">SVM、SVC、SVR</a> </p>
+<p>##第03章 分类</p>
+<p><a href="https://blog.csdn.net/weixin_38145317/article/details/79650188" target="_blank" rel="noopener">SVM、SVC、SVR</a> </p>
 <p>####练习</p>
 <ol>
 <li><p>尝试在 MNIST 数据集上建立一个分类器，使它在测试集上的精度超过 97%。提示：<code>KNeighborsClassifier</code>非常适合这个任务。你只需要找出一个好的超参数值（试一下对权重和超参数<code>n_neighbors</code>进行网格搜索）。</p>
@@ -1920,7 +1929,12 @@ soup(<span class="string">"a"</span>)
 <li>你也许想给你的流水线增加超参数，控制是否剥过邮件头、将邮件转换为小写、去除标点符号、将所有 URL 替换成<code>&quot;URL&quot;</code>，将所有数字替换成<code>&quot;NUMBER&quot;</code>，或者甚至提取词干（比如，截断词尾。有现成的 Python 库可以做到这点）。</li>
 <li>然后 尝试几个不同的分类器，看看你可否建立一个很棒的垃圾邮件分类器，同时有着高召回率和高准确率。</li>
 </ul>
-<h3 id="第04章-训练模型"><a href="#第04章-训练模型" class="headerlink" title="第04章 训练模型"></a>第04章 训练模型</h3><h4 id="正态方程"><a href="#正态方程" class="headerlink" title="正态方程"></a><strong>正态方程</strong></h4><p>最小化损失函数 $\hat{\theta} =   (X^T \cdot X)^{-1} \cdot X^T \cdot y $</p>
+<p>##第04章 训练模型</p>
+<p>线性回归预测模型：</p>
+<p>$\hat y = h_{\theta}(x)=\theta ^T\cdot x$</p>
+<p>线性回归模型的MSE损失函数:</p>
+<p>$MSE(X,h_\theta)=\frac{1}{m}\sum_{i=1}^{n}(\theta^T\cdot x^{(i)}-y^{(i)})^2$</p>
+<h4 id="正态方程"><a href="#正态方程" class="headerlink" title="正态方程"></a><strong>正态方程</strong></h4><p>最小化损失函数 $\hat{\theta} =   (X^T \cdot X)^{-1} \cdot X^T \cdot y $</p>
 <p>复杂度：需要计算$X^T\cdot X$ 的逆矩阵，是一个n*n的矩阵，运算复杂度大约在$O(n^{24})$ 到$O(n^{3})$之间。</p>
 <p>可以numpy直接求解，也可以使用sklearn：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line"></span><br><span class="line">lin_reg = LinearRegression()</span><br><span class="line">lin_reg.fit(X, y)</span><br><span class="line">lin_reg.intercept_, lin_reg.coef_</span><br></pre></td></tr></table></figure>
@@ -2013,7 +2027,7 @@ soup(<span class="string">"a"</span>)
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_4/%E5%9B%BE4-17.PNG" alt="img"></p>
 <p>######封闭方程的解</p>
 <p>$$\hat \theta=(X^T\cdot X+\alpha A)^{-1}\cdot X^T\cdot y$$</p>
-<p>A是一个除了左上角有一个0的nxn的单位矩阵，表示偏差$\theta_0$不被正则化。</p>
+<p>A是一个除了左上角有一个0的nxn的单位矩阵，表示偏差$\theta_0​$不被正则化。</p>
 <h6 id="随机梯度下降法求解"><a href="#随机梯度下降法求解" class="headerlink" title="随机梯度下降法求解"></a>随机梯度下降法求解</h6><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sgd_reg = SGDRegressor(penalty=<span class="string">"l2"</span>)</span><br><span class="line"><span class="comment"># penalty参数指的是正则项的惩罚类型。指定“l2”表明你要在损失函数上添加一项：权重向量 l2 范数平方的一半，这就是简单的岭回归。</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="Lasso回归"><a href="#Lasso回归" class="headerlink" title="Lasso回归"></a>Lasso回归</h5><p>Lasso 回归（也称 Least Absolute Shrinkage，或者 Selection Operator Regression）是另一种正则化版的线性回归：就像岭回归那样，它也在损失函数上添加了一个正则化项，但是它使用权重向量的$l_1$ 范数而不是权重向量 $l_2$范数平方的一半。</p>
@@ -2027,6 +2041,1040 @@ soup(<span class="string">"a"</span>)
 <p>#####早起停止法（Early Stopping）</p>
 <p>对于迭代学习算法，有一种非常特殊的正则化方法，就像梯度下降在验证错误达到最小值时立即停止训练那样。我们称为早期停止法。</p>
 <p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_4/%E5%9B%BE4-20.PNG" alt="img"></p>
+<p>#####逻辑回归</p>
+<blockquote>
+<p>一些回归算法也可以用于分类（反之亦然）。 Logistic 回归（也称为 Logit 回归）通常用于估计一个实例属于某个特定类别的概率。 若估计的概率大于 50%，则模型预测这个实例属于当前类（称为正类，标记为“1”），反之预测它不属于当前类（即属于负类 ，标记为“0”）。 这样便成为了一个二元分类器。</p>
+</blockquote>
+<p>逻辑回归模型的概率估计：</p>
+<p>$\hat p=h_\theta=\sigma(\theta^T\cdot x)$</p>
+<p>其中$\sigma()$是Logistic函数，是一个sigmoid函数，输出是介于0到1之间的数字。</p>
+<p>逻辑函数：</p>
+<p>$\sigma(t)=\frac{1}{1+\exp(-t)}$</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_4/%E5%9B%BE4-21.PNG" alt="img"></p>
+<p>逻辑回归预测模型：</p>
+<p>$\hat y = \left{ \begin{array}{cl} 0,&amp; \hat p &lt; 0.5 \ 1,&amp; \hat p \geq 0.5 \end{array} \right.$</p>
+<h6 id="训练和损失函数"><a href="#训练和损失函数" class="headerlink" title="训练和损失函数"></a>训练和损失函数</h6><p>单个样本的损失函数：</p>
+<p>$c(\theta)=\left { \begin{array}{lc} -\log(\hat p), &amp;y=1 \ -\log(1-\hat p),&amp; y=0 \end{array}\right.$</p>
+<p>整个训练集的损失函数只是所有训练实例的平均值。</p>
+<p>逻辑回归的损失函数：<br>$J (\theta) = -\frac{1}{m} \sum_{i=1}^{m}[y^{(i)}log(\hat p^{(i)})+(1-y^{(i)})log(1-\hat p^{(i)})]$</p>
+<p>但是这个损失函数对于求解最小化损失函数的$\theta是没有公式解的（没有等价的正态方程），但该损失函数是凸的，所以梯度下降（或任何其他优化算法）一定能够找到全局最小值。</p>
+<p>逻辑回归损失函数的偏导数：</p>
+<p>$$\frac{\partial}{\partial \theta_j}J(\theta_J)=\frac{1}{m}\sum_{i=1}^{m}(\sigma({\theta^T\cdot x^{(i)})-y^{(i)})x_j^{}(i)}$$</p>
+<h6 id="决策边界"><a href="#决策边界" class="headerlink" title="决策边界"></a>决策边界</h6><p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_4/%E5%9B%BE4-23.PNG" alt="img"></p>
+<p>概率=0.5的分界线</p>
+<p>逻辑回归模型也可以 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-8524eb1789cf2093cfccc4c297138c7f.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-8524eb1789cf2093cfccc4c297138c7f.gif" alt="\ell_1"></a> 或者 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-f2d02eaf32cb7a351989198531c0d12a.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-f2d02eaf32cb7a351989198531c0d12a.gif" alt="\ell_2"></a> 惩罚使用进行正则化。Scikit-Learn 默认添加了 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-f2d02eaf32cb7a351989198531c0d12a.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-f2d02eaf32cb7a351989198531c0d12a.gif" alt="\ell_2"></a> 惩罚。</p>
+<h5 id="Softmax回归"><a href="#Softmax回归" class="headerlink" title="Softmax回归"></a>Softmax回归</h5><p>Logistic 回归模型可以直接推广到支持多类别分类，不必组合和训练多个二分类器， 其称为 Softmax 回归或多类别 Logistic 回归。</p>
+<p>当给定一个实例 $x$ 时，Softmax 回归模型首先计算 $k$ 类的分数，然$s_k(x)$ 后将分数应用在<code>Softmax</code>函数（也称为归一化指数）上，估计出每类的概率。</p>
+<p>k类的Softmax得分：</p>
+<p>$s_k(x)=\theta^T\cdot x$</p>
+<blockquote>
+<p>每个类都有自己独一无二的参数向量 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9f888eddb683fe5f80f87f44bd727b08.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9f888eddb683fe5f80f87f44bd727b08.gif" alt="\theta_k"></a>。 所有这些向量通常作为行放在参数矩阵 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-b9dce96eb3d5a71b28f9f198c28d2d1b.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-b9dce96eb3d5a71b28f9f198c28d2d1b.gif" alt="\Theta"></a> 中。</p>
+</blockquote>
+<p>Softmax函数：<br>$$<br>\hat p_k=\sigma(s(x))<em>k=\frac{\exp(s_k(x))}{\sum</em>{j=1}^{K}{\exp(s_j(x))}}<br>$$<br>$K$ 表示类的总数</p>
+<p>Softmax 回归模型分类器预测结果:</p>
+<p>$\hat y=argmax\  \sigma(s(x))_k=argmax\ s_k(x) = argmax \ (\theta_k^T\cdot x)$</p>
+<blockquote>
+<p>Softmax 回归分类器一次只能预测一个类（即它是多类的，但不是多输出的），因此它只能用于判断互斥的类别，如不同类型的植物。 不能用它来识别一张照片中的多个人。</p>
+</blockquote>
+<h6 id="训练和损失函数-1"><a href="#训练和损失函数-1" class="headerlink" title="训练和损失函数"></a>训练和损失函数</h6><p>目标是建立一个模型在目标类别上有着较高的概率（因此其他类别的概率较低）</p>
+<p>交叉熵:<br>$$<br>J (\theta) = -\frac{1}{m} \sum_{i=1}^{m}\sum_{k=1}^{K}y^{(i)}_klog(\hat p^{(i)}_k)<br>$$</p>
+<blockquote>
+<p>交叉熵源于信息论。</p>
+<p>假设你想要高效地传输每天的天气信息。如果有八个选项（晴天，雨天等），则可以使用3位对每个选项进行编码，因为 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-5f344a952e29992de54b8cfe645b2d5b.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-5f344a952e29992de54b8cfe645b2d5b.gif" alt="2^3=8"></a>。但是，如果你认为几乎每天都是晴天，更高效的编码“晴天”的方式是：只用一位（0）。剩下的七项使用四位（从 1 开始）。交叉熵度量每个选项实际发送的平均比特数。 如果你对天气的假设是完美的，交叉熵就等于天气本身的熵（即其内部的不确定性）。 但是，如果你的假设是错误的（例如，如果经常下雨）交叉熵将会更大，称为 Kullback-Leibler 散度（KL 散度）。</p>
+<p>两个概率分布 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-83878c91171338902e0fe0fb97a8c47a.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-83878c91171338902e0fe0fb97a8c47a.gif" alt="p"></a> 和 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7694f4a66316e53c8cdd9d9954bd611d.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7694f4a66316e53c8cdd9d9954bd611d.gif" alt="q"></a> 之间的交叉熵定义为：<a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-6bc68f603b52e51645b4bbd318f8cdfe.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-6bc68f603b52e51645b4bbd318f8cdfe.gif" alt="H(p,q)=-\sum_xp(x)\log q(x)"></a>（分布至少是离散的）</p>
+</blockquote>
+<p>$k$ 类交叉熵的梯度向量:</p>
+<p>$\nabla_{\theta_k} J (\Theta) = -\frac{1}{m} \sum_{i=1}^{m}(p^{(i)}_k - y^{(i)}_k )x^{(i)})$</p>
+<h4 id="Exercise"><a href="#Exercise" class="headerlink" title="Exercise"></a>Exercise</h4><ol>
+<li><p>如果你有一个数百万特征的训练集，你应该选择哪种线性回归训练算法？</p>
+<blockquote>
+<p>mini-batch GD或者SGD</p>
+</blockquote>
+</li>
+<li><p>假设你训练集中特征的数值尺度（scale）有着非常大的差异，哪种算法会受到影响？有多大的影响？对于这些影响你可以做什么？</p>
+<blockquote>
+<p>如果训练集的特征尺度差距太大，损失函数的等高线会呈椭圆状，利用梯度下降来求最优解的过程中会很难收敛，梯度方向变化很剧烈，收敛速度很慢，并且可能不会收敛到最优点。</p>
+<p>对数据进行缩放（StandardScaler），归一化</p>
+</blockquote>
+</li>
+<li><p>训练 Logistic 回归模型时，梯度下降是否会陷入局部最低点？</p>
+<blockquote>
+<p>不会，其损失函数是一个凸函数。</p>
+</blockquote>
+</li>
+<li><p>在有足够的训练时间下，是否所有的梯度下降都会得到相同的模型参数？</p>
+<blockquote>
+<p>不是，SGD因为随机性，达到损失函数只会呈现大体下降趋势，随着时间的推移，会非常靠近最小值，但只会在附近摆动。</p>
+<p>mini-batch GD也会有一定的摆动。</p>
+</blockquote>
+</li>
+<li><p>假设你使用批量梯度下降法，画出每一代的验证误差。当你发现验证误差一直增大，接下来会发生什么？你怎么解决这个问题？</p>
+<blockquote>
+<p>模型发散，难以收敛。减小学习率</p>
+<p>或者模型过拟合，需要早停</p>
+</blockquote>
+</li>
+<li><p>当验证误差升高时，立即停止小批量梯度下降是否是一个好主意？</p>
+<blockquote>
+<p>不是，因为mini-batch的损失函数随时间大体下降，但会有一定波动。</p>
+<p>更好的选择是定期保存模型，如果经过很长一段时间仍然没有改进的话，可以恢复到保存的最好模型。</p>
+</blockquote>
+</li>
+<li><p>哪个梯度下降算法（在我们讨论的那些算法中）可以最快到达解的附近？哪个的确实会收敛？怎么使其他算法也收敛？</p>
+<blockquote>
+<p>SGD最快</p>
+<p>梯度下降法</p>
+<p>逐步减小学习率</p>
+</blockquote>
+</li>
+<li><p>假设你使用多项式回归，画出学习曲线，在图上发现学习误差和验证误差之间有着很大的间隙。这表示发生了什么？有哪三种方法可以解决这个问题？</p>
+<blockquote>
+<p>如果学习误差比验证误差小很多，说明发生了过拟合。</p>
+<p>可以通过正则化（岭回归，Lasso回归和弹性网络）这个模型降低过拟合程度。</p>
+<p>也可以提供更多的训练数据。</p>
+<p>或者改变模型。</p>
+</blockquote>
+</li>
+<li><p>假设你使用岭回归，并发现训练误差和验证误差都很高，并且几乎相等。你的模型表现是高偏差还是高方差？这时你应该增大正则化参数 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7b7f9dbfea05c83784f8b85149852f08.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7b7f9dbfea05c83784f8b85149852f08.gif" alt="\alpha"></a>，还是降低它？</p>
+<blockquote>
+<p>高偏差，应该减小$\alpha$。</p>
+</blockquote>
+</li>
+<li><p>你为什么要这样做：</p>
+</li>
+</ol>
+<ul>
+<li><p>使用岭回归代替线性回归？</p>
+<blockquote>
+<p>模型有正则化的时候会比没有正则化的时候又更好的泛化性能，岭回归就是对模型的参数做了正则化，约束其幅值变化不能太大，否则会容易出现过拟合。</p>
+</blockquote>
+</li>
+<li><p>Lasso 回归代替岭回归？</p>
+<blockquote>
+<p>当特征仅有少数是真正有用的时候，对重要的特征进行选择，将无用特征的权重降为零，增加模型的可解释性。</p>
+</blockquote>
+</li>
+<li><p>弹性网络代替 Lasso 回归？</p>
+<blockquote>
+<p>当特征数量比样本的数量大的时候，或者特征之间有很强的相关性时，Lasso 可能会表现的不规律。</p>
+</blockquote>
+</li>
+</ul>
+<ol start="11">
+<li><p>假设你想判断一副图片是室内还是室外，白天还是晚上。你应该选择二个逻辑回归分类器，还是一个 Softmax 分类器？</p>
+<blockquote>
+<p>两个逻辑回归分类器</p>
+</blockquote>
+</li>
+<li><p>在 Softmax 回归上应用批量梯度下降的早期停止法（不使用 Scikit-Learn）。</p>
+<blockquote>
+<p>​</p>
+</blockquote>
+</li>
+</ol>
+<p>##第05章 支持向量机</p>
+<p>能够做线性或者非线性的分类，回归，甚至异常值检测。SVM 特别适合应用于复杂但中小规模数据集的分类问题。</p>
+<p>####线性支持向量机分类</p>
+<p>SVM 分类器的判定边界实线，不仅分开了两种类别，而且还尽可能地远离了最靠近的训练数据点。（最大间隔分类）</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/5-1.jpg" alt="img"></p>
+<p>判定边界是由位于“街道”边缘的样本点确定的，这些样本点被称为“支持向量”</p>
+<h5 id="软间隔分类"><a href="#软间隔分类" class="headerlink" title="软间隔分类"></a>软间隔分类</h5><p>硬间隔分类有两个问题，</p>
+<ol>
+<li>只对线性可分的数据起作用.</li>
+<li>对异常点敏感。</li>
+</ol>
+<p>在 Scikit-Learn 库的 SVM 类，可以用<code>C</code>超参数（惩罚系数）来控制这种平衡：较小的<code>C</code>会导致更宽的“街道”，但更多的间隔违规。</p>
+<blockquote>
+<p>SVM 模型过拟合，可以尝试通过减小超参数<code>C</code>去调整</p>
+</blockquote>
+<h4 id="非线性支持向量机分类"><a href="#非线性支持向量机分类" class="headerlink" title="非线性支持向量机分类"></a>非线性支持向量机分类</h4><p>#####增加更多的特征</p>
+<p>通过 Scikit-Learn，可以创建一个流水线（Pipeline）去包含多项式特征（PolynomialFeatures）变换，然后StandardScaler.</p>
+<h5 id="多项式核"><a href="#多项式核" class="headerlink" title="多项式核"></a>多项式核</h5><p>添加多项式特征会：大量特征导致的组合爆炸</p>
+<h5 id="增加相似特征"><a href="#增加相似特征" class="headerlink" title="增加相似特征"></a>增加相似特征</h5><p>使用相似函数（similarity funtion）计算每个样本与特定地标（landmark）的相似度。</p>
+<p>定义一个相似函数，即<strong>高斯径向基函数（Gaussian Radial Basis Function，RBF）</strong>，设置<code>γ = 0.3</code></p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-8b908429a5b5ee2e519f8caa16f82ee1.gif" alt="\phi_{\gamma}(x, \ell) = exp(-\gamma \|x - \ell \|^2)"></p>
+<p>是个从 0 到 1 的钟型函数。</p>
+<h5 id="高斯-RBF-核"><a href="#高斯-RBF-核" class="headerlink" title="高斯 RBF 核"></a>高斯 RBF 核</h5><p>相似特征法在所有额外特征上的计算成本可能很高，特别是在大规模的训练集上。</p>
+<h5 id="计算复杂性"><a href="#计算复杂性" class="headerlink" title="计算复杂性"></a>计算复杂性</h5><p><code>LinearSVC</code>类基于<code>liblinear</code>库，它实现了线性 SVM 的优化算法。它并不支持核技巧，但是它样本和特征的数量几乎是线性的：训练时间复杂度大约为<code>O(m × n)</code>。</p>
+<p>SVC 类基于<code>libsvm</code>库，它实现了支持核技巧的算法。训练时间复杂度通常介<code>于O(m^2 × n)</code>和<code>O(m^3 × n)</code>之间。</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/tb-5-1.jpg" alt="img"></p>
+<h4 id="SVM回归"><a href="#SVM回归" class="headerlink" title="SVM回归"></a>SVM回归</h4><p>SVM 回归任务是限制间隔违规情况下，尽量放置更多的样本在“街道”上。“街道”的宽度由超参数<code>ϵ</code>控制。</p>
+<p>可以使用 Scikit-Learn 的<code>LinearSVR</code>类去实现线性 SVM 回归。</p>
+<p>处理非线性回归任务，可以使用核化的 SVM 模型。</p>
+<blockquote>
+<p>LinearSVR没有support_属性</p>
+</blockquote>
+<h4 id="背后机制"><a href="#背后机制" class="headerlink" title="背后机制"></a>背后机制</h4><p>首先，关于符号的约定：在第 4 章，我们将所有模型参数放在一个矢量<code>θ</code>里，包括偏置项<code>θ0</code>，<code>θ1</code>到<code>θn</code>的输入特征权重，和增加一个偏差输入<code>x0 = 1</code>到所有样本。</p>
+<p>在本章中，我们将使用一个不同的符号约定，在处理 SVM 上，这更方便，也更常见：<strong>偏置项被命名为b，特征权重向量被称为w</strong>，在输入特征向量中不再添加偏置特征。</p>
+<p>#####决策函数和预测</p>
+<p>线性 SVM 分类器通过简单地计算决策函数 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7781983bd977537b3c5d060e217ea82a.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-7781983bd977537b3c5d060e217ea82a.gif" alt="w \cdot x+b = w_1 x_1 + ... + w_n x_n + b"></a> 来预测新样本的类别：如果结果是正的，预测类别<code>ŷ</code>是正类，为 1，否则他就是负类，为 0。</p>
+<p>$\hat y = \left { \begin{array}{ll}  0 &amp; if \ w^T\cdot x+b&lt;0 \1 &amp; \ w^T\cdot x+b\geq0\end{array}\right.$</p>
+<p>训练线性 SVM 分类器意味着找到<code>w</code>值和<code>b</code>值使得这一个间隔尽可能大，同时避免间隔违规（硬间隔）或限制它们（软间隔）</p>
+<h5 id="训练目标"><a href="#训练目标" class="headerlink" title="训练目标"></a>训练目标</h5><p>决策函数的斜率：它等于权重向量的范数 $||\omega||$ ，斜率除于 2，那么间隔将增加两倍。权重向量<code>w</code>越小，间隔越大。</p>
+<p>目标是最小化$||\omega||$ ，从而获得大的间隔。如果想要避免间隔违规（硬间隔），对于正的训练样本，需要决策函数大于 1，对于负训练样本，小于 -1。即：$t^{(i)}\ w^T\cdot x^{(i)}+b\geq1$</p>
+<p><strong>可以将硬间隔线性 SVM 分类器表示为约束优化问题:</strong><br>$$<br>minimize \frac{1}{2} \omega^T\cdot \omega \<br>subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1 \ \ \ for \ i=1,2,3,\cdots , m<br>$$</p>
+<blockquote>
+<p><a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9a84ebda628c391e3046dfc2307e3c85.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9a84ebda628c391e3046dfc2307e3c85.gif" alt="1/2 w^T w"></a> 等于 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-98c822c91ab5af02c383eb03fa5b5446.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-98c822c91ab5af02c383eb03fa5b5446.gif" alt="1/2 \|w\|^2"></a>，最小化 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9a84ebda628c391e3046dfc2307e3c85.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-9a84ebda628c391e3046dfc2307e3c85.gif" alt="1/2 w^T w"></a>，而不是最小化 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-03549015bd48d379883d926e6857b448.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-03549015bd48d379883d926e6857b448.gif" alt="\|w\|"></a>。因为<a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-03549015bd48d379883d926e6857b448.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-03549015bd48d379883d926e6857b448.gif" alt="\|w\|"></a> 在<code>w=0</code>处是不可微的。优化算法在可微函数表现得更好。</p>
+</blockquote>
+<p>软间隔：</p>
+<p>对每个样本应用一个松弛变量（slack variable）$\zeta^{(i)}\geq0$ 。$\zeta^{(i)}$表示了第<code>i</code>个样本允许违规间隔的程度。</p>
+<p>现在有两个不一致的目标：</p>
+<ol>
+<li>使松弛变量尽可能的小，从而减小间隔违规.</li>
+<li>使<code>1/2 w·w</code>尽量小，从而增大间隔。</li>
+</ol>
+<p>这时<code>C</code>超参数发挥作用：它允许我们在两个目标之间权衡。<br>$$<br>minimize\  \frac{1}{2} \omega^T\cdot \omega +C\sum_{i=1}^{m}\zeta^{(i)}\</p>
+<p>subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1-\zeta^{(i)}\ \  and \ \ \zeta^{(i)} \geq0 \ \  for \ i=1,2,3,\cdots , m<br>$$</p>
+<h5 id="二次间隔"><a href="#二次间隔" class="headerlink" title="二次间隔"></a>二次间隔</h5><p>硬间隔和软间隔都是<strong>线性约束的凸二次规划优化问题</strong>。这些问题被称之为二次规划（QP）问题。</p>
+<h5 id="对偶问题"><a href="#对偶问题" class="headerlink" title="对偶问题"></a>对偶问题</h5><p>给出一个约束优化问题，即原始问题（primal problem），它可能表示不同但是和另一个问题紧密相连，称为对偶问题（Dual Problem）。对偶问题的解通常是对原始问题的解给出一个下界约束，但在某些条件下，它们可以获得相同解。</p>
+<p><strong>线性 SVM 的对偶形式（核技巧的基本）</strong>：</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-6.gif" alt="img"></p>
+<p>一旦找到最小化公式的向量<code>α</code>，可以计算<code>w</code>和<code>b</code>，从而使原始问题最小化。</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-7.gif" alt="img"></p>
+<p>训练样本的数量比特征数量小的时候，对偶问题比原始问题要快得多。</p>
+<h5 id="核化支持向量机"><a href="#核化支持向量机" class="headerlink" title="核化支持向量机"></a>核化支持向量机</h5><p>把一个 2 次多项式变换应用到二维空间的训练集，然后在变换后的训练集上训练一个线性SVM分类器。</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-8.gif" alt="img"></p>
+<p>转换后向量的点积等于原始向量点积的平方:</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-9.gif" alt="img"></p>
+<p><strong>核技巧的精髓:</strong></p>
+<p>不需要对训练样本进行转换：仅仅需要在对偶问题公式中，将点积替换成它点积的平方。</p>
+<p>函数$K(a, b) = (a^T b)^2$ 被称为二次多项式核（polynomial kernel）。在机器学习，核函数是一个能计算点积的函数，并只基于原始向量<code>a</code>和<code>b</code>，不需要计算（甚至知道）转换<code>ϕ</code>。</p>
+<p><strong>一些常见的核函数</strong></p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-10.gif" alt="img"></p>
+<blockquote>
+<p>Mercer 定理</p>
+<p>根据 Mercer 定理，如果函数<code>K(a, b)</code>满足一些 Mercer 条件的数学条件(<code>K</code>函数在参数内必须是连续，对称，即<code>K(a, b)=K(b, a)</code>，等)，那么存在函数<code>ϕ</code>，将<code>a</code>和<code>b</code>映射到另一个空间（可能有更高的维度），有 $K(a, b) = \phi(a)^T ϕ(b)$。所以可以用<code>K</code>作为核函数，即使不知道<code>ϕ</code>。使用高斯核（Gaussian RBF kernel）情况下，它实际是将每个训练样本映射到无限维空间，所以不需要知道是怎么执行映射的也是一件好事。</p>
+<p>注意一些常用核函数（例如 Sigmoid 核函数）并不满足所有的 Mercer 条件，然而在实践中通常表现得很好。</p>
+</blockquote>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-11.gif" alt="img"></p>
+<p>也需要使用同样的技巧来计算偏置项<code>b</code></p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-12.gif" alt="img"></p>
+<p>支持向量才满足<code>α(i)≠0</code>，做出预测只涉及计算为支持向量部分的输入样本 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-992fd41f053d328db0ca0287eed0e2e9.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-992fd41f053d328db0ca0287eed0e2e9.gif" alt="x^{(n)}"></a> 的点积，而不是全部的训练样本。</p>
+<h5 id="在线支持向量机"><a href="#在线支持向量机" class="headerlink" title="在线支持向量机"></a>在线支持向量机</h5><p>线学习意味着增量地学习，不断有新实例。</p>
+<p>于线性SVM分类器，一种方式是使用梯度下降（例如使用<code>SGDClassifire</code>）最小化代价函数：</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-13.gif" alt="img"></p>
+<p>第一个和会使模型有一个小的权重向量<code>w</code>，从而获得一个更大的间隔。第二个和计算所有间隔违规的总数。如果样本位于“街道”上和正确的一边，或它与“街道”正确一边的距离成比例，则间隔违规等于 0。最小化保证了模型的间隔违规尽可能小并且少。</p>
+<blockquote>
+<p>Hinge 损失</p>
+<p>函数<code>max(0, 1–t)</code>被称为 Hinge 损失函数（如下）。当<code>t≥1</code>时，Hinge 值为 0。如果<code>t&lt;1</code>,它的导数（斜率）为 -1，若<code>t&gt;1</code>，则等于0。在<code>t=1</code>处，它是不可微的，但就像套索回归（Lasso Regression）一样，仍然可以在<code>t=0</code>时使用梯度下降法（即 -1 到 0 之间任何值）<img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/5-hinge.jpg" alt="img"></p>
+</blockquote>
+<p>大规模的非线性问题，可能需要考虑使用神经网络。</p>
+<h4 id="Exercise-1"><a href="#Exercise-1" class="headerlink" title="Exercise"></a>Exercise</h4><ol>
+<li><p>支持向量机背后的基本思想是什么</p>
+<blockquote>
+<p>支持向量机的背后的基本思想：寻找具有最大间隔的分类平面，来对正负样本进行分类。</p>
+</blockquote>
+</li>
+<li><p>什么是支持向量</p>
+<blockquote>
+<p>支持向量就是最大间隔平面边界上样本点，这些样本点被称为“支持向量”</p>
+</blockquote>
+</li>
+<li><p>当使用 SVM 时，为什么标准化输入很重要？</p>
+<blockquote>
+<p>因为SVM 对特征缩放比较敏感，对特征进行缩放可以使得判定边界更宽。</p>
+<p>SVM寻找具有最大分类间隔的平面，如果不对输入进行归一化，SVM会忽略小的特征。</p>
+</blockquote>
+</li>
+<li><p>分类一个样本时，SVM 分类器能够输出一个置信值吗？概率呢？</p>
+<blockquote>
+<p>SVM分类器通过简单地计算决策函数$\omega \cdot x+b$来预测新样本的类别，如果小于0，则为负类，如果大于等于0，则为正类。</p>
+<p>SVM分类器不会输出每个类别的概率。</p>
+</blockquote>
+</li>
+<li><p>在一个有数百万训练样本和数百特征的训练集上，你是否应该使用 SVM 原始形式或对偶形式来训练一个模型？</p>
+<blockquote>
+<p>线性SVM的训练时间复杂度约为O(m x n)，而对偶形式的复杂度通常介于O(m^2 x n) 到 O(m^3 x n)，m为实例个数，当训练样本变大时，它将变得极其慢。</p>
+<p>所以对于大规模线性问题，可以使用SVM的原始形式，而对于大规模的非线性问题，可能需要考虑使用神经网络。</p>
+</blockquote>
+</li>
+<li><p>假设你用 RBF 核来训练一个 SVM 分类器，如果对训练集欠拟合：你应该增大或者减小<code>γ</code>吗？调整参数<code>C</code>呢？</p>
+<blockquote>
+<p>RBF的形式：$\phi_{\gamma}(x, \ell) = exp(-\gamma |x - \ell |^2)$，是一个钟形曲线，<code>γ</code>越大，钟形曲线越窄，每个样本的影响范围变得更小，边界更细化。</p>
+<p>超参数<code>C</code>控制SCM分类模型的软硬，较小的<code>C</code>会导致更宽的分类间隔平面，但更多的间隔违规。</p>
+<p>所以欠拟合时可以增大<code>γ</code>，增大<code>C</code></p>
+</blockquote>
+</li>
+<li><p>使用现有的 QP 解决方案，你应该怎么样设置 QP 参数（<code>H</code>，<code>f</code>，<code>A</code>，和<code>b</code>）去解决一个软间隔线性 SVM 分类器问题？</p>
+<blockquote>
+<p>软间隔分类：<br>$$<br>minimize\  \frac{1}{2} \omega^T\cdot \omega +C\sum_{i=1}^{m}\zeta^{(i)}\</p>
+<p>subject \  to\  t^{(i)}\ w^T\cdot x^{(i)}+b\geq1-\zeta^{(i)}\ \  and \ \ \zeta^{(i)} \geq0 \ \  for \ i=1,2,3,\cdots , m<br>$$<br>QP(二次规划问题，即线性约束的凸二次规划优化问题)</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_5/eq-5-5.gif" alt="img"></p>
+<p>H 是 $n_p \times n_p$的单位矩阵，左上角为0（忽略偏置向）</p>
+<p>p = $（b,\ \omega_1\ \cdots\ \omega_n)^T$</p>
+<p>$f^T\cdot p \ = \     C\cdot max(1-p^T\cdot A_i,0))$</p>
+<p>$b_i=1-max(1-p^T\cdot A_i,0)$</p>
+<p>$a_i^j=x_j^{(i)}\  \  i=1\cdots n_c;\ j=1\cdots n_p$ 第i个实例的第j个特征，但$x^{(i)}$带一个1的偏置项。</p>
+</blockquote>
+</li>
+<li><p>在一个线性可分的数据集训练一个<code>LinearSVC</code>，并在同一个数据集上训练一个<code>SVC</code>和<code>SGDClassifier</code>，看它们是否产生了大致相同效果的模型。</p>
+<blockquote>
+<p>​</p>
+</blockquote>
+</li>
+<li><p>在 MNIST 数据集上训练一个 SVM 分类器。因为 SVM 分类器是二元的分类，你需要使用一对多（one-versus-all）来对 10 个数字进行分类。你可能需要使用小的验证集来调整超参数，以加快进程。最后你能达到多少准确度？</p>
+</li>
+<li><p>在加利福尼亚住宅（California housing）数据集上训练一个 SVM 回归模型</p>
+</li>
+</ol>
+<h2 id="第06章-决策树"><a href="#第06章-决策树" class="headerlink" title="第06章 决策树"></a>第06章 决策树</h2><p>决策树是一种多功能机器学习算法， 即可以执行分类任务也可以执行回归任务， 甚至包括多输出（multioutput）任务。</p>
+<h3 id="决策树的训练和可视化"><a href="#决策树的训练和可视化" class="headerlink" title="决策树的训练和可视化"></a>决策树的训练和可视化</h3><blockquote>
+<p>决策树的众多特性之一就是， 它不需要太多的数据预处理， 尤其是不需要进行特征的缩放或者归一化。</p>
+</blockquote>
+<ul>
+<li>节点的<code>samples</code>属性统计出它应用于多少个训练样本实例。</li>
+<li>节点的<code>value</code>属性：这个节点对于每一个类别的样例有多少个。</li>
+<li>节点的<code>Gini</code>属性用于测量它的纯度：如果一个节点包含的所有训练样例全都是同一类别的，这个节点是纯的（<code>Gini=0</code>）。</li>
+</ul>
+<p><strong>Gini分数$G_i$</strong></p>
+<p>$G_i=1-\sum_{k=1}^{n}P_{i,k}^2$</p>
+<p>$P_{i,k}$是第<code>i</code>个节点中训练实例为的<code>k</code>类实例的比例。</p>
+<blockquote>
+<p>Scikit-Learn 用的是 CART 算法， CART 算法仅产生二叉树：每一个非叶节点总是只有两个子节点（只有是或否两个结果）。然而，像 ID3 这样的算法可以产生超过两个子节点的决策树模型。</p>
+</blockquote>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_6/102" alt="1528081141956"></p>
+<h3 id="估计分类概率"><a href="#估计分类概率" class="headerlink" title="估计分类概率"></a>估计分类概率</h3><p>决策树还可以估计某个实例属于特定类<code>k</code>的概率：首先遍历树来查找此实例的叶节点，然后它返回此节点中类<code>k</code>的训练实例的比例。</p>
+<blockquote>
+<p>假设你发现了一个花瓣长 5 厘米，宽 1.5 厘米的花朵。相应的叶节点是深度为 2 的左节点，因此决策树应该输出以下概率：Iris-Setosa 为 0%（0/54），Iris-Versicolor 为 90.7%（49/54），Iris-Virginica 为 9.3%（5/54）。当然，如果你要求它预测具体的类，它应该输出 Iris-Versicolor（类别 1），因为它具有最高的概率。</p>
+</blockquote>
+<h3 id="CART训练算法"><a href="#CART训练算法" class="headerlink" title="CART训练算法"></a>CART训练算法</h3><p>Scikit-Learn 用<strong>分裂回归树（Classification And Regression Tree，简称 CART）算法训练决策树（也叫“增长树”）</strong>。</p>
+<p>首先使用单个特征<code>k</code>和阈值 $t_k$ 例如，（“花瓣长度<code>≤2.45cm</code>”）将训练集分成两个子集。它如何选择<code>k</code>和 $t_k$ ？它寻找到能够产生最纯粹子集的一对 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-32cb6265eb19ce4be37ecf6650ff766a.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-32cb6265eb19ce4be37ecf6650ff766a.gif" alt="(k, t_k)"></a>，然后通过子集大小加权计算。</p>
+<p>算法会尝试最小化成本函数：</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_6/104" alt="1528086977613"></p>
+<blockquote>
+<p>CART 算法是一种贪婪算法：贪婪地搜索最高级别的最佳分割方式，然后在每个深度重复该过程。 </p>
+<p>不检查分割是否能够在几个级别中的全部分割可能中找到最佳方法。</p>
+<p>贪婪算法通常会产生一个相当好的解决方法，但它不保证这是全局中的最佳解决方案。</p>
+</blockquote>
+<h4 id="NP完全问题"><a href="#NP完全问题" class="headerlink" title="NP完全问题"></a>NP完全问题</h4><p>寻找最佳的决策树是NP完成问题(<code>Non-deterministic Polynomial</code>，即多项式复杂程度的非确定性问题)，也会简称为NP-C问题。</p>
+<p>决策树的这一特点，说明无法利用计算机在多项式时间内，找出全局最优的解。也正因为如此，大多数决策树算法都采用启发式的算法，如&amp;<strong>贪心算法</strong>，来指导对假设空间的搜索。可以说，决策树最后的结果，是在每一步、每一个节点上做的局部最优选择。决策树得到的结果，无法保证是全局最优解。</p>
+<p>#####P类问题</p>
+<blockquote>
+<p> 所有可以在多项式时间内求解的判定问题构成<strong>P类问题</strong></p>
+</blockquote>
+<p><strong>判定问题</strong>是指回答结果输出为<code>Yes</code>或<code>No</code>的问题，比如：3233是否可以写成两个大于1的数字的乘积？</p>
+<p>在设计程序时，需要评估这个程序的时间复杂度，即衡量当问题规模变大后，程序执行所需的时间增长会有多快。如$O(1)$表示常数级别，即不管问题的规模变大多少倍，所耗的时间不会改变；$O(N^2)$表示平方级别，即当问题规模增大至2倍时，所花费的时间则放大至4倍；$O(2^N)$表示指数级别，即当问题规模倍数扩大时，所用时间会呈指数放大。</p>
+<p><strong>多项式时间</strong>则是指$O(1)、O(logN)、O(N^2)$等这类可用多项式表示的时间复杂度，通常认为计算机可解决的问题只限于多项式时间内。而$O(2^N)、O(N!)$这类非多项式级别的问题，其复杂度往往已经到了计算机都接受不了的程度。</p>
+<p>#####NP类问题</p>
+<blockquote>
+<p>所有非确定性多项式时间内可解的判定问题构成<strong>NP类问题</strong></p>
+</blockquote>
+<p>NP类问题将问题分为求解和验证两个阶段，问题的求解是非确定性的，无法在多项式时间内得到答案，而问题的验证却是确定的，能够在多项式时间里确定结果。</p>
+<p>比如：是否存在一个公式可以计算下一个质数是多少？这个问题的答案目前是无法直接计算出来的，但是如果某人给出了一个公式，我们却可以在多项式时间里对这个公式进行验证。</p>
+<h5 id="NP完全问题-1"><a href="#NP完全问题-1" class="headerlink" title="NP完全问题"></a>NP完全问题</h5><blockquote>
+<p>NP类问题的一种特殊情况，这类问题中每个问题的复杂度与整个类的复杂度有关联性，假如其中任意一个问题在多项式时间内可解的，则这一类问题都是多项式时间可解。这些问题被称为<strong>NP完全问题</strong>。</p>
+</blockquote>
+<p>总结这几类问题的特点，可参考如下这个表格：</p>
+<table>
+<thead>
+<tr>
+<th>问题类型</th>
+<th>是否能在多项式时间内求解</th>
+<th>是否能在多项式时间内验证</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>NP</td>
+<td>是 or 否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>NP-C</td>
+<td>未知</td>
+<td>是</td>
+</tr>
+</tbody></table>
+<p>参考：<a href="https://www.jianshu.com/p/dcb0b52f4935" target="_blank" rel="noopener">https://www.jianshu.com/p/dcb0b52f4935</a></p>
+<p>###计算复杂度</p>
+<p>建立好决策树模型后， 做出<strong>预测</strong>需要遍历决策树， 从根节点一直到叶节点。决策树通常近似左右平衡，因此遍历决策树需要经历大致  $O(log_2m)$个节点。由于每个节点只需要检查一个特征的值，因此总体预测复杂度仅为 $O(log_2m)$，与特征的数量无关。</p>
+<p><strong>训练</strong>算法的时候（训练和预测不同）需要比较所有特征（如果设置了<code>max_features</code>会更少一些）在每个节点的所有样本上。训练复杂度为$O(nmlog_m)$</p>
+<h3 id="基尼不纯度和信息熵"><a href="#基尼不纯度和信息熵" class="headerlink" title="基尼不纯度和信息熵"></a>基尼不纯度和信息熵</h3><p>默认算法使用 Gini 不纯度来进行检测， 但是也可以通过将标准超参数设置为<code>&quot;entropy&quot;</code>来使用熵不纯度进行检测。</p>
+<p><strong>熵的计算：</strong><br>$$<br>H_i=-\sum_{k=1\ P_{i,k=!0}}^n{P_{i,k}}log(p_{i,k})<br>$$<br>熵的减少通常称为<strong>信息增益</strong></p>
+<blockquote>
+<p>基尼指数计算稍微快一点，所以这是一个很好的默认值。</p>
+<p>但是，也有的时候它们会产生不同的树，基尼指数会趋于在树的分支中将最多的类隔离出来，而熵指数趋向于产生略微平衡一些的决策树模型。</p>
+</blockquote>
+<p>###正则化超参数</p>
+<p>决策树几乎不对训练数据做任何假设（于此相反的是线性回归等模型，这类模型通常会假设数据是符合线性关系的）。这一类的模型通常会被称为<strong>非参数模型&amp;</strong>，这不是因为它没有任何参数（通常也有很多），而是因为<strong>在训练之前没有确定参数的具体数量，所以模型结构可以根据数据的特性自由生长。</strong></p>
+<p>如果不添加约束，树结构模型通常将根据训练数据调整自己，使自身能够很好的拟合数据，而这种情况下大多数会导致<strong>模型过拟合</strong>。</p>
+<blockquote>
+<p><strong><code>DecisionTreeClassifier</code>类还有一些其他的参数用于限制树模型的形状:</strong></p>
+<p><code>min_samples_split</code>（节点在被分裂之前必须具有的最小样本数）</p>
+<p><code>min_samples_leaf</code>（叶节点必须具有的最小样本数），<code>min_weight_fraction_leaf</code>（和<code>min_samples_leaf</code>相同，但表示为加权总数的一小部分实例）</p>
+<p><code>max_leaf_nodes</code>（叶节点的最大数量）</p>
+<p><code>max_features</code>（在每个节点被评估是否分裂的时候，具有的最大特征数量）</p>
+<p>增加<code>min_* hyperparameters</code>或者减少<code>max_* hyperparameters</code>会使模型正则化。</p>
+<p><strong>剪枝</strong></p>
+<p>在没有任何约束条件下训练决策树模型，让模型自由生长，然后再对不需要的节点进行剪枝。</p>
+<p>当一个节点的全部子节点都是叶节点时，如果它对纯度的提升不具有统计学意义，我们就认为这个分支是不必要的。</p>
+<p>标准的假设检验，例如卡方检测，通常会被用于评估一个概率值 – 即改进是否纯粹是偶然性的结果（也叫原假设）</p>
+<p>如果 p 值比给定的阈值更高（通常设定为 5%，也就是 95% 置信度，通过超参数设置），那么节点就被认为是非必要的，它的子节点会被删除。</p>
+<p>这种剪枝方式将会一直进行，直到所有的非必要节点都被删光。</p>
+</blockquote>
+<h3 id="回归"><a href="#回归" class="headerlink" title="回归"></a>回归</h3><p>Scikit-Learn 的<code>DecisionTreeRegressor</code>类构建回归树，不再以最小化不纯度的方式分割训练集，而是试图以最小化 MSE 的方式分割训练集。</p>
+<blockquote>
+<p> 每个区域的预测值总是该区域中实例的平均目标值。</p>
+</blockquote>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_6/108" alt="1528375227547"></p>
+<p>###不稳定性</p>
+<p>决策树的特点：</p>
+<ol>
+<li><p>容易理解和解释，易于使用且功能丰富而强大。</p>
+</li>
+<li><p>决策树很喜欢设定正交化的决策边界，（所有边界都是和某一个轴相垂直的），这使得它对训练数据集的旋转很敏感。</p>
+<blockquote>
+<p>解决办法：主成分分析PCA</p>
+</blockquote>
+</li>
+<li><p>决策时的主要问题是它对训练数据的微小变化非常敏感</p>
+</li>
+</ol>
+<h3 id="exercise"><a href="#exercise" class="headerlink" title="exercise"></a>exercise</h3><ol>
+<li><p>在 100 万例训练集上训练（没有限制）的决策树的近似深度是多少？</p>
+<blockquote>
+<p>$log_2(m)$，m=100万时，该值大约为20</p>
+</blockquote>
+</li>
+<li><p>节点的基尼指数比起它的父节点是更高还是更低？它是通常情况下更高/更低，还是永远更高/更低？</p>
+<blockquote>
+<p>节点的基尼指数通常低于其父节点，这是由CART数的训练损失函数所确定的，每个节点经过最优属性分割之后，子节点的基尼指数之和都会小于父节点的基尼指数，然而如果一个孩子节点的基尼指数比另外一个的基尼指数小，则可能比其父节点的基尼不纯度更大，但是其基尼不纯度的增加肯定小于另外孩子基尼不纯度的减少。</p>
+</blockquote>
+</li>
+<li><p>如果决策树过拟合了，减少最大深度是一个好的方法吗？</p>
+<blockquote>
+<p>是一个好方法，可以对模型进行约束，使其规范化</p>
+</blockquote>
+</li>
+<li><p>如果决策树对训练集欠拟合了，尝试缩放输入特征是否是一个好主意？</p>
+<blockquote>
+<p>不是，因为决策树对于数据的缩放并不敏感</p>
+</blockquote>
+</li>
+<li><p>如果对包含 100 万个实例的数据集训练决策树模型需要一个小时，在包含 1000 万个实例的培训集上训练另一个决策树大概需要多少时间呢？</p>
+<blockquote>
+<p>训练复杂度$O(n\times m \log(m))$，如果实例m增加10倍，则复杂度变为$10\times\log(10m)/\log(m)$ 倍，m=100万时，该值为11.7，所以需要11.7个小时</p>
+</blockquote>
+</li>
+<li><p>如果你的训练集包含 100,000 个实例，设置<code>presort=True</code>会加快训练的速度吗？</p>
+<blockquote>
+<p>只有当数据集小于几千时，才会加速训练实例。如果它包含100,000个实例，那么设置presort=True的训练将会慢得多。</p>
+</blockquote>
+</li>
+<li><p>对<code>moons</code>数据集进行决策树训练并优化模型。</p>
+<ol>
+<li><p>通过语句<code>make_moons(n_samples=10000, noise=0.4)</code>生成<code>moons</code>数据集</p>
+</li>
+<li><p>通过<code>train_test_split()</code>将数据集分割为训练集和测试集。</p>
+</li>
+<li><p>进行交叉验证，并使用网格搜索法寻找最好的超参数值（使用<code>GridSearchCV</code>类的帮助文档）</p>
+<p>提示: 尝试各种各样的<code>max_leaf_nodes</code>值</p>
+</li>
+<li><p>使用这些超参数训练全部的训练集数据，并在测试集上测量模型的表现。你应该获得大约 85% 到 87% 的准确度。</p>
+</li>
+</ol>
+</li>
+<li><p>生成森林</p>
+<ol>
+<li>接着前边的练习，现在，让我们生成 1,000 个训练集的子集，每个子集包含 100 个随机选择的实例。提示：你可以使用 Scikit-Learn 的<code>ShuffleSplit</code>类。</li>
+<li>使用上面找到的最佳超参数值，在每个子集上训练一个决策树。在测试集上测试这 1000 个决策树。由于它们是在较小的集合上进行了训练，因此这些决策树可能会比第一个决策树效果更差，只能达到约 80% 的准确度。</li>
+<li>见证奇迹的时刻到了！对于每个测试集实例，生成 1,000 个决策树的预测结果，然后只保留出现次数最多的预测结果（您可以使用 SciPy 的<code>mode()</code>函数）。这个函数使你可以对测试集进行多数投票预测。</li>
+<li>在测试集上评估这些预测结果，你应该获得了一个比第一个模型高一点的准确率，（大约 0.5% 到 1.5%），恭喜，你已经弄出了一个随机森林分类器模型!</li>
+</ol>
+</li>
+</ol>
+<p>##第07章 集成学习和随机森林</p>
+<p>合并了一组分类器的预测（像分类或者回归），得到一个比单一分类器更好的预测结果。这一组分类器就叫做<strong>集成</strong>；因此，这个技术就叫做<strong>集成学习</strong>，一个集成学习算法就叫做<strong>集成方法</strong>。一种决策树的集成就叫做<strong>随机森林</strong>。</p>
+<p>即使每一个分类器都是一个<strong>弱学习器</strong>（意味着它们也就比瞎猜好点），集成后仍然是一个<strong>强学习器</strong>（高准确率），只要有足够数量的弱学习者，他们就足够多样化。</p>
+<p>###投票分类</p>
+<p>一个非常简单去创建一个更好的分类器的方法就是去整合每一个分类器的预测然后经过投票去预测分类。这种分类器就叫做<strong>硬投票分类器</strong></p>
+<blockquote>
+<p>每一个分类器都在同一个数据集上训练，导致其很可能会发生这样的错误。他们可能会犯同一种错误，所以也会有很多票投给了错误类别导致集成的准确率下降。</p>
+</blockquote>
+<p>所以应该用完全不同的算法得到多样的分类器，使它们会做出不同种类的错误，提高集成的正确率。</p>
+<p>如果所有的分类器都能够预测类别的概率（有一个<code>predict_proba()</code>方法），可以让 sklearn 以最高的类概率来预测这个类，平均在所有的分类器上。这种方式叫做<strong>软投票</strong>。其表现比硬投票更好，因为给予高自信的投票更大的权重。</p>
+<h3 id="Bagging"><a href="#Bagging" class="headerlink" title="Bagging"></a>Bagging</h3><p><strong>有放回采样被称为装袋（<em>Bagging*，是 *bootstrap aggregating</em> 的缩写）。无放回采样称为粘贴（<em>pasting</em>）</strong></p>
+<p>Bagging 和 Pasting 都允许在多个分类器间对训练集进行多次采样，但只有 Bagging可以通过使用不同的训练算法去得到一些不同的分类器。 Pasting是对每一个分类器都使用相同的训练算法，但是在不同的训练集上去训练。</p>
+<blockquote>
+<p>当所有的分类器被训练后，集成可以通过对所有分类器结果的简单聚合来对新的实例进行预测。<strong>聚合函数</strong>通常对分类是<em>统计模式</em>（例如硬投票分类器）或者对回归是平均。</p>
+<p>每一个单独的分类器在如果在原始训练集上都是高偏差，但是聚合降低了偏差和方差。通常情况下，集成的结果是有一个相似的偏差，但是对比与在原始训练集上的单一分类器来讲有更小的方差。</p>
+</blockquote>
+<p>如果基分类器可以预测类别概率（例如它拥有<code>predict_proba()</code>方法），那么<code>BaggingClassifier</code>会自动的运行软投票。</p>
+<p>####Out-of-bag</p>
+<p>对于 Bagging 来说，一些实例可能被一些分类器重复采样，但其他的有可能不会被采样。<code>BaggingClassifier</code>默认是有放回的采样<code>m</code>个实例 （<code>bootstrap=True</code>）。意味着平均下来只有63%的训练实例被每个分类器采样，剩下的37%个没有被采样的训练实例就叫做 <em>Out-of-Bag</em> 实例。注意对于每一个的分类器它们的 37% 不是相同的。</p>
+<p>可以拿出每一个分类器的 oob 来评估集成本身。</p>
+<h4 id="随机贴片与随机子空间"><a href="#随机贴片与随机子空间" class="headerlink" title="随机贴片与随机子空间"></a>随机贴片与随机子空间</h4><p><code>BaggingClassifier</code>也支持采样特征。</p>
+<p>对训练实例和特征的采样被叫做随机贴片。保留了所有的训练实例（例如<code>bootstrap=False</code>和<code>max_samples=1.0</code>），但是对特征采样（<code>bootstrap_features=True</code>并且/或者<code>max_features</code>小于 1.0）叫做随机子空间。</p>
+<p><strong>采样特征导致更多的预测多样性，用高偏差换低方差。</strong></p>
+<h3 id="随机森林（一种bagging模型）"><a href="#随机森林（一种bagging模型）" class="headerlink" title="随机森林（一种bagging模型）"></a>随机森林（一种bagging模型）</h3><p>随机森林算法在树生长时引入了额外的随机；与在节点分裂时需要找到最好分裂特征相反（详见第六章），它<strong>在一个随机的特征集中找最好的特征，</strong>导致了树的差异性，<strong>再一次用高偏差换低方差</strong>，总的来说是一个更好的模型。</p>
+<p>####极端随机树</p>
+<p>在随机森林上生长树时，在每个结点分裂时只考虑随机特征集上的特征。可以通过对特征使用随机阈值使树更加随机。<strong>这种极端随机的树被称为Extremely Randomized Trees简称为 <em>Extra-Tree</em>。</strong></p>
+<blockquote>
+<p>因为在每个节点上找到每个特征的最佳阈值是生长树最耗时的任务之一，所以 <em>Extra-Tree</em> 比规则的随机森林训练更快。</p>
+</blockquote>
+<p>####特征重要度</p>
+<p><strong>重要的特征会出现在单一决策树更靠近根部的位置，而不重要的特征会经常出现在靠近叶子的位置。因此可以通过计算一个特征在森林的全部树中出现的平均深度来预测特征的重要性。</strong></p>
+<p>随机森林可以非常方便快速得了解哪些特征实际上是重要的，特别是你需要进行特征选择的时候。</p>
+<h3 id="提升"><a href="#提升" class="headerlink" title="提升"></a>提升</h3><p>提升（Boosting，最初称为<em>假设增强<em>）指的是可以将几个弱学习者组合成强学习者的集成方法。对于大多数的提升方法的思想就是按顺序去训练分类器，每一个都要尝试修正前面的分类。现如今已经有很多的提升方法了，但最著名的就是 *Adaboost</em>（适应性提升，是 *Adaptive Boosting</em> 的简称） 和 <em>Gradient Boosting</em>（梯度提升）。</p>
+<p>####Adaboost</p>
+<p>使一个新的分类器去修正之前分类结果的方法就是<strong>对之前分类结果错误的训练实例多加关注</strong>。这导致新的预测因子越来越多地聚焦于这种情况。这是 <em>Adaboost</em> 使用的技术。</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_7/7-7.png" alt="图7-7"></p>
+<blockquote>
+<p>序列学习技术的一个重要的<strong>缺点</strong>是：它不能被并行化（只能按步骤），因为每个分类器只能在之前的分类器已经被训练和评价后再进行训练。</p>
+</blockquote>
+<p><strong>Adaboost的算法</strong></p>
+<p>每一个实例的权重<code>wi</code>初始都被设为<code>1/m</code></p>
+<p>第一个分类器被训练后，在训练集上算出权重误差率<code>r1</code>：</p>
+<p><strong>第j个分类器的权重误差率：</strong><br>$$<br>r_j\ = \ \frac{\sum_{i=1,\hat y_j^{(i)}\neq y^{(i)}}^m \omega^{(i)}}{\sum _{i=1}^m \omega^{(i)}}<br>$$<br>$\hat y_j^i$ 是第j个分类器对于第i个实例的预测。</p>
+<p><strong>分类器的权重</strong></p>
+<p>其中<code>η</code>是超参数学习率（默认为 1）。分类器准确率越高，它的权重就越高。<br>$$<br>\alpha_j = \eta \log \frac{1-r_j}{r_j}<br>$$<br><strong>权重更新规则</strong></p>
+<p>对于<code>i=1, 2, ..., m</code></p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_7/E7-3.png" alt="公式7-3"></p>
+<p>随后所有实例的权重都被归一化。</p>
+<p>为了进行预测，Adaboost 通过分类器权重 $α_{j}$简单的计算了所有的分类器和权重。预测类别会是权重投票中主要的类别。</p>
+<p><strong>Adaboost 分类器</strong><br>$$<br>\hat y(x)\ = \ {argmax}<em>k \ \ \sum^N</em>{j=1,\hat y_j(x)=k} \alpha_j<br>$$<br>其中<code>N</code>是分类器的数量。</p>
+<blockquote>
+<p>sklearn 通常使用 Adaboost 的多分类版本 <em>SAMME<em>（</em>分段加建模使用多类指数损失函数*）。如果只有两类别，那么 *SAMME</em> 是与 Adaboost 相同的。如果分类器可以预测类别概率（有<code>predict_proba()</code>），如果 sklearn 可以使用 <em>SAMME</em> 叫做<code>SAMME.R</code>的变量（R 代表“REAL”），这种依赖于类别概率的通常比依赖于分类器的更好。</p>
+</blockquote>
+<p>如果 Adaboost 集成<strong>过拟合</strong>，可以尝试<strong>减少基分类器的数量</strong>或者<strong>对基分类器使用更强的正则化</strong>。</p>
+<p>####梯度提升</p>
+<p>梯度提升也是通过向集成中逐步增加分类器运行的，每一个分类器都修正之前的分类结果。然而，并不像 Adaboost 那样每一次迭代都更改实例的权重，这个方法<em><em>使用新的分类器去拟合前面分类器预测的</em>残差</em> **。</p>
+<p><strong>梯度提升回归树</strong>（GBRT，<em>Gradient Tree Boosting</em> 或者 <em>Gradient Boosted Regression Trees</em>）</p>
+<p><strong>梯度提升决策树</strong> (GBDT， <em>Gradient Boosted Decision Trees</em>)是梯度提升(GB)算法限定基学习器是<strong>回归决策树时的模型，尤其是CART回归树</strong>。</p>
+<p>sklean 中的<code>GradientBoostingRegressor</code>可以用来训练 GBRT 集成，也有超参数去控制集成训练，例如基分类器的数量（<code>n_estimators</code>）。超参数<code>learning_rate</code> 确立了每个树的贡献。</p>
+<blockquote>
+<p>如果把<code>learning_rate</code>设置为一个很小的树，例如 0.1，在集成中就需要更多的树去拟合训练集，但预测通常会更好。这个正则化技术叫做 <strong><em>shrinkage</em></strong>。</p>
+</blockquote>
+<p>#####Early stop(早停)</p>
+<p><code>GradientBoostingRegressor</code>有方法<code>staged_predict()</code>：它在训练的每个阶段返回一个迭代器。</p>
+<p>与先在一大堆树中训练，然后再回头去找最优数目相反。可以通过设置<code>warm_start=True</code>来实现 早停，这使得当<code>fit()</code>方法被调用时 sklearn 保留现有树，并允许增量训练。</p>
+<p><code>GradientBoostingRegressor</code>也支持指定用于训练每棵树的训练实例比例的超参数<code>subsample</code>。例如如果<code>subsample=0.25</code>，那么每个树都会在 25% 随机选择的训练实例上训练。这也是个高偏差换低方差的作用。同样也加速了训练。这个技术叫做<strong><em>随机梯度提升</em></strong>。</p>
+<h4 id="极端梯度提升（XGBoost）"><a href="#极端梯度提升（XGBoost）" class="headerlink" title="极端梯度提升（XGBoost）"></a>极端梯度提升（XGBoost）</h4><ol>
+<li>提升树只使用了一阶泰勒展开，而XGBoost使用了二阶泰勒展开。</li>
+<li>xgboost在<strong>代价函数里加入了正则项，用于控制模型的复杂度</strong>。</li>
+<li><strong>列抽样（column subsampling）</strong>。xgboost借鉴了随机森林的做法，支持列抽样（即每次的输入特征不是全部特征），不仅能降低过拟合，还能减少计算</li>
+<li><strong>并行化处理</strong>：在训练之前，预先对每个特征内部进行了排序找出候选切割点，然后保存为block结构，后面的迭代中重复地使用这个结构，大大减小计算量。</li>
+</ol>
+<p>xgboost工具支持自定义代价函数，只要函数可一阶和二阶求导。例如，xgboost支持线性分类器，这个时候xgboost相当于带L1和L2正则化项的逻辑斯蒂回归（分类问题）或者线性回归（回归问题）</p>
+<p><a href="https://zhuanlan.zhihu.com/p/57814935" target="_blank" rel="noopener">参考</a></p>
+<h3 id="Stacking"><a href="#Stacking" class="headerlink" title="Stacking"></a>Stacking</h3><p><strong><em>Stacking<em>（</em>stacked generalization</em> 的缩写），这个算法不使用琐碎的函数（如硬投票）来聚合集合中所有分类器的预测，我直接训练一个模型来执行这个聚合。</strong></p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_7/7-12.png" alt="图7-12"></p>
+<p>为了训练这个 <em>blender</em> ，一个通用的方法是<strong>采用保持集</strong>。</p>
+<ol>
+<li>首先，训练集被分为两个子集，第一个子集被用作训练第一层。</li>
+<li>第一层的分类器被用来预测第二个子集（保持集）。</li>
+<li>使用这些预测结果作为输入特征来创建一个新的训练集，保持目标数值不变，随后 <em>blender</em> 在这个新的训练集上训练。</li>
+</ol>
+<p>sklearn 并不直接支持 stacking ，但可以使用开源项目<a href="https://github.com/Menelau/DESlib" target="_blank" rel="noopener">DESlib</a>（基于sklearn）</p>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><ol>
+<li><p>如果你在相同训练集上训练 5 个不同的模型，它们都有 95% 的准确率，那么你是否可以通过组合这个模型来得到更好的结果？如果可以那怎么做呢？如果不可以请给出理由。</p>
+<blockquote>
+<p>可以通过集成学习将5个模型集成在一起</p>
+<p>通过投票的方式预测</p>
+</blockquote>
+</li>
+<li><p>软投票和硬投票分类器之间有什么区别？</p>
+<blockquote>
+<p>硬投票分类器计算集合中每个分类器的投票，并选择得到最多选票的类。</p>
+<p>软投票分类器计算每个类的平均估计类概率，并选择概率最高的类，也就是给置信度高的类更高的权重，但是前提是可以得到每个类的概率。</p>
+</blockquote>
+</li>
+<li><p>是否有可能通过分配多个服务器来加速 bagging 集成系统的训练？pasting 集成，boosting 集成，随机森林，或 stacking 集成怎么样？</p>
+<blockquote>
+<p>bagging，pasting和stacking都可以并行，随机森林算bagging</p>
+<p>boosting是序列学习技术，不能并行。</p>
+</blockquote>
+</li>
+<li><p>out-of-bag 评价的好处是什么？</p>
+<blockquote>
+<p>包外集成中的每个预测器都使用它没有经过训练的实例进行评估，不需要额外的验证集。</p>
+</blockquote>
+</li>
+<li><p>是什么使 Extra-Tree 比规则随机森林更随机呢？这个额外的随机有什么帮助呢？那这个 Extra-Tree 比规则随机森林谁更快呢？</p>
+<blockquote>
+<p>Extra-Tree在随机森林上生长树时，在每个结点分裂时只考虑随机特征集上的特征，额不是在每个节点上找到每个特征的最佳阈值，所以训练时 <em>Extra-Tree</em> 比规则的随机森林更快。</p>
+</blockquote>
+</li>
+<li><p>如果你的 Adaboost 模型欠拟合，那么你需要怎么调整超参数？</p>
+<blockquote>
+<p>如果 Adaboost 集成<strong>过拟合</strong>，可以尝试<strong>减少基分类器的数量</strong>或者<strong>对基分类器使用更强的正则化</strong>。</p>
+</blockquote>
+</li>
+<li><p>如果你的梯度提升过拟合，那么你应该调高还是调低学习率呢？</p>
+<blockquote>
+<p>降低学习率，或使用早停的方法来寻找正确数量的基学习器。</p>
+</blockquote>
+</li>
+<li><p>导入 MNIST 数据（第三章中介绍），把它切分进一个训练集，一个验证集，和一个测试集（例如 40000 个实例进行训练，10000 个进行验证，10000 个进行测试）。然后训练多个分类器，例如一个随机森林分类器，一个 Extra-Tree 分类器和一个 SVM。接下来，尝试将它们组合成集成，使用软或硬投票分类器来胜过验证集上的所有集合。一旦找到了，就在测试集上实验。与单个分类器相比，它的性能有多好？</p>
+</li>
+<li><p>从练习 8 中运行个体分类器来对验证集进行预测，并创建一个新的训练集并生成预测：每个训练实例是一个向量，包含来自所有分类器的图像的预测集，目标是图像类别。祝贺你，你刚刚训练了一个 <em>blender</em> ，和分类器一起组成了一个叠加组合！现在让我们来评估测试集上的集合。对于测试集中的每个图像，用所有分类器进行预测，然后将预测馈送到 <em>blender</em> 以获得集合的预测。它与你早期训练过的投票分类器相比如何？</p>
+</li>
+</ol>
+<h2 id="第08章-降维"><a href="#第08章-降维" class="headerlink" title="第08章 降维"></a>第08章 降维</h2><blockquote>
+<p>警告：降维会丢失一些信息，因此即使这种方法可以加快训练的速度，同时也会让系统表现的稍微差一点。降维会让工作流水线更复杂因而更难维护。所有应该先尝试使用原始的数据来训练，如果训练速度太慢的话再考虑使用降维。在某些情况下，降低训练集数据的维度可能会筛选掉一些噪音和不必要的细节，这可能会让结果比降维之前更好（这种情况通常不会发生；它只会加快训练的速度）。</p>
+</blockquote>
+<p>降维除了可以加快训练速度外，在数据可视化方面（或者 DataViz）也十分有用。降低特征维度到 2（或者 3）维从而可以在图中画出一个高维度的训练集，让我们可以通过视觉直观的发现一些非常重要的信息，比如聚类。</p>
+<p><strong>两种主要的降维方法：投影（projection）和流形学习（Manifold Learning），三种流行的降维技术：主成分分析（PCA），核主成分分析（Kernel PCA）和局部线性嵌入（LLE）。</strong></p>
+<p>###维数灾难（curse of dimentionality）</p>
+<p>一个 1,0000 维的单位超正方体中，随机选的点离所有边界大于 0.001（靠近中间位置）的概率（$1-0.998^{10000}$），近似于1，在高维超正方体中，大多数点都分布在边界处。</p>
+<p>在一个 1,000,000 维超立方体中随机抽取两点的平均距离，大概为 408.25（大致 <a href="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-50eeccb6ef846e2d0af5daef5cab1fa0.gif" target="_blank" rel="noopener"><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/tex-50eeccb6ef846e2d0af5daef5cab1fa0.gif" alt="\sqrt{1,000,000/6}"></a>）</p>
+<p>表明高维数据集有很大风险分布的非常稀疏：大多数训练实例可能彼此远离。也意味着一个新实例可能远离任何训练实例，使得预测的可靠性远低于较低维度数据的预测，因为它们将基于更大的推测（extrapolations）。简而言之，训练集的维度越高，过拟合的风险就越大。</p>
+<p>理论上来说，维数爆炸的一个解决方案是增加训练集的大小从而达到拥有足够密度的训练集。</p>
+<h3 id="降维的主要方法"><a href="#降维的主要方法" class="headerlink" title="降维的主要方法"></a>降维的主要方法</h3><h4 id="投影（Projection）"><a href="#投影（Projection）" class="headerlink" title="投影（Projection）"></a>投影（Projection）</h4><p>大多数现实生活的问题中，训练实例并不是在所有维度上均匀分布的，许多特征几乎是常数，而其他特征则高度相关（如前面讨论的 MNIST）。<strong>所有训练实例实际上位于（或接近）高维空间的低维子空间内。</strong></p>
+<p>投影并不总是降维的最佳方法。在很多情况下，子空间可能会扭曲和转动。</p>
+<p>####流形学习（Manifold Learning）</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_8/8-4.jpeg" alt="img"></p>
+<p>瑞士卷一个是二维流形的例子。简而言之，二维流形是一种二维形状，它可以在更高维空间中弯曲或扭曲。一个<code>d</code>维流形是类似于<code>d</code>维超平面的<code>n</code>维空间（其中<code>d &lt; n</code>）的一部分。瑞士卷有些像 2D 平面，但是它实际上是在第三维中卷曲。</p>
+<p><strong>通过对训练实例所在的流形进行建模从而达到降维目的，叫做流形学习。</strong>它依赖于流形猜想（manifold assumption），也被称为流形假设（manifold hypothesis），认为大多数现实世界的高维数据集大都靠近一个更低维的流形。</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_8/8-6.jpeg" alt="img"></p>
+<p>如果在训练模型之前降低训练集的维数，那训练速度肯定会加快，但并不总是会得出更好的训练效果；这一切都取决于数据集。</p>
+<h3 id="降维技术"><a href="#降维技术" class="headerlink" title="降维技术"></a>降维技术</h3><h4 id="主成分分析（PCA）"><a href="#主成分分析（PCA）" class="headerlink" title="主成分分析（PCA）"></a>主成分分析（PCA）</h4><p>主成分分析（Principal Component Analysis）是目前为止最流行的降维算法。首先它找到接近数据集分布的超平面，然后将所有的数据都投影到这个超平面上。</p>
+<h5 id="保留最大方差"><a href="#保留最大方差" class="headerlink" title="保留最大方差"></a>保留最大方差</h5><p>选择保持最大方差的轴将原始数据集投影到该轴上的均方距离最小，损失更少的信息。</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_8/8-7.jpeg" alt="img"></p>
+<h5 id="主成分（Principle-Componets）"><a href="#主成分（Principle-Componets）" class="headerlink" title="主成分（Principle Componets）"></a>主成分（Principle Componets）</h5><p> 定义第<code>i</code>个轴的单位矢量被称为第<code>i</code>个主成分（PC）。</p>
+<p><strong>奇异值分解（SVD）</strong>的标准矩阵分解：将训练集矩阵<code>X</code>分解为三个矩阵<code>U·Σ·V^T</code>的点积，其中<code>V^T</code>包含我们想要的所有主成分，</p>
+<blockquote>
+<p>PCA 假定数据集以原点为中心。Scikit-Learn 的<code>PCA</code>类负责数据集中心化处理。但是，如果自己实现 PCA，或者使用其他库，首先要先对数据做中心化处理。</p>
+</blockquote>
+<h5 id="投影到d维空间"><a href="#投影到d维空间" class="headerlink" title="投影到d维空间"></a>投影到<code>d</code>维空间</h5><p>$$<br>X_{d-proj} = X\cdot W_d<br>$$</p>
+<p>$W_d$定义为包含前<code>d</code>个主成分的矩阵（即由<code>V^T</code>的前<code>d</code>列组成的矩阵）</p>
+<h5 id="方差解释率（Explained-Variance-Ratio）"><a href="#方差解释率（Explained-Variance-Ratio）" class="headerlink" title="方差解释率（Explained Variance Ratio）"></a>方差解释率（Explained Variance Ratio）</h5><p>每个主成分的方差解释率，可通过<code>explained_variance_ratio_</code>变量获得。它表示位于每个主成分轴上的数据集方差的比例。</p>
+<h5 id="选择正确的维度"><a href="#选择正确的维度" class="headerlink" title="选择正确的维度"></a>选择正确的维度</h5><p>倾向于选择加起来到方差解释率能够达到足够占比（例如 95%）的维度的数量，而不是任意选择要降低到的维度数量。</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_8/8-8.jpeg" alt="img"></p>
+<h5 id="PCA压缩"><a href="#PCA压缩" class="headerlink" title="PCA压缩"></a>PCA压缩</h5><p>原始数据和重构数据之间的均方距离（压缩然后解压缩）被称为重构误差（reconstruction error）。</p>
+<p>PCA逆变换<br>$$<br>X_{recovered} = X_{d-proj}\cdot W_d^T<br>$$</p>
+<h5 id="增量-PCA（Incremental-PCA）"><a href="#增量-PCA（Incremental-PCA）" class="headerlink" title="增量 PCA（Incremental PCA）"></a>增量 PCA（Incremental PCA）</h5><p>有些算法如SVD需要在内存中处理整个训练集。可以将训练集分批，一次只对一个批量使用 IPCA 算法。这对大型训练集非常有用，并且可以在线应用 PCA（即在新实例到达时即时运行）。</p>
+<h5 id="随机-PCA（Randomized-PCA）"><a href="#随机-PCA（Randomized-PCA）" class="headerlink" title="随机 PCA（Randomized PCA）"></a>随机 PCA（Randomized PCA）</h5><p>这是一种随机算法，可以快速找到前d个主成分的近似值。它的计算复杂度是<code>O(m × d^2) + O(d^3)</code>，而不是<code>O(m × n^2) + O(n^3)</code>，所以当<code>d</code>远小于<code>n</code>时，它比之前的算法快得多。</p>
+<p>####核 PCA（Kernel PCA）</p>
+<p>核技巧，一种将实例隐式映射到非常高维空间（称为特征空间）的数学技术，让支持向量机可以应用于非线性分类和回归。高维特征空间中的线性决策边界对应于原始空间中的复杂非线性决策边界。</p>
+<p>同样的技巧可以应用于 PCA，从而可以执行复杂的非线性投影来降低维度。这就是所谓的核 PCA（kPCA）。它通常能够很好地保留投影后的簇，有时甚至可以展开分布近似于扭曲流形的数据集。</p>
+<p><strong>如何选择一种核并调整参数</strong></p>
+<blockquote>
+<ol>
+<li>网格搜索</li>
+<li>非监督学习</li>
+</ol>
+</blockquote>
+<h4 id="局部线性嵌入（LLE）"><a href="#局部线性嵌入（LLE）" class="headerlink" title="局部线性嵌入（LLE）"></a>局部线性嵌入（LLE）</h4><p>局部线性嵌入（Locally Linear Embedding）是一种非线性降维（NLDR）方法。这是一种流形学习技术。</p>
+<p>LLE 首先测量每个训练实例与其最近邻（c.n.）之间的线性关系，然后寻找能最好地保留这些局部关系的训练集的低维表示。</p>
+<blockquote>
+<p>擅长展开没有太多噪音的扭曲的流形。</p>
+</blockquote>
+<h5 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h5><p>对于每个训练实例 $x^{(i)}$，该算法识别其最近的<code>k</code>个邻居，然后尝试将 $x^{(i)}$重构为这些邻居的线性函数。找到权重 $w_{i,j}$从而使  $x^{(i)}$和 $\sum_{j=1}^{m}w_{i,j} x^{(j)}$之间的平方距离尽可能的小，假设如果 $x^{(j)}$不是 $x^{(i)}$的<code>k</code>个最近邻时 $w_{i,j}=0$。</p>
+<p>第一步：对局部关系进行线性建模 </p>
+<p>$W=argmin_w\ \sum_{i=1}^m | x^{(i)}-\sum_{j=1}^m w_{i,j}x^{(j)}| ^2 \ subject \ to \ \left {  \begin{array}{cc} w_{i,j}=0&amp;\ \ if \ x^{j} \  is \ not \ one \ of \ the \ k \ c.n. \ of \ x^{i} \ \sum_{j=1}^m w_{i,j}=1&amp; for\ i=1,2, \cdots ,m\end{array}\right.$</p>
+<p>第二个约束简单地对每个训练实例 $x^{(i)}$的权重进行归一化。</p>
+<p>权重矩阵 $\widehat{W}$包含权重 $\hat{w_{i,j}}$]对训练实例的线形关系进行编码。第二步是将训练实例投影到一个<code>d</code>维空间（<code>d &lt; n</code>）中去，同时尽可能的保留这些局部关系。如果 $z^{(i)}$是 $x^{(i)}$]在这个<code>d</code>维空间的图像，那么需要 $z^{(i)}$和 $\sum_{j=1}^{m}\hat{w_{i,j}}\ z^{(j)}$之间的平方距离尽可能的小。看起来与第一步非常相似，但不是保持实例固定并找到最佳权重，而是<strong>保持权重不变，并在低维空间中找到实例图像的最佳位置</strong>。<code>Z</code>是包含所有 $z^{(i)}$]的矩阵。</p>
+<p>第二步：保持关系的同时进行降维</p>
+<p>$W=argmin_z\ \sum_{i=1}^m | z^{(i)}-\sum_{j=1}^m w_{i,j}z^{(j)}| ^2 $</p>
+<p>Scikit-Learn 的 LLE 实现具有如下的计算复杂度：查找<code>k</code>个最近邻为<code>O(m log(m) n log(k))</code>，优化权重为<code>O(m n k^3)</code>，建立低维表示为<code>O(d m^2)</code>。</p>
+<h4 id="其他降维方法"><a href="#其他降维方法" class="headerlink" title="其他降维方法"></a>其他降维方法</h4><ul>
+<li>多维缩放（MDS）在尝试保持实例之间距离的同时降低了维度</li>
+<li>Isomap 通过将每个实例连接到最近的邻居来创建图形，然后在尝试保持实例之间的测地距离时降低维度。</li>
+<li>t-分布随机邻域嵌入（t-Distributed Stochastic Neighbor Embedding，<strong>t-SNE</strong>）可以用于降低维度，同时试图保持相似的实例临近并将不相似的实例分开。它主要用于可视化，尤其是用于可视化高维空间中的实例（例如，可以将MNIST图像降维到 2D 可视化）。</li>
+<li>线性判别分析（Linear Discriminant Analysis，LDA）实际上是一种分类算法，但在训练过程中，它会学习类之间最有区别的轴，然后使用这些轴来定义用于投影数据的超平面。LDA 的好处是投影会尽可能地保持各个类之间距离，所以在运行另一种分类算法（如 SVM 分类器）之前，LDA 是很好的降维技术。</li>
+</ul>
+<h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><ol>
+<li><p>减少数据集维度的主要动机是什么？主要缺点是什么？</p>
+<blockquote>
+<p>动机：</p>
+<ol>
+<li>加快训练速度(筛选掉一些噪音和不必要的细节，可能会让结果比降维之前更好)</li>
+<li>数据可视化方面：降低特征维度到 2（或者 3）维从而可以在图中画出一个高维度的训练集，可以通过视觉直观的发现一些非常重要的信息</li>
+<li>节省空间</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>丢失一些信息，降低算法后续性能</li>
+<li>使工作流水线更复杂因而更难维护</li>
+<li>降低可解释性</li>
+</ol>
+</blockquote>
+</li>
+<li><p>什么是维度爆炸？</p>
+<blockquote>
+<p>维度爆炸是指高维空间中出现了许多低维空间不存在的问题，在机器学习中，一个常见的表现是，随机采样的高维向量通常非常稀疏，增加了过度拟合的风险，使得在没有大量训练数据的情况下很难识别数据中的模式。</p>
+</blockquote>
+</li>
+<li><p>一旦对某数据集降维，我们可能恢复它吗？如果可以，怎样做才能恢复？如果不可以，为什么？</p>
+<blockquote>
+<p>一旦数据集通过降维降到了一个较小的维度，就几乎不会完全复现，因为在维度减小的过程中，损失了一部分信息，PCA有逆过程，可以重构一个和原始数据集比较相似的数据集，但是t-SNE没有。</p>
+</blockquote>
+</li>
+<li><p>PCA 可以用于降低一个高度非线性对数据集吗？</p>
+<blockquote>
+<p>PCA可以显著降低大多数数据集的维数，即使他们是高度非线性的，因为它至少可以消除无用的维度，然而如果没有无用的维度，例如”瑞士卷”，使用PCA降维将会损失许多信息。</p>
+</blockquote>
+</li>
+<li><p>假设你对一个 1000 维的数据集应用 PCA，同时设置方差解释率为 95%，你的最终数据集将会有多少维？</p>
+<blockquote>
+<p>取决于数据集</p>
+<p>如果数据集由几乎完全对齐的点组成，该情况下，PCA可以把数据降到一维，并保持95%的方差结实率</p>
+<p>如果数据集中的点完全随机，则该情况下，需要降到所有维度，并且每一维度都有95%的方差。</p>
+<p><img src="https://img.cntofu.com/book/hands_on_Ml_with_Sklearn_and_TF/images/chapter_8/8-8.jpeg" alt="img"></p>
+</blockquote>
+</li>
+<li><p>在什么情况下你会使用普通的 PCA，增量 PCA，随机 PCA 和核 PCA？</p>
+<blockquote>
+<p>一般默认使用普通的PCA，但它只在数据集适合内存的情况下工作。</p>
+<p>增量PCA对于不适合内存的大型数据集有用，可以分批训练，一次只对一个批量使用 IPCA 算法。但它比常规PCA要慢，所以如果数据集适合内存应该选择常规的PCA。增量PCA也适用于在线任务，当不断有新实例到达，需要动态应用PCA时。</p>
+<p>随机PCA：当想要大大减少维度并且数据集适合时，它比普通PCA快得多。</p>
+<p>数据呈现复杂的高维非线性时，使用核PCA</p>
+</blockquote>
+</li>
+<li><p>你该如何评价你的降维算法在你数据集上的表现？</p>
+<blockquote>
+<p>一个降维算法在不丢失太多信息的情况下从数据集中消除了大量的维数，那么它的性能就会很好。</p>
+<p>一种测量方法是应用反向变换并测量重构误差。然而，并不是所有的降维算法都提供了反向转换。</p>
+<p>如果将降维作为另一种机器学习算法前的预处理步骤，那么可以简单地测量第二种算法的性能;如果降维不会丢失太多信息，那么算法的性能应该与使用原始数据集时一样好。</p>
+</blockquote>
+</li>
+<li><p>将两个不同的降维算法串联使用有意义吗？</p>
+<blockquote>
+<p>有</p>
+<p>一个常见的例子是使用PCA快速摆脱大量无用的维数，然后应用另一种慢得多的降维算法，如LLE。这种分两步的方法可能会产生与仅使用LLE相同的性能，但大大缩短了时间。</p>
+</blockquote>
+</li>
+<li><p>加载 MNIST 数据集（在第 3 章中介绍），并将其分成一个训练集和一个测试集（将前 60,000 个实例用于训练，其余 10,000 个用于测试）。在数据集上训练一个随机森林分类器，并记录了花费多长时间，然后在测试集上评估模型。接下来，使用 PCA 降低数据集的维度，设置方差解释率为 95%。在降维后的数据集上训练一个新的随机森林分类器，并查看需要多长时间。训练速度更快？接下来评估测试集上的分类器：它与以前的分类器比较起来如何？</p>
+</li>
+<li><p>使用 t-SNE 将 MNIST 数据集缩减到二维，并使用 Matplotlib 绘制结果图。您可以使用 10 种不同颜色的散点图来表示每个图像的目标类别。或者，您可以在每个实例的位置写入彩色数字，甚至可以绘制数字图像本身的降维版本（如果绘制所有数字，则可视化可能会过于混乱，因此您应该绘制随机样本或只在周围没有其他实例被绘制的情况下绘制）。你将会得到一个分隔良好的的可视化数字集群。尝试使用其他降维算法，如 PCA，LLE 或 MDS，并比较可视化结果。</p>
+</li>
+</ol>
+<h2 id="第09章-非监督学习"><a href="#第09章-非监督学习" class="headerlink" title="第09章 非监督学习"></a>第09章 非监督学习</h2><p>降维就是最常用的非监督机器学习方法之一。</p>
+<p>###聚类（clustering）</p>
+<p>将相似的实例聚集在一起</p>
+<p><strong>和分类的区别：分类问题有标签，而聚类问题没有标签。</strong></p>
+<p><strong>应用场景：</strong></p>
+<p>降维，半监督学习，图像分类，推荐系统，搜索引擎，客户细分等</p>
+<p>也可以用于异常检测：数据聚类后，和所有cluster相聚很远的数据点可能是有问题的。</p>
+<p>半监督学习：只有若干数据有标签，可以聚类后将标签传递给同一cluster</p>
+<p>搜索引擎：例如搜索图片，将所有图片聚类，然后根据用户上传的图片，判断在哪一个cluster。</p>
+<p>image segmentation：数据监测，追踪，监测物体的边界</p>
+<blockquote>
+<p> 参考：<a href="https://www.cnblogs.com/LittleHann/p/6595148.html" target="_blank" rel="noopener">https://www.cnblogs.com/LittleHann/p/6595148.html</a></p>
+<p>​            <a href="https://zhuanlan.zhihu.com/p/150333968" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/150333968</a></p>
+</blockquote>
+<p>一些算法有中心：centroid （K-Means）</p>
+<p>一些算法分层：hierarchical</p>
+<p>一些算法基于密度：DBSCAN</p>
+<p>一些算法基于概率：GMM（高斯混合模型）</p>
+<h4 id="K-Means"><a href="#K-Means" class="headerlink" title="K-Means"></a>K-Means</h4><p>1957年，Stuart Lloyd在Bell Labs提出。该算法一般是最快的聚类方法，且一定会收敛，不会永远震荡。</p>
+<p><strong>计算复杂度</strong>：一般情况下（数据具有clustering structure）和实例的个数m以及类的个数k呈线性关系。否则，最坏的情况，指数增长（一般很少发生）。</p>
+<p><strong>算法：</strong></p>
+<ol>
+<li>初始化中心，然后将数据分到最近邻的类中。</li>
+<li>把所有实例分到相应的类中，计算数据中心</li>
+<li>按照新的中心，重新将实例分到相应的类中，计算数据中心</li>
+<li>重复2,3，知道中心不发生变化</li>
+</ol>
+<p><strong>hard-clustering和soft-clustering</strong></p>
+<p>hard-clustering将实例分到一个cluster中</p>
+<p>soft-clustering给出每个实例在每一个cluster中的评分，可以是距离，或者RBF等等</p>
+<p><strong>缺点：</strong></p>
+<p>虽然K-Means一定会收敛，但是可能会收敛到局部最优解，和初始中心的设置有很大的关系。</p>
+<p><strong>解决办法：</strong></p>
+<p>初始化聚类中心的方法：</p>
+<ol>
+<li><p>提前知道大概的中心位置，可以用<code>init</code>参数传递给KMeans</p>
+</li>
+<li><p>多次运行kmeans，保留最好的结果。<code>n_init，</code>sklearn中默认为10，用intertia（所有实例距离其最近邻聚类中心的距离的平方和）判定好坏（越小越好）</p>
+<blockquote>
+<p>sklearn中的score遵循“greater is better”的准则，所以score是intertia的负数。</p>
+</blockquote>
+</li>
+<li><p>改进算法：<strong>K-Means++</strong>（2006年，由David Arthur and Sergei Vassilvitskii提出）</p>
+<blockquote>
+<p>初始化聚类中心尽可能彼此远离，可以有效避免局部最优解。</p>
+<ol>
+<li>随机选取第一个中心$c^{(1)}$</li>
+<li>以概率$D(x^{(i)})^2/\sum_{j=1}^m D(x^{(j)})^2$ 选取实例作为新的中心$c^{(i)}$，$D(x^{(i)})$表示实例距离已经选定的中心的距离。</li>
+<li>重复2直到确定所有中心</li>
+</ol>
+</blockquote>
+<p>sklearn中默认使用这种算法，可以通过设置<code>init=random</code>使用原生K-Means</p>
+</li>
+</ol>
+<h4 id="加速K-Means算法"><a href="#加速K-Means算法" class="headerlink" title="加速K-Means算法"></a>加速K-Means算法</h4><blockquote>
+<p>由Charles Elkan于2003年提出。利用<strong>三角不等式的性质（triangle inequality），记录实例和聚类中心距离的上限和下限（lower and upper bounds）加速K-Means，</strong>避免许多无用的距离计算.</p>
+<p>sklearn中默认使用这种算法。</p>
+</blockquote>
+<h4 id="mini-batch-K-Means算法"><a href="#mini-batch-K-Means算法" class="headerlink" title="mini-batch K-Means算法"></a>mini-batch K-Means算法</h4><blockquote>
+<p>2000年由David Sculley提出，可以处理内存处理不下的数据（也可以memmap），与regular K-Means相比，快3-4倍，但intertia较差。</p>
+<p>sklearn中有MiniBatchKMeans类。</p>
+</blockquote>
+<h4 id="确定最佳类的个数"><a href="#确定最佳类的个数" class="headerlink" title="确定最佳类的个数"></a>确定最佳类的个数</h4><p>不能用intertia，因为类越多，intertia越小。选取intertia-k的肘部点。</p>
+<p><img src="https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/assets/mls2_0908.png" alt="mls2 0908"></p>
+<h4 id="silhouette-score（平均轮廓系数）"><a href="#silhouette-score（平均轮廓系数）" class="headerlink" title="silhouette score（平均轮廓系数）"></a><em>silhouette score（平均轮廓系数）</em></h4><p>silhouette score：所有实例silhouette efficient（轮廓系数）的平均。</p>
+<p>轮廓系数（-1~1）：(b – a) / max(a, b)，a是同类中其他实例距离的平均（the mean intra-cluster distance），b是到最近邻类中其他实例的平均距离（the mean nearest-cluster distance ），接近+1,意味着实例都处于当前类中，接近-1，意味着实例被分类到了错误的类，接近0，意味着数据点在边界。</p>
+<p><img src="https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/assets/mls2_0909.png" alt="mls2 0909"></p>
+<p>还可以画出silhouette diagram：算出每个实例的轮廓系数，并将它们分到相应的类里：</p>
+<p><img src="https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/assets/mls2_0910.png" alt="mls2 0910"></p>
+<p>红色虚线表示silhouette score，凡是处于虚线左侧的刀型图，表示该类的实例和其他类距离过近。</p>
+<p>k=4和5中类的大小不一样，4中橙色的类明显更大，而5中类更均匀，所以即使4的silhouette score更大，看上去5的表现更好。</p>
+<h4 id="K-Means的局限性"><a href="#K-Means的局限性" class="headerlink" title="K-Means的局限性"></a>K-Means的局限性</h4><ol>
+<li><p>需要提前跑几次，防止陷入过拟合</p>
+</li>
+<li><p>需要自己确定类的个数</p>
+</li>
+<li><p>当类的大小不均一，或者密度不一，或者分布不是球形时，表现不好</p>
+<blockquote>
+<p>椭圆分布（elliptical clusters），Gaussian mixture model表现更好</p>
+<p>运行K-Means之前，scale the feature</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="K-Means的具体应用"><a href="#K-Means的具体应用" class="headerlink" title="K-Means的具体应用"></a>K-Means的具体应用</h4><p><strong>图像分割</strong> <em>Image segmentation</em> ：将图像分成若干部分。</p>
+<blockquote>
+<ol>
+<li>语义分割（semantic segmentation）</li>
+<li>实例分割（instance segmentation）</li>
+</ol>
+<p>一般基于CNN实现。</p>
+</blockquote>
+<p>颜色分割（color segmentation）：应用场景：从卫星图计算森林面积的大小。</p>
+<p><strong>数据预处理</strong></p>
+<p>监督学习前使用K-Means对数据进行聚类。降低了数据的维度，更重要的是聚类得到的特征更加线性可分。</p>
+<p><strong>用于半监督学习</strong></p>
+<p>当有很多没有标签的数据时，可以使用K-Means对有标签的数据进行聚类，将最接近中心的图片（或其他）（representative image）表示出来。将标签传递给类中其他数据，这个过程叫做label  propagation。</p>
+<blockquote>
+<p>注意：边界上的数据点可能被错误的分类了，所以标签传递最好传递给距离聚类中心最近的一部分数据（比如20%）</p>
+</blockquote>
+<h4 id="主动学习-active-learning"><a href="#主动学习-active-learning" class="headerlink" title="主动学习(active learning)"></a>主动学习(active learning)</h4><p>不确定度采样<code>Uncertainty Sampling</code></p>
+<ol>
+<li>用仅有的有标签数据训练模型，用该模型预测所有无标签数据</li>
+<li>将预测结果中最不准确（概率最低）的实例拿出来给专家贴标签</li>
+<li>重复上述过程</li>
+</ol>
+<p>更深入了解可以参考：<a href="https://blog.csdn.net/qq_39856931/article/details/106433187" target="_blank" rel="noopener">https://blog.csdn.net/qq_39856931/article/details/106433187</a></p>
+<p>####KNN和K-Means的区别</p>
+<table>
+<thead>
+<tr>
+<th><strong>KNN</strong></th>
+<th><strong>K-Means</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.KNN是分类算法  2.监督学习 3.喂给它的数据集是带label的数据，已经是完全正确的数据</td>
+<td>1.K-Means是聚类算法  2.非监督学习 3.喂给它的数据集是无label的数据，是杂乱无章的，经过聚类后才变得有点顺序，先无序，后有序</td>
+</tr>
+<tr>
+<td>没有明显的前期训练过程，属于memory-based learning</td>
+<td>有明显的前期训练过程</td>
+</tr>
+<tr>
+<td>K的含义：来了一个样本x，要给它分类，即求出它的y，就从数据集中，在x附近找离它最近的K个数据点，这K个数据点，类别c占的个数最多，就把x的label设为c</td>
+<td>K的含义：K是人工固定好的数字，假设数据集合可以分为K个簇，由于是依靠人工定好，需要一点先验知识</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>相似点：都包含这样的过程，给定一个点，在数据集中找离它最近的点。即二者都用到了NN(Nears Neighbor)算法，一般用KD树来实现NN。</td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="DBSCAN（Density-Based-Spatial-Clustering-of-Applications-with-Noise）"><a href="#DBSCAN（Density-Based-Spatial-Clustering-of-Applications-with-Noise）" class="headerlink" title="DBSCAN（Density-Based Spatial Clustering of Applications with Noise）"></a>DBSCAN（Density-Based Spatial Clustering of Applications with Noise）</h4><p>基于局部密度估计（local density estimation），该算法允许对任意形状的数据进行聚类。</p>
+<ol>
+<li>对于每一个实例，算法计算一个小范围$\epsilon$ 内有多少实例，该范围叫做：实例的$\epsilon$-neighborhood</li>
+<li>如果一个实例的$\epsilon$-neighborhood中有超过min_samples个实例，则该实例为core instance</li>
+<li>所有在同一个core instance周围的实例属于同一个类，有可能一个core instance的周围有其他core instance。因此，一系列相邻的core instance形成一个cluster</li>
+<li>任何实例，如果不是core instance，其相邻范围内也没有core instance，会被认为是异常数据</li>
+</ol>
+<p>当数据的可以被低密度区域分开时，DBSCAN变现得很好。</p>
+<blockquote>
+<p>sklearn中的DBSCAN没有predict方法，可以用DBSCAN的聚类中心（或者全部数据，或者除了异常数据的其他数据）训练其他算法（例如KNN），再预测新的数据。</p>
+</blockquote>
+<p><img src="https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/assets/mls2_0915.png" alt="mls2 0915"></p>
+<p>其实有两个数据需要被判定为异常值。</p>
+<p>DBSCAN是一个简单但是强大的聚类算法，可以对不规则形状分布的数据进行聚类，并且只有两个超参数eps和min_samples，但如果类中密度变化很大，DBSCAN的表现可能没有那么好。</p>
+<p><strong>计算复杂度</strong>：O(m log m)</p>
+<h4 id="其他聚类算法"><a href="#其他聚类算法" class="headerlink" title="其他聚类算法"></a>其他聚类算法</h4><p>#####层次聚类(Agglomerative clustering)</p>
+<p>是一种自底而上的层次聚类方法，它能够根据指定的相似度或距离定义计算出类之间的距离。</p>
+<ol>
+<li>将每一个元素单独定为一类</li>
+<li>重复：每一轮都合并指定距离(对指定距离的理解很重要)最小的类</li>
+<li>直到所有的元素都归为同一类</li>
+</ol>
+<blockquote>
+<p>类似水面上的泡泡，会与相邻的泡泡合并</p>
+</blockquote>
+<p>依据对相似度（距离）的不同定义，将Agglomerative Clustering的聚类方法分为三种：Single-linkage, Complete-linkage和Group average.<br><strong>Single-linkage</strong>:要比较的距离为元素对之间的最小距离<br><strong>Complete-linkage</strong>:要比较的距离为元素对之间的最大距离<br><strong>Group average</strong>：要比较的距离为类之间的平均距离（平均距离的定义与计算：假设有A，B两个类，A中有n个元素，B中有m个元素。在A与B中各取一个元素，可得到他们之间的距离。将nm个这样的距离相加，得到距离和。最后距离和除以nm得到A，B两个类的平均距离。）</p>
+<h5 id="BIRCH"><a href="#BIRCH" class="headerlink" title="BIRCH"></a>BIRCH</h5><p>Balanced Iterative Reducing and Clustering using Hierarchies，利用层次方法的平衡迭代规约和聚类，针对large database，并且比batch-K Means快</p>
+<p>BIRCH算法利用了一个树结构来帮助我们快速的聚类，这个数结构类似于平衡B+树，一般将它称之为聚类特征树(Clustering Feature Tree，简称CF Tree)。这颗树的每一个节点是由若干个聚类特征(Clustering Feature，简称CF)组成。</p>
+<p>可参考：<a href="https://www.cnblogs.com/pinard/p/6179132.html" target="_blank" rel="noopener">https://www.cnblogs.com/pinard/p/6179132.html</a></p>
+<h5 id="Mean-Shift"><a href="#Mean-Shift" class="headerlink" title="Mean-Shift"></a>Mean-Shift</h5><p>也叫做均值漂移，在目标追踪中应用广泛。本身其实是一种<strong>基于密度</strong>的聚类算法。</p>
+<p>主要思路是：中心向着密度高的地方移动，直到移动到local density maximum</p>
+<ol>
+<li>计算某一实例(A)与其周围半径R内的向量距离的平均值M，计算出该点下一步漂移（移动）的方向（A=M+A）。</li>
+<li>重复上述过程，直到所有的点不再移动时，其与周围点形成一个类簇，</li>
+<li>计算这个类簇与历史类簇的距离，满足小于阈值D即合并为同一个类簇，不满足则自身形成一个类簇。直到所有的数据点选取完毕。</li>
+</ol>
+<blockquote>
+<p>当簇的内部具有密度不均匀时，Mean-shift倾向于将该簇分为几片</p>
+<p>计算复杂度：$O(m^2)$,不适合大的数据集</p>
+</blockquote>
+<h5 id="Affinity-propagation"><a href="#Affinity-propagation" class="headerlink" title="Affinity propagation"></a>Affinity propagation</h5><p>AP(Affinity Propagation)通常被翻译为近邻传播算法或者亲和力传播算法。</p>
+<p><strong>一种投票机制</strong>，每个实例对相似的实例投票，选出代表（representatives）一旦算法收敛，每个代表和其投票者聚成一簇。</p>
+<blockquote>
+<p>计算复杂度：$O(m^2)$,不适合大的数据集</p>
+</blockquote>
+<blockquote>
+<p>AP算法的基本思想是将全部数据点都当作潜在的聚类中心(称之为exemplar)，然后数据点两两之间连线构成一个网络(相似度矩阵)，再通过网络中各条边的消息(responsibility和availability)传递计算出各样本的聚类中心。</p>
+<p>聚类过程中，共有两种消息在各节点间传递，分别是吸引度（responsibility）和归属度（availability）。</p>
+<p>AP算法通过迭代过程不断更新每一个点的吸引度和归属度，直到产生m个高质量的Exemplar（相当于质心），同时将其余的数据点分配到相应的聚类中。</p>
+<p>可参考：<a href="https://www.biaodianfu.com/affinity-propagation.html" target="_blank" rel="noopener">https://www.biaodianfu.com/affinity-propagation.html</a></p>
+</blockquote>
+<h5 id="谱聚类"><a href="#谱聚类" class="headerlink" title="谱聚类"></a>谱聚类</h5><p>Spectral clustering，它的主要思想是把所有的数据看做空间中的点，这些点之间可以用边连接起来。距离较远的两个点之间的边权重值较低，而距离较近的两个点之间的边权重值较高，通过对所有数据点组成的图进行切图，让切图后不同的子图间边权重和尽可能的低，而子图内的边权重和尽可能的高，从而达到聚类的目的。</p>
+<h3 id="高斯混合模型-Gaussian-mixtures"><a href="#高斯混合模型-Gaussian-mixtures" class="headerlink" title="高斯混合模型 Gaussian mixtures"></a>高斯混合模型 Gaussian mixtures</h3><p><em>Gaussian mixture model</em> (GMM)：多个高斯分布的线性叠加能拟合非常复杂的密度函数；通过足够多的高斯分布叠加，并调节它们的均值，协方差矩阵，以及线性组合的系数，可以精确地逼近任意连续密度。</p>
+<p> <code>GaussianMixture</code> class: 需要确定数据有几个高斯分布生成</p>
+<blockquote>
+<ol>
+<li>对于每一个实例，从k个高斯分布（代表着k个簇）中随机选择，选择第j个高斯分布的概率$\phi^{(j)}$, 第i个实例选择的高斯分布记作$z^{(i)}$</li>
+<li>如果$z^{(i)}=j$意味着第i个实例被分到了第j个簇中，实例$x^{(i)}~ N(\mu^{(j)},\sum^{(j)})$</li>
+</ol>
+</blockquote>
+<p><img src="https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/assets/mls2_0916.png" alt="mls2 0916"></p>
+<h4 id="EM算法"><a href="#EM算法" class="headerlink" title="EM算法"></a>EM算法</h4><p>sklearn中的类<code>GaussianMixture</code>依据的是EM算法。</p>
+<blockquote>
+<p>和K-Means算法类似</p>
+<ol>
+<li>expectation step</li>
+</ol>
+<p>计算每个实例属于各个簇的概率（软分类）</p>
+<ol start="2">
+<li>maximization step</li>
+</ol>
+<p>迭代</p>
+<p>EM同样会收敛到不好的结果，所以需要多跑几次，保存最好的结果，<code>n_init=10</code></p>
+</blockquote>
+<p>GMM是一个生成模型，可以用来生成新的实例。</p>
+<p>还可以预测每个实例周围的密度，<code>score_samples()</code>方法，计算实例的PDF（probability density function）的l对数。</p>
+<p>对于高维数据，GMM可能陷入困难，需要对模型加以限制（减少自由度，限制分布的形状，大小和取向），通过超参数``covariance_type<code></code></p>
+<blockquote>
+<p>取值可以是：sphere，diag，tied default：full</p>
+</blockquote>
+<p><strong>计算复杂度</strong>：取决于实例的个数m，数据的维度n，以及簇的个数k，还有对协方差矩阵的限制。</p>
+<blockquote>
+<p>diag or spherical：$O(kmn)$</p>
+<p>tied or full: $O()kmn^2+kn^3$</p>
+</blockquote>
+<p>####异常值检测</p>
+<p>GMM用于异常值检测（anomaly detection）也叫做outlier detection。</p>
+<blockquote>
+<p>处在GMM低密度区域的实例可以被认为是异常值。可以自己规定阈值。</p>
+</blockquote>
+<p>观察学习“正常（normal）”的数据是什么样子的，来检测出异常数据（应用场景：生产线产品部件的检测&amp;异常访问）</p>
+<p>####新颖性检测</p>
+<p>novelty detection：检测新观察是否是异常值。 在这种情况下，异常值也被称为新颖点（a novelty）。是一种半监督的异常检测方法，在新颖性检测的背景下，新颖点可以形成密集的簇，只要它们处于训练数据的低密度区域中。</p>
+<p>GMM尝试fit所有的数据，包括异常值，如果异常点过多，可以</p>
+<blockquote>
+<ol>
+<li>去除最外侧的异常值，在cleaned-up的数据集上再次训练模型</li>
+<li>使用更鲁棒的算法：EllipticEnvelope （适合于对数据的鲁棒协方差估计，从而将椭圆适配到中央数据点，忽略中央模式之外的点。）</li>
+</ol>
+</blockquote>
+<h4 id="如何确定cluster的个数"><a href="#如何确定cluster的个数" class="headerlink" title="如何确定cluster的个数"></a>如何确定cluster的个数</h4><p>对于大小不一致或者非球型分布的数据，K-Means中用来确定cluster数目的inertia和轮廓系数都不可行。</p>
+<p>我们通过<strong>最小化理论信息标准（theoretical information criterion），如赤池信息量（<em>Akaike information criterion</em> ，AIC）,贝叶斯信息量（BIC，<em>Bayesian information criterion</em>）</strong></p>
+<p>定义：(m是实例的个数，p是模型的参数，$\hat L$ 是模型似然函数（likelihood function）的最大值)</p>
+<p>$BIC\ = \ \log(m)p-2\ \log(\hat L) \ AIC  \ = 2p-2\ \log(\hat L)$</p>
+<p>BIC和AIC对参数多模型加上penalty，一般情况下，BIC选择的模型比AIC简单，但是不如AIC的模型和数据吻合得好。</p>
+<p><strong>似然函数</strong></p>
+<p>概率（probability）是指：给定模型的参数，输出x的可信程度。（下图水平黑线，和PDF图）</p>
+<p>似然（likelihood）是指：一直输出x的前提下，模型的参数有多可信。（下图垂直蓝色线，和似然函数图）</p>
+<p><img src="https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/assets/mls2_0920.png" alt="mls2 0920"></p>
+<h4 id="Bayesian-Gaussian-Mixture-Models"><a href="#Bayesian-Gaussian-Mixture-Models" class="headerlink" title="Bayesian Gaussian Mixture Models"></a>Bayesian Gaussian Mixture Models</h4><p>可以赋予不重要的簇权重0，可以通过n_components预设簇的最大值。</p>
+<p><img src="https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/assets/mls2_0922.png" alt="mls2 0922"></p>
+<p>Stick-Breaking Process (SBP)</p>
+<p>Wishart distribution</p>
+<p><strong>贝叶斯定理</strong></p>
+<p>$p(z|X)=posterior=\frac{likelihood\times prior}{evidence}=\frac{p(X|z)p(z)}{p(X)}$</p>
+<p>$p(X)=\int p(X|z)p(z)dz$</p>
+<h3 id="其他处理异常值和新颖性检测的算法"><a href="#其他处理异常值和新颖性检测的算法" class="headerlink" title="其他处理异常值和新颖性检测的算法"></a>其他处理异常值和新颖性检测的算法</h3><h4 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h4><p>数据重建，正常值重建后与原始数据差距小，而异常值重建后与异常值差距大</p>
+<h4 id="Fast-MCD"><a href="#Fast-MCD" class="headerlink" title="Fast-MCD"></a>Fast-MCD</h4><p>minimum covariance determinant，</p>
+<p>认为正常值（inliers）是由单一的高斯模型产生的，不是由该单一高斯模型产生的数据点被认为是outliers</p>
+<h4 id="Isolation-Forest"><a href="#Isolation-Forest" class="headerlink" title="Isolation Forest"></a>Isolation Forest</h4><p>孤立森林： 是一个基于Ensemble的快速异常检测方法，具有线性时间复杂度和高精准度，是符合大数据处理要求的state-of-the-art算法。适用于<strong>连续数据（Continuous numerical data）的异常检测</strong>，将异常定义为“容易被孤立的离群点 (more likely to be separated)”——可以理解为分布稀疏且离密度高的群体较远的点。</p>
+<p>构建随机森林，其中每一个决策树都是随机的，在每个节点，随机的选择特征和阈值，将数据分为两个部分。</p>
+<p>适用于高维数据</p>
+<h4 id="Local-Outlier-Factoer（LOF）"><a href="#Local-Outlier-Factoer（LOF）" class="headerlink" title="Local Outlier Factoer（LOF）"></a>Local Outlier Factoer（LOF）</h4><p>一个样本点周围的样本点所处位置的平均密度比上该样本点所在位置的密度。比值越大于1，则该点所在位置的密度越小于其周围样本所在位置的密度，这个点就越有可能是异常点。</p>
+<h4 id="One-class-SVM"><a href="#One-class-SVM" class="headerlink" title="One-class SVM"></a>One-class SVM</h4><p>单分类算法，寻找一个超平面将样本中的正例圈出来，预测就是用这个超平面做决策，在圈内的样本就认为是正样本。由于<strong>核函数</strong>计算比较耗时，在海量数据的场景用的并不多；</p>
+<p><strong>适用于新颖性检测</strong></p>
+<p><img src="https://img2018.cnblogs.com/blog/1226410/201904/1226410-20190424112057869-1957699378.png" alt="img"></p>
+<p>###密度估计（density estimation）</p>
+<p>用来估计随机过程的概率密度函数（probability density function（PDF））（应用场景：异常检测（密度低的地方异常的概率大），数据分析和可视化）</p>
+<h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习"></a>练习</h3><ol>
+<li><p>How would you define clustering? Can you name a few clustering algorithms?</p>
+<blockquote>
+<p>聚类是一种无监督学习，将具有相似特征的实例聚集在一起。</p>
+<p>K-Means, DBSCAN，层次聚类，BRICH，Mean-shift，Affinity propagation和谱聚类</p>
+</blockquote>
+</li>
+<li><p>What are some of the main applications of clustering algorithms?</p>
+<blockquote>
+<p>半监督学习</p>
+<p>图像分割</p>
+<p>数据预处理</p>
+<p>异常值检测</p>
+<p>新颖性检测</p>
+</blockquote>
+</li>
+<li><p>Describe two techniques to select the right number of clusters when using K-Means.</p>
+<blockquote>
+<ol>
+<li>画出k-inertia图像，选择肘部</li>
+<li>画出k-轮廓系数图像，选择最高点</li>
+</ol>
+</blockquote>
+</li>
+<li><p>What is label propagation? Why would you implement it, and how?</p>
+<blockquote>
+<p>因为打标签是非常耗时的，所以实际情况下，数据集中可能只有很少一部分有标签，大部分数据都没有标签，标签传递可以得到更多的带标签的数据，可以进行监督学习（这个过程就是非监督学习）</p>
+<p>当数据中仅有少部分具有标签的数据时，可以先进行聚类，然后将标签打到具有相似特征的实例上（离聚类中心最近的有标签数据）。</p>
+</blockquote>
+</li>
+<li><p>Can you name two clustering algorithms that can scale to large datasets? And two that look for regions of high density?</p>
+<blockquote>
+<p>K-Means和BRICH可以用于大的数据集</p>
+<p>DBSCAN和Mean-shift（中心向着密度高的方向移动）寻找区域内高密度的位置</p>
+</blockquote>
+</li>
+<li><p>Can you think of a use case where active learning would be useful? How would you implement it?</p>
+<blockquote>
+<p>不是随机的选择数据打标签，而是人类专家参与算法的学习，为特定的实例提供标签。</p>
+<p>不确定采样</p>
+</blockquote>
+</li>
+<li><p>What is the difference between anomaly detection and novelty detection?</p>
+<blockquote>
+<p>异常值检测中：模型在包含异常值的数据集上训练，（孤立森林）</p>
+<p>新颖性检测中：模型在一个clean的数据及上训练，（单分类-SVM）</p>
+</blockquote>
+</li>
+<li><p>What is a Gaussian mixture? What tasks can you use it for?</p>
+<blockquote>
+<p>GMM是一种概率模型，假设实例是由若干个高斯模型混合生成的。换句话说，假设数据属于若干椭圆类，但大小，方向，形状和密度都不确定。</p>
+<p>可以用来密度检测，异常值检测，聚类。</p>
+</blockquote>
+</li>
+<li><p>Can you name two techniques to find the right number of clusters when using a Gaussian mixture model?</p>
+<blockquote>
+<p>画出k-AIC或者k-BIC的图像，选择使AIC或者BIC数值最小的聚类个数。</p>
+</blockquote>
+</li>
+<li><p>The classic Olivetti faces dataset contains 400 grayscale 64 × 64–pixel images of faces. Each image is flattened to a 1D vector of size 4,096. 40 different people were photographed (10 times each), and the usual task is to train a model that can predict which person is represented in each picture. Load the dataset using the <code>sklearn.datasets.fetch_olivetti_faces()</code> function, then split it into a training set, a validation set, and a test set (note that the dataset is already scaled between 0 and 1). Since the dataset is quite small, you probably want to use stratified sampling to ensure that there are the same number of images per person in each set. Next, cluster the images using K-Means, and ensure that you have a good number of clusters (using one of the techniques discussed in this chapter). Visualize the clusters: do you see similar faces in each cluster?</p>
+</li>
+<li><p>Continuing with the Olivetti faces dataset, train a classifier to predict which person is represented in each picture, and evaluate it on the validation set. Next, use K-Means as a dimensionality reduction tool, and train a classifier on the reduced set. Search for the number of clusters that allows the classifier to get the best performance: what performance can you reach? What if you append the features from the reduced set to the original features (again, searching for the best number of clusters)?</p>
+</li>
+<li><p>Train a Gaussian mixture model on the Olivetti faces dataset. To speed up the algorithm, you should probably reduce the dataset’s dimensionality (e.g., use PCA, preserving 99% of the variance). Use the model to generate some new faces (using the <code>sample()</code> method), and visualize them (if you used PCA, you will need to use its <code>inverse_transform()</code> method). Try to modify some images (e.g., rotate, flip, darken) and see if the model can detect the anomalies (i.e., compare the output of the <code>score_samples()</code> method for normal images and for anomalies).</p>
+</li>
+<li><p>Some dimensionality reduction techniques can also be used for anomaly detection. For example, take the Olivetti faces dataset and reduce it with PCA, preserving 99% of the variance. Then compute the reconstruction error for each image. Next, take some of the modified images you built in the previous exercise, and look at their reconstruction error: notice how much larger the reconstruction error is. If you plot a reconstructed image, you will see why: it tries to reconstruct a normal face.</p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>数据分析</category>
@@ -2851,6 +3899,7 @@ np.sqrt(arr)
 <li><input disabled="" type="checkbox"> 看电影</li>
 <li><input disabled="" type="checkbox"> 约泡</li>
 </ul>
+<h3 id="最大化快捷键"><a href="#最大化快捷键" class="headerlink" title="最大化快捷键"></a>最大化快捷键</h3><p>进去退出最大化：F11</p>
 <p>参考：<a href="https://www.jianshu.com/p/092de536d948" target="_blank" rel="noopener">https://www.jianshu.com/p/092de536d948</a></p>
 ]]></content>
       <categories>
@@ -2896,7 +3945,7 @@ np.sqrt(arr)
 <p>\widehat{abc} $\widehat{abc}$</p>
 <p>\overrightarrow{abc} $\overrightarrow{abc}$</p>
 <p>\left{ a b c}\right</p>
-<p>a = \left { \begin{array}{c} x^2 \ 2x \0 \end{array} \right } $a = \left { \begin{array}{c} x^2 \ 2x \0 \end{array} \right.$</p>
+<p>a = \left { \begin{array}{c} x^2 \ 2x \0 \end{array} \right. } $a = \left { \begin{array}{c} x^2 \ 2x \0 \end{array} \right.$</p>
 <p>\left ( \begin{array}{cc} a &amp; b \ c &amp; d\end{array} \right) $\left ( \begin{array}{cc} a &amp; b \ c &amp; d\end{array} \right)$</p>
 <hr>
 <p>参考：</p>
@@ -2928,6 +3977,112 @@ np.sqrt(arr)
       </categories>
       <tags>
         <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Scikit-Learn与TensorFlow机器学习实用指南》-第二部分</title>
+    <url>/2020/09/03/%E3%80%8AScikit-Learn%E4%B8%8ETensorFlow%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E7%94%A8%E6%8C%87%E5%8D%97%E3%80%8B-%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86/</url>
+    <content><![CDATA[<p>学习资料参考：</p>
+<p><a href="https://www.cntofu.com/book/27/docs/2.%E4%B8%80%E4%B8%AA%E5%AE%8C%E6%95%B4%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE.md" target="_blank" rel="noopener">一个完整的机器学习项目.md</a></p>
+<p><a href="https://github.com/ageron/handson-ml2" target="_blank" rel="noopener">原书Github上代码</a></p>
+<p><a href="https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/" target="_blank" rel="noopener">Oreilly上原书第二版（可以在线阅读）</a></p>
+<p><a href="https://github.com/apachecn/hands-on-ml-zh/blob/master/docs/1.%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%A7%88.md" target="_blank" rel="noopener">第一版翻译</a></p>
+<p><a href="https://www.jianshu.com/p/3470a6efbe8d" target="_blank" rel="noopener">简书第一版</a></p>
+<p><a href="https://www.jianshu.com/p/86626c79814a" target="_blank" rel="noopener">简书第二版第二部分</a></p>
+<p><a href="https://www.jianshu.com/p/4a94798f7dcc" target="_blank" rel="noopener">简书《Scikit-Learn、Keras与TensorFlow机器学习实用指南》第一版和第二版对照</a></p>
+<p><a href="https://blog.csdn.net/jiaoyangwm/article/details/82387883#%E7%BB%83%E4%B9%A0%E9%A2%987" target="_blank" rel="noopener">练习题答案参考</a> <a href="https://blog.csdn.net/leowinbow/article/details/88581039" target="_blank" rel="noopener">参考2</a></p>
+<a id="more"></a>
+
+<h2 id="第10章-使用Keras搭建人工神经网络"><a href="#第10章-使用Keras搭建人工神经网络" class="headerlink" title="第10章 使用Keras搭建人工神经网络"></a>第10章 使用Keras搭建人工神经网络</h2><p>需要安装<a href="https://www.jianshu.com/p/3a76e4f0504a" target="_blank" rel="noopener">Tensorflow</a>和Keras</p>
+<p>人工神经网络是受大脑中的生物神经元启发而来的机器学习模型。</p>
+<p>人工神经网络是深度学习的核心，它不仅样式多样、功能强大，还具有可伸缩性，这让人工神经网络适宜处理庞大且复杂的机器学习任务，例如对数十亿张图片分类（谷歌图片）、语音识别（苹果Siri）、向数亿用户每天推荐视频（Youtube）、或者通过学习几百围棋世界冠军（DeepMind的AlphaGo）。</p>
+<p>###神经元的逻辑计算</p>
+<p>1943年神经生理学家Warren McCulloch和数学家Walter Pitts在他们里程碑的论文<a href="https://scholar.google.com/scholar?q=A+Logical+Calculus+of+Ideas+Immanent+in+Nervous+Activity+author%3Amcculloch" target="_blank" rel="noopener">《A Logical Calculus of Ideas Immanent in Nervous Activity》</a> 中介绍了一个简单的生物神经元模型，它后来演化成了人工神经元：一个或多个二元（开或关）输入，一个二元输出。当达到一定的输入量时，神经元就会产生输出。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-51a591f44c8f7bba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<h3 id="感知机（单个TLU）"><a href="#感知机（单个TLU）" class="headerlink" title="感知机（单个TLU）"></a>感知机（单个TLU）</h3><p>感知机是最简单的人工神经网络结构之一，由 Frank Rosenblatt 发明于 1957年。</p>
+<p>它基于一种稍微不同的人工神经元，阈值逻辑单元（TLU），或称为线性阈值单元（LTU）：输入和输出是数字（而不是二元开/关值），并且每个输入连接都一个权重。TLU计算其输入的加权和（$z = W_1x_1 + W_2x_2 + … + W_nx_n = x^T·W）$，然后将阶跃函数应用于该和，并输出结果：$h_W(x) = step(z)$，其中$z = x^T·W$。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-c40c1380818019d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1113/format/webp" alt="img"></p>
+<p>####<strong>阶跃函数</strong>：</p>
+<p>单位阶跃函数（Heaviside step function）:<br>$$<br>heaviside(z)=\left { \begin{array} {ll} 0&amp; if\ z&lt;0\1&amp;if \ z\geq 0 \end{array} \right.\<br>sgn(z)=\left { \begin{array} {ll} 0&amp; if\ z&lt;0\0 &amp; if\ z =0\1&amp;if \ z\gt 0 \end{array} \right.<br>$$<br>单一TLU 可用于简单的线性二元分类。它计算输入的线性组合，如果结果超过阈值，它输出正类或者输出负类（就像逻辑回归分类或线性SVM分类）。</p>
+<p><strong>感知器只由一层 TLU 组成，每个TLU连接到所有输入</strong>。当一层的神经元连接着前一层的每个神经元时，该层被称为<strong>全连接层，或紧密层</strong>。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-878dec9a6b1e9c09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p>通常再添加一个<strong>偏置特征（$X_0=1$）</strong>：这种偏置特性通常用一种称为偏置神经元的特殊类型的神经元来表示，它总是输出 1。</p>
+<p>一个全连接层神经网络的输出：$h_{W,b}(x) = \phi (XW+B)$</p>
+<p>####Hebb规则</p>
+<p>如何训练感知机：感知器一次被馈送一个训练实例，对于每个实例，它进行预测。对于每一个产生错误预测的输出神经元，修正输入的连接权重，以获得正确的预测。<br>$$<br>\omega_{i,j}^{(next \ step)}=\omega_{i,j}+\eta (y_j-\hat y_j)x_i<br>$$<br><strong>每个输出神经元的决策边界是线性的，因此感知器不能学习复杂的模式</strong>（比如 Logistic 回归分类器）。如果训练实例是线性可分的，Rosenblatt 证明该算法将收敛到一个解。这被称为<strong>感知器收敛定理</strong>。</p>
+<p><strong>感知机不输出类概率，而是基于硬阈值进行预测。</strong></p>
+<p>####感知机的局限性</p>
+<ol>
+<li>不能解决一些琐碎的问题（例如，异或（XOR）分类问题）（线性分类模型都不能解决异或问题）</li>
+</ol>
+<p>可以通过堆叠多个感知机消除，由此产生的人工神经网络被称为<strong>多层感知机（MLP）</strong>。特别地，MLP 可以解决 XOR 问题：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-a8b41a11c481fc03.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<h3 id="多层感知机（MLP）"><a href="#多层感知机（MLP）" class="headerlink" title="多层感知机（MLP）"></a>多层感知机（MLP）</h3><p>MLP 由一个输入层、一个或多个称为隐藏层的 TLU 组成，一个 TLU 层称为输出层（见图 10-7）。靠近输入层的层，通常被称为浅层，靠近输出层的层通常被称为上层。除了输出层，每一层都有一个偏置神经元，并且全连接到下一层。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-eb971779e84208ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p>信号是从输入到输出单向流动，因此这种架构被称为<strong>前馈神经网络（FNN）</strong></p>
+<p>当人工神经网络有多个隐含层时，称为<strong>深度神经网络（DNN）</strong></p>
+<h3 id="反向传播（Back-Propagation）"><a href="#反向传播（Back-Propagation）" class="headerlink" title="反向传播（Back Propagation）"></a>反向传播（Back Propagation）</h3><p>一种训练 MLP 的方法，使用了高效梯度计算的梯度下降算法只需要两次网络传播（一次向前，一次向后），就可以算出网络误差的、和每个独立模型参数相关的梯度。</p>
+<blockquote>
+<ol>
+<li>每次处理一个微批次（假如每个批次包含32个实例），用训练集多次训练BP，每次被称为一个周期（epoch）；</li>
+<li>每个微批次先进入输入层，输入层再将其发到第一个隐藏层。计算得到该层所有神经元的（微批次的每个实例的）输出。输出接着传到下一层，直到得到输出层的输出。这个过程就是<strong>前向传播</strong>：就像做预测一样，只是保存了每个中间结果，中间结果要用于反向传播；</li>
+<li>然后计算输出误差（使用损失函数比较目标值和实际输出值，然后返回误差）；</li>
+<li>通过<strong>链式法则</strong>（对多个变量做微分）计算每个输出连接对误差的贡献量；</li>
+<li>使用<strong>链式法则</strong>，计算最后一个隐藏层的每个连接对误差的贡献，这个过程不断向后传播，直到到达输入层。</li>
+<li>BP算法做一次梯度下降步骤，用刚刚计算的误差梯度调整所有连接权重。</li>
+</ol>
+</blockquote>
+<p>对每个训练实例，BP算法先做一次预测（前向传播），然后计算误差，然后反向通过每一层以测量误差贡献量（反向传播），最后调整所有连接权重以降低误差（梯度下降）。（每个循环：向前，向后，调整参数）</p>
+<p><strong>注意：</strong></p>
+<blockquote>
+<p><strong>要机初始化隐藏层的连接权重</strong>。假如所有的权重和偏置都初始化为0，则在给定一层的所有神经元都是一样的，BP算法对这些神经元的调整也会是一样的。换句话，就算每层有几百个神经元，模型的整体表现就像每层只有一个神经元一样，模型会显得笨笨的。如果权重是随机初始化的，就可以打破对称性，训练出不同的神经元。</p>
+</blockquote>
+<blockquote>
+<p><strong>自动计算梯度被称为自动微分。</strong>反向传播使用的是<strong>反向模式自微分</strong>。这种方法快而准，当函数有多个变量（连接权重）和多个输出（损失函数）要微分时也能应对。</p>
+</blockquote>
+<h4 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h4><p>用其他激活函数代替阶跃函数（因为阶跃函数只包含平坦的段，因此没有梯度，而 Logistic函数处处都有一个定义良好的非零导数，允许梯度下降在每步上取得一些进展。）</p>
+<ul>
+<li><p>sigmoid（Logistic）函数：输出范围0~1</p>
+<p>$\sigma(z)=\frac{1}{1+\exp(-z)}$</p>
+</li>
+</ul>
+<ul>
+<li><p>双曲正切函数： S形，连续可微，输出范围-1~1</p>
+<p>$\tanh (z) = 2σ(2z) – 1$</p>
+</li>
+<li><p>ReLU 函数：连续，但在<code>z=0</code>处不可微，没有最大输出值，但效果好，计算快速</p>
+<p>$ReLU(z) = max(0, z)$</p>
+</li>
+<li><p>softplus函数：ReLU函数的平滑变体,z是负值时，softplus接近0，z是正值时，softplus接近z</p>
+<p>$softplus(z) = log(1 + exp(z))$</p>
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-cfc40648369f3b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><strong>设置激活函数的原因</strong>：</p>
+<p>如果将几个线性变化链式组合起来，得到的还是线性变换。比如，对于 <code>f(x) = 2x + 3</code> 和 <code>g(x) = 5x – 1</code> ，两者组合起来仍是线性变换：<code>f(g(x)) = 2(5x – 1) + 3 = 10x + 1</code>。<strong>如果层之间不具有非线性，则深层网络和单层网络其实是等同的，这样就不能解决复杂问题。</strong>相反的，足够深且有非线性激活函数的DNN（深度神经网络），在理论上可以近似于任意连续函数。</p>
+<p>###回归MLP</p>
+<p>预测一个单值，就只需要一个输出神经元；一次预测多个值，则每一维度都要有一个神经元。</p>
+<p>回归问题可以不用激活函数，如果想限制输出落到一定范围内，可以使用激活函数。</p>
+<p><strong>损失函数</strong>：一般使用<strong>均方误差</strong>，但如果训练集有许多异常值，则可以使用<strong>平均绝对误差</strong>。也可以使用<strong>Huber损失函数</strong>，它是前两者的组合。</p>
+<blockquote>
+<p>提示：当误差小于阈值δ时（一般为1），Huber损失函数是二次的；误差大于阈值时，Huber损失函数是线性的。相比均方误差，线性部分可以让Huber对异常值不那么敏感，二次部分可以让收敛更快，也比均绝对误差更精确。</p>
+</blockquote>
+<p><strong>回归MLP的典型架构</strong></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-51306abe073c8ea2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<h3 id="分类MLP"><a href="#分类MLP" class="headerlink" title="分类MLP"></a>分类MLP</h3><p>二元分类问题：需要一个使用Logistic激活的输出神经元：输出一个0和1之间的值，作为正类的估计概率。</p>
+<p>多标签二元分类问题：需要为每个正类配一个输出神经元。多个输出概率的和不一定非要等于1。</p>
+<p>多分类：softmax函数可以保证，每个估计概率位于0和1之间，并且各个值相加等于1。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-be616eb033cc7b19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><strong>损失函数</strong>： 预测概率分布，可以使用交叉商损失函数</p>
+<p><strong>分类MLP的典型架构</strong></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/7178691-9e017b74d26835cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+]]></content>
+      <categories>
+        <category>数据分析</category>
+      </categories>
+      <tags>
+        <tag>sklearn</tag>
+        <tag>机器学习</tag>
       </tags>
   </entry>
 </search>
