@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="认识操作系统 x86 系统的结构 PCI-EPCIe (Peripheral Component Interconnect Express，PCI-Express)一种高速串行计算机扩展总线标准，PCIe属于高速串行点对点双通道高带宽传输，所连接的设备分配独享通道带宽，不共享总线带宽，主要支持主动电源管理，错误报告，端对端的可靠性传输，热插拔以及服务质量(QOS)等功能。 PCIe Sizes：x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统">
+<meta property="og:url" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="Ringinmay&#39;s Blog">
+<meta property="og:description" content="认识操作系统 x86 系统的结构 PCI-EPCIe (Peripheral Component Interconnect Express，PCI-Express)一种高速串行计算机扩展总线标准，PCIe属于高速串行点对点双通道高带宽传输，所连接的设备分配独享通道带宽，不共享总线带宽，主要支持主动电源管理，错误报告，端对端的可靠性传输，热插拔以及服务质量(QOS)等功能。 PCIe Sizes：x">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600217528868.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600160298027.png">
+<meta property="og:image" content="https://img-blog.csdn.net/20180718153127412?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JqYXJuZUNwcA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://bkimg.cdn.bcebos.com/pic/9345d688d43f8794964ce0bdd31b0ef41ad53af5?x-bce-process=image/resize,m_lfit,w_250,h_250,limit_1">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600168907591.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600174254344.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600174669528.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600216350126.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600216585570.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600216594038.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600217029845.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600217767997.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600220979244.png">
+<meta property="article:published_time" content="2020-09-15T03:20:39.000Z">
+<meta property="article:modified_time" content="2020-09-16T02:54:24.745Z">
+<meta property="article:author" content="QQAI">
+<meta property="article:tag" content="OS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/1600217528868.png">
+
+<link rel="canonical" href="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>操作系统 | Ringinmay's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ringinmay's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Home is behind, the world ahead</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="QQAI">
+      <meta itemprop="description" content="Home is behind, the world ahead">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ringinmay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          操作系统
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-09-15 11:20:39" itemprop="dateCreated datePublished" datetime="2020-09-15T11:20:39+08:00">2020-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-09-16 10:54:24" itemprop="dateModified" datetime="2020-09-16T10:54:24+08:00">2020-09-16</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="认识操作系统"><a href="#认识操作系统" class="headerlink" title="认识操作系统"></a>认识操作系统</h2><p><img src="操作系统.assets\1600217528868.png" alt="1600217528868"></p>
+<h3 id="x86-系统的结构"><a href="#x86-系统的结构" class="headerlink" title="x86 系统的结构"></a>x86 系统的结构</h3><p><img src="操作系统.assets\1600160298027.png" alt="1600160298027"></p>
+<h4 id="PCI-E"><a href="#PCI-E" class="headerlink" title="PCI-E"></a>PCI-E</h4><p>PCIe (Peripheral Component Interconnect Express，PCI-Express)一种高速串行计算机扩展总线标准，PCIe属于高速串行点对点双通道高带宽传输，所连接的设备分配独享通道带宽，不共享总线带宽，主要支持主动电源管理，错误报告，端对端的可靠性传输，热插拔以及服务质量(<a href="https://baike.baidu.com/item/QOS" target="_blank" rel="noopener">QOS</a>)等功能。</p>
+<p>PCIe Sizes：x16 vs x8 vs x4 vs x1</p>
+<p>x后面的数字表示PCIe卡或插槽的物理大小，x16是最大的，x1是最小的。以下是各种尺寸的形状：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>Number of Pins（引脚的数量）</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI Express x1</td>
+<td>18</td>
+<td>25毫米</td>
+</tr>
+<tr>
+<td>PCI Express x4</td>
+<td>32</td>
+<td>39毫米</td>
+</tr>
+<tr>
+<td>PCI Express x8</td>
+<td>49</td>
+<td>56毫米</td>
+</tr>
+<tr>
+<td>PCI Express x16</td>
+<td>82</td>
+<td>89毫米</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>不管PCIe插槽或卡片的大小是多少，关键的凹槽，卡或槽中的小空间，总是在大头针11上。</p>
+<p>PCIe卡片适合于主板上的任何PCIe插槽，它的大小至少和它一样大。例如，PCIe x1卡将适用于任何PCIe x4、PCIe x8或PCIe x16插槽。</p>
+<p><img src="https://img-blog.csdn.net/20180718153127412?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JqYXJuZUNwcA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
+<h4 id="MDI"><a href="#MDI" class="headerlink" title="MDI"></a>MDI</h4><p>Medium Dependent Interface ，介质相关接口。在 hub 或 switch 中有两种接口，分别叫 MDI port和 MDI-X port， MDI port 也叫做级联端口（ uplink port ），是 hub 或 switch 之间相互连接的端口。 </p>
+<p>MDI port和 MDI-X port 之间最大的区别在于， MDI port内部发送数据线和接收数据线没交叉， 而MDI-X port 内部发送数据线和接收数据线是交叉的，这个X代表交叉的意思。</p>
+<p><img src="https://bkimg.cdn.bcebos.com/pic/9345d688d43f8794964ce0bdd31b0ef41ad53af5?x-bce-process=image/resize,m_lfit,w_250,h_250,limit_1" alt="img"></p>
+<p>计算机和交换机的连接要用直通线，交换机和交换机之间的连接要用交叉线，</p>
+<h4 id="DMI"><a href="#DMI" class="headerlink" title="DMI"></a>DMI</h4><p>DMI是指Direct Media Interface(直接媒体接口)，用于连接主板南北桥的总线，取代了以前的Hub-Link总线。它基于<a href="https://baike.baidu.com/item/PCI-Express" target="_blank" rel="noopener">PCI-Express</a>总线，跟随PCI-E总线的换代而换代。DMI采用点对点的连接方式，时钟频率为100MHz。</p>
+<h4 id="USB"><a href="#USB" class="headerlink" title="USB"></a>USB</h4><p>USB(Univversal Serial Bus) 连接慢速 I/O 设备和计算机。USB 1.0 ：12 Mb/s，USB 2.0 总线速度 480Mb/s，USB 3.0不小于 5Gb/s。USB连接不需要重启计算机。</p>
+<h4 id="SCSI"><a href="#SCSI" class="headerlink" title="SCSI"></a>SCSI</h4><p>SCSI(Small Computer System Interface) 总线是一种高速总线，用在高速硬盘，扫描仪和其他需要较大带宽的设备上。现在，它们主要用在服务器和工作站中，速度可以达到640MB/s。</p>
+<h3 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h3><h4 id="RAM"><a href="#RAM" class="headerlink" title="RAM"></a>RAM</h4><h4 id="ROM"><a href="#ROM" class="headerlink" title="ROM"></a>ROM</h4><blockquote>
+<ol>
+<li><p>rom最初不能编程，出厂什么内容就永远什么内容，不灵活。</p>
+</li>
+<li><p>后来出现了prom，可以自己写入一次，要是写错了，只能换一片。</p>
+</li>
+<li><p>人类文明不断进步，终于出现了可多次擦除写入的EPROM，每次擦除要把芯片拿到紫外线上照一下.</p>
+</li>
+<li><p>历史的车轮不断前进，伟大的EEPROM出现了，拯救了一大批程序员，终于可以随意的修改rom中的内容了。</p>
+<p>ROM—PROM—EPROM—EEPROM的进化！</p>
+</li>
+</ol>
+</blockquote>
+<h4 id="EEPROM"><a href="#EEPROM" class="headerlink" title="EEPROM"></a>EEPROM</h4><p>全称是“电可擦除可编程只读存储器，即Electrically Erasable Programmable Read-Only Memory。是相对于紫外擦除的rom来讲的。但是今天已经存在多种EEPROM的变种，变成了一类存储器的统称。</p>
+<h4 id="Flash"><a href="#Flash" class="headerlink" title="Flash"></a>Flash</h4><p>狭义的EEPROM：这种rom的特点是可以随机访问和修改任何一个字节，可以往每个bit中写入0或者1。这是最传统的一种EEPROM，掉电后数据不丢失，可以保存100年，可以擦写100w次。具有较高的可靠性，但是电路复杂/成本也高。因此目前的EEPROM都是几十千字节到几百千字节的，绝少有超过512K的。</p>
+<p>Flash属于广义的EEPROM，也是电擦除的rom。但擦除时不再以字节为单位，而是以块为单位，一次简化了电路，数据密度更高，降低了成本。上M的rom一般都是flash。</p>
+<p>flash分为nor flash和nand flash。</p>
+<blockquote>
+<ol>
+<li>nor flash数据线和地址线分开，可以实现ram一样的随机寻址功能，可以读取任何一个字节。但是擦除仍要按块来擦。</li>
+<li>nand flash同样是按块擦除，但是数据线和地址线复用，不能利用地址线随机寻址。读取只能按页来读取。（nandflash按块来擦除，按页来读，norflash没有页）</li>
+<li>由于nandflash引脚上复用，因此读取速度比nor flash慢一点，但是擦除和写入速度比nor flash快很多。nand flash内部电路更简单，因此数据密度大，体积小，成本也低。因此大容量的flash都是nand型的。小容量的2～12M的flash多是nor型的。</li>
+<li>使用寿命上，nand flash的擦除次数是nor的数倍。而且nand flash可以标记坏块，从而使软件跳过坏块。nor flash 一旦损坏便无法再用。</li>
+<li>因为nor flash可以进行字节寻址，所以程序可以在nor flash中运行。嵌入式系统多用一个小容量的nor flash存储引导代码，用一个大容量的nand flash存放文件系统和内核。</li>
+</ol>
+</blockquote>
+<p>参考：<a href="https://www.cnblogs.com/Pual623548198/p/7085319.html" target="_blank" rel="noopener">https://www.cnblogs.com/Pual623548198/p/7085319.html</a></p>
+<h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a>主板</h3><h4 id="基本输入输出系统-Basic-Input-Output-System-BIOS"><a href="#基本输入输出系统-Basic-Input-Output-System-BIOS" class="headerlink" title="基本输入输出系统(Basic Input Output System, BIOS)"></a>基本输入输出系统(Basic Input Output System, BIOS)</h4><p>保存在闪存中，非易失性。</p>
+<p>有底层I/0软件：读键盘，写屏幕，磁盘I/O。</p>
+<p>计算机启动时，检查设备，通过尝试存储在CMOS存储器中的设备清单尝试启动设备。</p>
+<p>决定从外部（CD-ROM，USB）还是硬盘启动。</p>
+<h4 id="互补金属氧化物半导体-Complementary-Metal-Oxide-Semiconductor-CMOS"><a href="#互补金属氧化物半导体-Complementary-Metal-Oxide-Semiconductor-CMOS" class="headerlink" title="互补金属氧化物半导体(Complementary Metal Oxide Semiconductor , CMOS)"></a>互补金属氧化物半导体(Complementary Metal Oxide Semiconductor , CMOS)</h4><p>电脑主板上的一块可读写的RAM芯片。用来保存BIOS设置完电脑硬件参数后的数据。</p>
+<h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><p>大型机操作系统</p>
+<p>服务器操作系统：典型的服务器操作系统有Solaris， FreeBSD，Linux，Windows Server 201x</p>
+<p>多处理器操作系统：将多个CPU连接到一个系统中，并行计算机（多核处理器）</p>
+<p>个人计算机系统：Linux，FreeBSD，Windows 7，Windows 8 ， OS X</p>
+<p>掌上计算机：Abdroid和IOS</p>
+<p>嵌入式操作系统：</p>
+<p>传感器节点操作系统：</p>
+<p>实时操作系统：硬实时系统和软实时系统</p>
+<p>智能卡操作系统：信用卡</p>
+<h4 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h4><p>本质是操作系统执行的一个程序。</p>
+<h5 id="地址空间："><a href="#地址空间：" class="headerlink" title="地址空间："></a>地址空间：</h5><p>32位有2^32字节的地址空间，64位有2^64字节的地址空间。</p>
+<p>通常，每个进程有一些可以使用的地址集合，典型值从0开始到某个最大值，一个进程可拥有的最大地址空间小于主存，这种情况下，即使进程用完其地址空间，内存也会有足够的内存运行该进程。</p>
+<blockquote>
+<p>如果进程的地址空间比主存还大，可以把部分地址空间装入主存，部分留在磁盘，并在需要时来回交换（虚拟内存）</p>
+</blockquote>
+<p>磁芯映像 core image</p>
+<p>资源集：寄存器（程序计数器和堆栈指针），打开文件的清单等 （这些都在进程表中）</p>
+<p>进程表：与一个进程相关的所有信息，除了该进程自身空间的内容以外，均存放在操作系统的一张表中。是数组或者链表结构，当前存在每一个进程都占据其中的一项。</p>
+<p>进程间通信：合作完成某些作业的相关进程需要彼此通信</p>
+<h4 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h4><p>读写之前，检查访问权限，若权限许可，系统返回一个小整数（文件描述符），若禁止访问，系统返回一个错误码。</p>
+<p>UNIX的特殊文件：为了使系统向调用读写文件一样调用I/O设备</p>
+<p>块特殊文件：可随机存取的块组成的设备，比如磁盘</p>
+<p>字符特殊文件：用于打印机，调制解调器和其他接受或输出字符流的设备。</p>
+<p>管道：一种虚文件，可以用来连接两个进程。</p>
+<h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><p>提供应用程序抽象：创建，写入，读取和删除文件。</p>
+<p>管理计算资源：</p>
+<h4 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h4><p>以系统调用read(fd, buffer, nbytes)为例</p>
+<p><img src="操作系统.assets\1600168907591.png" alt="1600168907591"></p>
+<p>首先把参数压入栈堆：1. C和C++编译器使用逆序 2. 第二个参数通过引用传递，即传递的是缓冲区的地址 &amp;</p>
+<p>TRAP指令：将用户态切换到内核态。</p>
+<p>完成调用之后，操作系统需要清除用户堆栈，增加堆栈指针（increment stackpointer）</p>
+<h5 id="用于进程管理的系统调用"><a href="#用于进程管理的系统调用" class="headerlink" title="用于进程管理的系统调用"></a>用于进程管理的系统调用</h5><p>fork创建原有进程的副本，包括所有的文件描述，寄存器等。fork调用返回一个值，在子进程中为0，在父进程中等于子进程的进程标识符（Process IDentified，PID）。</p>
+<h5 id="用于文件管理的系统调用"><a href="#用于文件管理的系统调用" class="headerlink" title="用于文件管理的系统调用"></a>用于文件管理的系统调用</h5><p>O_RDONLY O_WRONLY O_RDWR</p>
+<p>iseek(fd,offset,whence)</p>
+<h5 id="用于目录管理的系统调用"><a href="#用于目录管理的系统调用" class="headerlink" title="用于目录管理的系统调用"></a>用于目录管理的系统调用</h5><p>mkdir   rmdir</p>
+<p>link(name1,name2) 允许同一个文件以两个或者多个名称出现。</p>
+<p>每个文件都独一无二，i-number 是inodes表的索引。目录是一系列（i-编号，ASCII名称）的集合。</p>
+<p>link利用某个已有文件的i-编号，穿件一个新的目录项。</p>
+<p>mount(specila, name, flag)将两个文件系统合并为一个。<img src="操作系统.assets\1600174254344.png" alt="1600174254344"></p>
+<h5 id="其他系统调用"><a href="#其他系统调用" class="headerlink" title="其他系统调用"></a>其他系统调用</h5><p>chdir    chmod   kill</p>
+<h3 id="Win-32-API"><a href="#Win-32-API" class="headerlink" title="Win 32 API"></a>Win 32 API</h3><p>UNIX程序由执行某些操作或执行其他操作的代码组成，进行系统调用以执行某些服务。</p>
+<p>Windows应用程序通常是由事件驱动的，主程序等待一些时间发生，然后调用程序去处理。</p>
+<p>win中函数库的调用和实际的系统调用几乎是不对应的。</p>
+<p><img src="操作系统.assets\1600174669528.png" alt="1600174669528"></p>
+<p>windows中没有类似UNIX中的进程层次，不存在父进程和子进程的概念。</p>
+<h3 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a>操作系统结构</h3><h4 id="单体系统"><a href="#单体系统" class="headerlink" title="单体系统"></a>单体系统</h4><p>内核态以单一程序的方式运行</p>
+<p><img src="操作系统.assets\1600216350126.png" alt="1600216350126"></p>
+<p>除了核心操作系统外，操作系统还支持扩展：I/O设备驱动和文件系统。UNIX中叫做<strong>共享库（shared library）</strong>，windows中叫做**动态链接库（Dynamic Link Library，DLL）</p>
+<h4 id="分层系统"><a href="#分层系统" class="headerlink" title="分层系统"></a>分层系统</h4><p>使用层来分隔不同的功能单元，每一层只与该层的上层和下层通信。上层软件都是在下层软件的基础之上构建的。</p>
+<p><img src="操作系统.assets\1600216585570.png" alt="1600216585570"></p>
+<p><img src="操作系统.assets\1600216594038.png" alt="1600216594038"></p>
+<h4 id="微内核"><a href="#微内核" class="headerlink" title="微内核"></a>微内核</h4><p>在分层方式中，确定哪里划分内核-用户的分界。</p>
+<p>MINIX3</p>
+<p><img src="操作系统.assets\1600217029845.png" alt="1600217029845"></p>
+<p>微内核中机制与策略分离，内核均值寻找最高的优先级进程并运行，策略（赋予进程优先级）可以在用户态中的进程完成。</p>
+<h4 id="客户-服务器模式"><a href="#客户-服务器模式" class="headerlink" title="客户-服务器模式"></a>客户-服务器模式</h4><p>当策略将进程分为两大类：服务器（提供服务）和客户端（使用服务）——客户-服务模式。</p>
+<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p><img src="操作系统.assets\1600217767997.png" alt="1600217767997"></p>
+<h3 id="进程-1"><a href="#进程-1" class="headerlink" title="进程"></a>进程</h3><p>进程是对正在运行中的程序的一个抽象。即使CPU只有一个，也支持（伪）并发操作（将单独的CPU抽象为多个虚拟机的CPU）</p>
+<p>伪并行（pseudoparallelism）：单核或多核处理器同时执行多个进程，从而使程序更快，通过以非常有限的时间间隔在程序之间快速切换CPU产生并行感。</p>
+<h4 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h4><p>进程包括：程序计数器，寄存器，变量当前值。</p>
+<p>顺序进程（sequential process）</p>
+<h4 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h4><ul>
+<li><p>系统初始化（init）: 启动阶段穿件进程</p>
+<blockquote>
+<p>前台进程（numerous process）：同用户进行交互并完成工作</p>
+<p>守护进程（daemons）：运行在后台，不与特定用户进行交互</p>
+</blockquote>
+</li>
+<li><p>正在运行的程序执行了创建进程的系统调用（fork）</p>
+<blockquote>
+<p>​</p>
+</blockquote>
+</li>
+<li><p>用户请求创建新进程</p>
+<blockquote>
+<p>交互式系统中，输入命令或者双击启动程序</p>
+</blockquote>
+</li>
+<li><p>初始化一个批处理工作</p>
+<blockquote>
+<p>大型机的批处理系统</p>
+<p>在UNIX中，系统调用(fork)后，创建一个与调用进程相关的副本，子进程有何父进程相同的内存映像，环境字符创和打开文件，子进程执行<code>execve</code>或者简单的系统调用来改变内存映像并运行一个新程序。</p>
+<p>例如 shell中输入sort命令，shell会fork一个子进程，然后执行sort命令</p>
+<p>Win32中，<code>CreateProcess</code>处理流程创建并将正确的程序加载到新的进程中。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="进程的终止"><a href="#进程的终止" class="headerlink" title="进程的终止"></a>进程的终止</h4><ul>
+<li><p>正常退出(自愿)</p>
+<blockquote>
+<p>编译器完成给定程序的编译后，编译器执行一个系统调用告诉操作系统完成了工作</p>
+<p>UNIX：<code>exit</code>  Windows: <code>ExitProcess</code></p>
+<p>界面化的软件有可以点击关闭的按钮，用来通知进程删除其打开的临时文件，然后终止。</p>
+</blockquote>
+</li>
+<li><p>错误退出(自愿)</p>
+<blockquote>
+<p>发出声明，给出错误参数，并退出</p>
+<p>面向屏幕的交互式进程通常并不会直接退出</p>
+</blockquote>
+</li>
+<li><p>严重错误（非自愿）</p>
+<blockquote>
+<p>进程引起的错误，通常由于程序中的错误导致，UNIX中，进程会受到信号（中断）</p>
+<p>例如，执行一条非法指令，引用不存在的内存，或者除数为0</p>
+</blockquote>
+</li>
+<li><p>被其他进程杀死（非自愿）</p>
+<blockquote>
+<p>UNIX kill；Win32中TerminateProcess</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="进程的层次结构"><a href="#进程的层次结构" class="headerlink" title="进程的层次结构"></a>进程的层次结构</h4><ul>
+<li><p>UNIX</p>
+<p>进程和其所有子进程以及子进程的子进程共同组成一个进程组。</p>
+</li>
+<li><p>Windows</p>
+<p>没有进程层次的概念。父进程可以得到一个特别的令牌（句柄），用来控制子进程，但该令牌可以移交给别的操作系统。UNIX中不能剥夺其子进程的进程权。</p>
+</li>
+</ul>
+<h4 id="进程状态"><a href="#进程状态" class="headerlink" title="进程状态"></a>进程状态</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat chapter1 chapter2 chapter3 | grep tree</span><br></pre></td></tr></table></figure>
+<p>当grep就绪，但输入进程还没能完成时，必须阻塞grep进程，直到输入完毕。</p>
+<p><img src="操作系统.assets\1600220979244.png" alt="1600220979244"></p>
+<ul>
+<li>运行态：进程实际占用CPU时间片</li>
+<li>就绪态：可运行，但因其他进程正在运行而处于就绪状态</li>
+<li>阻塞态：除非某种外部时间发生，否则进程不能运行</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/OS/" rel="tag"># OS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/09/%E7%BD%91%E7%BB%9C%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86/" rel="prev" title="网络相关知识">
+      <i class="fa fa-chevron-left"></i> 网络相关知识
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#认识操作系统"><span class="nav-text">认识操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#x86-系统的结构"><span class="nav-text">x86 系统的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PCI-E"><span class="nav-text">PCI-E</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MDI"><span class="nav-text">MDI</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DMI"><span class="nav-text">DMI</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#USB"><span class="nav-text">USB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SCSI"><span class="nav-text">SCSI</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储器"><span class="nav-text">存储器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RAM"><span class="nav-text">RAM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ROM"><span class="nav-text">ROM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EEPROM"><span class="nav-text">EEPROM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flash"><span class="nav-text">Flash</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主板"><span class="nav-text">主板</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本输入输出系统-Basic-Input-Output-System-BIOS"><span class="nav-text">基本输入输出系统(Basic Input Output System, BIOS)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#互补金属氧化物半导体-Complementary-Metal-Oxide-Semiconductor-CMOS"><span class="nav-text">互补金属氧化物半导体(Complementary Metal Oxide Semiconductor , CMOS)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作系统"><span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分类"><span class="nav-text">分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程"><span class="nav-text">进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件"><span class="nav-text">文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#功能"><span class="nav-text">功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#系统调用"><span class="nav-text">系统调用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Win-32-API"><span class="nav-text">Win 32 API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作系统结构"><span class="nav-text">操作系统结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单体系统"><span class="nav-text">单体系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分层系统"><span class="nav-text">分层系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#微内核"><span class="nav-text">微内核</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#客户-服务器模式"><span class="nav-text">客户-服务器模式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程和线程"><span class="nav-text">进程和线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程-1"><span class="nav-text">进程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#进程模型"><span class="nav-text">进程模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程的创建"><span class="nav-text">进程的创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程的终止"><span class="nav-text">进程的终止</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程的层次结构"><span class="nav-text">进程的层次结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程状态"><span class="nav-text">进程状态</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="QQAI"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">QQAI</p>
+  <div class="site-description" itemprop="description">Home is behind, the world ahead</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">QQAI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+    MathJax.Ajax.config.path['mhchem'] = '//cdn.jsdelivr.net/npm/mathjax-mhchem@3';
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        extensions: ['[mhchem]/mhchem.js'],
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+
+  
+
+</body>
+</html>
