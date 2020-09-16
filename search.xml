@@ -5585,7 +5585,8 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 <img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600225430669.png" class width="1600225430669">
 <p>顺序进程（sequential process）</p>
 <p>操作系统最底层是调度程序（中断和调度处理），之上是顺序进程。</p>
-<h4 id="进程的实现"><a href="#进程的实现" class="headerlink" title="进程的实现"></a>进程的实现</h4>]]></content>
+<h4 id="进程的实现"><a href="#进程的实现" class="headerlink" title="进程的实现"></a>进程的实现</h4><p><code>进程表</code></p>
+]]></content>
       <categories>
         <category>基础知识</category>
       </categories>
@@ -6702,7 +6703,7 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 <p>PS：微信暂时不支持自定义截图存储位置</p>
 <a id="more"></a>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>Typora设置：文件→偏好设置→图片→设置复制图片到文件夹</p>
-
+<img src="/2020/09/16/Hexo%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/1600231524158.png" class width="1600231524158">
 <p>如果选择<code>对网络位置的图片应用上述规则</code>应该会将图片保存到assets文件夹下。</p>
 <p>但是完成设置后仅仅可以在Typro中显示，在主页不能显示。</p>
 <h2 id="博客不能显示图片"><a href="#博客不能显示图片" class="headerlink" title="博客不能显示图片"></a>博客不能显示图片</h2><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ol>
@@ -6716,8 +6717,8 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">_config.yml</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>可以<code>![](image.jpg)</code>，直接添加，会自动渲染添加路径。</p>
 </li>
-<li><p>将filename.assets文件夹重命名为filename</p>
-<p>或者将图片拷到filename文件夹下</p>
+<li><p>将filename.assets文件夹重命名为filename，或者将图片拷到filename文件夹下</p>
+<p>将md文件中图片的路径替换。</p>
 <p>因为hexo自动渲染的路径是相对应的post路径</p>
 </li>
 </ol>

@@ -53,12 +53,14 @@
 <meta property="og:site_name" content="Ringinmay&#39;s Blog">
 <meta property="og:description" content="前因记笔记时经常使用微信截图，直接粘贴到Typora中，在本地显示没有问题，但是如果不小心删除微信缓存，或者换电脑浏览图片显示就会出错。 PS：微信暂时不支持自定义截图存储位置">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/09/16/Hexo%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/1600231524158.png">
 <meta property="article:published_time" content="2020-09-16T04:40:49.000Z">
-<meta property="article:modified_time" content="2020-09-16T05:02:06.319Z">
+<meta property="article:modified_time" content="2020-09-16T05:07:40.722Z">
 <meta property="article:author" content="QQAI">
 <meta property="article:tag" content="Typora">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/09/16/Hexo%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/1600231524158.png">
 
 <link rel="canonical" href="http://yoursite.com/2020/09/16/Hexo%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/">
 
@@ -231,7 +233,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-16 12:40:49 / Modified: 13:02:06" itemprop="dateCreated datePublished" datetime="2020-09-16T12:40:49+08:00">2020-09-16</time>
+              <time title="Created: 2020-09-16 12:40:49 / Modified: 13:07:40" itemprop="dateCreated datePublished" datetime="2020-09-16T12:40:49+08:00">2020-09-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -267,7 +269,7 @@
 <p>PS：微信暂时不支持自定义截图存储位置</p>
 <a id="more"></a>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>Typora设置：文件→偏好设置→图片→设置复制图片到文件夹</p>
-
+<img src="/2020/09/16/Hexo%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/1600231524158.png" class width="1600231524158">
 <p>如果选择<code>对网络位置的图片应用上述规则</code>应该会将图片保存到assets文件夹下。</p>
 <p>但是完成设置后仅仅可以在Typro中显示，在主页不能显示。</p>
 <h2 id="博客不能显示图片"><a href="#博客不能显示图片" class="headerlink" title="博客不能显示图片"></a>博客不能显示图片</h2><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ol>
@@ -281,8 +283,8 @@
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">_config.yml</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>可以<code>![](image.jpg)</code>，直接添加，会自动渲染添加路径。</p>
 </li>
-<li><p>将filename.assets文件夹重命名为filename</p>
-<p>或者将图片拷到filename文件夹下</p>
+<li><p>将filename.assets文件夹重命名为filename，或者将图片拷到filename文件夹下</p>
+<p>将md文件中图片的路径替换。</p>
 <p>因为hexo自动渲染的路径是相对应的post路径</p>
 </li>
 </ol>
