@@ -163,25 +163,25 @@
 <font face="黑体">我是黑体字</font>
 <font face="微软雅黑">我是微软雅黑</font>
 <font face="STCAIYUN">我是华文彩云</font>
-<font color=red>我是红色</font>
-<font color=#008000>我是绿色</font>
-<font color=Blue>我是蓝色</font>
-<font size=5>我是尺寸</font>
-<font face="黑体" color=green size=5>我是黑体，绿色，尺寸为5</font>
+<font color="red">我是红色</font>
+<font color="#008000">我是绿色</font>
+<font color="Blue">我是蓝色</font>
+<font size="5">我是尺寸</font>
+<font face="黑体" color="green" size="5">我是黑体，绿色，尺寸为5</font>
 
 <h2 id="文字背景色"><a href="#文字背景色" class="headerlink" title="文字背景色"></a>文字背景色</h2><p>由于 Markdown中不支持 style 标签和 style 属性，所以这里只能是通过 table, tr, td 等表格标签的 bgcolor 属性来实现背景色，将一整行看作一个表格，更改单元格的背景色（bgcolor）</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">td</span> <span class="attr">bgcolor</span>=<span class="string">blue</span>&gt;</span></span>颜色测试<span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
-<table><tr><td bgcolor=blue>颜色测试</td></tr></table>
+<table><tr><td bgcolor="blue">颜色测试</td></tr></table>
 
 <h2 id="图片居中"><a href="#图片居中" class="headerlink" title="图片居中"></a>图片居中</h2><p>将文件放在 <em>/source/image</em> 文件夹下,  可以实现图片显示, 但是这种引用在本地markdown 编辑器中会无法预览,因为相对路径不一致,找不到文件。</p>
 <p>使用img标签</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">align</span>=<span class="string">right</span>&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image/timg.jfif"</span> <span class="attr">width</span>=<span class="string">"50%"</span> <span class="attr">height</span>=<span class="string">"50%"</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<div align=right><img src="image/timg.jfif" width="50%" height="50%"></div>
+<div align="right"><img src="/.com//timg.jfif" width="50%" height="50%"></div>
 
 <p>使用div标签+css控制图片显示</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width: 200px; margin: auto"</span>&gt;</span>![pikachu](image/timg.jfif)<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<div style="width: 200px; margin: auto">![pikachu](image/timg.jfif)</div>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width: 200px; margin: auto"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div style="width: 200px; margin: auto"></div>
 
 <hr>
 <p>参考：<a href="https://blog.csdn.net/heimu24/article/details/81189700" target="_blank" rel="noopener">https://blog.csdn.net/heimu24/article/details/81189700</a></p>
@@ -1373,7 +1373,6 @@
 <p><a href="https://www.jianshu.com/p/4a94798f7dcc" target="_blank" rel="noopener">简书《Scikit-Learn、Keras与TensorFlow机器学习实用指南》第一版和第二版对照</a></p>
 <p><a href="https://blog.csdn.net/jiaoyangwm/article/details/82387883#%E7%BB%83%E4%B9%A0%E9%A2%987" target="_blank" rel="noopener">练习题答案参考</a> <a href="https://blog.csdn.net/leowinbow/article/details/88581039" target="_blank" rel="noopener">参考2</a></p>
 <a id="more"></a>
-<p>[TOC]</p>
 <h2 id="第10章-使用Keras搭建人工神经网络"><a href="#第10章-使用Keras搭建人工神经网络" class="headerlink" title="第10章 使用Keras搭建人工神经网络"></a>第10章 使用Keras搭建人工神经网络</h2><p>需要安装<a href="https://www.jianshu.com/p/3a76e4f0504a" target="_blank" rel="noopener">Tensorflow</a>和Keras</p>
 <p>人工神经网络是受大脑中的生物神经元启发而来的机器学习模型。</p>
 <p>人工神经网络是深度学习的核心，它不仅样式多样、功能强大，还具有可伸缩性，这让人工神经网络适宜处理庞大且复杂的机器学习任务，例如对数十亿张图片分类（谷歌图片）、语音识别（苹果Siri）、向数亿用户每天推荐视频（Youtube）、或者通过学习几百围棋世界冠军（DeepMind的AlphaGo）。</p>
@@ -2802,7 +2801,7 @@ sgn(z)=\left \{ \begin{array} {ll} 0& if\ z<0\\0 & if\ z =0\\1&if \ z\gt 0 \end{
 <p>​                                                                                                                                                                                          </p>
 ]]></content>
       <categories>
-        <category>数据分析</category>
+        <category>基础知识</category>
       </categories>
       <tags>
         <tag>sklearn</tag>
@@ -3159,7 +3158,7 @@ sgn(z)=\left \{ \begin{array} {ll} 0& if\ z<0\\0 & if\ z =0\\1&if \ z\gt 0 \end{
       </tags>
   </entry>
   <entry>
-    <title>《Scikit-Learn与TensorFlow机器学习实用指南》</title>
+    <title>《Scikit-Learn与TensorFlow机器学习实用指南》-第一部分</title>
     <url>/2020/08/25/%E3%80%8AScikit-Learn%E4%B8%8ETensorFlow%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E7%94%A8%E6%8C%87%E5%8D%97%E3%80%8B/</url>
     <content><![CDATA[<p>学习资料参考：</p>
 <p><a href="https://www.cntofu.com/book/27/docs/2.%E4%B8%80%E4%B8%AA%E5%AE%8C%E6%95%B4%E7%9A%84%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE.md" target="_blank" rel="noopener">一个完整的机器学习项目.md</a></p>
@@ -3171,7 +3170,6 @@ sgn(z)=\left \{ \begin{array} {ll} 0& if\ z<0\\0 & if\ z =0\\1&if \ z\gt 0 \end{
 <p><a href="https://www.jianshu.com/p/4a94798f7dcc" target="_blank" rel="noopener">简书《Scikit-Learn、Keras与TensorFlow机器学习实用指南》第一版和第二版对照</a></p>
 <p><a href="https://blog.csdn.net/jiaoyangwm/article/details/82387883#%E7%BB%83%E4%B9%A0%E9%A2%987" target="_blank" rel="noopener">练习题答案参考</a> <a href="https://blog.csdn.net/leowinbow/article/details/88581039" target="_blank" rel="noopener">参考2</a></p>
 <a id="more"></a>
-<p>[TOC]</p>
 <h2 id="第01章-机器学习概览"><a href="#第01章-机器学习概览" class="headerlink" title="第01章 机器学习概览"></a>第01章 机器学习概览</h2><ol>
 <li><p>os.makedirs(IMAGES_PATH, exist_ok=True)</p>
 </li>
@@ -4582,7 +4580,7 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 </ol>
 ]]></content>
       <categories>
-        <category>数据分析</category>
+        <category>基础知识</category>
       </categories>
       <tags>
         <tag>sklearn</tag>
@@ -5374,9 +5372,10 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
   <entry>
     <title>操作系统</title>
     <url>/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h2 id="认识操作系统"><a href="#认识操作系统" class="headerlink" title="认识操作系统"></a>认识操作系统</h2><p><img src="操作系统.assets\1600217528868.png" alt="1600217528868"></p>
+    <content><![CDATA[<h2 id="认识操作系统"><a href="#认识操作系统" class="headerlink" title="认识操作系统"></a>认识操作系统</h2><p><img src="/.com//1600217528868.png" alt="1600217528868"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img 1600217528868.png This is an example image %&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="x86-系统的结构"><a href="#x86-系统的结构" class="headerlink" title="x86 系统的结构"></a>x86 系统的结构</h3><p><img src="操作系统.assets\1600160298027.png" alt="1600160298027"></p>
+<h3 id="x86-系统的结构"><a href="#x86-系统的结构" class="headerlink" title="x86 系统的结构"></a>x86 系统的结构</h3><p><img src="/.com//1600160298027.png" alt="1600160298027"></p>
 <h4 id="PCI-E"><a href="#PCI-E" class="headerlink" title="PCI-E"></a>PCI-E</h4><p>PCIe (Peripheral Component Interconnect Express，PCI-Express)一种高速串行计算机扩展总线标准，PCIe属于高速串行点对点双通道高带宽传输，所连接的设备分配独享通道带宽，不共享总线带宽，主要支持主动电源管理，错误报告，端对端的可靠性传输，热插拔以及服务质量(<a href="https://baike.baidu.com/item/QOS" target="_blank" rel="noopener">QOS</a>)等功能。</p>
 <p>PCIe Sizes：x16 vs x8 vs x4 vs x1</p>
 <p>x后面的数字表示PCIe卡或插槽的物理大小，x16是最大的，x1是最小的。以下是各种尺寸的形状：</p>
@@ -5482,7 +5481,7 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 <h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><p>提供应用程序抽象：创建，写入，读取和删除文件。</p>
 <p>管理计算资源：</p>
 <h4 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h4><p>以系统调用read(fd, buffer, nbytes)为例</p>
-<p><img src="操作系统.assets\1600168907591.png" alt="1600168907591"></p>
+<p><img src="/.com//1600168907591.png" alt="1600168907591"></p>
 <p>首先把参数压入栈堆：1. C和C++编译器使用逆序 2. 第二个参数通过引用传递，即传递的是缓冲区的地址 &amp;</p>
 <p>TRAP指令：将用户态切换到内核态。</p>
 <p>完成调用之后，操作系统需要清除用户堆栈，增加堆栈指针（increment stackpointer）</p>
@@ -5493,25 +5492,25 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 <p>link(name1,name2) 允许同一个文件以两个或者多个名称出现。</p>
 <p>每个文件都独一无二，i-number 是inodes表的索引。目录是一系列（i-编号，ASCII名称）的集合。</p>
 <p>link利用某个已有文件的i-编号，穿件一个新的目录项。</p>
-<p>mount(specila, name, flag)将两个文件系统合并为一个。<img src="操作系统.assets\1600174254344.png" alt="1600174254344"></p>
+<p>mount(specila, name, flag)将两个文件系统合并为一个。<img src="/.com//1600174254344.png" alt="1600174254344"></p>
 <h5 id="其他系统调用"><a href="#其他系统调用" class="headerlink" title="其他系统调用"></a>其他系统调用</h5><p>chdir    chmod   kill</p>
 <h3 id="Win-32-API"><a href="#Win-32-API" class="headerlink" title="Win 32 API"></a>Win 32 API</h3><p>UNIX程序由执行某些操作或执行其他操作的代码组成，进行系统调用以执行某些服务。</p>
 <p>Windows应用程序通常是由事件驱动的，主程序等待一些时间发生，然后调用程序去处理。</p>
 <p>win中函数库的调用和实际的系统调用几乎是不对应的。</p>
-<p><img src="操作系统.assets\1600174669528.png" alt="1600174669528"></p>
+<p><img src="/.com//1600174669528.png" alt="1600174669528"></p>
 <p>windows中没有类似UNIX中的进程层次，不存在父进程和子进程的概念。</p>
 <h3 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a>操作系统结构</h3><h4 id="单体系统"><a href="#单体系统" class="headerlink" title="单体系统"></a>单体系统</h4><p>内核态以单一程序的方式运行</p>
-<p><img src="操作系统.assets\1600216350126.png" alt="1600216350126"></p>
+<p><img src="/.com//1600216350126.png" alt="1600216350126"></p>
 <p>除了核心操作系统外，操作系统还支持扩展：I/O设备驱动和文件系统。UNIX中叫做<strong>共享库（shared library）</strong>，windows中叫做**动态链接库（Dynamic Link Library，DLL）</p>
 <h4 id="分层系统"><a href="#分层系统" class="headerlink" title="分层系统"></a>分层系统</h4><p>使用层来分隔不同的功能单元，每一层只与该层的上层和下层通信。上层软件都是在下层软件的基础之上构建的。</p>
-<p><img src="操作系统.assets\1600216585570.png" alt="1600216585570"></p>
-<p><img src="操作系统.assets\1600216594038.png" alt="1600216594038"></p>
+<p><img src="/.com//1600216585570.png" alt="1600216585570"></p>
+<p><img src="/.com//1600216594038.png" alt="1600216594038"></p>
 <h4 id="微内核"><a href="#微内核" class="headerlink" title="微内核"></a>微内核</h4><p>在分层方式中，确定哪里划分内核-用户的分界。</p>
 <p>MINIX3</p>
-<p><img src="操作系统.assets\1600217029845.png" alt="1600217029845"></p>
+<p><img src="/.com//1600217029845.png" alt="1600217029845"></p>
 <p>微内核中机制与策略分离，内核均值寻找最高的优先级进程并运行，策略（赋予进程优先级）可以在用户态中的进程完成。</p>
 <h4 id="客户-服务器模式"><a href="#客户-服务器模式" class="headerlink" title="客户-服务器模式"></a>客户-服务器模式</h4><p>当策略将进程分为两大类：服务器（提供服务）和客户端（使用服务）——客户-服务模式。</p>
-<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p><img src="操作系统.assets\1600217767997.png" alt="1600217767997"></p>
+<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p><img src="/.com//1600217767997.png" alt="1600217767997"></p>
 <h3 id="进程-1"><a href="#进程-1" class="headerlink" title="进程"></a>进程</h3><p>进程是对正在运行中的程序的一个抽象。即使CPU只有一个，也支持（伪）并发操作（将单独的CPU抽象为多个虚拟机的CPU）</p>
 <p>伪并行（pseudoparallelism）：单核或多核处理器同时执行多个进程，从而使程序更快，通过以非常有限的时间间隔在程序之间快速切换CPU产生并行感。</p>
 <h4 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h4><p>进程包括：程序计数器，寄存器，变量当前值。</p>
@@ -5577,14 +5576,14 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 </ul>
 <h4 id="进程状态"><a href="#进程状态" class="headerlink" title="进程状态"></a>进程状态</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat chapter1 chapter2 chapter3 | grep tree</span><br></pre></td></tr></table></figure>
 <p>当grep就绪，但输入进程还没能完成时，必须阻塞grep进程，直到输入完毕。</p>
-<p><img src="操作系统.assets\1600220979244.png" alt="1600220979244"></p>
+<p><img src="/.com//1600220979244.png" alt="1600220979244"></p>
 <ul>
 <li>运行态：进程实际占用CPU时间片</li>
 <li>就绪态：可运行，但因其他进程正在运行而处于就绪状态</li>
 <li>阻塞态：除非某种外部时间发生，否则进程不能运行</li>
 </ul>
 <p>程序调度：决定哪个进程优先被运行和运行多久。</p>
-<p><img src="操作系统.assets/1600225430669.png" alt="1600225430669"></p>
+<img src="/.com//09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600225430669.png" class width="1600225430669">
 <p>顺序进程（sequential process）</p>
 <p>操作系统最底层是调度程序（中断和调度处理），之上是顺序进程。</p>
 <h4 id="进程的实现"><a href="#进程的实现" class="headerlink" title="进程的实现"></a>进程的实现</h4>]]></content>
