@@ -5374,6 +5374,24 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
     <url>/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h2 id="认识操作系统"><a href="#认识操作系统" class="headerlink" title="认识操作系统"></a>认识操作系统</h2><p><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600217528868.png" alt="1600217528868"></p>
 <a id="more"></a>
+<p><a href="https://blog.csdn.net/weixin_34408717/article/details/92328959?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param" target="_blank" rel="noopener">BSD操作系统大盘点：四种主流BSD</a></p>
+<p>现在，共有5个流行的BSD操作系统，其中的三个——FreeBSD，NetBSD 和OpenBSD——得到了BSD的授权，操作系统和源代码都是免费的，任何人都可以用于任何目的。其余的两个BSD/OS和Mac OS X是商业产品，它们以开放的BSD代码为基础，具有特殊的优势和与众不同的技术。</p>
+<ol>
+<li>OpenBSD非常适合用于网络路由器、防火墙和安全互联网服务解决方案中，因为它具有高水平的内置安全和加密功能。操作系统很小，但效率很高，它能在老的只有16MB内存的486机器上运行得很好</li>
+<li>FreeBSD的重点是性能，特别是TCP/IP堆栈的性能。包括雅虎在内的许多公司都在使用FreeBSD作为互联网服务器平台。FreeBSD还有一项传输数据的非正式的记录，一台运行这个操作系统的服务器传输了2TB以上的数据。这个统计还显示，FreeBSD还是最稳定的操作系统之一。</li>
+<li>基于BSD的最轻便的操作系统。目前能够在46种之多的不同硬件构架上运行, 嵌入式系统的最佳选择。</li>
+</ol>
+<p>台式机：</p>
+<blockquote>
+<p>FreeBSD是一种稳定的和广泛支持的选择。</p>
+<p>对于比较老的硬件或者非主流的硬件来说，NetBSD也许是更好的解决方案。</p>
+<p>如果正在开发部署针对多种嵌入式系统的解决方案，NetBSD应该是很好的选择，因为它可以方便的应用于各种目标平台。</p>
+</blockquote>
+<p>服务器：</p>
+<blockquote>
+<p>OpenBSD显然是服务器的选择，因为它有非常高的安全政策。拥有这样的安全环境，很容易部署基于OpenBSD的服务器，而不比太担心这个系统或者网络被攻破。OpenBSD用于网络的公共方面、提供防火墙和互联网与内部网络之间的代理服务是特别理想的。</p>
+<p>对于纯Web服务器来说，FreeBSD也是一个很好的选择，因为它在x86等关键的硬件平台上具有很好的稳定性。硬盘和网络堆栈的质量意决定了服务器的可用性。特别是通过关闭你不需要支持的服务，还能使FreeBSD更加安全。</p>
+</blockquote>
 <h3 id="x86-系统的结构"><a href="#x86-系统的结构" class="headerlink" title="x86 系统的结构"></a>x86 系统的结构</h3><p><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600160298027.png" alt="1600160298027"></p>
 <h4 id="PCI-E"><a href="#PCI-E" class="headerlink" title="PCI-E"></a>PCI-E</h4><p>PCIe (Peripheral Component Interconnect Express，PCI-Express)一种高速串行计算机扩展总线标准，PCIe属于高速串行点对点双通道高带宽传输，所连接的设备分配独享通道带宽，不共享总线带宽，主要支持主动电源管理，错误报告，端对端的可靠性传输，热插拔以及服务质量(<a href="https://baike.baidu.com/item/QOS" target="_blank" rel="noopener">QOS</a>)等功能。</p>
 <p>PCIe Sizes：x16 vs x8 vs x4 vs x1</p>
@@ -5510,7 +5528,8 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 <p>微内核中机制与策略分离，内核均值寻找最高的优先级进程并运行，策略（赋予进程优先级）可以在用户态中的进程完成。</p>
 <h4 id="客户-服务器模式"><a href="#客户-服务器模式" class="headerlink" title="客户-服务器模式"></a>客户-服务器模式</h4><p>当策略将进程分为两大类：服务器（提供服务）和客户端（使用服务）——客户-服务模式。</p>
 <h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600217767997.png" alt="1600217767997"></p>
-<h3 id="进程-1"><a href="#进程-1" class="headerlink" title="进程"></a>进程</h3><p>进程是对正在运行中的程序的一个抽象。即使CPU只有一个，也支持（伪）并发操作（将单独的CPU抽象为多个虚拟机的CPU）</p>
+<h3 id="进程-1"><a href="#进程-1" class="headerlink" title="进程"></a>进程</h3><p>进程是对正在运行中的程序的一个抽象。一般包括一个地址空间和一个控制线程。</p>
+<p>即使CPU只有一个，也支持（伪）并发操作（将单独的CPU抽象为多个虚拟机的CPU）</p>
 <p>伪并行（pseudoparallelism）：单核或多核处理器同时执行多个进程，从而使程序更快，通过以非常有限的时间间隔在程序之间快速切换CPU产生并行感。</p>
 <h4 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h4><p>进程包括：程序计数器，寄存器，变量当前值。</p>
 <h4 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h4><ul>
@@ -5586,6 +5605,542 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 <p>顺序进程（sequential process）</p>
 <p>操作系统最底层是调度程序（中断和调度处理），之上是顺序进程。</p>
 <h4 id="进程的实现"><a href="#进程的实现" class="headerlink" title="进程的实现"></a>进程的实现</h4><p><code>进程表</code></p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600233868365.png" class width="1600233868365">
+<p>中断向量</p>
+<ol>
+<li>硬件压入堆栈程序计数器等</li>
+<li>硬件从中断向量装入新的程序计数器</li>
+<li>汇编语言过程保存寄存器的值</li>
+<li>汇编语言过程设置新的堆栈</li>
+<li>C中断服务器运行</li>
+<li>调度器决定接下来那个程序先运行</li>
+<li>C过程返回汇编代码</li>
+<li>汇编语言过程开始运行新的当前进程</li>
+</ol>
+<h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><p>在许多情况下，经常存在同一个地址空间中运行多个控制线程的情形，这些线程就像是分离的进程。</p>
+<h4 id="线程的使用"><a href="#线程的使用" class="headerlink" title="线程的使用"></a>线程的使用</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>线程</th>
+<th>进程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多线程可以共享一块地址空间和所有可用数据</td>
+<td></td>
+</tr>
+<tr>
+<td>更轻量级，比进程更容易创建，撤销，创建一个线程比创建一个进程快10-100倍</td>
+<td></td>
+</tr>
+<tr>
+<td>性能方面：如果多个线程都是CPU密集型的，则不能获得性能上的增强，吐过存在大量的计算和大量I/O处理，多线程可以重叠进行，加快应用程序的执行速度。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="多线程解决方案"><a href="#多线程解决方案" class="headerlink" title="多线程解决方案"></a>多线程解决方案</h5><p>一个多线程的web服务器</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600234612151.png" class width="1600234612151">
+<p>调度线程的大致逻辑：一个的循环获得工作请求，并将请求派给工作线程</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(TRUE)&#123;</span><br><span class="line">get_next_request(&amp;buf);</span><br><span class="line">handoff_work(&amp;buf);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>工作线程的大致逻辑：在告诉缓存中查找页面，若无，从web服务器（磁盘中）获得页面</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(TRUE)&#123;</span><br><span class="line">wait_for_work(&amp;buf);</span><br><span class="line">look_for_page_in_cache(&amp;buf,&amp;page);</span><br><span class="line"><span class="keyword">if</span>(page_not_in_cache(&amp;page))&#123;</span><br><span class="line">read_page_from_disk(&amp;buf,&amp;page);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> _page(&amp;page);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="单线程解决方案"><a href="#单线程解决方案" class="headerlink" title="单线程解决方案"></a>单线程解决方案</h5><p>web服务器通过主循环获取请求并检查请求，争取在下一个请求之前完成工作，在等待磁盘操作时，服务器空转，不处理任何其他请求。</p>
+<h5 id="状态机解决方案"><a href="#状态机解决方案" class="headerlink" title="状态机解决方案"></a>状态机解决方案</h5><p>并行，非阻塞系统调用，中断</p>
+<p>有限状态机</p>
+<h4 id="经典的线程模型"><a href="#经典的线程模型" class="headerlink" title="经典的线程模型"></a>经典的线程模型</h4><p>线程有程序计数器（记录下一条执行指令）和寄存器（保存线程当前正在使用的变量）以及堆栈（记录程序的执行路径）。</p>
+<p>线程具有一些进程的属性，被称为<code>轻量的进程</code></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>线程</th>
+<th>进程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用于把资源集中在一起</td>
+<td>CPU上调度执行的实体</td>
+</tr>
+<tr>
+<td>多个线程共享同一地址空间和其他资源，每个线程都可以访问进程地址空间内每个内存地址，因此一个线程可以读取、写入甚至擦除另一个线程的堆栈</td>
+<td>多进程共享物理内存，磁盘，打印机和其他资源。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600237514736.png" class width="1600237514736">
+<p>线程通常会被阻塞，直到它等待某个外部事件的发生或者有其他线程来释放它。</p>
+<h4 id="线程系统调用"><a href="#线程系统调用" class="headerlink" title="线程系统调用"></a>线程系统调用</h4><p><code>thread_create</code>：创建</p>
+<p><code>thread_exit</code>：退出</p>
+<p><code>thread_join</code>：阻塞调用线程直到等待特定的线程退出</p>
+<p><code>thread_yield</code>：允许线程自动放弃CPU从而让另一线程运行</p>
+<h4 id="POSIX线程（pthreads）"><a href="#POSIX线程（pthreads）" class="headerlink" title="POSIX线程（pthreads）"></a>POSIX线程（pthreads）</h4><p>一种独立于语言而存在的执行模型，以及并行执行模型。</p>
+<p><code>pthread_create</code>创建新线程，返回新线程的标识符，起着PID的作用。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NUMBER_OF_THREADS 10</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">print_hello_world</span><span class="params">(vvoid *tid)</span></span>&#123;</span><br><span class="line"><span class="comment">/* 输出线程标识符 */</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Hello World. Greetings from thread %d\n"</span>,tid);</span><br><span class="line">pthread_exit(<span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[])</span></span>&#123;</span><br><span class="line"><span class="comment">/* 主程序创建10个线程，然后退出 */</span></span><br><span class="line"><span class="keyword">pthread_t</span> threads[NUMBER_OF_THREADS];</span><br><span class="line"><span class="keyword">int</span> status,i;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; NUMBER_OF_THREADS;i++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Main here. Creating thread %d\n"</span>,i);</span><br><span class="line">status = pthread_create(&amp;threads[i], <span class="literal">NULL</span>, print_hello_world, (<span class="keyword">void</span> *)i);</span><br><span class="line"><span class="keyword">if</span>(status != <span class="number">0</span>)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Oops. pthread_create returned error code %d\n"</span>,status);</span><br><span class="line"><span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">exit</span>(<span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="线程实现"><a href="#线程实现" class="headerlink" title="线程实现"></a>线程实现</h4><h5 id="在用户空间实现"><a href="#在用户空间实现" class="headerlink" title="在用户空间实现"></a>在用户空间实现</h5><p>内核对线程一无所知</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600240126229.png" class width="1600240126229">
+<p>运行时系统（runtime system）也叫作运行时环境。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>优势</th>
+<th>劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>线程调度便捷，效率高：不需要切换到内核，也不需要上下文切换，不需要对内存高速缓存进行刷新</td>
+<td>使用线程的一个目标是能都让线程进行阻塞调用，避免被阻塞的线程影响其他线程。</td>
+</tr>
+<tr>
+<td>允许每个进程有自己定制的调度算法</td>
+<td>程序调用不在内存的指令时，会发生页面故障，OS将到磁盘上取回这个丢失的指令，该阶段整个进程会被阻塞。（如果是由一个线程引起的，也会整个阻塞）</td>
+</tr>
+<tr>
+<td>较好的可扩展性</td>
+<td>再一个单进程内部，没有时钟中断，不能使用轮转调度的方式调度线程</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="在内核空间实现"><a href="#在内核空间实现" class="headerlink" title="在内核空间实现"></a>在内核空间实现</h5><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600240676849.png" class width="1600240676849">
+<p>当一个线程阻塞时，内核可以选择是运行同一个进程中的线程还是运行另一个进程中的线程。</p>
+<p>内核中线程的创建和销毁开销大，某些系统通过可循环利用的方式回收线程：线程销毁时，标记不可运行状态，但内部结构没有影响。在创建新线程时，启用就线程，标记为可用状态。</p>
+<h5 id="混合实现"><a href="#混合实现" class="headerlink" title="混合实现"></a>混合实现</h5><p>内核级线程：将用户级线程与内核线程多路复用</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600240942918.png" class width="1600240942918">
+<h3 id="进程间通信（inter-process-communication）"><a href="#进程间通信（inter-process-communication）" class="headerlink" title="进程间通信（inter process communication）"></a>进程间通信（inter process communication）</h3><p>竞态条件（race condition）：两个或多个线程同时对一共享数据进行修改，影响程序运行的正确性。</p>
+<p>互斥操作（mutual exclusion）：禁止两个或多个进程在同一时刻对共享资源进行读写。</p>
+<p>临界区（critical section）或临界区域（critical region）：对共享内存进行访问的程序片段。</p>
+<h4 id="临界互斥："><a href="#临界互斥：" class="headerlink" title="临界互斥："></a>临界互斥：</h4><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600241408214.png" class width="1600241408214">
+<h4 id="忙等互斥-（都是忙等待）"><a href="#忙等互斥-（都是忙等待）" class="headerlink" title="忙等互斥 （都是忙等待）"></a>忙等互斥 （都是忙等待）</h4><p>当一个进程正忙于更新其关键区域的共享内存时，没有其他进程会进入其关键区域</p>
+<h5 id="屏蔽中断"><a href="#屏蔽中断" class="headerlink" title="屏蔽中断"></a>屏蔽中断</h5><p>让每个进程在进入临界区后屏蔽所有中断，离开临界区域之前重启它们。</p>
+<h5 id="锁变量"><a href="#锁变量" class="headerlink" title="锁变量"></a>锁变量</h5><p>软件层面解决方案：单个共享的锁变量，初始值为零。一个线程想进入关键区域时，先检查锁的值是否为0，若为零，设为1，进入关键区域，若为1，等待变量变为0.</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600246506593.png" class width="1600246506593">
+<h5 id="严格轮询法"><a href="#严格轮询法" class="headerlink" title="严格轮询法"></a>严格轮询法</h5><p>抛出一段代码，进程0的代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(TRUE)&#123;</span><br><span class="line">   <span class="keyword">while</span>(<span class="built_in">turn</span> = <span class="number">0</span>)&#123;</span><br><span class="line">       <span class="comment">/* 进入关键区域 */</span></span><br><span class="line">      critical_region();</span><br><span class="line">      <span class="built_in">turn</span> = <span class="number">1</span>;</span><br><span class="line">       <span class="comment">/* 离开关键区域 */</span></span><br><span class="line">       noncritical_region();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>进程1的代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(TRUE)&#123;</span><br><span class="line">   <span class="keyword">while</span>(<span class="built_in">turn</span> = <span class="number">1</span>)&#123;</span><br><span class="line">   critical_region();</span><br><span class="line">   <span class="built_in">turn</span> = <span class="number">0</span>;</span><br><span class="line">   noncritical_region();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>忙等待：</strong>连续检查一个变量直到出现某个值</p>
+<p><strong>自旋锁</strong>：用于忙等待的锁</p>
+<p>当一个进程比另一个进程执行速度慢很多的情况下，轮流进入临界区并不是一个好方法。</p>
+<h5 id="Peterson解法"><a href="#Peterson解法" class="headerlink" title="Peterson解法"></a>Peterson解法</h5><p>将锁变量和警告变量相结合，一个不需要严格轮换的软件互斥算法</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="comment">/* 进程数量 */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 2</span></span><br><span class="line"><span class="comment">/* 现在轮到谁 */</span></span><br><span class="line"><span class="keyword">int</span> <span class="built_in">turn</span>;</span><br><span class="line"><span class="comment">/* 所有值初始化为 0 (FALSE) */</span></span><br><span class="line"><span class="keyword">int</span> interested[N];</span><br><span class="line"><span class="comment">/* 进程是0 或 1 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">enter_region</span><span class="params">(<span class="keyword">int</span> <span class="built_in">process</span>)</span></span>&#123;</span><br><span class="line">   <span class="comment">/* 另一个进程号 */</span></span><br><span class="line">   <span class="keyword">int</span> other;</span><br><span class="line">   <span class="comment">/* 另一个进程 */</span></span><br><span class="line">   other = <span class="number">1</span> - <span class="built_in">process</span>;</span><br><span class="line">   <span class="comment">/* 表示愿意进入临界区 */</span></span><br><span class="line">   interested[<span class="built_in">process</span>] = TRUE;</span><br><span class="line">   <span class="built_in">turn</span> = <span class="built_in">process</span>;</span><br><span class="line">   <span class="comment">/* 空循环 */</span></span><br><span class="line">   <span class="keyword">while</span>(<span class="built_in">turn</span> == <span class="built_in">process</span></span><br><span class="line">        &amp;&amp; interested[other] == <span class="literal">true</span>)&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">leave_region</span><span class="params">(<span class="keyword">int</span> <span class="built_in">process</span>)</span></span>&#123;</span><br><span class="line">   <span class="comment">/* 表示离开临界区 */</span></span><br><span class="line">   interested[<span class="built_in">process</span>] == FALSE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="TSL指令"><a href="#TSL指令" class="headerlink" title="TSL指令"></a>TSL指令</h5><p>需要硬件帮助，<code>TSL RX,LOCK</code>称为<strong>测试并加锁（test and set lock）</strong></p>
+<p>锁住总线，比禁用中断好，原因：禁用中断不能保证另一个处理器对内存的读写。</p>
+<h4 id="睡眠和唤醒"><a href="#睡眠和唤醒" class="headerlink" title="睡眠和唤醒"></a>睡眠和唤醒</h4><p>忙等待浪费CPU时间，还可能引起<strong>优先级反转问题（orioruty inversion problem）</strong></p>
+<p>实现方式<strong>监听</strong></p>
+<p>问题：唤醒尚未进行睡眠状态的进程会导致唤醒丢失</p>
+<p><strong>唤醒等待位</strong></p>
+<h4 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h4><p>用一个整型变量累计唤醒次数。</p>
+<h4 id="互斥量"><a href="#互斥量" class="headerlink" title="互斥量"></a>互斥量</h4><p>mutex：信号量的简单版本</p>
+<p>futex:快速用户空间互斥（fast user space mutex）</p>
+<blockquote>
+<p>分为内核服务和用户库两部分</p>
+<p>内核服务提供了一个等待队列（wait queue）允许多个进程在锁上排队等待。</p>
+</blockquote>
+<p>Pthreads也有互斥量机制，还有第二种同步机制：条件变量</p>
+<h4 id="管程"><a href="#管程" class="headerlink" title="管程"></a>管程</h4><p>管程：monitor：程序，变量和数据结构等组成的一个集合，组成一个特殊的模块或者包。</p>
+<p>特性：在任何时候管程中只能有一个活跃的进程</p>
+<p>管道语言需要编译器识别管道并用某种方式对其互斥做出保证。</p>
+<h4 id="消息传递"><a href="#消息传递" class="headerlink" title="消息传递"></a>消息传递</h4><p>send和receive</p>
+<p>对发送者，需要判断消息有没有本网络丢失。</p>
+<p>对于接受者来说，如何区分新的消息和一条重发的老消息很重要，通常会在每条原始消息中嵌入一个连续的序号。还需要身份验证，是不是真正的文件服务器通信。</p>
+<h4 id="屏障"><a href="#屏障" class="headerlink" title="屏障"></a>屏障</h4><p>屏障用来实现一组进程同步：当一个进程到达屏障时，会被屏障所拦截，直到所有的屏障都达到为止。</p>
+<h4 id="避免锁"><a href="#避免锁" class="headerlink" title="避免锁"></a>避免锁</h4><p>读-复制-更新（ready-copy-update，RCU）</p>
+<p>确保每个读操作要么读取旧的版本，要么读取新的版本</p>
+<h3 id="调度"><a href="#调度" class="headerlink" title="调度"></a>调度</h3><p>调度程序&amp;调度算法</p>
+<h4 id="调度介绍"><a href="#调度介绍" class="headerlink" title="调度介绍"></a>调度介绍</h4><p>大型机：批处理+分时服务</p>
+<h5 id="进程行为"><a href="#进程行为" class="headerlink" title="进程行为"></a>进程行为</h5><p>进程中，I/O请求和计算时交替进行的</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600259991563.png" class width="1600259991563">
+<p>a：CPU密集型        b：I/O密集型</p>
+<p>随着CPU速度越来越快，更多进程倾向于I/O密集型</p>
+<p><strong>空闲进程（system-supplied idle process）</strong>：在系统没有处理其他线程时占据处理器时间，并不是一个真正的进程，是核心虚拟出来的。代表CPU的空闲状态。</p>
+<h5 id="调度算法"><a href="#调度算法" class="headerlink" title="调度算法"></a>调度算法</h5><p>非抢占式（nonpreemprtive）：直到该进程被阻塞，或者直到该进程自动释放CPU。不会被强制挂起，并且如果没有更高优先级的进程等待，责备中断的进程会继续执行</p>
+<p>抢占式：有最大固定时间，需要在时间间隔结束时发起时钟中断。</p>
+<ol>
+<li>批处理环境下：一般非抢占式或者周期长的抢占式，减少线程切换，提升性能</li>
+<li>交互式环境下：抢占式（包括服务器）</li>
+<li>实时环境下：</li>
+</ol>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600260741139.png" class width="1600260741139">
+<h4 id="批处理中的调度"><a href="#批处理中的调度" class="headerlink" title="批处理中的调度"></a>批处理中的调度</h4><p>先来先服务（first-come，first-serverd），缺点没有优先级</p>
+<p>最短作业优先（Shortest job first）</p>
+<p>最短剩余时间优先（shortest remaining time next）：新作业到达时，同当前进程的剩余时间做比较，如果新的进程比当前短，当前进程被挂起，运行新的进程。</p>
+<h4 id="交互式系统中的调度"><a href="#交互式系统中的调度" class="headerlink" title="交互式系统中的调度"></a>交互式系统中的调度</h4><p>个人计算机&amp;服务器</p>
+<h5 id="轮询调度"><a href="#轮询调度" class="headerlink" title="轮询调度"></a>轮询调度</h5><p>时间片(quantum)，调度程序维护一个可运行进程的列表。</p>
+<p>进程间切换（process switch）和上下文切换（context switch）：将其设置太短会导致过多的进程切换降低CPU效率；太长会导致一个短请求很长时间得不到相应。（一般20-50 ms）</p>
+<h5 id="优先级调度"><a href="#优先级调度" class="headerlink" title="优先级调度"></a>优先级调度</h5><p>动态或静态分配优先级，调度程序会在每个时钟中断期间降低当前运行进程的优先级。或者分配允许运行的最大时间间隔。</p>
+<h5 id="多级队列"><a href="#多级队列" class="headerlink" title="多级队列"></a>多级队列</h5><p>CTSS(compatible timesharing system）兼容分时系统</p>
+<h5 id="最短进程优先"><a href="#最短进程优先" class="headerlink" title="最短进程优先"></a>最短进程优先</h5><p>根据进程过去的行为推测，并执行估计运行时间最短的那一个。</p>
+<p><code>a*T0+(1-a)T1</code> a决定了老化（aging）的速度。</p>
+<h5 id="保证调度"><a href="#保证调度" class="headerlink" title="保证调度"></a>保证调度</h5><p>对进程做出明确的性能保证，n个进程，所有进程等价，每个进程获得1/n的CPU时间</p>
+<h5 id="彩票调度"><a href="#彩票调度" class="headerlink" title="彩票调度"></a>彩票调度</h5><p>lottery scheduling：将资源作为彩票抽奖，抽中得到CPU时间</p>
+<p>进程之间可以通过交换票据协作。</p>
+<h5 id="公平分享调度"><a href="#公平分享调度" class="headerlink" title="公平分享调度"></a>公平分享调度</h5><p>用户1:9个进程，用户2:1个进程，这是轮转或者相同优先级调度算法不合适</p>
+<p>每个用户都分配一些CPU时间</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600262207567.png" class width="1600262207567">
+<h4 id="实时系统中的调度"><a href="#实时系统中的调度" class="headerlink" title="实时系统中的调度"></a>实时系统中的调度</h4><p>硬实时：必须满足绝对的截止时间</p>
+<p>软实时：可以容忍偶尔错失截止时间</p>
+<p>周期性事件：</p>
+<p>非周期性事件：</p>
+<h4 id="调度策略和机制"><a href="#调度策略和机制" class="headerlink" title="调度策略和机制"></a>调度策略和机制</h4><p>有一种情况：一个进程中有多个子进程（数据库管理系统进程）</p>
+<p>分为调度机制（scheduling mechanism）+ 调度策略（scheduling policy），参数化，但参数可以被用户填写。调度机制位于内核，调度策略由用户决定。</p>
+<h4 id="线程调度"><a href="#线程调度" class="headerlink" title="线程调度"></a>线程调度</h4><p>用户级线程：内核不能感受线程，选择一个进程，线程不会影响其他进程，时钟中断也不能中断线程</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600262739859.png" class width="1600262739859">
+<p>内核级线程：内核不考虑线程属于哪个进程</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600262824458.png" class width="1600262824458">
+<p>将进程A切换到进程B的消耗高于运行进程A的两个线程。</p>
+<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600262922944.png" class width="1600262922944">
+<p>分层存储体系</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600327716389.png" class width="1600327716389">
+<p>操作系统中管理内存层次结构的部分<code>内存管理器（memory manager）</code></p>
+<h3 id="无存储器抽象"><a href="#无存储器抽象" class="headerlink" title="无存储器抽象"></a>无存储器抽象</h3><p>每个程序直接访问物理内存，通过多线程并行（多线程可以共享同一内存映像）。</p>
+<p>缺点：1. 很容易破坏操作系统 2. 很难运行多个程序</p>
+<h3 id="一种存储器抽象：地址空间"><a href="#一种存储器抽象：地址空间" class="headerlink" title="一种存储器抽象：地址空间"></a>一种存储器抽象：地址空间</h3><p>保护和重定位。</p>
+<p>保护密钥标记内存块</p>
+<p>地址空间（the address space）：创建抽象内存供程序使用。是进程可以用来寻址内存的地址集。每个进程都有自己的地址空间。</p>
+<h4 id="基址寄存器和变址寄存器"><a href="#基址寄存器和变址寄存器" class="headerlink" title="基址寄存器和变址寄存器"></a>基址寄存器和变址寄存器</h4><p>动态重定位：将每个进程的地址空间映射到物理内存的不同区域。</p>
+<p>当一个程序运行时，程序的起始物理地址装载到基址寄存器中，程序的长度装载到变址寄存器中。</p>
+<p>缺点：每次访问内存时，都会运行<code>ADD</code>和<code>CMP</code>运算，变慢</p>
+<h4 id="交换技术"><a href="#交换技术" class="headerlink" title="交换技术"></a>交换技术</h4><p>交换技术：把一个进程完整调入内存，然后在内存中运行一段时间，再把它放回磁盘，空闲进程会存储在磁盘中。</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600330767595.png" class width="1600330767595">
+<p>交换会在内存中创建多个空闲区（hole），可以通过内存紧缩（memory compaction）合并成大的空闲区，但是耗费时间。</p>
+<h5 id="段-segment"><a href="#段-segment" class="headerlink" title="段-segment"></a>段-segment</h5><p>代码段：文本段，存放指令，一般只读，空间大小在代码运行前已经确定。</p>
+<p>数据段：存储初始化的全局变量和初始化的静态变量，生存期：随进程持续性。</p>
+<p>bss段：可读可写，存储未初始化的全局变量和未初始化的静态变量，生存期：随进程持续性。</p>
+<p>rodata段：只读数据</p>
+<p>栈（stack）：可读可写，存储函数或代码中的局部变量，生存期随代码块持续性</p>
+<p>堆（heap）：可读可写，存储程序运行期间动态分配的malloc/realloc，随进程持续性</p>
+<p>有些区域会自动增长(针对单个或者一小部分需要增长的进程)：</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600331216327.png" class width="1600331216327">
+<p>若大部分进程都要在运行时增长，可以预先分配额外的内存。</p>
+<h4 id="空闲内存管理"><a href="#空闲内存管理" class="headerlink" title="空闲内存管理"></a>空闲内存管理</h4><h5 id="位图（bitmap）"><a href="#位图（bitmap）" class="headerlink" title="位图（bitmap）"></a>位图（bitmap）</h5><p>内存被划分为一定大小的分配单元，对应位图中的一位，0—-空闲；1-占用。</p>
+<p>缺点：当把具有k个分配单元的进程放入内存时，内容管理器必须搜索位图，在位图中找到能够运行k个连续0位的串，耗时。</p>
+<h5 id="链表（segment-list）"><a href="#链表（segment-list）" class="headerlink" title="链表（segment list）"></a>链表（segment list）</h5><p>空闲区（H）进程（P）</p>
+<p>段链表按照地址排序，进程终止或者交换时，更新列表很简单。</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600331687285.png" class width="1600331687285">
+<p>首次适配（first fit）：内存管理器沿着段列表扫描，直到知道一个足够大的空闲区。很快，但会拆分大的空闲区。</p>
+<p>下次适配（next fit）：在每次找到合适的空闲区时，记录当前位置。（性能略低于首次适配）</p>
+<p>最佳适配（best fit）：从头到尾寻找链表，找到能够容纳进程的最小空闲区。（产生很多小缓冲区）</p>
+<p>最差适配（worst fit）：总分配最大的内存区域，</p>
+<p>快速适配法（quick fit）：为常用大小的空闲区维护单独的链表。</p>
+<h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><p>运行的程序往往大到内存无法容纳。大内存交换不现实，太慢。</p>
+<p>虚拟内存：每个程序有自己的地址空间，被划分为多个页面（page），每一页都是连续的地址范围，被映射到物理内存，不需要所有页都在内存中才能运行程序。允许应用程序部分地运行在内存中。</p>
+<h4 id="分页（paging）"><a href="#分页（paging）" class="headerlink" title="分页（paging）"></a>分页（paging）</h4><p>程序生成的地址被称为：虚拟地址，形成虚拟地址空间。在使用虚拟内存时，虚拟地址不会直接发送到内存总线上，会使用内存管理单元（MMU）吧虚拟地址映射为物理内存地址</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600332477587.png" class width="1600332477587">
+<p>虚拟空间：页（pages）</p>
+<p>物理内存：页框（page frames）</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600332692103.png" class width="1600332692103">
+<p>未映射的页标记X，OS会讲很少使用的页写入磁盘。</p>
+<h4 id="页表"><a href="#页表" class="headerlink" title="页表"></a>页表</h4><p>蓝色为页表，在/不在位如果为0——缺页异常。</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600333059233.png" class width="1600333059233">
+<p>页表的结构：</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600333186105.png" class width="1600333186105">
+<p>修改位（也叫脏位）：如果页面被修改（脏的），需要写会磁盘，如果页面没有修改（干净），该页框会被丢弃，因为磁盘上的副本仍然有效。</p>
+<h4 id="加速分页过程"><a href="#加速分页过程" class="headerlink" title="加速分页过程"></a>加速分页过程</h4><p>如果页的大小为4KB，32位的地址空间将有100万页，而64位地址空间会更多。</p>
+<h5 id="转换检测缓冲区（translation-lookaside-buffer，TLB）"><a href="#转换检测缓冲区（translation-lookaside-buffer，TLB）" class="headerlink" title="转换检测缓冲区（translation lookaside buffer，TLB）"></a>转换检测缓冲区（translation lookaside buffer，TLB）</h5><p>大多数程序对少量的页面进行多次访问。在TLB中的PTE（page table entry 页表项）可以不访问内存。</p>
+<p>精简指令集（RISC），使计算机的微处理器的每条指令（CPI）周期比复杂指令计算机（CISC）少。</p>
+<p>软失效：页在内存中而不在TLB中</p>
+<p>硬失效：页不在内存中，需要页表遍历（page table walk）</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600334025618.png" class width="1600334025618">
+<h4 id="针对大内存的页表"><a href="#针对大内存的页表" class="headerlink" title="针对大内存的页表"></a>针对大内存的页表</h4><h5 id="多级页表"><a href="#多级页表" class="headerlink" title="多级页表"></a>多级页表</h5><p>避免把全部页表保存在内存中。</p>
+<p>32位的地址被划分为PT1,PT2和offset</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600337115639.png" class width="1600337115639">
+<p>顶级页表：1024个表项，对应于10位的PT1域。</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600337144675.png" class width="1600337144675">
+<h5 id="倒排页表"><a href="#倒排页表" class="headerlink" title="倒排页表"></a>倒排页表</h5><h3 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h3><p>发生缺页异常时，操作系统会选择一个页面进行换出为新的页面腾出空间。</p>
+<h4 id="最优页面置换算法"><a href="#最优页面置换算法" class="headerlink" title="最优页面置换算法"></a>最优页面置换算法</h4><p>标记最大的页面</p>
+<h4 id="最近未使用（NRU）页面置换算法"><a href="#最近未使用（NRU）页面置换算法" class="headerlink" title="最近未使用（NRU）页面置换算法"></a>最近未使用（NRU）页面置换算法</h4><p>在一个时钟内（约20ms）淘汰一个已修改但是没有北方味的页面比一个大量引用的未修改页面好。</p>
+<h4 id="先进先出（FIFO）页面置换法"><a href="#先进先出（FIFO）页面置换法" class="headerlink" title="先进先出（FIFO）页面置换法"></a>先进先出（FIFO）页面置换法</h4><p>操作系统维护一个所有在当前内存中的页面的链表，最早进入的放在表头，最新进入的页面放在表尾。发生缺页异常时，将头部的页移除并把新的页添加到表尾。</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600338063467.png" class width="1600338063467">
+<p>bug：出链和入链不会进行check，会把经常使用的页面置换出去。（<strong>可能会抛弃重要界面</strong>）</p>
+<h4 id="第二次机会页面置换法"><a href="#第二次机会页面置换法" class="headerlink" title="第二次机会页面置换法"></a>第二次机会页面置换法</h4><p>检查页面R位，</p>
+<p>缺点：需要经常在链表中移动页面，降低了效率。</p>
+<h4 id="时钟页面置换算法（实际使用）"><a href="#时钟页面置换算法（实际使用）" class="headerlink" title="时钟页面置换算法（实际使用）"></a>时钟页面置换算法（实际使用）</h4><p>把所有的页面都保存在一个类似钟面的环形链表中，一个指针指向最老的页面。</p>
+<h4 id="最近最少使用（LRU）页面置换算法"><a href="#最近最少使用（LRU）页面置换算法" class="headerlink" title="最近最少使用（LRU）页面置换算法"></a>最近最少使用（LRU）页面置换算法</h4><p>在缺页中断时，置换未使用时间最长的页面。（LRU（Least Recently Used））</p>
+<h4 id="工作集页面置换法"><a href="#工作集页面置换法" class="headerlink" title="工作集页面置换法"></a>工作集页面置换法</h4><p>一个进程当前正在使用的页面的集合称为它的<strong>工作集（working set）</strong></p>
+<h4 id="工作集时钟页面置换法"><a href="#工作集时钟页面置换法" class="headerlink" title="工作集时钟页面置换法"></a>工作集时钟页面置换法</h4><p>对基本工作集算法的提升是基于时钟算法但是却使用工作集的信息——WSClock（工作集时钟）</p>
+<p>发生缺页异常时，首先检查指针指向的页面，如果R为被设置为1，说明页面在当前时钟周期内被使用过，该页面不该被淘汰，并把该页面的R位置设为0，指针指向下一个页面，并重复。</p>
+<p>如果R=0，页面使用期限大于t，并且被访问过，磁盘上有此页面的副本，需要更新。</p>
+<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h2><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600349120853.png" class width="1600349120853">
+<p>文件是由进程创建的逻辑信息单元。可以把每个文件都看作一个独立的地址空间。</p>
+<p>操作系统中处理文件的部分称为<strong>文件系统（file system）</strong></p>
+<h3 id="文件-1"><a href="#文件-1" class="headerlink" title="文件"></a>文件</h3><h4 id="文件命名"><a href="#文件命名" class="headerlink" title="文件命名"></a>文件命名</h4><p>UNIX文件名区分大小写，MS-DOS不区分。</p>
+<p>文件系统FAT-16,FAT-32，NTFS，exFAT</p>
+<p>文件名，文件扩展名：UNIX系统不前置采用文件扩展名，并且可以有多个文件扩展名；Windows用户（或进程）可以在操作系统中注册扩展名，双击时，拥有给文件名的程序就启动并运行文件。</p>
+<h4 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h4><p>字节序列</p>
+<p>记录序列：文件是有固定长度记录的序列，每个记录有其内部结构。读操作返回一个记录，而写操作重写或者追加一个记录。</p>
+<p>树</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600350074121.png" class width="1600350074121">
+<h4 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h4><p>字符特殊文件 ：和串行I/O设备有关</p>
+<p>块特殊文件：用于磁盘类设备</p>
+<p>常规文件：可执行文件，文本文件，图像文件。</p>
+<p>常规文件：ASCII码和二进制文件。</p>
+<p>行用回车符结束（ASCII码 13，控制字符CR，转义字符\r），或者换行符（ASCII码 10，控制字符LF，转义字符\n），windows二者都用。</p>
+<p>ASCII码文件：显示和打印</p>
+<p>二进制文件：</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600350829224.png" class width="1600350829224">
+<h4 id="文件访问"><a href="#文件访问" class="headerlink" title="文件访问"></a>文件访问</h4><p>顺序访问</p>
+<p>随机访问文件（read从头读取，seek操作当前位置）</p>
+<h4 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h4><p>属性（attributes）也称作元数据（metadata）</p>
+<p>属性有两种状态：设置（set）和清除（clear）</p>
+<h4 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h4><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>目录（directories）和文件夹（folders）</p>
+<h4 id="一级目录系统"><a href="#一级目录系统" class="headerlink" title="一级目录系统"></a>一级目录系统</h4><p>有一个能够包含所有文件的目录——根目录。一般用于嵌入式设备。</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600351378026.png" class width="1600351378026">
+<h4 id="层次目录系统"><a href="#层次目录系统" class="headerlink" title="层次目录系统"></a>层次目录系统</h4><h4 id="路径名"><a href="#路径名" class="headerlink" title="路径名"></a>路径名</h4><p>绝对路径名：第一个字符是分隔符</p>
+<p>相对路径名：和工作目录（当前目录）一起使用。</p>
+<h4 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h4><p>创建，删除，读取，关闭，重命名，链接link</p>
+<h3 id="文件系统的实现"><a href="#文件系统的实现" class="headerlink" title="文件系统的实现"></a>文件系统的实现</h3><h4 id="文件系统布局"><a href="#文件系统布局" class="headerlink" title="文件系统布局"></a>文件系统布局</h4><p>磁盘分区（disk partitioning）或者磁盘分片（disk slicing）</p>
+<p>磁盘号为0：主引导记录（master boot record，MBR），用来引导（BOOT）计算机</p>
+<p>MBR结尾是分区表（partition table）</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600351821747.png" class width="1600351821747">
+<h5 id="引导块"><a href="#引导块" class="headerlink" title="引导块"></a>引导块</h5><p>MBR确定活动分区，读入其第一个块（引导块，boot block），引导块中的程序加载分区中的操作系统。4096字节</p>
+<h5 id="超级块"><a href="#超级块" class="headerlink" title="超级块"></a>超级块</h5><p>4096字节，包含文件系统的所有关键参数：</p>
+<ul>
+<li>文件系统的大小</li>
+<li>文件系统中的数据块数</li>
+<li>指示文件系统状态的标志</li>
+<li>分配组大小</li>
+</ul>
+<h5 id="空闲空间块"><a href="#空闲空间块" class="headerlink" title="空闲空间块"></a>空闲空间块</h5><p>位图和链表</p>
+<h5 id="碎片（fragment）"><a href="#碎片（fragment）" class="headerlink" title="碎片（fragment）"></a>碎片（fragment）</h5><p>零散的单个数据</p>
+<h5 id="inode"><a href="#inode" class="headerlink" title="inode"></a>inode</h5><p>索引节点（index node），一个数组结构，存储对象数据的属性和磁盘块位置。</p>
+<p>包含：</p>
+<ul>
+<li>权限</li>
+<li>所有者ID</li>
+<li>组ID</li>
+<li>文件大小</li>
+<li>文件硬链接数</li>
+<li>上次访问时间</li>
+<li>最后修改时间</li>
+<li>inode上次修改时间</li>
+</ul>
+<h4 id="文件的实现"><a href="#文件的实现" class="headerlink" title="文件的实现"></a>文件的实现</h4><p>文件两部分：索引节点+块；需要记录各个文件分别使用了哪些磁盘块，背后思想：有效可利用文件空间和快速访问文件。</p>
+<h5 id="连续分配"><a href="#连续分配" class="headerlink" title="连续分配"></a>连续分配</h5><p>优点：实现简单，高性能</p>
+<ul>
+<li>简单：只需记忆第一个块的文件地址和文件的块数量</li>
+<li>读取性强</li>
+</ul>
+<p>缺点：磁盘会变得零碎（当删除文件后）</p>
+<p>CD-ROM（只读光盘）</p>
+<h5 id="链表分配"><a href="#链表分配" class="headerlink" title="链表分配"></a>链表分配</h5><p>为每个文件构造磁盘块链表，每个文件都是磁盘块的链接列表。</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600352565654.png" class width="1600352565654">
+<p>缺点：</p>
+<ul>
+<li>指针会占用一些字节</li>
+<li>随机访问比较困难</li>
+</ul>
+<h5 id="使用内存表进行链表分配"><a href="#使用内存表进行链表分配" class="headerlink" title="使用内存表进行链表分配"></a>使用内存表进行链表分配</h5><p>将磁盘块的指针放在内存的一个表中。文件分配表（File Application Table，FAT）</p>
+<p>缺点：必须把整个链表放在内存中</p>
+<h5 id="inode-1"><a href="#inode-1" class="headerlink" title="inode"></a>inode</h5><p>给每个文件赋予一个索引节点。</p>
+<p>链表的表的大小和磁盘本省成正比，如果磁盘有n个快，表也需要n项，线性增长。</p>
+<p>inode需要节点中的数组，大小与可能打开的最大文件个数成正比。</p>
+<p>NTFS（new technology File system）</p>
+<h4 id="目录的实现"><a href="#目录的实现" class="headerlink" title="目录的实现"></a>目录的实现</h4><p>哈希表（也叫散列表）：提高文件检索效率。管理复杂。</p>
+<p>缓存：</p>
+<h4 id="共享文件"><a href="#共享文件" class="headerlink" title="共享文件"></a>共享文件</h4><p>图论中：一个有向图从任意顶点出发无法经过若干条边回到该点，则是一个有向无环图。</p>
+<ol>
+<li>仅仅将inode放在目录中，而不把磁盘块例如目录</li>
+<li>符号链接</li>
+</ol>
+<h4 id="日志结构文件系统"><a href="#日志结构文件系统" class="headerlink" title="日志结构文件系统"></a>日志结构文件系统</h4><p>log-structured file system（LFS）主要解决：减少对硬盘的随机写操作。</p>
+<h4 id="日志文件系统"><a href="#日志文件系统" class="headerlink" title="日志文件系统"></a>日志文件系统</h4><p>移除文件：</p>
+<ul>
+<li>在目录中删除文件</li>
+<li>释放inode到空闲inode池</li>
+<li>将所有磁盘块归还给空闲磁盘池</li>
+</ul>
+<p>原子事物</p>
+<p>文件系统一致性检查（fsck）</p>
+<h4 id="虚拟文件系统（Virtual-File-System，VFS-）"><a href="#虚拟文件系统（Virtual-File-System，VFS-）" class="headerlink" title="虚拟文件系统（Virtual File System，VFS ）"></a>虚拟文件系统（Virtual File System，VFS ）</h4><p>UNIX操作系统使用：将多种文件系统构成一个有序的结构。</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600354302449.png" class width="1600354302449">
+<h3 id="文件系统的管理和优化"><a href="#文件系统的管理和优化" class="headerlink" title="文件系统的管理和优化"></a>文件系统的管理和优化</h3><h4 id="磁盘空间管理"><a href="#磁盘空间管理" class="headerlink" title="磁盘空间管理"></a>磁盘空间管理</h4><p>两种策略：</p>
+<ol>
+<li><p>分配n个字节的连续磁盘空间</p>
+</li>
+<li><p>把文件拆分成多个并不连续的块</p>
+<blockquote>
+<p>块太大浪费空间，太小浪费时间</p>
+<p>记录空间块：磁盘块链表（可以记录单个块，也可以连续分块），位图</p>
+</blockquote>
+</li>
+</ol>
+<p>存储管理系统：</p>
+<ol>
+<li>分段管理</li>
+<li>分页管理</li>
+</ol>
+<h4 id="磁盘配额"><a href="#磁盘配额" class="headerlink" title="磁盘配额"></a>磁盘配额</h4><p>enforcing disk quotas：系统管理员为每个用户分配最大的文件和块分配。</p>
+<p>软限制</p>
+<p>硬限制</p>
+<h4 id="文件备份系统"><a href="#文件备份系统" class="headerlink" title="文件备份系统"></a>文件备份系统</h4><ul>
+<li>从意外的灾难中恢复</li>
+<li>从错误的操作中恢复</li>
+</ul>
+<p>增量转储（incremental dumps）</p>
+<h5 id="物理转储（physical-dump）："><a href="#物理转储（physical-dump）：" class="headerlink" title="物理转储（physical dump）："></a>物理转储（physical dump）：</h5><p>简单，快速，缺点：全量备份</p>
+<h5 id="逻辑转储（logical-dump）："><a href="#逻辑转储（logical-dump）：" class="headerlink" title="逻辑转储（logical dump）："></a>逻辑转储（logical dump）：</h5><h4 id="文件系统的一致性"><a href="#文件系统的一致性" class="headerlink" title="文件系统的一致性"></a>文件系统的一致性</h4><p>检查文件系统的一致性：fsck（UNIX）和scf（Windows）</p>
+<p>块的一致性检查和文件的一致性检查。</p>
+<p>文件系统一致时：</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600391479702.png" class width="1600391479702">
+<p>系统崩溃后：</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600391494196.png" class width="1600391494196">
+<p>磁盘块2——块丢失（missing block）</p>
+<h4 id="文件系统性能"><a href="#文件系统性能" class="headerlink" title="文件系统性能"></a>文件系统性能</h4><p>存储层次结构</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600391706575.png" class width="1600391706575">
+<h5 id="高速缓存"><a href="#高速缓存" class="headerlink" title="高速缓存"></a>高速缓存</h5><p>块高速缓存（block cache）</p>
+<p>缓冲区高速缓存（buffer cache）</p>
+<h5 id="块提前读"><a href="#块提前读" class="headerlink" title="块提前读"></a>块提前读</h5><p>对于顺序读取的文件</p>
+<h5 id="减少磁盘臂运动"><a href="#减少磁盘臂运动" class="headerlink" title="减少磁盘臂运动"></a>减少磁盘臂运动</h5><p>把有可能顺序访问的块放在一起（同柱面）</p>
+<p>（寻道时间和旋转时间）</p>
+<h5 id="磁盘碎片整理"><a href="#磁盘碎片整理" class="headerlink" title="磁盘碎片整理"></a>磁盘碎片整理</h5><p>windows：defrag</p>
+<p>SSD不需要碎片整理</p>
+<h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600392296985.png" class width="1600392296985">
+<h3 id="I-O设备"><a href="#I-O设备" class="headerlink" title="I/O设备"></a>I/O设备</h3><p>输入/输出设备，能够像计算机发送数据，并从计算机接收数据。</p>
+<h4 id="块设备（block-devices）"><a href="#块设备（block-devices）" class="headerlink" title="块设备（block devices）"></a>块设备（block devices）</h4><p>固定大小的块：硬盘，U盘</p>
+<p>通常需要较少的引脚</p>
+<p>缺点：需要在开头开始读取或写入</p>
+<h4 id="字符设备"><a href="#字符设备" class="headerlink" title="字符设备"></a>字符设备</h4><p>以字符为单位发送或接受一个字符流，不可寻址</p>
+<p>打印机，网络设备，鼠标等</p>
+<h4 id="设备控制器"><a href="#设备控制器" class="headerlink" title="设备控制器"></a>设备控制器</h4><p>通过应用程序的借口与操作系统进行通信，把串行的位流转换成字节块，并进行必要的错误矫正工作。</p>
+<p>I/O设备：机械组件和电子组件（设备控制器或者适配器，一般是可以插入PCIe扩展槽的主板上的芯片或印刷电路卡形成）</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600392723432.png" class width="1600392723432">
+<h4 id="内存映射I-O"><a href="#内存映射I-O" class="headerlink" title="内存映射I/O"></a>内存映射I/O</h4><p>在CPU与其连接的外围设备之间交换数据和指令的一种方式。</p>
+<ul>
+<li>数据缓冲区，设置I/O端口</li>
+<li>PDP-11，处理器和IO设备共享同一内存位置的内存</li>
+</ul>
+<h4 id="直接内存访问（DMA）"><a href="#直接内存访问（DMA）" class="headerlink" title="直接内存访问（DMA）"></a>直接内存访问（DMA）</h4><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600397144597.png" class width="1600397144597">
+<h4 id="精确中断和不精确中断"><a href="#精确中断和不精确中断" class="headerlink" title="精确中断和不精确中断"></a>精确中断和不精确中断</h4><p>PC（程序计数器）保存在一个已知的地方，PC之前指令已经完全执行，之后指令都没有执行，PC所指向的指令的执行状态已知。</p>
+<h3 id="I-O软件原理"><a href="#I-O软件原理" class="headerlink" title="I/O软件原理"></a>I/O软件原理</h3><p>设备独立性</p>
+<p>错误处理</p>
+<p>同步和异步传输：大部分物理IO是异步的（物理IO从磁盘等存储设备实际获取数据，逻辑IO对存储器（块，缓冲区）获取数据）</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600398022673.png" class width="1600398022673">
+<p>缓冲</p>
+<p>共享和独占</p>
+<h4 id="使用程序控制IO"><a href="#使用程序控制IO" class="headerlink" title="使用程序控制IO"></a>使用程序控制IO</h4><p>可编程IO，由CPU在驱动程序软件控制下启动的数据传输来访问设备上的寄存器或者其他存储器。</p>
+<p>CPU会轮询（polling）或者忙等（busy waiting）</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600416897823.png" class width="1600416897823">
+<h4 id="使用中断驱动"><a href="#使用中断驱动" class="headerlink" title="使用中断驱动"></a>使用中断驱动</h4><p>可以使CPU在等待IO设备的同时，能够做其他事情</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600416930613.png" class width="1600416930613">
+<h4 id="使用DMA的IO"><a href="#使用DMA的IO" class="headerlink" title="使用DMA的IO"></a>使用DMA的IO</h4><p>CPU赋予IO模块权限在不涉及CPU的情况下读取或者写入内存。</p>
+<h3 id="IO层次结构"><a href="#IO层次结构" class="headerlink" title="IO层次结构"></a>IO层次结构</h3><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600418399431.png" class width="1600418399431">
+<h4 id="中断服务程序（Interrupt-service-routines-ISR"><a href="#中断服务程序（Interrupt-service-routines-ISR" class="headerlink" title="中断服务程序（Interrupt service routines,ISR)"></a>中断服务程序（Interrupt service routines,ISR)</h4><p>启动中断驱动程序解决阻塞，三种通知方式：</p>
+<ol>
+<li>信号量实现中</li>
+<li>管道实现</li>
+<li>发送消息</li>
+</ol>
+<p>嵌套中断：</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600418767973.png" class width="1600418767973">
+<h4 id="设备驱动程序"><a href="#设备驱动程序" class="headerlink" title="设备驱动程序"></a>设备驱动程序</h4><p>字符设备和块设备</p>
+<p>功能：接收和识别命令，进行数据交换，地址识别，差错检测</p>
+<h4 id="与设备无关的IO软件"><a href="#与设备无关的IO软件" class="headerlink" title="与设备无关的IO软件"></a>与设备无关的IO软件</h4><p>基本功能是对所有设备执行公共的IO功能，并且向用户层软件提供一个统一的接口。</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600419071897.png" class width="1600419071897">
+<h5 id="缓冲"><a href="#缓冲" class="headerlink" title="缓冲"></a>缓冲</h5><p>双缓冲（duble buffering）</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600419317010.png" class width="1600419317010">
+<p>缓冲循环</p>
+<h4 id="用户空间的IO软件"><a href="#用户空间的IO软件" class="headerlink" title="用户空间的IO软件"></a>用户空间的IO软件</h4><p>大部分IO软件在内核结构中，但有一些在用户空间。</p>
+<h3 id="盘"><a href="#盘" class="headerlink" title="盘"></a>盘</h3><h4 id="盘硬件"><a href="#盘硬件" class="headerlink" title="盘硬件"></a>盘硬件</h4><p>磁盘 magnetic hard disks ， hard disk， HDD</p>
+<p>随机访问，非易失性设备</p>
+<p>重叠寻址：控制器控制两个或者多个驱动器进行磁盘寻址</p>
+<h4 id="RAID"><a href="#RAID" class="headerlink" title="RAID"></a>RAID</h4><p>磁盘冗余阵列，简称磁盘阵列，使用虚拟化技术把多个硬盘结合在一起。</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600419649541.png" class width="1600419649541">
+<h4 id="磁盘格式化"><a href="#磁盘格式化" class="headerlink" title="磁盘格式化"></a>磁盘格式化</h4><p>扇区格式：</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600419685650.png" class width="1600419685650">
+<p>前导码：柱面好，扇区号等</p>
+<p>数据大小由<strong>低级格式化程序</strong>控制，一般512字节</p>
+<p>ECC。error correction code，数据纠错码，一般16位</p>
+<p>0扇区位置和前一个磁道相比，有偏移——柱面斜进</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600419871957.png" class width="1600419871957">
+<p><strong>高级格式化</strong></p>
+<p>设置引导块，空闲存储管理（位图或者链表），根目录，空文件系统。</p>
+<h4 id="磁盘调度算法"><a href="#磁盘调度算法" class="headerlink" title="磁盘调度算法"></a>磁盘调度算法</h4><ul>
+<li>寻道时间（影响最大）</li>
+<li>旋转延迟</li>
+<li>实际数据的读取和写入</li>
+</ul>
+<p>FIFO</p>
+<p>最短路径优先（SSF）</p>
+<p>电梯算法：协调效率和公平性，保持一个方向移动，知道在该方向上没有请求为止，然后改变方向。</p>
+<p>实际情况下，磁盘控制器会读取多个扇区并进行高速缓存</p>
+<h4 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h4><p>坏块的处理办法</p>
+<ul>
+<li>控制器：将备用扇区之一重新映射或者将所有的扇区都想上移动一个扇区</li>
+<li>系统操作</li>
+</ul>
+<h4 id="稳定器存储"><a href="#稳定器存储" class="headerlink" title="稳定器存储"></a>稳定器存储</h4><ul>
+<li>稳定写</li>
+<li>稳定读</li>
+<li>崩溃恢复：恢复程序扫描两个磁盘，比较对应的块，如果都是好的，并且相同，不触发任何机制；若其中一块触发了ECC错误，使用好块覆盖坏块</li>
+</ul>
+<h3 id="时钟"><a href="#时钟" class="headerlink" title="时钟"></a>时钟</h3><p>时钟（clocks）也被成为定时器（timers），负责维护时间，防止一个进程长期占用CPU时间等其他功能。</p>
+<h4 id="时钟硬件"><a href="#时钟硬件" class="headerlink" title="时钟硬件"></a>时钟硬件</h4><ul>
+<li><p>110V或者220V，美国电压周期差生一个中断</p>
+</li>
+<li><p>时钟晶体振荡器+计数器+寄存器（可编程时钟）</p>
+<blockquote>
+<p>一键式：时钟启动时，把存储器的值复制到计数器，每次晶体振荡器的脉冲，使计数器-1，计数器变为0时，产生一个中断。</p>
+<p>方波模式，计数器变为0并产生中断后，存储寄存器的值会自动恢复到计数器中。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="时钟软件"><a href="#时钟软件" class="headerlink" title="时钟软件"></a>时钟软件</h4><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600420838617.png" class width="1600420838617">
+<h4 id="软定时器"><a href="#软定时器" class="headerlink" title="软定时器"></a>软定时器</h4><p>可编程时钟，可以以程序需要的任何速率发生中断。</p>
+<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/1600420953207.png" class width="1600420953207">
+<p>计算机独占性的资源，一次只能由一个进程使用。（例如打印机）</p>
+<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><p>可抢占资源：可以从进程中抢占，不造成其他影响（如内存）</p>
+<p><strong>不可抢占资源</strong>（和死锁有关）：除非引起错误或者异常，否则进程无法抢占指定资源（光盘等）</p>
+<h4 id="资源获取"><a href="#资源获取" class="headerlink" title="资源获取"></a>资源获取</h4><p>数据库记录资源：<strong>信号量</strong>来管理（或者互斥锁）</p>
+<h4 id="资源死锁"><a href="#资源死锁" class="headerlink" title="资源死锁"></a>资源死锁</h4><h4 id="死锁模型"><a href="#死锁模型" class="headerlink" title="死锁模型"></a>死锁模型</h4><img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20200918190257435.png" class title="image-20200918190257435">
+<p>四个条件：</p>
+<ul>
+<li>互斥</li>
+<li>保持和等待</li>
+<li>不可抢占</li>
+<li>循环等待</li>
+</ul>
+<h4 id="鸵鸟算法"><a href="#鸵鸟算法" class="headerlink" title="鸵鸟算法"></a>鸵鸟算法</h4><p>忽略死锁带来的影响</p>
+<h4 id="死锁的检测与恢复"><a href="#死锁的检测与恢复" class="headerlink" title="死锁的检测与恢复"></a>死锁的检测与恢复</h4><p>检测：基于矩阵</p>
+<img src="/2020/09/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20200918191841473.png" class title="image-20200918191841473">
+<ul>
+<li>通过抢占恢复</li>
+<li>回滚恢复</li>
+<li>杀死进程恢复</li>
+</ul>
+<h4 id="死锁避免"><a href="#死锁避免" class="headerlink" title="死锁避免"></a>死锁避免</h4><ol>
+<li>单个资源的银行家算法</li>
+</ol>
+<h4 id="破坏死锁"><a href="#破坏死锁" class="headerlink" title="破坏死锁"></a>破坏死锁</h4><p>破坏四个条件</p>
+<ol>
+<li><p>互斥</p>
+<blockquote>
+<p>假脱机打印机</p>
+</blockquote>
+</li>
+<li><p>等待</p>
+<blockquote>
+<p>组织持有资源的进程请求其他资源</p>
+</blockquote>
+</li>
+<li><p>不可抢占条件</p>
+<blockquote>
+<p>虚拟化</p>
+</blockquote>
+</li>
+<li><p>循环等待</p>
+</li>
+</ol>
+<h4 id="两阶段加锁"><a href="#两阶段加锁" class="headerlink" title="两阶段加锁"></a>两阶段加锁</h4><h4 id="通信死锁"><a href="#通信死锁" class="headerlink" title="通信死锁"></a>通信死锁</h4><p>以上都是资源死锁，可以通过<strong>调度的方式</strong>解决</p>
+<p>通信死锁：<strong>超时（time out）</strong></p>
+<h4 id="活锁"><a href="#活锁" class="headerlink" title="活锁"></a>活锁</h4><p>一对并行的进程用到了两个资源，分别获得另一个锁失败后，两个进程都释放自己持有的锁，再次进行尝试，该过程一直重复。</p>
+<h4 id="饥饿"><a href="#饥饿" class="headerlink" title="饥饿"></a>饥饿</h4><p>进程永远得不到服务</p>
 ]]></content>
       <categories>
         <category>基础知识</category>
@@ -6716,6 +7271,9 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
 <li><p>按照<a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="noopener">Hexo-资源文件夹</a>中的设置：</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">_config.yml</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>可以<code>![](image.jpg)</code>，直接添加，会自动渲染添加路径。</p>
+<blockquote>
+<p>但我用的是<code></code>，这样Typora和博客上都能正常显示，将markdown文件复制到其他电脑时，只需将资源文件也一起复制即可。</p>
+</blockquote>
 </li>
 <li><p>将filename.assets文件夹重命名为filename，或者将图片拷到filename文件夹下</p>
 <p>将md文件中图片的路径替换。</p>
@@ -6733,6 +7291,522 @@ X_{recovered} = X_{d-proj}\cdot W_d^T</script><h5 id="增量-PCA（Incremental-P
       <tags>
         <tag>Typora</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows的剪切板</title>
+    <url>/2020/09/26/Windows%E7%9A%84%E5%89%AA%E5%88%87%E6%9D%BF/</url>
+    <content><![CDATA[<p>windows下ctrl+c复制是存储在内存中的，如果不另外保存，新复制的内容会覆盖旧内容（当然word中有剪切板，但不是在word中呢），如何记录复制的内容呢？</p>
+<p><strong>剪贴簿相关工具</strong>：ClipClip</p>
+<p>但win10更新后添加了系统功能-剪切薄，可以在windows所有设置$\rightarrow$系统$\rightarrow$选择剪贴簿选项</p>
+<p>将其打开即可，还可以跨设备同步。</p>
+<img src="/2020/09/26/Windows%E7%9A%84%E5%89%AA%E5%88%87%E6%9D%BF/image-20200926164341224.png" class title="image-20200926164341224">
+<p>按下快捷键Windows+V，就能打开剪贴簿视窗，还有钉选功能可以保留重要内容，即便重启电脑、或使用清除剪贴簿历程纪录，它也依旧会被保留下来。</p>
+<img src="/2020/09/26/Windows%E7%9A%84%E5%89%AA%E5%88%87%E6%9D%BF/%E5%89%AA%E5%88%87%E6%9D%BF.png" class title="image-20200926162448521">
+]]></content>
+      <categories>
+        <category>日常记录</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>剪切板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关联分析</title>
+    <url>/2020/09/21/%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/36669198" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/36669198</a></p>
+<p><a href="https://www.cnblogs.com/yidansheng/p/6855549.html" target="_blank" rel="noopener">https://www.cnblogs.com/yidansheng/p/6855549.html</a></p>
+<p><a href="https://www.cnblogs.com/volcao/p/10080736.html" target="_blank" rel="noopener">数据挖掘：数据（数据对象与属性类型）</a></p>
+<p><img src="https://pic2.zhimg.com/v2-0bc9d9c853a1acb6fdc02d703e6c7845_r.jpg" alt="preview"></p>
+<p><a href="https://www.jianshu.com/p/aac25acf0197" target="_blank" rel="noopener">多维数据可视化表现形式</a></p>
+<p><a href="http://vis.pku.edu.cn/hdvis/zh-cn/index.html" target="_blank" rel="noopener">北京大学高维数据可视化</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/21381461" target="_blank" rel="noopener">高维度数据可视化专题一 Scatter Plot Matrix</a></p>
+<p><a href="https://www.cnblogs.com/qicaide/category/886488.html" target="_blank" rel="noopener">数据挖掘博客笔记</a></p>
+]]></content>
+      <categories>
+        <category>数据挖掘</category>
+      </categories>
+      <tags>
+        <tag>关联分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LeetCode刷题之旅</title>
+    <url>/2020/09/19/LeetCode%E5%88%B7%E9%A2%98%E4%B9%8B%E6%97%85/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/qq_32424059/article/details/88855423" target="_blank" rel="noopener">LeetCode 700题 题解答案集合 Python</a></p>
+<p><a href="https://leetcode-cn.com/problemset/algorithms/" target="_blank" rel="noopener">LeetCode 算法</a></p>
+<h2 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a>1. 两数之和</h2><ol>
+<li>两重循环暴力求解</li>
+<li>哈希表（字典），检查 target-i 是否在字典中</li>
+<li>先把数组排序，start、end表示数组下标为0、数组最后一个值的下标。如果nums[start] + nums[end] &gt; target，说明end需要减一；如果nums[start]+ nums[end]&lt;target,说明start需要加1；如果相等则是我们想要的。找到start、end后，再遍历一遍数组，找到对应的结果即可</li>
+</ol>
+<h2 id="2-两数之和（链表）"><a href="#2-两数之和（链表）" class="headerlink" title="2. 两数之和（链表）"></a>2. 两数之和（链表）</h2><p><a href="https://www.jianshu.com/p/e4000619232b" target="_blank" rel="noopener">使用python实现链表操作</a> <a href="https://www.jb51.net/article/133798.htm" target="_blank" rel="noopener">实现链表的操作</a></p>
+<h2 id="3-无重复字符的最长子串"><a href="#3-无重复字符的最长子串" class="headerlink" title="3. 无重复字符的最长子串"></a>3. 无重复字符的最长子串</h2><p>用双指针法 +  sliding window解题</p>
+<h2 id="4-寻找两个有序数组的中位数-sob"><a href="#4-寻找两个有序数组的中位数-sob" class="headerlink" title="4.  寻找两个有序数组的中位数 :sob:"></a>4.  寻找两个有序数组的中位数 :sob:</h2><blockquote>
+<p>给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。</p>
+<p>请你找出这两个正序数组的中位数，并且要求<strong>算法的时间复杂度为 O(log(m + n))。</strong></p>
+<p>你可以假设 nums1 和 nums2 不会同时为空。</p>
+</blockquote>
+<ul>
+<li>暴力解法，合并两个数组，求中位数，时间复杂度O(m+n)</li>
+<li>如果对时间复杂度的要求有 log(m+n)，通常都需要用到二分查找。求中位数，其实就是求第 <code>k</code> 小数的一种特殊情况，</li>
+<li>第二种方法：数组划分</li>
+</ul>
+<h2 id="5-最长回文子串"><a href="#5-最长回文子串" class="headerlink" title="5. 最长回文子串"></a>5. 最长回文子串</h2><p>给定一个字符串 <code>s</code>，找到 <code>s</code> 中最长的回文子串。你可以假设 <code>s</code> 的最大长度为 1000。</p>
+<ul>
+<li><p>暴力求解，找出所有的子串，判断是否回文，记录最长的，时间复杂度：$O(n^2)$</p>
+</li>
+<li><p>动态规划：时间，空间复杂度：$O(n^2)$</p>
+<p>一个长度大于2的回文串，去掉首尾两个字符后仍是回文串</p>
+
+<p>状态转移方程：<strong>从长度较短的字符串向长度较长的字符串进行转移，要注意动态规划的循环顺序。</strong></p>
+
+</li>
+</ul>
+<p>​       如果子串长度为1或者2</p>
+
+<p>​      最终长度是P(i, j) = True 中j-i+1的最大值。</p>
+<ul>
+<li><p>中心扩展算法：时间复杂度：$O(n^2)$，空间复杂度：$O(1)$</p>
+<p>枚举所有的「回文中心」并尝试「扩展」，直到无法扩展为止，此时的回文串长度即为此「回文中心」下的最长回文串长度。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">expandAroundCenter</span><span class="params">(self, s, left, right)</span>:</span></span><br><span class="line">        <span class="keyword">while</span> left &gt;= <span class="number">0</span> <span class="keyword">and</span> right &lt; len(s) <span class="keyword">and</span> s[left] == s[right]:</span><br><span class="line">            left -= <span class="number">1</span></span><br><span class="line">            right += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> left + <span class="number">1</span>, right - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestPalindrome</span><span class="params">(self, s: str)</span> -&gt; str:</span></span><br><span class="line">        start, end = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)):</span><br><span class="line">            left1, right1 = self.expandAroundCenter(s, i, i)</span><br><span class="line">            left2, right2 = self.expandAroundCenter(s, i, i + <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">if</span> right1 - left1 &gt; end - start:</span><br><span class="line">                start, end = left1, right1</span><br><span class="line">            <span class="keyword">if</span> right2 - left2 &gt; end - start:</span><br><span class="line">                start, end = left2, right2</span><br><span class="line">        <span class="keyword">return</span> s[start: end + <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Manacher 算法  时间复杂度：$O(n)$ 臂长</p>
+</li>
+</ul>
+<h2 id="6-Z-字形变换"><a href="#6-Z-字形变换" class="headerlink" title="6. Z 字形变换"></a>6. Z 字形变换</h2><p><a href="https://leetcode-cn.com/problems/zigzag-conversion/solution/zzi-xing-bian-huan-by-jyd/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/zigzag-conversion/solution/zzi-xing-bian-huan-by-jyd/</a></p>
+<p>0和numRows-1是两个折返点，当i=0 or numRows-1 时，需要将行进方向相反</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">convert</span><span class="params">(self, s: str, numRows: int)</span> -&gt; str:</span></span><br><span class="line">        <span class="keyword">if</span> numRows &lt; <span class="number">2</span> <span class="keyword">or</span> numRows &gt;= len(s): <span class="keyword">return</span> s</span><br><span class="line">        res = [<span class="string">""</span> <span class="keyword">for</span> _ <span class="keyword">in</span> range(numRows)]</span><br><span class="line">        i, direction = <span class="number">0</span>, <span class="number">-1</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            res[i] += c</span><br><span class="line">            <span class="keyword">if</span> i == <span class="number">0</span> <span class="keyword">or</span> i == numRows - <span class="number">1</span>: direction = -direction</span><br><span class="line">            i += direction</span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span>.join(res)</span><br></pre></td></tr></table></figure>
+<h2 id="7-整数反转"><a href="#7-整数反转" class="headerlink" title="7. 整数反转"></a>7. 整数反转</h2><ul>
+<li>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</li>
+</ul>
+<p>先转为string，反转后再转为int，注意溢出后，返回0</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverse</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type x: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        INT_MIN = <span class="number">-2</span> **<span class="number">31</span></span><br><span class="line">        INT_MAX = <span class="number">2</span> ** <span class="number">31</span> - <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; <span class="number">0</span>:</span><br><span class="line">            res = int(<span class="string">"-"</span> + str(x)[::<span class="number">-1</span>][:<span class="number">-1</span>])      </span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            res = int(str(x)[::<span class="number">-1</span>])</span><br><span class="line">        <span class="keyword">return</span> res <span class="keyword">if</span> INT_MIN &lt;= res &lt;= INT_MAX <span class="keyword">else</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>一次构建反转整数的一位数字，可以预先检查向原整数附加另一位数字是否会导致溢出。</p>
+<p>重复 “弹出” x 的最后一位数字，并将它 “推入” 到 res 的后面</p>
+<p>时间复杂度：$O(log(x))$，x中大约有 $log10(x)$位数字。<br>空间复杂度：$O(1)$</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reverse_better</span><span class="params">(self,  x: int)</span> -&gt; int:</span>      </span><br><span class="line">        y, res = abs(x), <span class="number">0</span></span><br><span class="line">        <span class="comment"># 则其数值范围为 [−2^31,  2^31 − 1]</span></span><br><span class="line">        boundry = (<span class="number">1</span>&lt;&lt;<span class="number">31</span>) <span class="number">-1</span> <span class="keyword">if</span> x&gt;<span class="number">0</span> <span class="keyword">else</span> <span class="number">1</span>&lt;&lt;<span class="number">31</span>  <span class="comment">## 左移动运算符：运算数的各二进位全部左移若干位，由 &lt;&lt; 右边的数字指定了移动的位数，高位丢弃，低位补 0。</span></span><br><span class="line">        <span class="keyword">while</span> y != <span class="number">0</span>:</span><br><span class="line">            res = res*<span class="number">10</span> +y%<span class="number">10</span></span><br><span class="line">            <span class="keyword">if</span> res &gt; boundry :</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            y //=<span class="number">10</span> </span><br><span class="line">        <span class="keyword">return</span> res <span class="keyword">if</span> x &gt;<span class="number">0</span> <span class="keyword">else</span> -res</span><br></pre></td></tr></table></figure>
+<h2 id="8-字符串转换整数-atoi"><a href="#8-字符串转换整数-atoi" class="headerlink" title="8. 字符串转换整数 (atoi)"></a>8. 字符串转换整数 (atoi)</h2><p>实现一个 atoi 函数，使其能将字符串转换成整数。</p>
+<p>首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：</p>
+<ul>
+<li>如果第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字字符组合起来，形成一个有符号整数。</li>
+<li>假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成一个整数。</li>
+<li>该字符串在有效的整数部分之后也可能会存在多余的字符，那么这些字符可以被忽略，它们对函数不应该造成影响。</li>
+</ul>
+<p>注意：假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换，即无法进行有效转换。</p>
+<p>在任何情况下，若函数不能进行有效的转换时，请返回 0 。</p>
+<ul>
+<li>官方解法是<a href="https://leetcode-cn.com/problems/string-to-integer-atoi/solution/zi-fu-chuan-zhuan-huan-zheng-shu-atoi-by-leetcode-/" target="_blank" rel="noopener">自动机</a>。</li>
+<li>使用正则表达式</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myAtoi</span><span class="params">(self, str: str)</span> -&gt; int:</span></span><br><span class="line">        INT_MAX = <span class="number">2147483647</span>    </span><br><span class="line">        INT_MIN = <span class="number">-2147483648</span></span><br><span class="line">        str = str.lstrip()      <span class="comment">#清除左边多余的空格</span></span><br><span class="line">        num_re = re.compile(<span class="string">r'^[\+\-]?\d+'</span>)   <span class="comment">#设置正则规则</span></span><br><span class="line">        num = num_re.findall(str)   <span class="comment">#查找匹配的内容</span></span><br><span class="line">        num = int(*num) <span class="comment">#由于返回的是个列表，解包并且转换成整数</span></span><br><span class="line">        <span class="keyword">return</span> max(min(num,INT_MAX),INT_MIN)    <span class="comment">#返回值</span></span><br></pre></td></tr></table></figure>
+<h2 id="9-回文数"><a href="#9-回文数" class="headerlink" title="9. 回文数"></a>9. 回文数</h2><p>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p>
+<ul>
+<li><p>转换为字符串再判断</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, x: int)</span> -&gt; bool:</span></span><br><span class="line">        s=str(x)</span><br><span class="line">        <span class="keyword">return</span> s[::<span class="number">-1</span>]==s</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>数学思维：先反转整数，再比较两者是否一样大</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, x: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="comment"># 不用字符串，则用数学思想解</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">or</span> (x % <span class="number">10</span> == <span class="number">0</span> <span class="keyword">and</span> x !=<span class="number">0</span> ):</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        rem = <span class="number">0</span></span><br><span class="line">        initial = x</span><br><span class="line">        <span class="keyword">while</span> x != <span class="number">0</span>:</span><br><span class="line">            rem = rem*<span class="number">10</span> + x%<span class="number">10</span></span><br><span class="line">            x = x//<span class="number">10</span></span><br><span class="line">        <span class="keyword">return</span> initial == rem</span><br></pre></td></tr></table></figure>
+
+<p>可以不用完全求得翻转之后的数字，只需要求一半，偶数x==rem，奇数个数字：x==rem//10</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span><span class="params">(self, x: int)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">or</span> (x % <span class="number">10</span> == <span class="number">0</span> <span class="keyword">and</span> x !=<span class="number">0</span> ): <span class="comment"># 小于0的数，能被10整除且不为0的数，一定不是回文数。</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        rem = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> x &gt; rem:</span><br><span class="line">            rem = rem*<span class="number">10</span> + x%<span class="number">10</span></span><br><span class="line">            x = x//<span class="number">10</span></span><br><span class="line">        <span class="keyword">return</span> x == rem <span class="keyword">or</span> x == rem//<span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>竟然还慢一点，想不明白</strong></p>
+</li>
+</ul>
+<h2 id="10-正则表达式匹配"><a href="#10-正则表达式匹配" class="headerlink" title="10. 正则表达式匹配"></a>10. 正则表达式匹配</h2><p>一个字符串 <code>s</code> 和一个字符规律 <code>p</code>，实现一个支持 <code>&#39;.&#39;</code> 和 <code>&#39;*&#39;</code> 的正则表达式匹配。所谓匹配，是要涵盖 <strong>整个</strong> 字符串 <code>s</code>的，而不是部分字符串。</p>
+<ul>
+<li><p>涉及两个字符串的穷举，应该考虑动态规划</p>
+</li>
+<li><p>使用递归</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isMatch</span><span class="params">(self, s: str, p: str)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> p: <span class="keyword">return</span> <span class="keyword">not</span> s  <span class="comment"># 结束条件</span></span><br><span class="line"></span><br><span class="line">        first_match = (len(s) &gt; <span class="number">0</span>) <span class="keyword">and</span> p[<span class="number">0</span>] <span class="keyword">in</span> &#123;s[<span class="number">0</span>], <span class="string">'.'</span>&#125;</span><br><span class="line">        <span class="comment"># 先处理 `*`</span></span><br><span class="line">        <span class="keyword">if</span> len(p) &gt;=<span class="number">2</span> <span class="keyword">and</span> p[<span class="number">1</span>] == <span class="string">'*'</span>:</span><br><span class="line">            <span class="comment"># 匹配0个 | 多个</span></span><br><span class="line">            <span class="keyword">return</span> self.isMatch(s, p[<span class="number">2</span>:]) <span class="keyword">or</span> (first_match <span class="keyword">and</span> self.isMatch(s[<span class="number">1</span>:], p))</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 处理 `.` ，匹配一个</span></span><br><span class="line">        <span class="keyword">return</span> first_match <span class="keyword">and</span> self.isMatch(s[<span class="number">1</span>:], p[<span class="number">1</span>:])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>re.match 尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配成功的话，match()就返回none。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isMatch</span><span class="params">(self, s: str, p: str)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">return</span> bool(re.match(<span class="string">r"%s"</span> %p, s)) <span class="keyword">and</span> re.match(<span class="string">r"%s"</span> %p, s).group(<span class="number">0</span>) == s</span><br></pre></td></tr></table></figure>
+<h2 id="11-盛最多水的容器"><a href="#11-盛最多水的容器" class="headerlink" title="11. 盛最多水的容器"></a>11. 盛最多水的容器</h2><p>给定 <em>n</em> 个非负整数 <em>a</em>1，<em>a</em>2，…，<em>a</em>n，每个数代表坐标中的一个点 (<em>i</em>, <em>ai</em>) 。在坐标内画 <em>n</em>条垂直线，垂直线 <em>i</em> 的两个端点分别为 (<em>i</em>, <em>ai</em>) 和 (<em>i</em>, 0)。找出其中的两条线，使得它们与 <em>x</em> 轴共同构成的容器可以容纳最多的水。</p>
+<p>不能倾斜容器，且 <em>n</em> 的值至少为 2。</p>
+<p><img src="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg" alt="img"></p>
+<p>图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49</p>
+<ul>
+<li><p>双指针法</p>
+</li>
+<li><p>面积最大=min(left,right)*指针之间的距离，所以移动数字较小的指针</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxArea</span><span class="params">(self, height: List[int])</span> -&gt; int:</span></span><br><span class="line">        l, r = <span class="number">0</span>, len(height) - <span class="number">1</span></span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> l &lt; r:</span><br><span class="line">            area = min(height[l], height[r]) * (r - l)</span><br><span class="line">            ans = max(ans, area)</span><br><span class="line">            <span class="keyword">if</span> height[l] &lt;= height[r]:</span><br><span class="line">                l += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                r -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li>时间复杂度：$O(N)$，双指针总计最多遍历整个数组一次。</li>
+<li>空间复杂度：$O(1)$，只需要额外的常数级别的空间。</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-整数转罗马数字"><a href="#12-整数转罗马数字" class="headerlink" title="12. 整数转罗马数字"></a>12. 整数转罗马数字</h2><p><img src="https://img-blog.csdnimg.cn/20200414105909472.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTEzOTUwNQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ul>
+<li><p>贪心算法</p>
+<p>找适合该整数的最大符号。减去它，然后寻找适合余数的最大符号，依此类推，直到余数为0。取出的每个符号附加到输出的罗马数字字符串上。</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">digits = [(<span class="number">1000</span>, <span class="string">"M"</span>), (<span class="number">900</span>, <span class="string">"CM"</span>), (<span class="number">500</span>, <span class="string">"D"</span>), (<span class="number">400</span>, <span class="string">"CD"</span>), (<span class="number">100</span>, <span class="string">"C"</span>), (<span class="number">90</span>, <span class="string">"XC"</span>), (<span class="number">50</span>, <span class="string">"L"</span>), (<span class="number">40</span>, <span class="string">"XL"</span>), (<span class="number">10</span>, <span class="string">"X"</span>), (<span class="number">9</span>, <span class="string">"IX"</span>), (<span class="number">5</span>, <span class="string">"V"</span>), (<span class="number">4</span>, <span class="string">"IV"</span>), (<span class="number">1</span>, <span class="string">"I"</span>)]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">intToRoman</span><span class="params">(self, num: int)</span> -&gt; str:</span></span><br><span class="line">    roman_digits = []</span><br><span class="line">    <span class="comment"># Loop through each symbol.</span></span><br><span class="line">    <span class="keyword">for</span> value, symbol <span class="keyword">in</span> digits:</span><br><span class="line">        <span class="comment"># We don't want to continue looping if we're done.</span></span><br><span class="line">        <span class="keyword">if</span> num == <span class="number">0</span>: <span class="keyword">break</span></span><br><span class="line">        count, num = divmod(num, value)</span><br><span class="line">        <span class="comment"># Append "count" copies of "symbol" to roman_digits.</span></span><br><span class="line">        roman_digits.append(symbol * count)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">""</span>.join(roman_digits)</span><br></pre></td></tr></table></figure>
+<p>复杂度分析</p>
+<p>时间复杂度：$O(1)$。由于有一组有限的罗马数字，循环可以迭代多少次有一个硬上限。因此，我们说时间复杂度是常数的，即 O(1)O(1)。<br>空间复杂度：$O(1)$，使用的内存量不会随输入整数的大小而改变，因此是常数。</p>
+<ul>
+<li>硬编码数字</li>
+</ul>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">intToRoman</span><span class="params">(self, num: int)</span> -&gt; str:</span></span><br><span class="line">    thousands = [<span class="string">""</span>, <span class="string">"M"</span>, <span class="string">"MM"</span>, <span class="string">"MMM"</span>]</span><br><span class="line">    hundreds = [<span class="string">""</span>, <span class="string">"C"</span>, <span class="string">"CC"</span>, <span class="string">"CCC"</span>, <span class="string">"CD"</span>, <span class="string">"D"</span>, <span class="string">"DC"</span>, <span class="string">"DCC"</span>, <span class="string">"DCCC"</span>, <span class="string">"CM"</span>]</span><br><span class="line">    tens = [<span class="string">""</span>, <span class="string">"X"</span>, <span class="string">"XX"</span>, <span class="string">"XXX"</span>, <span class="string">"XL"</span>, <span class="string">"L"</span>, <span class="string">"LX"</span>, <span class="string">"LXX"</span>, <span class="string">"LXXX"</span>, <span class="string">"XC"</span>]</span><br><span class="line">    ones = [<span class="string">""</span>, <span class="string">"I"</span>, <span class="string">"II"</span>, <span class="string">"III"</span>, <span class="string">"IV"</span>, <span class="string">"V"</span>, <span class="string">"VI"</span>, <span class="string">"VII"</span>, <span class="string">"VIII"</span>, <span class="string">"IX"</span>]</span><br><span class="line">    <span class="keyword">return</span> thousands[num // <span class="number">1000</span>] + hundreds[num % <span class="number">1000</span> // <span class="number">100</span>] + tens[num % <span class="number">100</span> // <span class="number">10</span>] + ones[num % <span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>暴力解法</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">intToRoman</span><span class="params">(self, num)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type num: int</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        digit = [<span class="number">1000</span>,<span class="number">900</span>,<span class="number">500</span>,<span class="number">400</span>,<span class="number">100</span>,<span class="number">90</span>,<span class="number">50</span>,<span class="number">40</span>,<span class="number">10</span>,<span class="number">9</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">1</span>]</span><br><span class="line">        mapping = &#123;<span class="number">1000</span>:<span class="string">"M"</span>, <span class="number">900</span>:<span class="string">"CM"</span>, <span class="number">500</span>:<span class="string">"D"</span>,<span class="number">400</span>:<span class="string">"CD"</span>, <span class="number">100</span>:<span class="string">"C"</span>, <span class="number">90</span>: <span class="string">"XC"</span>, <span class="number">50</span>:<span class="string">"L"</span>,<span class="number">40</span>: <span class="string">"XL"</span>, <span class="number">10</span>:<span class="string">"X"</span>, <span class="number">9</span>:<span class="string">"IX"</span>, <span class="number">5</span>:<span class="string">"V"</span>, <span class="number">4</span>:<span class="string">"IV"</span>, <span class="number">1</span>:<span class="string">"I"</span>&#125;</span><br><span class="line">        res = <span class="string">""</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> digit:</span><br><span class="line">            res += int(num / i) * mapping[i]</span><br><span class="line">            num -= i * int(num / i)</span><br><span class="line">            <span class="keyword">if</span> num == <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h2 id="13-罗马数字转整数"><a href="#13-罗马数字转整数" class="headerlink" title="13 罗马数字转整数"></a>13 <a href="https://leetcode-cn.com/problems/roman-to-integer/" target="_blank" rel="noopener">罗马数字转整数</a></h2><ul>
+<li>罗马数字一般从左到右从大到小排列，但特例是当小数字出现在左边，需要减去，注意最后一位永远是正的。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">romanToInt</span><span class="params">(self, s: str)</span> -&gt; int:</span></span><br><span class="line">        Roman2Int = &#123;<span class="string">'I'</span>:<span class="number">1</span>,<span class="string">'V'</span>:<span class="number">5</span>,<span class="string">'X'</span>:<span class="number">10</span>,<span class="string">'L'</span>:<span class="number">50</span>,<span class="string">'C'</span>:<span class="number">100</span>,<span class="string">'D'</span>:<span class="number">500</span>,<span class="string">'M'</span>:<span class="number">1000</span>&#125;</span><br><span class="line">        Int = <span class="number">0</span></span><br><span class="line">        n = len(s)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> range(n - <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> Roman2Int[s[index]] &lt; Roman2Int[s[index + <span class="number">1</span>]]:</span><br><span class="line">                Int -= Roman2Int[s[index]]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                Int += Roman2Int[s[index]]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> Int + Roman2Int[s[<span class="number">-1</span>]]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>暴力解法，存在六种特例</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">romanToInt</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        dic = &#123;<span class="string">"I"</span>: <span class="number">1</span>, <span class="string">"V"</span>:<span class="number">5</span>, <span class="string">"X"</span>: <span class="number">10</span>, <span class="string">"L"</span>:<span class="number">50</span>, <span class="string">"C"</span>:<span class="number">100</span>, <span class="string">"D"</span>: <span class="number">500</span>, <span class="string">"M"</span>: <span class="number">1000</span>&#125;</span><br><span class="line">        stack = []</span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> inx, item <span class="keyword">in</span> enumerate(s):</span><br><span class="line">            res += dic[item]</span><br><span class="line">            <span class="comment"># print res</span></span><br><span class="line">            <span class="comment"># s.append(item)</span></span><br><span class="line">            <span class="keyword">if</span> item == <span class="string">"V"</span> <span class="keyword">or</span> item == <span class="string">"X"</span>:</span><br><span class="line">                <span class="keyword">if</span> stack <span class="keyword">and</span> stack[<span class="number">-1</span>] == <span class="string">"I"</span>:</span><br><span class="line">                    res -= <span class="number">2</span></span><br><span class="line">            <span class="keyword">elif</span> item == <span class="string">"L"</span> <span class="keyword">or</span> item == <span class="string">"C"</span>:</span><br><span class="line">                <span class="keyword">if</span> stack <span class="keyword">and</span> stack[<span class="number">-1</span>] == <span class="string">"X"</span>:</span><br><span class="line">                    res -= <span class="number">20</span></span><br><span class="line">            <span class="keyword">elif</span> item == <span class="string">"D"</span> <span class="keyword">or</span> item == <span class="string">"M"</span>:</span><br><span class="line">                <span class="keyword">if</span> stack <span class="keyword">and</span> stack[<span class="number">-1</span>] == <span class="string">"C"</span>:</span><br><span class="line">                    res -= <span class="number">200</span></span><br><span class="line">            stack.append(item)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h2 id="14-最长公共前缀"><a href="#14-最长公共前缀" class="headerlink" title="14. 最长公共前缀"></a><a href="https://leetcode-cn.com/problems/longest-common-prefix/" target="_blank" rel="noopener">14. 最长公共前缀</a></h2><p>编写一个函数来查找字符串数组中的最长公共前缀。如果不存在公共前缀，返回空字符串 <code>&quot;&quot;</code>。</p>
+<p>所有输入只包含小写字母 <code>a-z</code> 。</p>
+<ul>
+<li>横向扫描： 依次遍历每个字符串，更新最长公共前缀。</li>
+</ul>
+
+<p>如果在尚未遍历完所有的字符串时，最长公共前缀已经是空串，则最长公共前缀一定是空串，因此不需要继续遍历剩下的字符串，直接返回空串即可。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestCommonPrefix</span><span class="params">(self, strs: List[str])</span> -&gt; str:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> strs:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">        </span><br><span class="line">        prefix, count = strs[<span class="number">0</span>], len(strs)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, count):</span><br><span class="line">            prefix = self.lcp(prefix, strs[i])</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> prefix:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> prefix</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lcp</span><span class="params">(self, str1, str2)</span>:</span></span><br><span class="line">        length, index = min(len(str1), len(str2)), <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> index &lt; length <span class="keyword">and</span> str1[index] == str2[index]:</span><br><span class="line">            index += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> str1[:index]</span><br></pre></td></tr></table></figure>
+<p><strong>复杂度分析</strong></p>
+<p>时间复杂度：$O(mn)$，其中 mm 是字符串数组中的字符串的平均长度，nn 是字符串的数量。最坏情况下，字符串数组中的每个字符串的每个字符都会被比较一次。</p>
+<p>空间复杂度：$O(1)$。使用的额外空间复杂度为常数。</p>
+<ul>
+<li>纵向扫描</li>
+</ul>
+<p>纵向扫描时，从前往后遍历所有字符串的每一列，比较相同列上的字符是否相同，如果相同则继续对下一列进行比较，如果不相同则当前列不再属于公共前缀，当前列之前的部分为最长公共前缀。</p>
+<p>复杂度同横向扫描</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestCommonPrefix</span><span class="params">(self, strs: List[str])</span> -&gt; str:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> strs:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">        </span><br><span class="line">        length, count = len(strs[<span class="number">0</span>]), len(strs)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(length):</span><br><span class="line">            c = strs[<span class="number">0</span>][i]</span><br><span class="line">            <span class="keyword">if</span> any(i == len(strs[j]) <span class="keyword">or</span> strs[j][i] != c <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, count)):</span><br><span class="line">                <span class="keyword">return</span> strs[<span class="number">0</span>][:i]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> strs[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>二分查找</li>
+<li>分治</li>
+<li>python里的字符串可以通过ascii的形式进行比较，所以只要找出最大的字符串和最小的字符串进行比较，就可以找到最长公共前缀。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestCommonPrefix</span><span class="params">(self, strs)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type strs: List[str]</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> strs:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">        </span><br><span class="line">        mins = min(strs)</span><br><span class="line">        maxs = max(strs)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> index, item <span class="keyword">in</span> enumerate(mins):</span><br><span class="line">            <span class="keyword">if</span> maxs[index] != mins[index]:</span><br><span class="line">                <span class="keyword">return</span> mins[:index]</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> mins</span><br></pre></td></tr></table></figure>
+<h2 id="15-三数之和"><a href="#15-三数之和" class="headerlink" title="15. 三数之和"></a><a href="https://leetcode-cn.com/problems/3sum/" target="_blank" rel="noopener">15. 三数之和</a></h2><p>给一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请找出所有满足条件且不重复的三元组。注意：答案中不可以包含重复的三元组。</p>
+<ul>
+<li>暴力解决（超时）：三重循环，再判断是否超时（时间复杂度$O(N^3)$）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSum</span><span class="params">(self, nums: List[int])</span> -&gt; List[List[int]]:</span></span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            tmp = []</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,len(nums)):</span><br><span class="line">                <span class="keyword">for</span> k <span class="keyword">in</span> range(j+<span class="number">1</span>,len(nums)):</span><br><span class="line">                    <span class="keyword">if</span> nums[i]+nums[j]+nums[k] == <span class="number">0</span>:</span><br><span class="line">                        tmp = [nums[i],nums[j],nums[k]]<span class="comment">#.sort()</span></span><br><span class="line">                        a = sorted(tmp)</span><br><span class="line">                        <span class="keyword">if</span> a <span class="keyword">not</span> <span class="keyword">in</span> ans:</span><br><span class="line">                            ans.append(a)                      </span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>排序+双指针，消除无效解</p>
+<p>数组排序，如果第一个值大于零，则无解（后面的值都大于等于该值）</p>
+<p>左指针，中指针，右指针（和小于零，中指针右移，和大于零，右指针左移）</p>
+<p>一次循环之后，左指针右移，如果nums[i+1]=nums[i]，则跳过i+1</p>
+</li>
+</ul>
+<p><a href="https://leetcode-cn.com/problems/3sum/solution/3sumpai-xu-shuang-zhi-zhen-yi-dong-by-jyd/" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSum</span><span class="params">(self, nums: [int])</span> -&gt; [[int]]:</span></span><br><span class="line">        nums.sort()</span><br><span class="line">        res, k = [], <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> range(len(nums) - <span class="number">2</span>):</span><br><span class="line">            <span class="keyword">if</span> nums[k] &gt; <span class="number">0</span>: <span class="keyword">break</span> <span class="comment"># 1. because of j &gt; i &gt; k.</span></span><br><span class="line">            <span class="keyword">if</span> k &gt; <span class="number">0</span> <span class="keyword">and</span> nums[k] == nums[k - <span class="number">1</span>]: <span class="keyword">continue</span> <span class="comment"># 2. skip the same `nums[k]`.</span></span><br><span class="line">            i, j = k + <span class="number">1</span>, len(nums) - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> i &lt; j: <span class="comment"># 3. double pointer</span></span><br><span class="line">                s = nums[k] + nums[i] + nums[j]</span><br><span class="line">                <span class="keyword">if</span> s &lt; <span class="number">0</span>:</span><br><span class="line">                    i += <span class="number">1</span></span><br><span class="line">                    <span class="keyword">while</span> i &lt; j <span class="keyword">and</span> nums[i] == nums[i - <span class="number">1</span>]: i += <span class="number">1</span></span><br><span class="line">                <span class="keyword">elif</span> s &gt; <span class="number">0</span>:</span><br><span class="line">                    j -= <span class="number">1</span></span><br><span class="line">                    <span class="keyword">while</span> i &lt; j <span class="keyword">and</span> nums[j] == nums[j + <span class="number">1</span>]: j -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    res.append([nums[k], nums[i], nums[j]])</span><br><span class="line">                    i += <span class="number">1</span></span><br><span class="line">                    j -= <span class="number">1</span></span><br><span class="line">                    <span class="keyword">while</span> i &lt; j <span class="keyword">and</span> nums[i] == nums[i - <span class="number">1</span>]: i += <span class="number">1</span></span><br><span class="line">                    <span class="keyword">while</span> i &lt; j <span class="keyword">and</span> nums[j] == nums[j + <span class="number">1</span>]: j -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h2 id="16-最接近的三数之和"><a href="#16-最接近的三数之和" class="headerlink" title="16. 最接近的三数之和"></a><a href="https://leetcode-cn.com/problems/3sum-closest/" target="_blank" rel="noopener">16. 最接近的三数之和</a></h2><p>排序+双指针</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSumClosest</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; int:</span></span><br><span class="line">        nums.sort()</span><br><span class="line">        n = len(nums)</span><br><span class="line">        best = <span class="number">10</span>**<span class="number">7</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 根据差值的绝对值来更新答案</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">update</span><span class="params">(cur)</span>:</span></span><br><span class="line">            <span class="keyword">nonlocal</span> best <span class="comment"># 注意这句</span></span><br><span class="line">            <span class="keyword">if</span> abs(cur - target) &lt; abs(best - target):</span><br><span class="line">                best = cur</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 枚举 a</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            <span class="comment"># 保证和上一次枚举的元素不相等</span></span><br><span class="line">            <span class="keyword">if</span> i &gt; <span class="number">0</span> <span class="keyword">and</span> nums[i] == nums[i - <span class="number">1</span>]:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="comment"># 使用双指针枚举 b 和 c</span></span><br><span class="line">            j, k = i + <span class="number">1</span>, n - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> j &lt; k:</span><br><span class="line">                s = nums[i] + nums[j] + nums[k]</span><br><span class="line">                <span class="comment"># 如果和为 target 直接返回答案</span></span><br><span class="line">                <span class="keyword">if</span> s == target:</span><br><span class="line">                    <span class="keyword">return</span> target</span><br><span class="line">                update(s)</span><br><span class="line">                <span class="keyword">if</span> s &gt; target:</span><br><span class="line">                    <span class="comment"># 如果和大于 target，移动 c 对应的指针</span></span><br><span class="line">                    k0 = k - <span class="number">1</span></span><br><span class="line">                    <span class="comment"># 移动到下一个不相等的元素</span></span><br><span class="line">                    <span class="keyword">while</span> j &lt; k0 <span class="keyword">and</span> nums[k0] == nums[k]:</span><br><span class="line">                        k0 -= <span class="number">1</span></span><br><span class="line">                    k = k0</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="comment"># 如果和小于 target，移动 b 对应的指针</span></span><br><span class="line">                    j0 = j + <span class="number">1</span></span><br><span class="line">                    <span class="comment"># 移动到下一个不相等的元素</span></span><br><span class="line">                    <span class="keyword">while</span> j0 &lt; k <span class="keyword">and</span> nums[j0] == nums[j]:</span><br><span class="line">                        j0 += <span class="number">1</span></span><br><span class="line">                    j = j0</span><br><span class="line">        <span class="keyword">return</span> best</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：$O(N^2)$，其中 N 是数组nums 的长度。我们首先需要 $O(N \log N)$的时间对数组进行排序，随后在枚举的过程中，使用一重循环 $O(N)$枚举 a，双指针 $O(N)$ 枚举 b 和 c，故一共是 $O(N^2)$</p>
+<p>空间复杂度：$O(\log N)$。排序需要使用 $O(\log N)$的空间。然而我们修改了输入的数组 nums，在实际情况下不一定允许，因此也可以看成使用了一个额外的数组存储了 nums 的副本并进行排序，此时空间复杂度为 $O(N)$。</p>
+<h2 id="17-电话号码的字母组合"><a href="#17-电话号码的字母组合" class="headerlink" title="17. 电话号码的字母组合"></a>17. 电话号码的字母组合</h2><p>给定一个仅包含数字 <code>2-9</code> 的字符串，返回所有它能表示的字母组合。</p>
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png" alt="img"></p>
+<ul>
+<li><p>暴力解决</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">letterCombinations</span><span class="params">(self, digits: str)</span> -&gt; List[str]:</span></span><br><span class="line">        mapping = &#123;<span class="number">2</span>:<span class="string">"abc"</span>,<span class="number">3</span>:<span class="string">"def"</span>,<span class="number">4</span>:<span class="string">'ghi'</span>,<span class="number">5</span>:<span class="string">'jkl'</span>,<span class="number">6</span>:<span class="string">'mno'</span>,<span class="number">7</span>:<span class="string">'pqrs'</span>,<span class="number">8</span>:<span class="string">'tuv'</span>,<span class="number">9</span>:<span class="string">'wxyz'</span>&#125;</span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> digits:</span><br><span class="line">            n=int(i)</span><br><span class="line">            temp=[]</span><br><span class="line">            <span class="keyword">for</span> char <span class="keyword">in</span> mapping[n]:</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> res:</span><br><span class="line">                    temp.append(char)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">for</span> item <span class="keyword">in</span> res:</span><br><span class="line">                        temp.append(item+char)</span><br><span class="line">            res=temp</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<p>空间复杂度$O(3^M×4^N)$</p>
+</li>
+<li><p>列表推导式(和暴力解法相同，只不过将for循环写作一行，注意ans初始为’’，可以减少判断ans是否为空)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">letterCombinations</span><span class="params">(self, digits: str)</span> -&gt; list:</span></span><br><span class="line">        KEY = &#123;<span class="string">'2'</span>: [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>],</span><br><span class="line">               <span class="string">'3'</span>: [<span class="string">'d'</span>, <span class="string">'e'</span>, <span class="string">'f'</span>],</span><br><span class="line">               <span class="string">'4'</span>: [<span class="string">'g'</span>, <span class="string">'h'</span>, <span class="string">'i'</span>],</span><br><span class="line">               <span class="string">'5'</span>: [<span class="string">'j'</span>, <span class="string">'k'</span>, <span class="string">'l'</span>],</span><br><span class="line">               <span class="string">'6'</span>: [<span class="string">'m'</span>, <span class="string">'n'</span>, <span class="string">'o'</span>],</span><br><span class="line">               <span class="string">'7'</span>: [<span class="string">'p'</span>, <span class="string">'q'</span>, <span class="string">'r'</span>, <span class="string">'s'</span>],</span><br><span class="line">               <span class="string">'8'</span>: [<span class="string">'t'</span>, <span class="string">'u'</span>, <span class="string">'v'</span>],</span><br><span class="line">               <span class="string">'9'</span>: [<span class="string">'w'</span>, <span class="string">'x'</span>, <span class="string">'y'</span>, <span class="string">'z'</span>]&#125;</span><br><span class="line">        <span class="keyword">if</span> digits == <span class="string">''</span>:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        ans = [<span class="string">''</span>]</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> digits:</span><br><span class="line">            ans = [pre+suf <span class="keyword">for</span> pre <span class="keyword">in</span> ans <span class="keyword">for</span> suf <span class="keyword">in</span> KEY[int(num)]]</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>回溯（回溯的复杂度很大）<strong>回溯和递归的区别</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">letterCombinations</span><span class="params">(self, digits: str)</span> -&gt; List[str]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> digits: <span class="keyword">return</span> []</span><br><span class="line"></span><br><span class="line">        phone = &#123;<span class="string">'2'</span>:[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>],</span><br><span class="line">                 <span class="string">'3'</span>:[<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>],</span><br><span class="line">                 <span class="string">'4'</span>:[<span class="string">'g'</span>,<span class="string">'h'</span>,<span class="string">'i'</span>],</span><br><span class="line">                 <span class="string">'5'</span>:[<span class="string">'j'</span>,<span class="string">'k'</span>,<span class="string">'l'</span>],</span><br><span class="line">                 <span class="string">'6'</span>:[<span class="string">'m'</span>,<span class="string">'n'</span>,<span class="string">'o'</span>],</span><br><span class="line">                 <span class="string">'7'</span>:[<span class="string">'p'</span>,<span class="string">'q'</span>,<span class="string">'r'</span>,<span class="string">'s'</span>],</span><br><span class="line">                 <span class="string">'8'</span>:[<span class="string">'t'</span>,<span class="string">'u'</span>,<span class="string">'v'</span>],</span><br><span class="line">                 <span class="string">'9'</span>:[<span class="string">'w'</span>,<span class="string">'x'</span>,<span class="string">'y'</span>,<span class="string">'z'</span>]&#125;</span><br><span class="line">                </span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">backtrack</span><span class="params">(conbination,nextdigit)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> len(nextdigit) == <span class="number">0</span>:</span><br><span class="line">                res.append(conbination)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">for</span> letter <span class="keyword">in</span> phone[nextdigit[<span class="number">0</span>]]:</span><br><span class="line">                    backtrack(conbination + letter,nextdigit[<span class="number">1</span>:])</span><br><span class="line"></span><br><span class="line">        res = []</span><br><span class="line">        backtrack(<span class="string">''</span>,digits)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：$O(3^M×4^N)$。M 是对应三个字母的数字个数，N 是对应四个字母的数字个数。<br>空间复杂度：$O(3^M×4^N)$ 。一共要生成 $3^M×4^N $  个结果</p>
+</li>
+<li><p>队列（先将输入的 <code>digits</code> 中第一个数字对应的每一个字母入队，然后将出队的元素与第二个数字对应的每一个字母组合后入队…直到遍历到 <code>digits</code> 的结尾。）</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">letterCombinations</span><span class="params">(self, digits: str)</span> -&gt; List[str]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> digits: <span class="keyword">return</span> []</span><br><span class="line">        phone = [<span class="string">'abc'</span>,<span class="string">'def'</span>,<span class="string">'ghi'</span>,<span class="string">'jkl'</span>,<span class="string">'mno'</span>,<span class="string">'pqrs'</span>,<span class="string">'tuv'</span>,<span class="string">'wxyz'</span>]</span><br><span class="line">        queue = [<span class="string">''</span>]  <span class="comment"># 初始化队列</span></span><br><span class="line">        <span class="keyword">for</span> digit <span class="keyword">in</span> digits:</span><br><span class="line">            <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(queue)):</span><br><span class="line">                tmp = queue.pop(<span class="number">0</span>)</span><br><span class="line">                <span class="keyword">for</span> letter <span class="keyword">in</span> phone[ord(digit)<span class="number">-50</span>]:<span class="comment"># 这里我们不使用 int() 转换字符串，使用ASCII码</span></span><br><span class="line">                    queue.append(tmp + letter)</span><br><span class="line">        <span class="keyword">return</span> queue</span><br></pre></td></tr></table></figure>
+<p>复杂度同回溯</p>
+<h2 id="18-四数之和"><a href="#18-四数之和" class="headerlink" title="18. 四数之和"></a>18. 四数之和</h2><p>给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。</p>
+<p>和15.三数之和同</p>
+<ul>
+<li>排序+双指针，消除无效解</li>
+<li>注意因为和三数之和为零不同的地方在于第一个数&gt;target，可能后面的数是小于零的，不应该直接break或者return，可以更改为4<em>num[i]，return，第二个判断为num[i]+3\</em>num[j]&gt;target，再break</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fourSum</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; List[List[int]]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> nums <span class="keyword">or</span> len(nums)&lt;<span class="number">4</span>: <span class="keyword">return</span> []</span><br><span class="line">        nums.sort()</span><br><span class="line">       <span class="comment"># print(nums)</span></span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)<span class="number">-3</span>):      </span><br><span class="line">            <span class="keyword">if</span> <span class="number">4</span>*nums[i] &gt; target: </span><br><span class="line">                <span class="keyword">return</span> res               </span><br><span class="line">            <span class="keyword">if</span> i&gt;<span class="number">0</span> <span class="keyword">and</span> nums[i] == nums[i<span class="number">-1</span>]: </span><br><span class="line">                <span class="keyword">continue</span>               </span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,len(nums)<span class="number">-2</span>):                               </span><br><span class="line">                <span class="keyword">if</span> <span class="number">3</span>*nums[j] + nums[i] &gt; target: </span><br><span class="line">                    <span class="keyword">break</span>                </span><br><span class="line">                <span class="keyword">if</span> j &gt; i+<span class="number">1</span> <span class="keyword">and</span> nums[j] == nums[j<span class="number">-1</span>]: </span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line">                m,n = j+<span class="number">1</span>, len(nums)<span class="number">-1</span></span><br><span class="line">                <span class="keyword">while</span> m &lt; n:</span><br><span class="line">                    <span class="keyword">if</span> i==<span class="number">4</span>:</span><br><span class="line">                        print(i,j,m,n)</span><br><span class="line">                    s = nums[i]+nums[j]+nums[m]+nums[n]</span><br><span class="line">                    <span class="keyword">if</span> s &lt; target:</span><br><span class="line">                        m+=<span class="number">1</span></span><br><span class="line">                        <span class="keyword">while</span> m &lt; n <span class="keyword">and</span> nums[m] == nums[m<span class="number">-1</span>]:</span><br><span class="line">                            m+=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">elif</span> s &gt; target:</span><br><span class="line">                        n-=<span class="number">1</span></span><br><span class="line">                        <span class="keyword">while</span> m &lt; n <span class="keyword">and</span> nums[n] == nums [n+<span class="number">1</span>]:</span><br><span class="line">                            n-=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        res.append([nums[i],nums[j],nums[m],nums[n]])</span><br><span class="line">                        m=m+<span class="number">1</span></span><br><span class="line">                        n=n<span class="number">-1</span></span><br><span class="line">                        <span class="keyword">while</span> m &lt; n <span class="keyword">and</span> nums[m] == nums[m<span class="number">-1</span>]:</span><br><span class="line">                            m+=<span class="number">1</span></span><br><span class="line">                        <span class="keyword">while</span> m &lt; n <span class="keyword">and</span> nums[n] == nums[n+<span class="number">1</span>]:</span><br><span class="line">                            n-=<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：$O(N^3)$。</p>
+<h2 id="19-删除链表的倒数第N个节点"><a href="#19-删除链表的倒数第N个节点" class="headerlink" title="19. 删除链表的倒数第N个节点"></a><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/" target="_blank" rel="noopener">19. 删除链表的倒数第N个节点</a></h2><p>给定一个链表，删除链表的倒数第 <em>n</em> 个节点，并且返回链表的头结点。</p>
+<ul>
+<li>两次链表的遍历</li>
+</ul>
+<p>转化为：删除从列表开头数起的第 (L - n + 1)个结点</p>
+<p>首先添加一个位于列表头部哑结点作为辅助，用来简化某些极端情况，例如列表中只含有一个结点，或需要删除列表的头部。在第一次遍历中，找出列表的长度 L。然后设置一个指向哑结点的指针，并移动它遍历列表，直至它到达第 (L - n)个结点那里。我们把第 (L - n)个结点的 next 指针重新链接至第 (L - n + 2)个结点，完成这个算法。</p>
+<p><strong>时间复杂度</strong>为 $O(L)$，对列表进行了两次遍历，首先计算了列表的长度 LL 其次找到第 $(L - n)$ 个结点。 操作执行了 $2L-n$步。</p>
+<p><strong>空间复杂度</strong>：$O(1)$，只用了常量级的额外空间。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeNthFromEnd</span><span class="params">(self, head: ListNode, n: int)</span> -&gt; ListNode:</span></span><br><span class="line">        dummy = ListNode(<span class="number">0</span>)</span><br><span class="line">        dummy.next = head </span><br><span class="line"></span><br><span class="line">        <span class="comment">#step1: 获取链表长度</span></span><br><span class="line">        cur, length = head, <span class="number">0</span> </span><br><span class="line">        <span class="keyword">while</span> cur:</span><br><span class="line">            length += <span class="number">1</span></span><br><span class="line">            cur = cur.next </span><br><span class="line">        </span><br><span class="line">        <span class="comment">#step2: 找到倒数第N个节点的前面一个节点</span></span><br><span class="line">        cur = dummy</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(length - n):</span><br><span class="line">            cur = cur.next</span><br><span class="line">        </span><br><span class="line">        <span class="comment">#step3: 删除节点，并重新连接</span></span><br><span class="line">        cur.next = cur.next.next</span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br></pre></td></tr></table></figure>
+<ul>
+<li>快慢指针：一次链表的遍历</li>
+</ul>
+<p>使用两个指针，第一个指针从列表的开头向前移动 n+1步，而第二个指针将从列表的开头出发。两个指针被 n 个结点分开。同时移动两个指针向前来保持这个恒定的间隔，直到第一个指针到达最后一个结点。此时第二个指针将指向从最后一个结点数起的第 n 个结点。重新链接第二个指针所引用的结点的 next 指针指向该结点的下下个结点。</p>
+<p><strong>时间复杂度</strong>为 $O(L)$   <strong>空间复杂度</strong>：$O(1)$，只用了常量级的额外空间。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeNthFromEnd</span><span class="params">(self, head: ListNode, n: int)</span> -&gt; ListNode:</span>        </span><br><span class="line">        <span class="comment"># 防止，删除变为空指针。</span></span><br><span class="line">        dummy = ListNode(<span class="number">0</span>)</span><br><span class="line">        dummy.next = head</span><br><span class="line">        <span class="comment"># 快慢指针。</span></span><br><span class="line">        slow, fast = _ , _</span><br><span class="line">        <span class="comment"># 快指针，后移n个节点。</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">            fast = fast.next</span><br><span class="line">        <span class="comment"># 同时移动快慢指针。当快指针到末尾时，慢指针正好在倒数第n-1个节点位置。</span></span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            fast = fast.next</span><br><span class="line">            slow = slow.next</span><br><span class="line">        <span class="comment"># 删除目标节点</span></span><br><span class="line">        slow.next =  slow.next.next</span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h3 id="递归迭代-—-回溯时，进行节点计数"><a href="#递归迭代-—-回溯时，进行节点计数" class="headerlink" title="递归迭代 — 回溯时，进行节点计数"></a>递归迭代 — 回溯时，进行节点计数</h3></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span>  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeNthFromEnd</span><span class="params">(self, head: ListNode, n: int)</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head: </span><br><span class="line">            self.count = <span class="number">0</span>  <span class="comment"># 如果不写成这样，需要global count，否则在每次调用函数的时候，变量都会释放</span></span><br><span class="line">            <span class="keyword">return</span> head  </span><br><span class="line">        head.next = self.removeNthFromEnd(head.next, n) <span class="comment"># 递归调用</span></span><br><span class="line">        self.count += <span class="number">1</span> <span class="comment"># 回溯时进行节点计数</span></span><br><span class="line">        <span class="keyword">return</span> head.next <span class="keyword">if</span> self.count == n <span class="keyword">else</span> head</span><br></pre></td></tr></table></figure>
+<ul>
+<li>还可以链表转list处理再转链表输出。</li>
+</ul>
+<h2 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20. 有效的括号"></a>20. 有效的括号</h2><p>给定一个只包括 <code>&#39;(&#39;</code>，<code>&#39;)&#39;</code>，<code>&#39;{&#39;</code>，<code>&#39;}&#39;</code>，<code>&#39;[&#39;</code>，<code>&#39;]&#39;</code> 的字符串，判断字符串是否有效。有效字符串需满足：</p>
+<ol>
+<li>左括号必须用相同类型的右括号闭合。</li>
+<li>左括号必须以正确的顺序闭合。</li>
+</ol>
+<ul>
+<li>栈：</li>
+</ul>
+<p>需要一个数据结构暂存左括号，处理右括号需要看匹配最近的左括号，后进先出，所以可以用栈。</p>
+<p>每次左括号就压进栈，右括号就看栈顶是不是匹配的左括号，如果不是说明有问题， 比如 [ )，就无法匹配上，</p>
+<p>如果匹配上了，就把栈顶pop掉。最后判断是不是栈里所有左括号都脱单了。</p>
+<p>注意到有效字符串的长度一定为偶数，使用哈希映射（HashMap）存储每一种括号。哈希映射的键为右括号，值为相同类型的左括号。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isValid</span><span class="params">(self, s: str)</span> -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> len(s) % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        </span><br><span class="line">        pairs = &#123;</span><br><span class="line">            <span class="string">")"</span>: <span class="string">"("</span>,</span><br><span class="line">            <span class="string">"]"</span>: <span class="string">"["</span>,</span><br><span class="line">            <span class="string">"&#125;"</span>: <span class="string">"&#123;"</span>,</span><br><span class="line">        &#125;</span><br><span class="line">        stack = list()</span><br><span class="line">        <span class="keyword">for</span> ch <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> ch <span class="keyword">in</span> pairs: <span class="comment"># 如果是右括号</span></span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> stack <span class="keyword">or</span> stack[<span class="number">-1</span>] != pairs[ch]:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">                stack.pop()</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(ch)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">not</span> stack</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：$O(n)$</p>
+<p>空间复杂度：$O(n)$</p>
+<h2 id="21-合并两个有序链表"><a href="#21-合并两个有序链表" class="headerlink" title="21. 合并两个有序链表"></a>21. 合并两个有序链表</h2><p>将两个升序链表合并为一个新的 <strong>升序</strong> 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</p>
+<ul>
+<li>递归</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeTwoLists</span><span class="params">(self, l1, l2)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l2</span><br><span class="line">        <span class="keyword">elif</span> l2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l1</span><br><span class="line">        <span class="keyword">elif</span> l1.val &lt; l2.val:</span><br><span class="line">            l1.next = self.mergeTwoLists(l1.next, l2)</span><br><span class="line">            <span class="keyword">return</span> l1</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            l2.next = self.mergeTwoLists(l1, l2.next)</span><br><span class="line">            <span class="keyword">return</span> l2</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：$O(n+m)$</p>
+<p>空间复杂度：$O(n+m)$，递归调用 mergeTwoLists 函数时需要消耗栈空间，栈空间的大小取决于递归调用的深度。结束递归调用时 mergeTwoLists 函数最多调用 n+m次</p>
+<ul>
+<li>迭代</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeTwoLists</span><span class="params">(self, l1, l2)</span>:</span></span><br><span class="line">        prehead = ListNode(<span class="number">-1</span>)</span><br><span class="line">        prev = prehead</span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">and</span> l2:</span><br><span class="line">            <span class="keyword">if</span> l1.val &lt;= l2.val:</span><br><span class="line">                prev.next = l1</span><br><span class="line">                l1 = l1.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                prev.next = l2</span><br><span class="line">                l2 = l2.next            </span><br><span class="line">            prev = prev.next</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 合并后 l1 和 l2 最多只有一个还未被合并完，我们直接将链表末尾指向未合并完的链表即可</span></span><br><span class="line">        prev.next = l1 <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">else</span> l2</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> prehead.next</span><br></pre></td></tr></table></figure>
+<p>先声明一个newhead作为dummy head，最后返回它的next作为答案，然后对于l1, l2线性扫描，每次选两者中值小的那个作为新链表的下一个节点，然后选取的链表前进一步。如果l1, l2里有一个已经结束了，就把另一个剩下的值全部直接连过来。 </p>
+<p>时间复杂度$O(m+n)$</p>
+<p>空间复杂度$O(1)$</p>
+<h2 id="22-括号生成-网易互娱数据挖掘研究员面试题"><a href="#22-括号生成-网易互娱数据挖掘研究员面试题" class="headerlink" title="22. 括号生成(网易互娱数据挖掘研究员面试题)"></a>22. 括号生成(网易互娱数据挖掘研究员面试题)</h2><p>给出 <em>n</em> 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且<strong>有效的</strong>括号组合。</p>
+<ul>
+<li>回溯法</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generateParenthesis</span><span class="params">(self, n: int)</span> -&gt; List[str]:</span></span><br><span class="line">        ans = []</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">backtrack</span><span class="params">(S, left, right)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> len(S) == <span class="number">2</span> * n:</span><br><span class="line">                ans.append(<span class="string">''</span>.join(S))</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            <span class="keyword">if</span> left &lt; n:</span><br><span class="line">                S.append(<span class="string">'('</span>)</span><br><span class="line">                backtrack(S, left+<span class="number">1</span>, right)</span><br><span class="line">                S.pop()</span><br><span class="line">            <span class="keyword">if</span> right &lt; left:</span><br><span class="line">                S.append(<span class="string">')'</span>)</span><br><span class="line">                backtrack(S, left, right+<span class="number">1</span>)</span><br><span class="line">                S.pop()</span><br><span class="line"></span><br><span class="line">        backtrack([], <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generateParenthesis</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type n: int</span></span><br><span class="line"><span class="string">        :rtype: List[str]</span></span><br><span class="line"><span class="string">        """</span>       </span><br><span class="line">        res = []        </span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">dfs</span><span class="params">(tmp, left, right)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> len(tmp) == <span class="number">2</span> * n:</span><br><span class="line">                res.append(tmp)</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">if</span> left:</span><br><span class="line">                dfs(tmp + <span class="string">"("</span>, left - <span class="number">1</span>, right)</span><br><span class="line">            <span class="keyword">if</span> right &gt; left:</span><br><span class="line">                dfs(tmp + <span class="string">")"</span>, left, right - <span class="number">1</span>)</span><br><span class="line">      </span><br><span class="line">        dfs(<span class="string">""</span>, n, n)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h2 id="23-合并K个排序链表"><a href="#23-合并K个排序链表" class="headerlink" title="23. 合并K个排序链表"></a>23. 合并K个排序链表</h2><p>合并 <em>k</em> 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。</p>
+<ul>
+<li>暴力解法:直接将所有的元素取出，然后排个序(构造链表的这种题一般都是需要两个量，一个存储链表头，一个不断移动进行构造。)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeKLists</span><span class="params">(self, lists: List[ListNode])</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> lists <span class="keyword">or</span> len(lists) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">import</span> heapq</span><br><span class="line">        all_vals = []</span><br><span class="line">        <span class="keyword">for</span> l <span class="keyword">in</span> lists:</span><br><span class="line">            <span class="keyword">while</span> l:</span><br><span class="line">                all_vals.append(l.val)</span><br><span class="line">                l = l.next</span><br><span class="line">        all_vals.sort()</span><br><span class="line">        dummy = ListNode(<span class="literal">None</span>)</span><br><span class="line">        cur = dummy</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> all_vals:</span><br><span class="line">            temp_node = ListNode(i)</span><br><span class="line">            cur.next = temp_node</span><br><span class="line">            cur = cur.next</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br></pre></td></tr></table></figure>
+<ul>
+<li>优先队列（heap）(最小堆)  (但好像可以只用大小为K的堆，把每个表头放到里面)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeKLists</span><span class="params">(self, lists: List[ListNode])</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> lists <span class="keyword">or</span> len(lists) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">import</span> heapq</span><br><span class="line">        heap = []</span><br><span class="line">        <span class="comment"># 首先 for 嵌套 while 就是将所有元素都取出放入堆中</span></span><br><span class="line">        <span class="keyword">for</span> node <span class="keyword">in</span> lists:</span><br><span class="line">            <span class="keyword">while</span> node:</span><br><span class="line">                heapq.heappush(heap, node.val)</span><br><span class="line">                node = node.next</span><br><span class="line">        dummy = ListNode(<span class="literal">None</span>)</span><br><span class="line">        cur = dummy</span><br><span class="line">        <span class="comment"># 依次将堆中的元素取出(因为是小顶堆，所以每次出来的都是目前堆中值最小的元素），然后重新构建一个列表返回</span></span><br><span class="line">        <span class="keyword">while</span> heap:</span><br><span class="line">            temp_node = ListNode(heappop(heap))</span><br><span class="line">            cur.next = temp_node</span><br><span class="line">            cur = cur.next</span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br></pre></td></tr></table></figure>
+<ul>
+<li>分治归并（利用合并两个升序链表）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeKLists</span><span class="params">(self, lists: List[ListNode])</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="keyword">if</span> len(lists) == <span class="number">0</span>: <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">if</span> len(lists) == <span class="number">1</span>: <span class="keyword">return</span> lists[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">if</span> len(lists) == <span class="number">2</span>: <span class="keyword">return</span> self.mergetwolists(lists[<span class="number">0</span>],lists[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">        mid = len(lists)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> self.mergetwolists(self.mergeKLists(lists[:mid]),self.mergeKLists(lists[mid:len(lists)]))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergetwolists</span><span class="params">(self,l1,l2)</span>:</span></span><br><span class="line">        dummy = ListNode(<span class="literal">None</span>)</span><br><span class="line">        pointer = dummy</span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">and</span> l2:</span><br><span class="line">            <span class="keyword">if</span> l1.val &lt; l2.val:</span><br><span class="line">                pointer.next = ListNode(l1.val)</span><br><span class="line">                l1 = l1.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                pointer.next = ListNode(l2.val)</span><br><span class="line">                l2 = l2.next</span><br><span class="line">            pointer = pointer.next</span><br><span class="line">        <span class="keyword">if</span> l1:</span><br><span class="line">            pointer.next = l1</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            pointer.next = l2</span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br></pre></td></tr></table></figure>
+<h2 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a><a href="https://leetcode-cn.com/problems/swap-nodes-in-pairs/" target="_blank" rel="noopener">24. 两两交换链表中的节点</a></h2><p>给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。</p>
+<ul>
+<li>递归 (链表也能递归ORZ)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">swapPairs</span><span class="params">(self, head: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="comment"># If the list has no node or has only one node left.</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line">        <span class="comment"># Nodes to be swapped</span></span><br><span class="line">        first_node = head</span><br><span class="line">        second_node = head.next</span><br><span class="line">        <span class="comment"># Swapping</span></span><br><span class="line">        first_node.next  = self.swapPairs(second_node.next)</span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        用递归实现链表相邻互换：</span></span><br><span class="line"><span class="string">        第一个节点的 next 是第三、第四个节点交换的结果，第二个节点的 next 是第一个节点；</span></span><br><span class="line"><span class="string">        第三个节点的 next 是第五、第六个节点交换的结果，第四个节点的 next 是第三个节点；</span></span><br><span class="line"><span class="string">        以此类推</span></span><br><span class="line"><span class="string">        """</span>        </span><br><span class="line">        second_node.next = first_node</span><br><span class="line">        <span class="comment"># Now the head is the second node</span></span><br><span class="line">        <span class="keyword">return</span> second_node</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：O(N)，其中 NN 指的是链表的节点数量。</p>
+<p>空间复杂度：O(N)，递归过程使用的堆栈空间。</p>
+<ul>
+<li>迭代</li>
+</ul>
+<p>链表分为两部分，即奇数节点为一部分，偶数节点为一部分，A 指的是交换节点中的前面的节点，B 指的是要交换节点中的后面的节点。在完成它们的交换，还得用 prevNode 记录 A 的前驱节点。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">swapPairs</span><span class="params">(self, head: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="comment"># Dummy node acts as the prevNode for the head node</span></span><br><span class="line">        <span class="comment"># of the list and hence stores pointer to the head node.</span></span><br><span class="line">        dummy = ListNode(<span class="number">-1</span>)</span><br><span class="line">        dummy.next = head</span><br><span class="line"></span><br><span class="line">        prev_node = dummy</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> head <span class="keyword">and</span> head.next:</span><br><span class="line">            <span class="comment"># Nodes to be swapped</span></span><br><span class="line">            first_node = head;</span><br><span class="line">            second_node = head.next;</span><br><span class="line">            <span class="comment"># Swapping</span></span><br><span class="line">            prev_node.next = second_node</span><br><span class="line">            first_node.next = second_node.next</span><br><span class="line">            second_node.next = first_node</span><br><span class="line">            <span class="comment"># Reinitializing the head and prev_node for next swap</span></span><br><span class="line">            prev_node = first_node</span><br><span class="line">            head = first_node.next</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Return the new head node.</span></span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：O(N)，其中 NN 指的是链表的节点数量。空间复杂度：O(1)</p>
+<h2 id="25-K-个一组翻转链表"><a href="#25-K-个一组翻转链表" class="headerlink" title="25. K 个一组翻转链表"></a>25. K 个一组翻转链表</h2><p>一个链表，每 <em>k</em> 个节点一组进行翻转，请你返回翻转后的链表。<em>k</em> 是一个正整数，它的值小于或等于链表的长度。</p>
+<p>如果节点总数不是 <em>k</em> 的整数倍，那么请将最后剩余的节点保持原有顺序。</p>
+<p><strong>说明 :</strong></p>
+<ol>
+<li>你的算法只能使用常数的额外空间。</li>
+<li>你不能只是单纯的改变节点内部的值**，而是需要实际的进行节点交换。</li>
+</ol>
+<ul>
+<li>栈：将<code>k</code> 个数压入栈中，然后弹出来的顺序就是翻转的（最后剩下不够k个不翻转，以及翻转的部分需要与剩下的链表连接起来）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseKGroup</span><span class="params">(self, head: ListNode, k: int)</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="comment"># calculate the list length</span></span><br><span class="line">        tmp = head</span><br><span class="line">        counts =<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> tmp:</span><br><span class="line">            counts += <span class="number">1</span></span><br><span class="line">            tmp = tmp.next</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># calculate the group number and the remainder.</span></span><br><span class="line">        grp_num, tails = divmod(counts, k)</span><br><span class="line"></span><br><span class="line">        dummy = ListNode(<span class="literal">None</span>)</span><br><span class="line">        ptr = dummy</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> grp <span class="keyword">in</span> range(grp_num):</span><br><span class="line">            stack = list()</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</span><br><span class="line">                stack.append(head)</span><br><span class="line">                head = head.next</span><br><span class="line">            <span class="keyword">while</span> stack:</span><br><span class="line">                ptr.next = stack.pop()</span><br><span class="line">                ptr = ptr.next</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(tails):</span><br><span class="line">            ptr.next = head</span><br><span class="line">            head = head.next</span><br><span class="line">            ptr = ptr.next</span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        if tails !=0:</span></span><br><span class="line"><span class="string">            ptr.next = head    </span></span><br><span class="line"><span class="string">        """</span>  </span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br></pre></td></tr></table></figure>
+<p>第一次执行68ms，第二次超出时间限制</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseKGroup</span><span class="params">(self, head: ListNode, k: int)</span> -&gt; ListNode:</span></span><br><span class="line">        dummy = ListNode(<span class="number">0</span>)</span><br><span class="line">        p = dummy</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            count = k </span><br><span class="line">            stack = []</span><br><span class="line">            tmp = head</span><br><span class="line">            <span class="keyword">while</span> count <span class="keyword">and</span> tmp:</span><br><span class="line">                stack.append(tmp)</span><br><span class="line">                tmp = tmp.next</span><br><span class="line">                count -= <span class="number">1</span></span><br><span class="line">            <span class="comment"># 注意,目前tmp所在k+1位置</span></span><br><span class="line">            <span class="comment"># 说明剩下的链表不够k个,跳出循环</span></span><br><span class="line">            <span class="keyword">if</span> count : </span><br><span class="line">                p.next = head</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="comment"># 翻转操作</span></span><br><span class="line">            <span class="keyword">while</span> stack:</span><br><span class="line">                p.next = stack.pop()</span><br><span class="line">                p = p.next</span><br><span class="line">            <span class="comment">#与剩下链表连接起来 </span></span><br><span class="line">            p.next = tmp</span><br><span class="line">            head = tmp</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br><span class="line"></span><br><span class="line">作者：powcai</span><br><span class="line">链接：https://leetcode-cn.com/problems/reverse-nodes-<span class="keyword">in</span>-k-group/solution/kge-yi-zu-fan-zhuan-lian-biao-by-powcai/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>尾插法（head-tail，将current移到tail后面）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseKGroup</span><span class="params">(self, head: ListNode, k: int)</span> -&gt; ListNode:</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 定义函数：反转K个节点(尾插法)</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">reverse_node</span><span class="params">(start,k)</span>:</span></span><br><span class="line">            node = <span class="literal">None</span></span><br><span class="line">            res_ = start</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</span><br><span class="line">                temp = start.next</span><br><span class="line">                start.next = node</span><br><span class="line">                node = start</span><br><span class="line">                start = temp</span><br><span class="line">            <span class="comment"># 返回的结果中 node为当前反转晚链表的头结点，res_为为尾结点，temp为下次需要开始反转的第一个节点</span></span><br><span class="line">            <span class="keyword">return</span> (node, res_, temp)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 求出链表的总程度</span></span><br><span class="line">        l_head = <span class="number">0</span></span><br><span class="line">        temp = head</span><br><span class="line">        <span class="keyword">while</span> temp:</span><br><span class="line">            l_head += <span class="number">1</span></span><br><span class="line">            temp = temp.next</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 求出进行的次数</span></span><br><span class="line">        num = l_head // k</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 总运行次数为 num*k &lt;= n(链表总长度)</span></span><br><span class="line">        dumm = ListNode(<span class="number">0</span>)</span><br><span class="line">        res = dumm</span><br><span class="line">        next_ = head</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(num):</span><br><span class="line">            start_, end, next_ = reverse_node(next_,k)<span class="comment"># 反转k个节点</span></span><br><span class="line">            dumm.next = start_ <span class="comment"># 进行反转完链表的连接</span></span><br><span class="line">            dumm = end</span><br><span class="line">        <span class="comment"># 最后如果有不满足K的节点，不进行反转直接连接</span></span><br><span class="line">        dumm.next = next_</span><br><span class="line">        <span class="keyword">return</span> res.next</span><br></pre></td></tr></table></figure>
+<ul>
+<li>递归</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reverseKGroup</span><span class="params">(self, head: ListNode, k: int)</span> -&gt; ListNode:</span></span><br><span class="line">    cur = head</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(k):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> cur:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line">        cur = cur.next</span><br><span class="line"> </span><br><span class="line">    pre, cur = <span class="literal">None</span>, head</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> range(k):</span><br><span class="line">        cur.next, pre, cur = pre, cur, cur.next  <span class="comment"># 这个链表翻转过程很不错</span></span><br><span class="line"></span><br><span class="line">    head.next = self.reverseKGroup(cur, k)</span><br><span class="line">    <span class="keyword">return</span> pre</span><br></pre></td></tr></table></figure>
+<ul>
+<li>迭代</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reverseKGroup</span><span class="params">(self, head: ListNode, k: int)</span> -&gt; ListNode:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 反转 k 个元素，返回反转后的头、尾节点。</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">revrese</span><span class="params">(head, k)</span>:</span></span><br><span class="line">        pre, cur = <span class="literal">None</span>, head</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(k):</span><br><span class="line">            cur.next, pre, cur = pre, cur, cur.next</span><br><span class="line">        <span class="keyword">return</span> pre, head</span><br><span class="line"></span><br><span class="line">    pre = dummy = ListNode(<span class="number">0</span>)</span><br><span class="line">    dummy.next = head</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> pre.next:</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 判断剩余节点个数是否有 k 个，若没有直接返回。</span></span><br><span class="line">        <span class="comment"># 另一个目的是将 cur 定位到 k+1 个节点的位置，方便后续的拼接。    </span></span><br><span class="line">        cur = pre.next</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(k):</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> cur:</span><br><span class="line">                <span class="keyword">return</span> dummy.next</span><br><span class="line">            cur = cur.next</span><br><span class="line"></span><br><span class="line">        pre.next, pre = revrese(pre.next, k)  <span class="comment"># 将 pre 连接已经反转好的元素，顺便移动 pre 的位置。</span></span><br><span class="line">        pre.next = cur  <span class="comment"># 拼接剩余元素，否则无法继续迭代。</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> dummy.next</span><br></pre></td></tr></table></figure>
+<h2 id="26-删除排序数组中的重复项"><a href="#26-删除排序数组中的重复项" class="headerlink" title="26. 删除排序数组中的重复项"></a>26. 删除排序数组中的重复项</h2><p>给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。</p>
+<p><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/solution/shuang-zhi-zhen-shan-chu-zhong-fu-xiang-dai-you-hu/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/solution/shuang-zhi-zhen-shan-chu-zhong-fu-xiang-dai-you-hu/</a></p>
+<p><img src="https://pic.leetcode-cn.com/0039d16b169059e8e7f998c618b6c2b269c2d95b02f43415350bde1f661e503a-1.png" alt="1.png"></p>
+<p>快慢指针：当q和p相等时，快指针q后移，不相等时，交换，快慢指针都后移。</p>
+<ul>
+<li>双指针</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicates</span><span class="params">(self, nums)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        l = len(nums)</span><br><span class="line">        slow, fast = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> slow &lt; l:</span><br><span class="line">            <span class="keyword">if</span> slow &gt; <span class="number">0</span> <span class="keyword">and</span> nums[slow] &lt;= nums[slow - <span class="number">1</span>]: <span class="comment">#slow这个位置上发生了重复，需要找新的有效的数放过来</span></span><br><span class="line">                <span class="keyword">while</span>(fast &lt; l <span class="keyword">and</span> nums[fast] &lt;= nums[slow - <span class="number">1</span>]):</span><br><span class="line">                    fast += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> fast == l:</span><br><span class="line">                    <span class="keyword">return</span> slow</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    nums[slow] = nums[fast]</span><br><span class="line">            slow += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> slow</span><br></pre></td></tr></table></figure>
+<p>还是双指针(更快)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicates</span><span class="params">(self, nums: List[int])</span> -&gt; int:</span></span><br><span class="line">        slow = <span class="number">0</span></span><br><span class="line">        fast = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> len(nums) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[fast] != nums[slow]:</span><br><span class="line">                slow += <span class="number">1</span></span><br><span class="line">                nums[slow], nums[fast] = nums[fast], nums[slow]</span><br><span class="line">            slow += <span class="number">1</span>    </span><br><span class="line">        <span class="keyword">return</span> fast + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h2 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h2><p>给定一个数组 <em>nums</em> 和一个值 <em>val</em>，你需要<strong><a href="https://baike.baidu.com/item/原地算法" target="_blank" rel="noopener">原地</a></strong>移除所有数值等于 <em>val</em> 的元素，返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须在<strong><a href="https://baike.baidu.com/item/原地算法" target="_blank" rel="noopener">原地</a>修改输入数组</strong>并在使用 O(1) 额外空间的条件下完成。</p>
+<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
+<ul>
+<li><strong>倒序线性扫描</strong>，遇到相同的值pop</li>
+<li>**需要倒着扫描，否则下标会溢出</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElement</span><span class="params">(self, nums, val)</span>:</span></span><br><span class="line">        l = len(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(l<span class="number">-1</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == val:</span><br><span class="line">                nums.pop(i)</span><br><span class="line">                          </span><br><span class="line">        <span class="keyword">return</span> len(nums)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>正向扫描</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElement</span><span class="params">(self, nums: List[int], val: int)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">while</span> val <span class="keyword">in</span> nums:</span><br><span class="line">            nums.pop(nums.index(val))</span><br></pre></td></tr></table></figure>
+<h2 id="28-实现strStr"><a href="#28-实现strStr" class="headerlink" title="28. 实现strStr()"></a>28. 实现strStr()</h2><p>给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。</p>
+<p><strong> C语言的 <a href="https://baike.baidu.com/item/strstr/811469" target="_blank" rel="noopener">strstr()</a> 以及 Java的 <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String" target="_blank" rel="noopener">indexOf()</a>)</strong></p>
+<ul>
+<li>调库</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span><span class="params">(self, haystack, needle)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type haystack: str</span></span><br><span class="line"><span class="string">        :type needle: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> needle:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> needle <span class="keyword">in</span> haystack:</span><br><span class="line">            <span class="keyword">return</span> haystack.index(needle)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>把haystack可能为needle的子串全部找出来匹配一遍。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span><span class="params">(self, haystack, needle)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type haystack: str</span></span><br><span class="line"><span class="string">        :type needle: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> needle:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(haystack)-len(needle)+<span class="number">1</span>): <span class="comment"># 优化</span></span><br><span class="line">            <span class="keyword">if</span> haystack[i] == needle[<span class="number">0</span>]:</span><br><span class="line">                <span class="keyword">if</span> haystack[i:i + len(needle)] == needle:</span><br><span class="line">                    <span class="keyword">return</span> i</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>比较所有长度为needle的子串</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span><span class="params">(self, haystack: str, needle: str)</span> -&gt; int:</span></span><br><span class="line">        L, n = len(needle), len(haystack)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> start <span class="keyword">in</span> range(n - L + <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> haystack[start: start + L] == needle:</span><br><span class="line">                <span class="keyword">return</span> start</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<p>时间复杂度：O((N - L)L)</p>
+<ul>
+<li>双指针</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span><span class="params">(self, haystack: str, needle: str)</span> -&gt; int:</span></span><br><span class="line">        h, n = len(haystack), len(needle)</span><br><span class="line">        i = j = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; h <span class="keyword">and</span> j &lt; n:</span><br><span class="line">            <span class="keyword">if</span> haystack[i] == needle[j]:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">if</span> j &gt; <span class="number">0</span>:</span><br><span class="line">                    i = i - j + <span class="number">1</span> <span class="comment"># 表示从匹配子串的首位的下一个开始匹配</span></span><br><span class="line">                    j = <span class="number">0</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> i - n <span class="keyword">if</span> j == n <span class="keyword">else</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>KMP算法（待看）</li>
+</ul>
+<h2 id="29-两数相除"><a href="#29-两数相除" class="headerlink" title="29. 两数相除"></a>29. 两数相除</h2><p>给定两个整数，被除数 <code>dividend</code> 和除数 <code>divisor</code>。将两数相除，要求不使用乘法、除法和 mod 运算符。</p>
+<p>返回被除数 <code>dividend</code> 除以除数 <code>divisor</code> 得到的商。</p>
+<ul>
+<li><p>除法的本质就是被除数不断减去除数 ，当被除数比除数小的时候，被除数就是余数，减法的次数就是商。<strong>容易超时</strong></p>
+</li>
+<li><p>快速逼近</p>
+</li>
+</ul>
+<p>举个例子：11 除以 3 。<br>首先11比3大，结果至少是1， 然后让3翻倍（6），11比3翻倍还要大，结果至少是2，让6再翻倍，得12，11不比12大，（解翻倍得到4）。最终结果肯定在2和4之间。也就是说2再加上某个数，这个数是多少呢？让11减去刚才最后一次的结果6，剩下5，计算5是3的几倍。</p>
+<ul>
+<li>二分查找</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>基础知识</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Scrapy学习</title>
+    <url>/2020/08/07/Scrapy%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="架构介绍"><a href="#架构介绍" class="headerlink" title="架构介绍"></a>架构介绍</h2><ul>
+<li>Engine，引擎，用来处理整个系统的数据流处理，触发事务，是整个框架的核心。</li>
+<li>Item，项目，它定义了爬取结果的数据结构，爬取的数据会被赋值成该对象。</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>Scheduler， 调度器，用来接受引擎发过来的请求并加入队列中，并在引擎再次请求的时候提供给引擎。</li>
+<li>Downloader，下载器，用于下载网页内容，并将网页内容返回给蜘蛛。</li>
+<li>Spiders，蜘蛛，其内定义了爬取的逻辑和网页的解析规则，它主要负责解析响应并生成提取结果和新的请求。</li>
+<li>Item Pipeline，项目管道，负责处理由蜘蛛从网页中抽取的项目，它的主要任务是清洗、验证和存储数据。</li>
+<li>Downloader Middlewares，下载器中间件，位于引擎和下载器之间的钩子框架，主要是处理引擎与下载器之间的请求及响应。</li>
+<li>Spider Middlewares， 蜘蛛中间件，位于引擎和蜘蛛之间的钩子框架，主要工作是处理蜘蛛输入的响应和输出的结果及新的请求。</li>
+</ul>
+<h2 id="数据流"><a href="#数据流" class="headerlink" title="数据流"></a>数据流</h2><p>Scrapy 中的数据流由引擎控制，其过程如下:</p>
+<ul>
+<li>Engine 首先打开一个网站，找到处理该网站的 Spider 并向该 Spider 请求第一个要爬取的 URL。</li>
+<li>Engine 从 Spider 中获取到第一个要爬取的 URL 并通过 Scheduler 以 Request 的形式调度。</li>
+<li>Engine 向 Scheduler 请求下一个要爬取的 URL。</li>
+<li>Scheduler 返回下一个要爬取的 URL 给 Engine，Engine 将 URL 通过 Downloader Middlewares 转发给 Downloader 下载。</li>
+<li>一旦页面下载完毕， Downloader 生成一个该页面的 Response，并将其通过 Downloader Middlewares 发送给 Engine。</li>
+<li>Engine 从下载器中接收到 Response 并通过 Spider Middlewares 发送给 Spider 处理。</li>
+<li>Spider 处理 Response 并返回爬取到的 Item 及新的 Request 给 Engine。</li>
+<li>Engine 将 Spider 返回的 Item 给 Item Pipeline，将新的 Request 给 Scheduler。</li>
+<li>重复第二步到最后一步，直到  Scheduler 中没有更多的 Request，Engine 关闭该网站，爬取结束。</li>
+</ul>
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p>Scrapy 框架通过命令行来创建项目的，代码的编写需要 IDE。项目创建之后，项目文件结构如下所示：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">scrapy.cfg</span><br><span class="line">project/</span><br><span class="line">    __init__.py</span><br><span class="line">    items.py</span><br><span class="line">    pipelines.py</span><br><span class="line">    settings.py</span><br><span class="line">    middlewares.py</span><br><span class="line">    spiders/</span><br><span class="line">        __init__.py</span><br><span class="line">        spider1.py</span><br><span class="line">        spider2.py</span><br><span class="line">        ...</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tensorflow安装记录</title>
+    <url>/2020/09/04/Tensorflow%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="在anaconda下安装tensorflow"><a href="#在anaconda下安装tensorflow" class="headerlink" title="在anaconda下安装tensorflow"></a>在anaconda下安装tensorflow</h2><hr>
+<p>电脑不是NVIDIA或者AMD独显，是因特尔集显，所以不需要考虑CUDA，安装CPU版本即可。</p>
+<p>conda版本：conda 4.5.1</p>
+<p>python 版本：3.7.1</p>
+<p><code>conda -list</code> 可以查看所有包的版本信息</p>
+<hr>
+<a id="more"></a>
+<h2 id="第一次尝试"><a href="#第一次尝试" class="headerlink" title="第一次尝试"></a>第一次尝试</h2><p>参考简书上一篇博客：<a href="https://www.jianshu.com/p/3a76e4f0504a" target="_blank" rel="noopener">anaconda+tensorflow安装完整步骤</a></p>
+<p>没有创建新环境，直接<code>pip install --upgrade --ignore-installed tensorflow</code></p>
+<p>但报错了，应该是权限的问题，所以加上<code>--user</code> <code>pip install --upgrade --ignore-installed tensorflow--user</code></p>
+<p>但安装过程中仍有错误信息（但python版本明明是3.7）：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">spyder 3.3.2 requires pyqt5&lt;5.10; python_version &gt;= "3", which is not installed.</span><br></pre></td></tr></table></figure>
+<p>还有一些warning：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">The script chardetect.exe <span class="keyword">is</span> installed <span class="keyword">in</span> <span class="string">'C:\Users\bao\AppData\Roaming\Python\Python37\Scripts'</span> which <span class="keyword">is</span> <span class="keyword">not</span> on PATH.</span><br><span class="line">Consider adding this directory to PATH <span class="keyword">or</span>, <span class="keyword">if</span> you prefer to suppress this warning, use --no-warn-script-location.</span><br></pre></td></tr></table></figure>
+<p>但最终显示successfully installed。</p>
+<p>尝试<code>import tensorflow</code>报错：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"C:\Users\bao\AppData\Roaming\Python\Python37\site-packages\tensorflow\python\pywrap_tensorflow.py"</span>, line <span class="number">64</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    <span class="keyword">from</span> tensorflow.python._pywrap_tensorflow_internal <span class="keyword">import</span> *</span><br><span class="line">ImportError: DLL load failed: 找不到指定的模块。</span><br></pre></td></tr></table></figure>
+<p>网上搜索发现有很多人和我遇到了同样的问题，说是安装的版本和自己的环境不匹配，但网上都是建议安装到1.x版本的，而我需要安装2.0以上的版本。</p>
+<p>查看安装的tensorflow的版本：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">(base) C:\Users\bao&gt;pip show tensorflow</span><br><span class="line">Name: tensorflow</span><br><span class="line">Version: 2.3.0</span><br><span class="line">Summary: TensorFlow is an open source machine learning framework for everyone.</span><br><span class="line">Home-page: https://www.tensorflow.org/</span><br><span class="line">Author: Google Inc.</span><br><span class="line">Author-email: packages@tensorflow.org</span><br><span class="line">License: Apache 2.0</span><br><span class="line">Location: c:\users\njuqi\appdata\roaming\python\python37\site-packages</span><br><span class="line">Requires: six, termcolor, gast, wrapt, tensorboard, protobuf, h5py, google-pasta, scipy, tensorflow-estimator, astunparse, opt-einsum, wheel, keras-preprocessing, absl-py, numpy, grpcio</span><br><span class="line">Required-by:</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="第二次尝试"><a href="#第二次尝试" class="headerlink" title="第二次尝试"></a>第二次尝试</h2><ol>
+<li>先卸载<code>pip uninstall tensorflow</code></li>
+</ol>
+<ol>
+<li>安装高版本pip（安装了20.2.2）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">easy_install pip</span><br><span class="line">pip -V</span><br></pre></td></tr></table></figure>
+<ol>
+<li>安装tensorflow</li>
+</ol>
+<p><code>pip install tensorflow==2.0.0</code></p>
+<ol>
+<li><code>import tensoflow</code>成功</li>
+<li>之后可能会出现numpy的错误，此时用pip升级numpy即可</li>
+</ol>
+<p>到这里就结束啦！</p>
+<p>注意：<a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">清华大学开源软件镜像站</a>上tensorflow windows的镜像已废弃，新版本在PyPI上。</p>
+<hr>
+<p>参考：</p>
+<p><a href="https://tensorflow.google.cn/install/errors" target="_blank" rel="noopener">TensorFlow中文官方网站</a></p>
+<p><a href="https://github.com/tensorflow/tensorflow/issues/22794" target="_blank" rel="noopener">TensorFlow github 上的issue</a></p>
+]]></content>
+      <categories>
+        <category>日常记录</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>tensorflow</tag>
       </tags>
   </entry>
 </search>
