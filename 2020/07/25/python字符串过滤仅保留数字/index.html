@@ -271,7 +271,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-内置-filter-函数"><a href="#1-内置-filter-函数" class="headerlink" title="1. 内置 filter() 函数"></a>1. 内置 filter() 函数</h2><p><code>filter(function, iterable)</code>函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表，<font face="黑体" color=green > <strong>注意:</strong> Pyhton2.7 返回列表，Python3.x 返回迭代器对象</font>。</p>
+        <h2 id="1-内置-filter-函数"><a href="#1-内置-filter-函数" class="headerlink" title="1. 内置 filter() 函数"></a>1. 内置 filter() 函数</h2><p><code>filter(function, iterable)</code>函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表，<font face="黑体" color="green"> <strong>注意:</strong> Pyhton2.7 返回列表，Python3.x 返回迭代器对象</font>。</p>
 <a id="more"></a>
 <h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 过滤出列表中的所有奇数：</span></span><br><span class="line">newlist = filter(is_odd, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>])</span><br><span class="line"><span class="comment"># 过滤出1~100中平方根是整数的数：</span></span><br><span class="line">newlist = filter(is_sqr, range(<span class="number">1</span>, <span class="number">101</span>))</span><br><span class="line"><span class="comment"># 字符串过滤仅保留数字和字母</span></span><br><span class="line">string = <span class="string">'abc5fg67.!aa99'</span></span><br><span class="line">string_new = <span class="string">''</span>.join(list(filter(str.isdigit,string))) <span class="comment">#只保留数字</span></span><br><span class="line">string_new = <span class="string">''</span>.join(list(filter(str.isalpha,string))) <span class="comment">#只保留字母</span></span><br><span class="line">string_new = <span class="string">''</span>.join(list(filter(str.isalnum,string))) <span class="comment">#保留数字和字母</span></span><br><span class="line"><span class="comment"># 如果想保留数字0-9和小数点’.’ 则需要自定义函数</span></span><br><span class="line"><span class="string">''</span>.join(list(filter(<span class="keyword">lambda</span> ch: ch <span class="keyword">in</span> <span class="string">'1234567890.'</span>, string)))</span><br></pre></td></tr></table></figure>
 <h2 id="2-正则表达式"><a href="#2-正则表达式" class="headerlink" title="2. 正则表达式"></a>2. 正则表达式</h2><p>python自带<code>re</code> 模块，使 Python 语言拥有全部的正则表达式功能。</p>
@@ -388,7 +388,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -401,7 +401,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-count">46</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

@@ -367,7 +367,7 @@
 <h4 id="子节点"><a href="#子节点" class="headerlink" title="子节点"></a>子节点</h4><h5 id="contents-和-children"><a href="#contents-和-children" class="headerlink" title=".contents 和 .children"></a>.contents 和 .children</h5><p><code>tag</code> 的 <code>.contents</code> 属性可以将<code>tag</code> 的子节点以列表的方式输出:</p>
 <p>通过<code>tag</code> 的 <code>.children</code> 生成器,可以对<code>tag</code> 的子节点进行循环:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">head_tag = soup.head  <span class="comment"># &lt;head&gt;&lt;title&gt;The Dormouse's story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line">title_tag = head_tag.contents[<span class="number">0</span>]  <span class="comment"># &lt;title&gt;The Dormouse's story&lt;/title&gt;</span></span><br><span class="line">title_tag.contents    <span class="comment"># [u'The Dormouse's story']</span></span><br><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> title_tag.children:</span><br><span class="line">    print(child)      <span class="comment"># The Dormouse's story</span></span><br></pre></td></tr></table></figure>
-<h5 id="descendants"><a href="#descendants" class="headerlink" title=".descendants"></a>.descendants</h5><p><code>.contents</code> 和 <code>.children</code> 属性仅包含tag的直接子节点.例如,<head>标签只有一个直接子节点<code>&lt;title&gt;</code> 但<code>&lt;title&gt;</code> 标签也包含一个子节点:字符串 “The Dormouse’s story”，这种情况下字符串 “The Dormouse’s story”也属于<code>&lt;head&gt;</code> 标签的子孙节点. <code>.descendants</code> 属性可以对所有tag的子孙节点进行递归循环。</p>
+<h5 id="descendants"><a href="#descendants" class="headerlink" title=".descendants"></a>.descendants</h5><p><code>.contents</code> 和 <code>.children</code> 属性仅包含tag的直接子节点.例如,<head>标签只有一个直接子节点<code>&lt;title&gt;</code> 但<code>&lt;title&gt;</code> 标签也包含一个子节点:字符串 “The Dormouse’s story”，这种情况下字符串 “The Dormouse’s story”也属于<code>&lt;head&gt;</code> 标签的子孙节点. <code>.descendants</code> 属性可以对所有tag的子孙节点进行递归循环。</head></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> head_tag.descendants:</span><br><span class="line">    print(child)</span><br><span class="line">    <span class="comment"># &lt;title&gt;The Dormouse's story&lt;/title&gt;</span></span><br><span class="line">    <span class="comment"># The Dormouse's story</span></span><br></pre></td></tr></table></figure>
 <h5 id="string"><a href="#string" class="headerlink" title=".string"></a>.string</h5><p>如果<code>tag</code> 只有一个 <code>NavigableString</code> 类型子节点,那么这个<code>tag</code> 可以使用 <code>.string</code> 得到子节点</p>
 <p>否则，<code>.string</code> 的输出结果是 <code>None</code></p>
@@ -415,7 +415,7 @@
 </ul>
 <h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>通过get_text()可以通过下面代码得到每一页面的书名：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">book_name_list = []</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>): <span class="comment"># 每页20本书</span></span><br><span class="line">        book_name = soup.select(<span class="string">"#subject_list &gt; ul &gt; li:nth-child("</span> + str(j) + <span class="string">") &gt; div.info &gt; h2 &gt; a"</span>)  </span><br><span class="line">        <span class="comment"># 第29页只有19本书</span></span><br><span class="line">        <span class="keyword">for</span> book_name <span class="keyword">in</span> book_name:</span><br><span class="line">            book_name_list.append(book_name.get_text().replace(<span class="string">" "</span>,<span class="string">""</span>).replace(<span class="string">"\r"</span>, <span class="string">""</span>).replace(<span class="string">"\n"</span>, <span class="string">""</span>))</span><br></pre></td></tr></table></figure>
-<h3 id="修改文档树"><a href="#修改文档树" class="headerlink" title="修改文档树"></a>修改文档树</h3><h3 id="解析部分文档"><a href="#解析部分文档" class="headerlink" title="解析部分文档"></a>解析部分文档</h3><p>如果仅仅因为想要查找文档中的<a>标签而将整片文档进行解析,实在是浪费内存和时间.最快的方法是从一开始就把<a>标签以外的东西都忽略掉. <code>SoupStrainer</code> 类可以定义文档的某段内容,这样搜索文档时就不必先解析整篇文档,只会解析在 <code>SoupStrainer</code> 中定义过的文档. 创建一个 <code>SoupStrainer</code> 对象并作为 <code>parse_only</code> 参数给 <code>BeautifulSoup</code> 的构造方法即可.</p>
+<h3 id="修改文档树"><a href="#修改文档树" class="headerlink" title="修改文档树"></a>修改文档树</h3><h3 id="解析部分文档"><a href="#解析部分文档" class="headerlink" title="解析部分文档"></a>解析部分文档</h3><p>如果仅仅因为想要查找文档中的<a>标签而将整片文档进行解析,实在是浪费内存和时间.最快的方法是从一开始就把<a>标签以外的东西都忽略掉. <code>SoupStrainer</code> 类可以定义文档的某段内容,这样搜索文档时就不必先解析整篇文档,只会解析在 <code>SoupStrainer</code> 中定义过的文档. 创建一个 <code>SoupStrainer</code> 对象并作为 <code>parse_only</code> 参数给 <code>BeautifulSoup</code> 的构造方法即可.</a></a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> SoupStrainer</span><br><span class="line">only_a_tags = SoupStrainer(<span class="string">"a"</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="6-解析库pyquery"><a href="#6-解析库pyquery" class="headerlink" title="6. 解析库pyquery"></a>6. 解析库pyquery</h2><p>用法和JQuery类似</p>
 <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><h4 id="字符串初始化"><a href="#字符串初始化" class="headerlink" title="字符串初始化"></a>字符串初始化</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html = <span class="string">" &lt;html blabla"</span></span><br><span class="line">pq(html)</span><br></pre></td></tr></table></figure>
@@ -489,28 +489,28 @@
 </details>
 
 <h3 id="测试代理IP"><a href="#测试代理IP" class="headerlink" title="测试代理IP"></a>测试代理IP</h3><p>通过request直接请求一个网址，看是否通过或者看状态码是否为200(<strong><code>request.status_code == 200</code></strong>)</p>
-<p><details></p>
+<p><details></details></p>
 <summary><mark>查看隐藏代码</mark></summary>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_proxy</span><span class="params">(ip_list, headers, test_url)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    测试代理IP</span></span><br><span class="line"><span class="string">    :param ip_list:</span></span><br><span class="line"><span class="string">    :return: ip_list [&#123;"https": ip&#125;,…]</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> proxy <span class="keyword">in</span> ip_list:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            response = requests.get(test_url, headers=headers, proxies=proxy, timeout=<span class="number">5</span>)  </span><br><span class="line">        <span class="keyword">except</span> requests.exceptions.ConnectTimeout:</span><br><span class="line">            ip_list.pop(i)</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> ip_list</span><br></pre></td></tr></table></figure>
-<p><details><br><strong>但是上述代码的问题是设置了代理IP，请求网站通过，也不代表IP有效，因为有可能不是用了设置的代理IP而是用了自己公网下的IP（可以用ifconfig查询所在局域网下的IP，及私网IP）</strong><a href="https://blog.csdn.net/Chenftli/article/details/86701563" target="_blank" rel="noopener">参考</a></p>
-<p><details></p>
+<p><details><br><strong>但是上述代码的问题是设置了代理IP，请求网站通过，也不代表IP有效，因为有可能不是用了设置的代理IP而是用了自己公网下的IP（可以用ifconfig查询所在局域网下的IP，及私网IP）</strong><a href="https://blog.csdn.net/Chenftli/article/details/86701563" target="_blank" rel="noopener">参考</a></details></p>
+<p><details></details></p>
 <summary><mark>查看隐藏代码</mark></summary>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_proxy_3</span><span class="params">(ip_list)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    测试是理IP</span></span><br><span class="line"><span class="string">    :param ip_list:</span></span><br><span class="line"><span class="string">    :return ip_valid_list: [&#123;https: ip&#125;,…]</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    ip_valid_list = []</span><br><span class="line">    test_url =  <span class="string">"http://httpbin.org/get"</span> <span class="comment"># 改网站可测试目前请求的IP</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> proxy <span class="keyword">in</span> ip_list:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            res = requests.get(test_url, proxies=proxy, headers=headers, timeout=<span class="number">8</span>)</span><br><span class="line">            data = response.text.strip()</span><br><span class="line">            proxyIP = json.loads(data)[<span class="string">'origin'</span>]</span><br><span class="line">            <span class="keyword">if</span> proxyIP != proxy[<span class="string">"https"</span>]:</span><br><span class="line">                ip_list.pop(i)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="comment">#print("proxy invalid")</span></span><br><span class="line">            ip_list.pop(i)</span><br><span class="line">        i = i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ip_valid_list</span><br></pre></td></tr></table></figure>
 <details>
 
-<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p><details></p>
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p><details></details></p>
 <summary><mark>隐藏</mark></summary>
 
 <p>Max retries exceeded with url</p>
 <ol>
-<li><p>requests.exceptions.<strong>ProxyError</strong>: HTTPConnectionPool(host=’**<em>‘, port=443): Max retries exceeded with url: \</em>** (Caused by ProxyError(‘Cannot connect to proxy.’, NewConnectionError(‘<urllib3.connection.HTTPConnection object at 0x0000015363189190>: </p>
+<li><p>requests.exceptions.<strong>ProxyError</strong>: HTTPConnectionPool(host=’**<em>‘, port=443): Max retries exceeded with url: \</em>** (Caused by ProxyError(‘Cannot connect to proxy.’, NewConnectionError(‘<urllib3.connection.HTTPConnection object at 0x0000015363189190>: </urllib3.connection.HTTPConnection></p>
 <blockquote>
 <p>IP代理使用的协议不正常，http和https不能写错。</p>
 </blockquote>
 </li>
-<li><p>requests.exceptions.<strong>ConnectionError</strong>: HTTPSConnectionPool(host=<em>**, , port=443): Max retries exceeded with url: \</em>** (Caused by NewConnectionError(‘<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb51433af98>:</p>
+<li><p>requests.exceptions.<strong>ConnectionError</strong>: HTTPSConnectionPool(host=<em>**, , port=443): Max retries exceeded with url: \</em>** (Caused by NewConnectionError(‘<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb51433af98>:</urllib3.connection.VerifiedHTTPSConnection></p>
 <blockquote>
 <p>http的连接数超过最大限制，默认的情况下连接是Keep-alive的，所以导致服务器保持了太多连接而不能再新建连接。</p>
 </blockquote>
@@ -532,7 +532,7 @@
 </blockquote>
 <details>
 
-</li>
+</details></li>
 </ol>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><ul>
 <li><a href="https://github.com/Hopetree/Jobs-search" target="_blank" rel="noopener">招聘网站爬虫</a></li>
@@ -546,7 +546,7 @@
 <li><a href="[https://www.jianshu.com/p/2b783f7914c6](https://www.jianshu.com/p/2b783f7914c6">bs4模块使用指南</a>)</li>
 <li><a href="https://python3webspider.cuiqingcai.com/" target="_blank" rel="noopener">Python3网络爬虫开发实战</a>​</li>
 </ol>
-
+</details>
     </div>
 
     
@@ -648,7 +648,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -661,7 +661,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-count">46</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
